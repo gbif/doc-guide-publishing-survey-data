@@ -1,4 +1,46 @@
 [[short-id-for-section]]
-== Section/chapter title 
+=== Darwin Core standard and biological survey data
 
-It was a dark and stormy night, the rain fell in torrents — except at occasional intervals, when it was checked by a violent gust of wind which swept up the streets (for it is in London that our scene lies), rattling along the house-tops, and fiercely agitating the scanty flame of the lamps that struggled against the darkness. Through one of the obscurest quarters of London, and among haunts little loved by the gentlemen of the police, a man evidently of the lowest orders was wending his solitary way. He stopped twice or thrice at different shops and houses of a description correspondent with the appearance of the _quartier_ in which they were situated, — and tended inquiry for some article or another which did not seem easily to be met with. All the answers he received were couched in the negative; and as he turned from each door he muttered to himself, in no very elegant phraseology, his disappointment and discontent. At length, at one house, the landlord, a sturdy butcher, after rendering the same reply the inquirer had hitherto received, added, — “But if _this_ vill do as vell, Dummie, it is quite at your sarvice!” Pausing reflectively for a moment, Dummie responded that he thought the thing proffered _might_ do as well; and thrusting it into his ample pocket, he strode away with as rapid a motion as the wind and the rain would allow. He soon came to a nest of low and dingy buildings, at the entrance to which, in half-effaced characters, was written “Thames Court.” Halting at the most conspicuous of these buildings, an inn or alehouse, through the half-closed windows of which blazed out in ruddy comfort the beams of the hospitable hearth, he knocked hastily at the door. He was admitted by a lady of a certain age, and endowed with a comely rotundity of face and person.
+The https://dwc.tdwg.org/[+++Darwin Core (DwC) standard+++] is a
+community-maintained biodiversity information standard. The primary goal
+of DwC is to support biodiversity informatics by making data
+interoperable and reusable across various platforms and applications.
+DwC provides a set of terms, definitions, and guidelines designed to
+facilitate the exchange of biological data. DwC *terms* are used to
+describe and share biodiversity data. Each term has an accepted
+definition accompanied by comment(s),a usage example (for example, see
+https://eco.tdwg.org/terms/#eco:verbatimTargetScope[_+++verbatimTargetScope+++_]
+and
+https://eco.tdwg.org/terms/#eco:protocolNames[_+++protocolNames+++_]),
+and in some cases contains controlled vocabulariesfootnote:[A list of
+accepted values that can be used for the term]. Populating DwC terms
+with information from a particular dataset is called *mapping*. Use of
+the standard can help reduce errors and inconsistencies in data, enhance
+data discoverability, and facilitate data reuse. DwC includes
+standardized terms for describing species occurrences and biodiversity
+sampling efforts, including terms for methodology, location, date,
+taxonomy, and other relevant attributes. DwC *extensions* provide
+additional terms and properties for specific types of biodiversity data
+enabling researchers to capture a broader range of information tailored
+to particular needs, such as data on ecological interactions, genetic
+sequences, or sampling events.
+
+In a Darwin Core context, biological survey data are best captured as
+https://dwc.tdwg.org/list/#dwc_Event[+++Events+++], where time- and
+space-specific detection are documented centrally and separately from
+the list of species recorded in each event. Historically, DwC evolved
+from collections to other biodiversity data contexts, and until recently
+struggled to effectively capture more complex data like biological
+surveys. Specifically, detailed information about sampling methods and
+protocols, scope, and completeness were captured in an unstructured
+manner relegated largely to verbatim text fields such as
+https://dwc.tdwg.org/terms/#dwc:samplingProtocol[+++samplingProtocol+++]
+and
+https://dwc.tdwg.org/terms/#dwc:samplingEffort[+++samplingEffort+++].
+The https://eco.tdwg.org/[+++Humboldt Extension for Biological
+Inventories+++] (HE), an extension to the DwC event core, provides data
+publishers with a means by which to share biological inventory data in a
+structured manner, increasing the findability of datasets, and thereby
+improving chances of dataset re-use. The extension added 55 terms to the
+DwC Event class vocabulary by which to capture components of survey
+design previously lost as unstructured metadata.
