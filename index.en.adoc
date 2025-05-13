@@ -18,18 +18,18 @@ include::colophon.en.adoc[]
 
 include::intro.en.adoc[]
 
-:sectnums:
+//:sectnums:
 
-include::100.en.adoc[]
+//include::100.en.adoc[]
 
-include::200.en.adoc[]
+//include::200.en.adoc[]
 
 :sectnums!:
 
-include::afterword.en.adoc[]
+//include::afterword.en.adoc[]
 
-include::appa.en.adoc[]
+//include::appa.en.adoc[]
 
-include::glossary.en.adoc[]
+//include::glossary.en.adoc[]
 
 include::bibliography.en.adoc[]
