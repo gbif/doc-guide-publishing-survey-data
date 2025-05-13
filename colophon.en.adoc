@@ -1,23 +1,23 @@
 // add cover image to img directory and update filename below
-ifdef::backend-html5[]
-image::img/web/photo.jpg[]
-endif::backend-html5[]
+// ifdef::backend-html5[]
+// image::img/web/photo.jpg[]
+// endif::backend-html5[]
 
 == Colophon
 
 === Suggested citation
 
-Author U, Autore D & Auteur T. The special guide to something. Third edition. GBIF Secretariat: Copenhagen. 
+Ingenloff K, Svenningsen C, Earl C, Shimabukuro PHF, Sica Y, Gan Y-M, Kachian ZR, Brenton P, Hochachka W, Wieczorek J, Stevenson R, Kazem A, Baskauf S, Zermoglio PF, Bloom D, Rodrigues A, Gamboa Martínez J & Schigel D. Guide for publishing biological survey data to GBIF. GBIF Secretariat: Copenhagen. 
 // Uncomment once a DOI is assigned
-//https://doi.org/10.EXAMPLE/EXAMPLE
+//https://doi.org/10.35035/doc-ynvs-eh84
 
 === Authors
 
-Un Author, Due Autore & https://www.orcid.org/#[Troisième Auteur]
+https://orcid.org/0000-0001-5942-9053#[Ingenloff K], https://orcid.org/0000-0002-9216-2917#[Svenningsen C], https://orcid.org/0000-0001-9850-882X#[Earl C], https://orcid.org/0000-0002-5114-953X#[Shimabukuro PHF], https://orcid.org/0000-0002-1720-0127 #[Sica Y], https://orcid.org/0000-0001-7087-2646#[Gan Y-M], https://orcid.org/0000-0002-0500-0339#[Kachian ZR], https://orcid.org/0000-0001-9730-8340 #[Brenton P], https://orcid.org/0000-0002-0595-7827#[Hochachka W], https://orcid.org/0000-0003-1144-0290#[Wieczorek J], https://orcid.org/0000-0003-1617-5895 #[Stevenson R], https://orcid.org/0000-0003-2475-132X#[Kazem A], https://orcid.org/0000-0003-4365-3135 #[Baskauf S], https://orcid.org/0000-0002-6056-5084  #[Zermoglio PF], https://orcid.org/0000-0003-1273-1807#[Bloom D], https://orcid.org/0000-0002-5468-2452 #[Rodrigues A], https://orcid.org/0000-0002-1789-1183#[Gamboa Martínez J] & https://orcid.org/0000-0002-2919-1168#[Schigel D]
 
-=== Contributors
-
-James Joyce and Samuel Beckett of Trinity College, Dublin, contributed to this version of the document.
+// === Contributors
+//
+// James Joyce and Samuel Beckett of Trinity College, Dublin, contributed to this version of the document.
 
 === Licence
 
@@ -27,18 +27,18 @@ The document _The special guide to something_ is licensed under https://creative
 
 #TODO: Assign a DOI before publication#
 // Uncomment once a DOI is assigned
-//https://doi.org/10.EXAMPLE/EXAMPLE
+//10.35035/doc-ynvs-eh84
 
 === Document control
 
-Third edition, April 2020
+First edition, June 2025
 
 // include reference to provenance if possible/relevant
-https://doi.org/10.EXAMPLE/2ND-EXAMPLE[Second edition], March 2015, by Due Autore and https://orcid.org/0000-0000-0000-0000[Troisième Auteur].
+// https://doi.org/10.EXAMPLE/2ND-EXAMPLE[Second edition], March 2015, by Due Autore and https://orcid.org/0000-0000-0000-0000[Troisième Auteur].
 
-Originally based on an earlier publication, _Towards establishing the special guide to something_.
+// Originally based on an earlier publication, _Towards establishing the special guide to something_.
 
-=== Cover image
-
+// === Cover image
+//
 // Caption. Credit, source, licence.
-Western honey bee (_Apis mellifera_), Hardy County, Florida, United States. Photo 2018 thebugroomno2 via https://www.gbif.org/occurrence/1945467387[iNaturalist research-grade observations], licensed under http://creativecommons.org/licenses/by-nc/4.0/[CC BY-NC 4.0].
+// Western honey bee (_Apis mellifera_), Hardy County, Florida, United States. Photo 2018 thebugroomno2 via https://www.gbif.org/occurrence/1945467387[iNaturalist research-grade observations], licensed under http://creativecommons.org/licenses/by-nc/4.0/[CC BY-NC 4.0].
