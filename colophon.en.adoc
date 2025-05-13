@@ -21,13 +21,13 @@ https://orcid.org/0000-0001-5942-9053#[Ingenloff K], https://orcid.org/0000-0002
 
 === Licence
 
-The document _The special guide to something_ is licensed under https://creativecommons.org/licenses/by-sa/4.0[Creative Commons Attribution-ShareAlike 4.0 Unported License].
+The document _Guide for publishing biological survey data to GBIF_ is licensed under https://creativecommons.org/licenses/by-sa/4.0[Creative Commons Attribution-ShareAlike 4.0 Unported License].
 
-=== Persistent URI
-
-#TODO: Assign a DOI before publication#
+// === Persistent URI
+//
+// #TODO: Assign a DOI before publication#
 // Uncomment once a DOI is assigned
-//10.35035/doc-ynvs-eh84
+// 10.35035/doc-ynvs-eh84
 
 === Document control
 
