@@ -1,13 +1,179 @@
 [bibliography]
 == References
 
-//The bibliography list is a style of AsciiDoc bulleted list.
+* {blank}
++
+____
+Abarenkov K, Andersson AF, Bissett A, Finstad AG, Fossøy F, Grosjean M,
+Hope M, Jeppesen TS, Kõljalg U, Lundin D, Nilsson RN, Prager M, Provoost
+P, Schigel D, Suominen S, Svenningsen C & Frøslev TG (2023) Publishing
+DNA-derived data through biodiversity data platforms, v1.3. Copenhagen:
+GBIF Secretariat.
+https://doi.org/10.35035/doc-vf1a-nr22[+++https://doi.org/10.35035/doc-vf1a-nr22+++].
+____
+* {blank}
++
+____
+Bubnicki, J.W., Norton, B., Baskauf, S.J., Bruce, T., Cagnacci, F.,
+Casaer, J., Churski, M., Cromsigt, J.P.G.M., Farra, S.D., Fiderer, C.,
+Forrester, T.D., Hendry, H., Heurich, M., Hofmeester, T.R., Jansen,
+P.A., Kays, R., Kuijper, D.P.J., Liefting, Y., Linnell, J.D.C., Luskin,
+M.S., Mann, C., Milotic, T., Newman, P., Niedballa, J., Oldoni, D.,
+Ossi, F., Robertson, T., Rovero, F., Rowcliffe, M., Seidenari, L.,
+Stachowicz, I., Stowell, D., Tobler, M.W., Wieczorek, J., Zimmermann, F.
+and Desmet, P. (2024), Camtrap DP: an open standard for the FAIR
+exchange and archiving of camera trap data. Remote Sens Ecol Conserv,
+10: 283-295.
+https://doi.org/10.1002/rse2.374[+++https://doi.org/10.1002/rse2.374+++].
+____
+* {blank}
++
+____
+Chapman AD (2020) Current Best Practices for Generalizing Sensitive
+Species Occurrence Data. Copenhagen: GBIF Secretariat.
+https://doi.org/10.15468/doc-5jp4-5g10[+++https://doi.org/10.15468/doc-5jp4-5g10+++].
+____
+* {blank}
++
+____
+De Pooter D, Appeltans W, Bailly N, Bristol S, Deneudt K, Eliezer M,
+Fujioka E, Giorgetti A, Goldstein P, Lewis M, Lipizer M, Mackay K, Marin
+M, Moncoiffé G, Nikolopoulou S, Provoost P, Rauch S, Roubicek A, Torres
+C, van de Putte A, Vandepitte L, Vanhoorne B, Vinci M, Wambiji N, Watts
+D, Klein Salas E, Hernandez F (2017) Toward a new data standard for
+combined marine biological and environmental datasets - expanding OBIS
+beyond species occurrences. Biodiversity Data Journal 5: e10989.
+https://doi.org/10.3897/BDJ.5.e10989[+++https://doi.org/10.3897/BDJ.5.e10989+++].
+____
+* {blank}
++
+____
+Dimaki, M., & Legakis, A. (1999). The reptile fauna of the Fourni
+Archipelago (Eastern Aegean, Greece). Herpetozoa, 12(3/4), 129-133.
+____
+* {blank}
++
+____
+Figueira R, Beja P, Villaverde C, Vega M, Cezón K, Messina T, Archambeau
+A, Johaadien R, Endresen D & Escobar D (2020) Guidance for private
+companies to become data publishers through GBIF: Template document to
+support the internal authorization process to become a GBIF publisher.
+Copenhagen: GBIF Secretariat.
+https://doi.org/10.35035/doc-b8hq-me03[+++https://doi.org/10.35035/doc-b8hq-me03+++].
+____
+* {blank}
++
+____
+GBIF (2011). GBIF Metadata Profile – How-to Guide, (contributed by Ó
+Tuama, Éamonn, Braak, K. Remsen, D.), Copenhagen: GBIF Secretariat ISBN:
+87-92020-24-0, accessible online at:
+https://ipt.gbif.org/manual/en/ipt/3.0/gbif-metadata-profile[+++https://ipt.gbif.org/manual/en/ipt/3.0/gbif-metadata-profile+++]
+____
+* {blank}
++
+____
+GBIF (2018) Best Practices in Publishing Sampling-event data, version
+2.2. Copenhagen: GBIF Secretariat.
+https://ipt.gbif.org/manual/en/ipt/3.0/best-practices-sampling-event-data
+____
+* {blank}
++
+____
+GBIF Secretariat & IAIA (2020) Best Practices for Publishing
+Biodiversity Data from Environmental Impact Assessments. Copenhagen:
+GBIF Secretariat.
+https://doi.org/10.35035/doc-5xdm-8762[+++https://doi.org/10.35035/doc-5xdm-8762+++].
+____
+* {blank}
++
+____
+Guralnick, R., Walls, R. and Jetz, W. (2018), Humboldt Core – toward a
+standardized capture of biological inventories for biodiversity
+monitoring, modeling and assessment. Ecography, 41: 713-725.
+https://doi.org/10.1111/ecog.02942.
+____
+* {blank}
++
+____
+Heberling JM, Miller JT, Noesgaard D, Weingart SB, Schigel D. Data
+integration enables global biodiversity synthesis. Proc Natl Acad Sci U
+S A. 2021 Feb 9;118(6):e2018093118. doi: 10.1073/pnas.2018093118.
+____
+* {blank}
++
+____
+IPBES (2019): Global assessment report on biodiversity and ecosystem
+services of the Intergovernmental Science-Policy Platform on
+Biodiversity and Ecosystem Services. E. S. Brondizio, J. Settele, S.
+Díaz, and H. T. Ngo (editors). IPBES secretariat, Bonn, Germany. 1148
+pages.
+https://doi.org/10.5281/zenodo.3831673[+++https://doi.org/10.5281/zenodo.3831673+++]
+____
+* {blank}
++
+____
+Jackowiak, B., & Lawenda, M. (2025). How Does Sharing Data from Research
+Institutions on Global Biodiversity Information Facility Enhance Its
+Scientific Value? Diversity, 17(4), 221.
+https://doi.org/10.3390/d17040221[+++https://doi.org/10.3390/d17040221+++]
+____
+* {blank}
++
+____
+Lapatas V, Stefanidakis M, Jimenez RC, Via A, Schneider MV. Data
+integration in biological research: an overview. J Biol Res (Thessalon).
+2015 Sep 2;22(1):9. doi: 10.1186/s40709-015-0032-5.
+____
+* {blank}
++
+____
+Lento J & Schmidt-Kloiber A (2025) Freshwater Data Publishing Guide.
+Copenhagen: GBIF Secretariat.
+https://doi.org/10.35035/doc-sw3k-w725[+++https://doi.org/10.35035/doc-sw3k-w725+++]
+____
+* {blank}
++
+____
+Reyserhove L, Norton B & Desmet P (2023) Best Practices for Managing and
+Publishing Camera Trap Data. GBIF Secretariat: Copenhagen.
+https://doi.org/10.35035/doc-0qzp-2x37
+____
 
-- [[carrillo]] Carrillo Trueba C (1995) El Pedregal de San Ángel. Mexico City: Universidad Nacional Autonoma de Mexico.
-- [[eggener]]	Keith Eggener (2001) Luis Barragán’s Gardens of el Pedregal Princeton, N.J., USA: Princeton Architectural Press.
-- [[heizer]]Heizer RF & Bennyhoff JA (1958) Archeological Investigation of Cuicuilco, Valley of Mexico, 1957. Science 127(3292): 232-233. https://doi.org/10.1126/science.127.3292.232
-- [[palacio]] Palacio Prieto JL & Guilbaud M-N (2015) Patrimonio natural de la Reserva Ecológica del Pedregal de San Ángel y áreas cercanas: sitios de interés geológico y geomorfológico al sur de la Cuenca de México. Boletín de la Sociedad Geológica Mexicana 67(2):227-244. http://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1405-33222015000200008
-- [[salas05]] Salas Portugal A (2005) Armando Salas Portugal. Mexico City: Lunwerg Editores.
-- [[salas06]] Salas Portugal A (2006) Morada de Lava: las colecciones fotográficas del Pedregal de San Ángel y la Ciudad Universitaria. Mexico City: Universidad Nacional Autonoma de Mexico.
-
+* {blank}
++
+____
+Sampling event Data:
+https://ipt.gbif.org/manual/en/ipt/latest/sampling-event-data[+++https://ipt.gbif.org/manual/en/ipt/latest/sampling-event-data+++]
+____
+* {blank}
++
+____
+TDWG Humboldt Extension Task Group (1). 2024.
+isLeastSpecificTargetCategoryQuantityInclusive Guidelines. Biodiversity
+Information Standards (TDWG).
+http://rs.tdwg.org/dwc/doc/inclusive/2024-02-28
+____
+* {blank}
++
+____
+TDWG Humboldt Extension Task Group (2). 2024. Humboldt Extension
+Vocabulary List of Terms. Biodiversity Information Standards (TDWG).
+http://rs.tdwg.org/dwc/doc/eco/2024-03-26[+++http://rs.tdwg.org/dwc/doc/eco/2024-03-26+++]
+____
+* {blank}
++
+____
+Wieczorek J, Bloom D, Guralnick R, Blum S, Döring M, Giovanni R, et al.
+(2012) Darwin Core: An Evolving Community-Developed Biodiversity Data
+Standard. PLoS ONE 7(1): e29715.
+https://doi.org/10.1371/journal.pone.0029715[+++https://doi.org/10.1371/journal.pone.0029715+++]
+____
+* {blank}
++
+____
+Wilkinson, M., Dumontier, M., Aalbersberg, I. _et al._ The FAIR Guiding
+Principles for scientific data management and stewardship. _Sci Data_ 3,
+160018 (2016).
+https://doi.org/10.1038/sdata.2016.18[+++https://doi.org/10.1038/sdata.2016.18+++].
+____
 <<<
