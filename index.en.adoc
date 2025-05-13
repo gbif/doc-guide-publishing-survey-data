@@ -18,9 +18,9 @@ include::colophon.en.adoc[]
 
 include::intro.en.adoc[]
 
-//:sectnums:
+:sectnums:
 
-//include::100.en.adoc[]
+include::100.en.adoc[]
 
 //include::200.en.adoc[]
 
