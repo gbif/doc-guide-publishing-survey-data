@@ -1,0 +1,145 @@
+== Using this guide
+
+Throughout the guide, Darwin Core terms will be written in italics and
+preceded by their namespace abbreviation and a colon (‘dwc’ or ‘eco’) to
+denote the DwC core or extension to which the term belongs. For example,
+Darwin Core terms, such as the event ID term, will appear as
+_dwc:eventID_ and the Humboldt Extension term for verbatim target scope
+will be written as _eco:verbatimTargetScope_.
+
+Terms are linked with their respective term internationalized resource
+identifier (IRI, ex.,
+http://rs.tdwg.org/eco/terms/protocolNames[_+++eco:protocolNames+++_]).
+
+Namespace abbreviations and usage examples for DwC terms.
+
+[width="100%",cols="20%,48%,32%",options="header",]
+|===
+|*Namespace abbreviation* |*Core or extension name* |*Example*
+|dwc a|
+Darwin Core
+
+(applies to event core, occurrence extension, measurements or facts
+extension, and related resource extension terms)
+
+|http://rs.tdwg.org/dwc/terms/eventID[_+++dwc:eventID+++_]
+
+|eco |Humboldt extension for ecological inventories
+|http://rs.tdwg.org/eco/terms/verbatimTargetScope[_+++eco:verbatimTargetScope+++_]
+|===
+
+*+++Term usage recommendations+++*
+
+Each term mentioned in this guide is associated with one of 3 usage
+recommendations.
+
+* {blank}
++
+____
+*Required* terms must be populated and included with the dataset for
+publication to GBIF.
+____
+* {blank}
++
+____
+*Recommended* terms enhance the value and broader usefulness of a
+dataset with improved information about event localities, sampling
+context, methods, and scopes.
+____
+* {blank}
++
+____
+*Share if available* terms denoted as ‘share if available’ can enhance
+the potential usefulness of a dataset but to a less quantifiable extent
+than required and recommended terms.
+____
+
+=== Data mapping template
+
+A basic
+https://docs.google.com/spreadsheets/d/1A5wvy-zK7zl2eL79QOeADkbtPQXQtHUl/edit?usp=sharing&ouid=100202681437108536507&rtpof=true&sd=true[+++biodiversity
+survey data template+++] is available to facilitate mapping of survey
+data and preparation for formatting of a DwC-A. The spreadsheet has 2
+data tabs (event and occurrence) and a ‘README’ tab.
+
+[width="100%",cols="20%,80%",options="header",]
+|===
+|*Tab* |*Description*
+|event a|
+Data table
+
+Terms in the event tab should be used to capture survey event
+information including survey design, protocol(s), scopes, and effort.
+Terms from both Darwin Core Event class
+(https://rs.gbif.org/core/dwc_event_2024-02-19.xml[+++https://rs.gbif.org/core/dwc_event_2024-02-19.xml+++])
+and the Humboldt extension
+(https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[+++https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml+++])
+are included.
+
+Column heads are populated with the DwC Event core and Humboldt
+extension terms referenced in this guide. In the rows beneath each term,
+the term definition, comments, recommended usage for publication in
+GBIF, and additional comments or usage guidance.
+
+|occurrence a|
+Data table
+
+Terms in the occurrence tab should be used to capture occurrence
+information with terms from the Darwin Core Occurrence extension
+(https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[+++https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml+++]).
+
+Column heads are populated with the DwC occurrence extension terms
+referenced in this guide. In the rows beneath each term, the term
+definition, comments, and recommended usage for publication in GBIF.
+Additional terms from the extension should be added to your own data
+table as appropriate for your dataset.
+
+|README |The README table provides additional information about the
+structure and information included in each data tab.
+|===
+
+=== Example data
+
+The authors are currently collaborating with the National Ecological
+Observatory Network (NEON) to develop a comprehensive example dataset to
+accompany this guide. The guide will be updated as soon as the data are
+available.
+
+The GBIF datasets listed below implement at least some Humbodlt
+extension terms and may serve as useful references on event dataset
+structure and term usage.
+
+* {blank}
++
+____
+Faveyts W, Cooleman S (2025). Bird census counts at the Zwin Nature
+Park. Version 1.5. Belgian Biodiversity Platform. Sampling event dataset
+https://doi.org/10.15468/saesvn[+++https://doi.org/10.15468/saesvn+++]
+____
+* {blank}
++
+____
+Palpurina S (2025). Vegetation plots collected in dry grasslands
+throughout Bulgaria and Romanian Dobrudzha. Version 1.12. Masaryk
+University, Department of Botany and Zoology. Sampling event dataset
+https://doi.org/10.15468/pkx4tg[+++https://doi.org/10.15468/pkx4tg+++].
+____
+* {blank}
++
+____
+Piesschaert F, Vermeersch G, Brosens D, Westra T, Desmet P, Feys S, Van
+de Poel S, Pollet M, Cooleman S (2025). ABV - Common breeding birds in
+Flanders, Belgium (post 2016). Version 1.14. Research Institute for
+Nature and Forest (INBO). Sampling event dataset
+https://doi.org/10.15468/pj2v6h[+++https://doi.org/10.15468/pj2v6h+++]
+____
+* {blank}
++
+____
+van Klink R, Gerrits G (2025). Biological Station Wijster standard
+trapping program: Sampling event data for ground beetles (Coleoptera:
+Carabidae). Version 1.3. WBBS foundation. Sampling event dataset
+https://doi.org/10.15468/3mcqja[+++https://doi.org/10.15468/3mcqja+++].
+____
+
+==  +
