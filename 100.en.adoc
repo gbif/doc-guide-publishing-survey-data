@@ -192,6 +192,7 @@ species occurrence information. +
 (see below for more information about extensions). See the table below
 for an overview of GBIF registered extensions.
 
+[caption=]
 .A non-exhaustive list of GBIF registered extensions (https://rs.gbif.org/extensions.html) that can and cannot currently be published with a Darwin Core event dataset to GBIF.
 [width="100%",cols="<20%,<80%",]
 |===
@@ -203,20 +204,10 @@ a| * https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[Occurrence] - terms 
    * https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[Relevé] - support for vegetation plot survey measurements 
    * https://rs.gbif.org/extension/ac/audubon_2020_10_06.xml[Media] - support for metadata from biodiversity multimedia resources and collections applied to an Event
 |DwC extensions that *cannot* currently be published through GBIF with a DwC Event core dataset
-a| https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2024-04-17.xml[DNA-derived
-data] -An extension to Occurrence and event cores to capture information
-relating to DNA-derived data. GBIF currently recommends the extension is
-used with Occurrence Core to be able to capture sequence/occurrence
-specific information.
-https://rs.gbif.org/extension/ac/audubon_2020_10_06.xml[Media] - support
-for metadata from biodiversity multimedia resources and collections
-applied to occurrences
-https://rs.gbif.org/extension/zooarchnet/ChronometricAge_2020-10-06.xml[Chronometric
-age] - to capture the true age information of a historic specimen
-collected long after the dwc:organism was deceased
-https://rs.gbif.org/extension/identification_history_2024-02-19.xm[Identification
-history] - specific for occurrences and used as an extended support to
-capture multiple identifications of the same dwc:Organism
+a| * https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2024-04-17.xml[DNA-derived data] -An extension to Occurrence and event cores to capture information relating to DNA-derived data. GBIF currently recommends the extension is used with Occurrence Core to be able to capture sequence/occurrence specific information.
+   * https://rs.gbif.org/extension/ac/audubon_2020_10_06.xml[Media] - support for metadata from biodiversity multimedia resources and collections applied to occurrences
+   * https://rs.gbif.org/extension/zooarchnet/ChronometricAge_2020-10-06.xml[Chronometric age] - to capture the true age information of a historic specimen collected long after the dwc:organism was deceased 
+   * https://rs.gbif.org/extension/identification_history_2024-02-19.xm[Identification history] - specific for occurrences and used as an extended support to capture multiple identifications of the same dwc:Organism
 |===
 
 A Darwin Core Archive for biodiversity survey data will require at least
