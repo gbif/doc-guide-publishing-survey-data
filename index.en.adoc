@@ -22,6 +22,8 @@ include::scope.en.adoc[]
 
 include::targetaudience.en.adoc[]
 
+include::usingThisGuide.en.adoc[]
+
 :sectnums:
 
 //include::100.en.adoc[]
