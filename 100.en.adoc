@@ -215,20 +215,8 @@ two tables: `metadata' and `event'. The DwC-A will have an additional
 table for each extension (e.g., occurrence, extended measurements or
 facts) included with the archive.
 
-[width="100%",cols="<100%",]
-|===
-|A note on extensions and DwC-A The current GBIF data model limits how
-many layers of extensions a DwC-A can contain in the GBIF
-infrastructure. For example, a sampling event dataset can have
-occurrences as an extension, as well as other relevant extensions. But
-the occurrences cannot have an extension with additional information on
-the specific occurrences. Furthermore, some extensions can only be used
-in combination with a specific core while others can be used with
-multiple cores. For example, the
-https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2024-04-17.xml[DNA-derived
-data extension] can currently only be used in conjunction with a dataset
-being published as an Occurrence core and the
-https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt
-extension for ecological inventories] can only be used with the event
-core. This limitation applies only to publishing the data to GBIF.
-|===
+[NOTE] 
+.A note on extensions and DwC-A
+==== 
+The current GBIF data model limits how many layers of extensions a DwC-A can contain in the GBIF infrastructure. For example, a sampling event dataset can have occurrences as an extension, as well as other relevant extensions. But the occurrences cannot have an extension with additional information on the specific occurrences. Furthermore, some extensions can only be used in combination with a specific core while others can be used with multiple cores. For example, the https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2024-04-17.xml[DNA-derived data extension] can currently only be used in conjunction with a dataset being published as an Occurrence core and the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt extension for ecological inventories] can only be used with the event core. This limitation applies only to publishing the data to GBIF.
+====
