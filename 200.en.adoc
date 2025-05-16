@@ -109,7 +109,7 @@ area where multiple surveys are aggregated) which results in several
 occurrences.
 
 .A simple schematic of a non-nested event dataset structure (a) consisting of a single event with associated occurrences related to the event via the occurrence extension and (b) a series of individual events with associated occurrences related to the appropriate event via the occurrence extension. 
-image::img/fig1.jpg
+image::img/fig1.jpg[]
 
 *Figure 1.* 
 
