@@ -15,13 +15,16 @@ endif::backend-html5[]
 :sectnums!:
 
 include::colophon.en.adoc[]
+
 include::intro.en.adoc[]
+
 include::scope.en.adoc[]
+
 include::targetaudience.en.adoc[]
 
 :sectnums:
 
-include::100.en.adoc[]
+//include::100.en.adoc[]
 
 //include::200.en.adoc[]
 
