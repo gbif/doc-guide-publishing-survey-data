@@ -15,8 +15,8 @@ endif::backend-html5[]
 :sectnums!:
 
 include::colophon.en.adoc[]
-
 include::intro.en.adoc[]
+include::scope.en.[]
 
 :sectnums:
 
