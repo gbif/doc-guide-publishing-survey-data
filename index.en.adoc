@@ -28,7 +28,7 @@ include::usingThisGuide.en.adoc[]
 
 include::100.en.adoc[]
 
-//include::200.en.adoc[]
+include::200.en.adoc[]
 
 :sectnums!:
 
