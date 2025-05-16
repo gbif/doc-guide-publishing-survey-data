@@ -141,21 +141,13 @@ hierarchical levels and secondarily on locality (Figure 5b) .. *protocol
 .Simplified example schematic of a nested event dataset structure representing a survey (Parent Event, dark red oval) with two survey sites (child-Events, medium red ovals) at each of which two protocols (child-child-Events, light red ovals) are implemented and occurrence information is collected and related to each sampling event using the occurrence extension. 
 image::img/fig2a.jpg[]
 
-*Figure 2b.* Simplified example schematic of a nested event dataset
-structure representing a survey (Parent Event, dark red oval) with two
-protocols (child-Events, medium red ovals) which are each implemented at
-two survey sites (four independently surveyed child-child-Events, light
-red ovals) wherein occurrence information is collected in four
-occurrences lists and related to each sampling event using the
-occurrence extension.
+[caption="Figure 2b. "]
+.Simplified example schematic of a nested event dataset structure representing a survey (Parent Event, dark red oval) with two protocols (child-Events, medium red ovals) which are each implemented at two survey sites (four independently surveyed child-child-Events, light red ovals) wherein occurrence information is collected in four occurrences lists and related to each sampling event using the occurrence extension.
+image::img/fig2b.jpg[]
 
-*Figure 2c.* Simplified example schematic of a nested event dataset
-structure representing a time series survey (Parent Event, dark red
-oval) with two survey sites (child-Events, medium red ovals) which are
-each independently sampled at two different times (four independently
-surveyed child-child-Events, light red ovals) wherein occurrence
-information is collected in four occurrences lists and related to each
-sampling event using the occurrence extension.
+[caption="Figure 2c. "]
+.Simplified example schematic of a nested event dataset structure representing a time series survey (Parent Event, dark red oval) with two survey sites (child-Events, medium red ovals) which are each independently sampled at two different times (four independently surveyed child-child-Events, light red ovals) wherein occurrence information is collected in four occurrences lists and related to each sampling event using the occurrence extension.
+image::img/fig2c.jpg[]
 
 ==== Constructing a dataset schematic
 
