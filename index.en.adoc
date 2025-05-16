@@ -17,6 +17,7 @@ endif::backend-html5[]
 include::colophon.en.adoc[]
 include::intro.en.adoc[]
 include::scope.en.[]
+include::targetaudience.en.adoc[]
 
 :sectnums:
 
