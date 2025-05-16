@@ -178,4 +178,4 @@ https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt
 Extension for Ecological Inventories] as described in the following
 sections.
 
-=== 
+<<<
