@@ -25,28 +25,27 @@ emphasize that data availability is scarce for a proper assessment of
 nearly all facets of biodiversity in response to the current global
 biodiversity crisis (IPBES 2019). The only way to address these needs
 are to aggregate existing data from prior and disparate biological
-surveys and monitoring efforts. International
-organizationsfootnote:[e.g., Convention on Biological Diversity
-(https://www.cbd.int/gbf/targets/21), Intergovernmental Science-Policy
-Platform on Biodiversity and Ecosystem Services
-(https://www.ipbes.net/node/38260)], governmental
-policiesfootnote:[Australian National Data Service, EU’s Open Data
-Directive], funding agenciesfootnote:[e.g., EU Horizon Europe, US
-National Science Foundation (NSF Dissemination and Sharing of Research
-Results:
-https://new.nsf.gov/policies/pappg/24-1/ch-11-other-post-award-requirements#ch11D4)]
-, and scientific journalsfootnote:[e.g.,
-https://journals.plos.org/plosone/[PLOS ONE], Nature Research Journals (
-https://www.nature.com/sdata/policies/data-policies)] are increasingly
-adopting the requirement that biodiversity data should be shared as FAIR
-(findable, accessible, interoperable, reusable) and open (Wilkinson et
-al 2016). These mandates are designed to enhance transparency,
-reproducibility, and the collective impact of biodiversity research and
-conservation efforts. Although biodiversity data are increasingly
-findable and accessible thanks to recent initiatives and mandates
-requiring research data and outputs to be made FAIR, it is often still
-difficult to assess the usability of data for aggregation or application
-in larger analyses due to lack of standardization.
+surveys and monitoring efforts. International organizations (e.g.,
+https://www.cbd.int/gbf/targets/21[+++Convention on Biological
+Diversity+++], https://www.ipbes.net/node/38260[+++Intergovernmental
+Science-Policy Platform on Biodiversity and Ecosystem Services+++],
+governmental policies (such as the Australian National Data Service and
+the EU’s Open Data Directive), funding agencies (e.g., EU Horizon
+Europe,
+https://new.nsf.gov/policies/pappg/24-1/ch-11-other-post-award-requirements#ch11D4[+++US
+National Science Foundation+++]), and scientific journals (e.g.,
+https://journals.plos.org/plosone/[PLOS ONE],
+https://www.nature.com/sdata/policies/data-policies[+++Nature Research
+Journals+++]) are increasingly adopting the requirement that
+biodiversity data should be shared as FAIR (findable, accessible,
+interoperable, reusable) and open (Wilkinson et al 2016). These mandates
+are designed to enhance transparency, reproducibility, and the
+collective impact of biodiversity research and conservation efforts.
+Although biodiversity data are increasingly findable and accessible
+thanks to recent initiatives and mandates requiring research data and
+outputs to be made FAIR, it is often still difficult to assess the
+usability of data for aggregation or application in larger analyses due
+to lack of standardization.
 
 GBIF, the https://www.gbif.org/what-is-gbif[+++Global Biodiversity
 Information Facility+++], is among the leading open access FAIR
@@ -66,3 +65,33 @@ appropriate datasets and aggregate data. This guide serves as a tool to
 help biological survey data holders capture key facets of survey design
 using the Darwin Core standard to facilitate FAIR and open sharing of
 these data through GBIF.
+
+== Scope
+
+This guide aims to help those with biodiversity survey data improve the
+interoperability of their data, thus facilitating increased data reuse,
+through the application of the Darwin Core Archive
+(https://dwc.tdwg.org/text/[+++https://dwc.tdwg.org/text/+++]). The
+guide provides an overview of the primary components of biodiversity
+survey data in the context of the Darwin Core standard, DwC Events
+(https://dwc.tdwg.org/terms/#event[+++https://dwc.tdwg.org/terms/#event+++])
+and the Humboldt extension for ecological inventories
+(https://eco.tdwg.org/[+++https://eco.tdwg.org/+++]) and, in particular
+assists the reader in structuring their data as a Darwin Core Archive
+and walks the reader through the process of mapping their data to DwC
+terms. Readers will be pointed to existing additional documentation
+where available.
+
+== Target audience
+
+This guide aims to help ecologists, researchers, and data managers from
+any organization or group (be they commercial, government agencies,
+non-governmental organizations, research groups, or other) wanting to
+standardize and share biodiversity survey data, specifically those
+aiming to format their data with the intent of publishing these data to
+GBIF (https://www.gbif.org/[+++https://www.gbif.org/+++]).
+
+If you are already comfortable with Darwin Core event datasets and are
+simply seeking guidance in applying the Humboldt extension, refer to the
+https://doi.org/10.35035/doc-7t3p-ve38[+++Survey and monitoring data
+quick start guide+++] (Ingenloff, 2025).
