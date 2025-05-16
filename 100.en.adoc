@@ -81,6 +81,7 @@ and collaboration, enables large-scale analyses facilitating data
 aggregation, improves data quality, fosters innovation, and promotes
 efficient use of resources.
 
+[caption=]
 .Guiding principles for making biological survey data FAIR and open
 [width="100%",cols="<50%,<50%",]
 |===
