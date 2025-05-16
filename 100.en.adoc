@@ -83,7 +83,7 @@ efficient use of resources.
 
 Guiding principles for making biological survey data FAIR and open.
 
-[width="100%",cols="<50%,<50%",options="header",]
+[width="100%",cols="<50%,<50%",]
 |===
 |Findable |Metadata: Create comprehensive metadata describing the
 dataset using a standardized schema such as Ecological Metadata Language
@@ -211,7 +211,7 @@ A non-exhaustive list of GBIF registered extensions
 (https://rs.gbif.org/extensions.html) that can and cannot currently be
 published with a Darwin Core event dataset to GBIF.
 
-[width="100%",cols="<50%,<50%",options="header",]
+[width="100%",cols="<50%,<50%",]
 |===
 |DwC extensions that can currently be published through GBIF with a DwC
 Event core dataset
@@ -256,7 +256,7 @@ two tables: `metadata' and `event'. The DwC-A will have an additional
 table for each extension (e.g., occurrence, extended measurements or
 facts) included with the archive.
 
-[width="100%",cols="<100%",options="header",]
+[width="100%",cols="<100%",]
 |===
 |A note on extensions and DwC-A The current GBIF data model limits how
 many layers of extensions a DwC-A can contain in the GBIF
