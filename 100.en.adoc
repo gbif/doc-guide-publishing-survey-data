@@ -192,11 +192,8 @@ species occurrence information. +
 (see below for more information about extensions). See the table below
 for an overview of GBIF registered extensions.
 
-A non-exhaustive list of GBIF registered extensions
-(https://rs.gbif.org/extensions.html) that can and cannot currently be
-published with a Darwin Core event dataset to GBIF.
-
-[width="100%",cols="<50%,<50%",]
+.A non-exhaustive list of GBIF registered extensions (https://rs.gbif.org/extensions.html) that can and cannot currently be published with a Darwin Core event dataset to GBIF.
+[width="100%",cols="<20%,<80%",]
 |===
 |DwC extensions that can currently be published through GBIF with a DwC Event core dataset
 a| * https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[Occurrence] - terms to capture the content of occurrence based records 
