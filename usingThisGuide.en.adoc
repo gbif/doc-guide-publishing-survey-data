@@ -33,26 +33,13 @@ extension, and related resource extension terms)
 Each term mentioned in this guide is associated with one of 3 usage
 recommendations.
 
-* {blank}
-+
-____
-*Required* terms must be populated and included with the dataset for
-publication to GBIF.
-____
-* {blank}
-+
-____
-*Recommended* terms enhance the value and broader usefulness of a
+* *Required* terms must be populated and included with the dataset for publication to GBIF.
+* *Recommended* terms enhance the value and broader usefulness of a
 dataset with improved information about event localities, sampling
 context, methods, and scopes.
-____
-* {blank}
-+
-____
-*Share if available* terms denoted as ‘share if available’ can enhance
+* *Share if available* terms denoted as ‘share if available’ can enhance
 the potential usefulness of a dataset but to a less quantifiable extent
 than required and recommended terms.
-____
 
 === Data mapping template
 
@@ -109,37 +96,19 @@ The GBIF datasets listed below implement at least some Humbodlt
 extension terms and may serve as useful references on event dataset
 structure and term usage.
 
-* {blank}
-+
-____
-Faveyts W, Cooleman S (2025). Bird census counts at the Zwin Nature
+* Faveyts W, Cooleman S (2025). Bird census counts at the Zwin Nature
 Park. Version 1.5. Belgian Biodiversity Platform. Sampling event dataset
 https://doi.org/10.15468/saesvn[+++https://doi.org/10.15468/saesvn+++]
-____
-* {blank}
-+
-____
-Palpurina S (2025). Vegetation plots collected in dry grasslands
+* Palpurina S (2025). Vegetation plots collected in dry grasslands
 throughout Bulgaria and Romanian Dobrudzha. Version 1.12. Masaryk
 University, Department of Botany and Zoology. Sampling event dataset
 https://doi.org/10.15468/pkx4tg[+++https://doi.org/10.15468/pkx4tg+++].
-____
-* {blank}
-+
-____
-Piesschaert F, Vermeersch G, Brosens D, Westra T, Desmet P, Feys S, Van
+* Piesschaert F, Vermeersch G, Brosens D, Westra T, Desmet P, Feys S, Van
 de Poel S, Pollet M, Cooleman S (2025). ABV - Common breeding birds in
 Flanders, Belgium (post 2016). Version 1.14. Research Institute for
 Nature and Forest (INBO). Sampling event dataset
 https://doi.org/10.15468/pj2v6h[+++https://doi.org/10.15468/pj2v6h+++]
-____
-* {blank}
-+
-____
-van Klink R, Gerrits G (2025). Biological Station Wijster standard
+* van Klink R, Gerrits G (2025). Biological Station Wijster standard
 trapping program: Sampling event data for ground beetles (Coleoptera:
 Carabidae). Version 1.3. WBBS foundation. Sampling event dataset
 https://doi.org/10.15468/3mcqja[+++https://doi.org/10.15468/3mcqja+++].
-____
-
-==  +
