@@ -30,13 +30,11 @@ herbs, crytpograms, mosses, lichens, algae, litter, water, and rocks +
 [NOTE]
 .*Using the Relevé extension* (https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml) 
 ====
-Create a
-new `Relevé' table Add term:dwc[dwc:eventID] as a column header so to link the
-record to the `Event' table. Add the Relevé extension fields as column
-headers. The term:dwc[dwc:eventID] will link the record to the `Event' table For
-each unique survey event (term:dwc[dwc:eventID]), populate the relevant
-extension field. Information for a unique term:dwc[dwc:eventID] should require
-only one row in the table.
+- Create a new `Relevé` table
+- Add term:dwc[dwc:eventID] as a column header so to link the
+record to the `Event` table.
+- Add the Relevé extension fields as column headers. The term:dwc[dwc:eventID] will link the record to the `Event' table
+- For each unique survey event (term:dwc[dwc:eventID]), populate the relevant extension field. Information for a unique term:dwc[dwc:eventID] should require only one row in the table.
 ====
 
 For an example implementation of the Relevé extension
