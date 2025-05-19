@@ -31,7 +31,7 @@ information that applies to all occurrence and ancillary data collected
 or recorded during an event such as information about the survey design,
 site (e.g., location, date), protocol(s), scope(s), and sampling effort.
 Resource: see the
-https://docs.google.com/spreadsheets/d/1A5wvy-zK7zl2eL79QOeADkbtPQXQtHUl/edit?usp=sharing&ouid=100202681437108536507&rtpof=true&sd=true[`event'
+https://docs.google.com/spreadsheets/d/1A5wvy-zK7zl2eL79QOeADkbtPQXQtHUl/edit?usp=sharing&ouid=100202681437108536507&rtpof=true&sd=true['event'
 tab in the template]. +
 * *Map occurrence data to the DwC occurrence extension:* Organism
 occurrence information collected during biological surveys (e.g.,
@@ -39,7 +39,7 @@ scientific name, additional organismal information) will be shared in an
 independent `occurrence' table using the
 https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[occurrence
 extension]. Resource: see the
-https://docs.google.com/spreadsheets/d/1A5wvy-zK7zl2eL79QOeADkbtPQXQtHUl/edit?usp=sharing&ouid=100202681437108536507&rtpof=true&sd=true[`occurrence'
+https://docs.google.com/spreadsheets/d/1A5wvy-zK7zl2eL79QOeADkbtPQXQtHUl/edit?usp=sharing&ouid=100202681437108536507&rtpof=true&sd=true['occurrence'
 tab in the template]. +
 * *Map ancillary data to appropriate extensions:* Additional information
 collected during the survey that require use of one or more extensions
