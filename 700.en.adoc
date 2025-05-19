@@ -84,9 +84,9 @@ would be reported.
 
 [width="99%",cols="<12%,<11%,<11%,<11%,11%,11%,11%,11%,11%",options="header",]
 |===
-|_term:dwc[dwc:eventID]_
+|term:dwc[dwc:eventID]
 |term:dwc[dwc:occurrenceID]
-|_term:dwc[dwc:basisOfRecord]_
+|term:dwc[dwc:basisOfRecord]
 |term:dwc[dwc:scientificName]
 |term:dwc[dwc:organismQuantity]
 |term:dwc[dwc:organismQuantityType]
@@ -112,56 +112,58 @@ possible. Sections that may be of particular interest:
 * identification (https://dwc.tdwg.org/terms/#identification) +
 * taxon (https://dwc.tdwg.org/terms/#taxon)
 
-Species occurrence terms, their recommended usage (status), and example
-data entries.
-
+[caption=""]
+.Species occurrence terms, their recommended usage (status), and example data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Required |_term:dwc[dwc:eventID]_
-|`uniqueEventID-1'
+.4+|Required
+|term:dwc[dwc:eventID]
+|`uniqueEventID-1`
 
-| |term:dwc[dwc:occurrenceID]
-|`uniqueObsID-2'
+|term:dwc[dwc:occurrenceID]
+|`uniqueObsID-2`
 
-| |_term:dwc[dwc:scientificName]_
-|`Gavialis gangeticus'
+|_term:dwc[dwc:scientificName]
+|`Gavialis gangeticus`
 
-| |_term:dwc[dwc:basisOfRecord]_
-|`HumanObservation'
+|term:dwc[dwc:basisOfRecord]
+|`HumanObservation`
 
-|Recommended |_term:dwc[dwc:taxonRank]_
-|`species'
+.5+|Recommended
+|term:dwc[dwc:taxonRank]
+|`species`
 
-| |_term:dwc[dwc:kingdom]_ |`Animalia'
+|term:dwc[dwc:kingdom]
+|`Animalia`
 
-| |_term:dwc[dwc:organismQuantity]_
-|`3'
+|term:dwc[dwc:organismQuantity]
+|`3`
 
-|
-|_term:dwc[dwc:organismQuantityType]_
-|`individuals'
+|term:dwc[dwc:organismQuantityType]
+|`individuals`
 
-| |_term:dwc[dwc:occurrenceStatus]_
-|`present' or `absent'
+|term:dwc[dwc:occurrenceStatus]
+|`present` or `absent`
 
-|Share if available
-|_term:dwc[dwc:vernacularName]_
-|`Indian gharial'
+.6+|Share if available
+|term:dwc[dwc:vernacularName]
+|`Indian gharial`
 
-| |_term:dwc[dwc:sex]_ |`female'
+|term:dwc[dwc:sex]
+|`female`
 
-| |_term:dwc[dwc:lifeStage]_ |`adult'
+|term:dwc[dwc:lifeStage]
+|`adult`
 
-|
-|_term:dwc[dwc:establishmentMeans]_
-|`native'
+|term:dwc[dwc:establishmentMeans]
+|`native`
 
-|
-|_term:dwc[dwc:degreeOfEstablishment]_
-|`native'
+|term:dwc[dwc:degreeOfEstablishment]_
+|`native`
 
-| |_term:dwc[dwc:vitality]_ |`dead'
+|term:dwc[dwc:vitality]
+|`dead`
 |===
 
 === Reporting absences
