@@ -1011,45 +1011,36 @@ term is available in the Occurrence extension. This term can be used to
 report degree of establishment information for organism occurrences in
 the `occurrence` table.
 
-Organismal scope terms, their recommended usage (status), and example
-data entries.
-
+[caption=""]
+.Organismal scope terms, their recommended usage (status), and example data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Share if available
+.8+|Share if available
 |term:eco[eco:targetLifeStageScope]
 |`larva`
 
-|
 |term:eco[eco:excludedLifeStageScope]
-|’adult
+|`adult` \| `juvenile`
 
-|
 |term:eco[eco:isLifeStageScopeFullyReported]
 |`true` or `false`
 
-|
 |term:eco[eco:targetDegreeOfEstablishmentScope]
 |`native`
 
-|
 |term:eco[eco:excludedDegreeOfEstablishmentScope]
 |`invasive`
 
-|
 |term:eco[eco:isDegreeOfEstablishmentScopeFullyReported]
 |`true` or `false`
 
-|
 |term:eco[eco:targetGrowthFormScope]
 |`tree`
 
-|
 |term:eco[eco:excludedGrowthFormScope]
 |`shrub`
 
-|
 |term:eco[eco:isGrowthFormScopeFullyReported]
 |`true` or `false`
 |===
