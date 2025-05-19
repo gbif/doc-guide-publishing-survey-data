@@ -145,7 +145,7 @@ http://rs.tdwg.org/dwc/terms/fieldNumber[_dwc:fieldNumber_].
 |term:dwc[dwc:parentEventID]
 |survey2022
 
-|Recommended |dwc[eco:siteCount]
+|Recommended |term:dwc[eco:siteCount]
 |75
 
 |
