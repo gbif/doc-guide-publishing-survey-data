@@ -1,9 +1,9 @@
 == Resource metadata
 
-[width="100%",cols="^100%",options="header",]
-|===
+[IMPORTANT] 
+====
 |Resource metadata information should be saved to the DwC-A metafile.
-|===
+====
 
 *Resource metadata* provides project- and/or dataset- level information
 for potential data users to understand the context of the dataset. GBIF
