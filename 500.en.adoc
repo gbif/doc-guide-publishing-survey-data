@@ -145,11 +145,11 @@ http://rs.tdwg.org/dwc/terms/fieldNumber[_dwc:fieldNumber_].
 |term:dwc[dwc:parentEventID]
 |survey2022
 
-|Recommended |term:dwc[eco:siteCount]
+|Recommended |term:eco[eco:siteCount]
 |75
 
 |
-|term:dwc[eco:siteNestingDescription]
+|term:eco[eco:siteNestingDescription]
 |25 survey sites each with 3 1m2 quadrats
 
 |Share if available
