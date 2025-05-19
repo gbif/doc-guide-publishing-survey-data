@@ -1056,7 +1056,7 @@ If *_taxonomic_* bycatch are included in the datasets:
 * Populate
 term:eco[eco:hasNonTargetTaxa] as
 true at all relevant event levels. +
-* If ALL *_taxonomic_* bycatch (_eco:hasNonTargetTaxa_ = `true`)
+* If ALL *_taxonomic_* bycatch (term:eco[eco:hasNonTargetTaxa] = `true`)
 captured/observed during an Event are reported in the dataset
 ** term:eco[eco:areNonTargetTaxaFullyReported]
 = `true` +
@@ -1077,24 +1077,24 @@ and
 term:eco[eco:hasNonTargetOrganisms]
 as `false` for all relevant events.
 
-Bycatch terms, their recommended usage (status), and example data
-entries.
+[caption=""]
+.Bycatch terms, their recommended usage (status), and example data entries.
 
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Share if available
+.4+|Share if available
 |term:eco[eco:hasNonTargetTaxa]
 |`true` or `false`
 
-|
+
 |term:eco[eco:areNonTargetTaxaFullyReported]
 |`true` or `false`
 
-| |term:eco[eco:nonTargetTaxa]
-|’Parabuteo unicinctus
+|term:eco[eco:nonTargetTaxa]
+|`Parabuteo unicinctus \| Geranoaetus melanoleucus; Cetoniinae \| Aclopinae \| Cyclocephala modesta`
 
-|
+
 |term:eco[eco:hasNonTargetOrganisms]
 |`true` or `false`
 |===
