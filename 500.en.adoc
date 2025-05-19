@@ -798,45 +798,40 @@ term:dwc[dwc:eventRemarks].
 
 Both fields can be applied to any event at any level.
 
-Other survey protocol information and verbatim protocol terms, their
-recommended usage (status), and example data entries.
-
+[caption=""]
+.Other survey protocol information and verbatim protocol terms, their recommended usage (status), and example data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Recommended
+.3+|Recommended
 |term:eco[eco:hasMaterialSamples]
 |`true` or `false`
 
-| |term:eco[eco:hasVouchers] |`true`
-or `false`
+|term:eco[eco:hasVouchers]
+|`true` or `false`
 
-|
 |term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
 |`true` or `false`
 
-|Share if available
+.5+|Share if available
 |term:eco[eco:materialSampleTypes]
 |`wholeOrganism`
 
-|
 |term:eco[eco:voucherInstitutions]
 |`AMNH`
 
-|
 |_term:dwc[dwc:dataGeneralizations]_
-|`Coordinates generalized from original GPS coordinates to the nearest
-half degree grid cell.'; `Coordinates for each event site generalized
-from original GPS coordinates to the nearest half degree grid cell'
+|`Coordinates generalized from original GPS coordinates to the nearest half degree grid cell.`; `Coordinates for each event site generalized from original GPS coordinates to the nearest half degree grid cell`
 
-|
-|_term:dwc[dwc:informationWithheld]_
+
+|term:dwc[dwc:informationWithheld]
 |`Sensitive species occurrence information not reported`
 
-| |term:dwc[dwc:fieldNotes] |`Notes
-available in the Grinnell-Miller Library'
+|term:dwc[dwc:fieldNotes] |`Notes available in the Grinnell-Miller Library'
 
-| |term:dwc[dwc:eventRemarks] |
+|
+|term:dwc[dwc:eventRemarks]
+|
 |===
 
 === Scope and completeness
