@@ -19,7 +19,7 @@ format.
 === DNA and metabarcoding data
 
 Refer to 'https://doi.org/10.35035/doc-vf1a-nr22[Publishing DNA-derived
-data through biodiversity data platform]' (<<Abarenkov2023>>) for
+data through biodiversity data platform]' <<Abarenkov2023>> for
 help in standardizing and publishing DNA and metabarcoding data. The
 guide is also available in
 https://docs.gbif.org/publishing-dna-derived-data/fr/[French],
