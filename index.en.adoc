@@ -16,19 +16,21 @@ endif::backend-html5[]
 
 include::colophon.en.adoc[]
 
-include::intro.en.adoc[]
+//include::intro.en.adoc[]
 
-include::scope.en.adoc[]
+//include::scope.en.adoc[]
 
-include::targetaudience.en.adoc[]
+//include::targetaudience.en.adoc[]
 
-include::usingThisGuide.en.adoc[]
+//include::usingThisGuide.en.adoc[]
 
 :sectnums:
 
 include::100.en.adoc[]
 
 include::200.en.adoc[]
+
+include::300.en.adoc[]
 
 :sectnums!:
 
