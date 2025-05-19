@@ -202,31 +202,26 @@ http://rs.tdwg.org/eco/terms/verbatimSiteDescriptions[_eco:verbatimSiteDescripti
 These terms should be populated at any hierarchical event level that is
 appropriate.
 
-General event site terms, their recommended usage (status), and example
-data entries..
-
+[caption=]
+.General event site terms, their recommended usage (status), and example data entries
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Share if available
-|_http://rs.tdwg.org/eco/terms/verbatimSiteNames[eco:verbatimSiteNames]_
-|`Trap_18'
+.5+|Share if available
+|term:eco[eco:verbatimSiteNames]
+|Trap_18\|Trap_27\|Trap_54\|Trap_96\|Annala\|Kumpula
 
-| |_http://rs.tdwg.org/dwc/terms/habitat[dwc:habitat]_ |`Ephemeral
-wetland'
+|term:dwc[dwc:habitat]
+|Ephemeral wetland
 
-| |http://rs.tdwg.org/eco/terms/reportedWeather[_eco:reportedWeather_]
-|\{``minimumTemperatureInDegreesFahrenheit'': 18,
-``maximumTemperatureInDegreesFahrenheit'': 32}
+|term:eco[eco:reportedWeather]
+|\{"minimumTemperatureInDegreesFahrenheit": 18, "maximumTemperatureInDegreesFahrenheit": 32\}
 
-|
-|_http://rs.tdwg.org/eco/terms/reportedExtremeConditions[eco:reportedExtremeConditions]_
-|`Site flooded'
+|term:eco[eco:reportedExtremeConditions]
+|Site flooded
 
-|
-|_http://rs.tdwg.org/eco/terms/verbatimSiteDescriptions[eco:verbatimSiteDescriptions]_
-|`Coastal sand dunes at dry oak forest edge. Vegetation: Ammophila
-arenaria, Betula pendula, Leymus arenarius, Pinus sylvestris'
+|term:eco[eco:verbatimSiteDescriptions]
+|Coastal sand dunes at dry oak forest edge. Vegetation: Ammophila arenaria, Betula pendula, Leymus arenarius, Pinus sylvestris
 |===
 
 ==== Site locality
