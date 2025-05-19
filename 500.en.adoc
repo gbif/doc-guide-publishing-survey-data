@@ -564,20 +564,14 @@ capture information about sampling protocol in a more structured manner:
 * term:eco[eco:protocolDescriptions] +
 * term:eco[eco:protocolReferences]
 
-[width="100%",cols="<100%",options="header",]
-|===
-|Updated recommended best practice Report the name(s) of the sampling
-protocol with
-term:eco[eco:protocolNames]. Capture
-details of the methods or protocols implemented using
-term:eco[eco:protocolDescriptions].
-Provide citation information for the protocol via
-term:eco[eco:protocolReferences].
-Retain
-term:dwc[dwc:samplingProtocol] as
-a verbatim field of
-term:eco[eco:protocolNames].
-|===
+[NOTE]
+.*Updated recommended best practice*
+====
+- Report the name(s) of the sampling protocol with term:eco[eco:protocolNames].
+- Capture details of the methods or protocols implemented using term:eco[eco:protocolDescriptions].
+- Provide citation information for the protocol via term:eco[eco:protocolReferences].
+- Retain term:dwc[dwc:samplingProtocol] as a verbatim field of term:eco[eco:protocolNames].
+====
 
 Survey event protocol terms, their recommended usage (status), and
 example data entries.
