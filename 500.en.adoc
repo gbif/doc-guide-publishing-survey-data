@@ -525,8 +525,7 @@ term:eco[eco:compilationTypes]
 and data sources captured using
 term:eco[eco:compilationSourceTypes].
 ** A compilation is a summary inventory resulting from the combination
-of multiple existing inventories (as described in Guralnick et
-al. 2018). Compilations are aggregates of multiple studies, and may
+of multiple existing inventories (as described in <<Guralnick2018>>). Compilations are aggregates of multiple studies, and may
 combine surveys employing different protocols, processes, and observers,
 often with variable reporting of the methods employed or other compiled
 data sources and literature searches.
