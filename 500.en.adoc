@@ -6,7 +6,7 @@ Event level information specifically related to survey structure,
 location, protocols, scopes, and efforts.
 
 [IMPORTANT]
-.Survey level information in DWC-A files
+.*Survey level information in DWC-A files*
 ====
 Survey event data should be
 saved to the DwC-A event table. This includes DwC Event terms (any term
