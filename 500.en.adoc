@@ -133,29 +133,28 @@ http://rs.tdwg.org/eco/terms/siteNestingDescription[_eco:siteNestingDescription_
 specific event, this should be shared using
 http://rs.tdwg.org/dwc/terms/fieldNumber[_dwc:fieldNumber_].
 
-Event hierarchy terms, their recommended usage (status), and example
-data entries.
-
+[caption=]
+.Event hierarchy terms, their recommended usage (status), and example data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Required |term:dwc[dwc:eventID]]
+|Required |term:dwc[dwc:eventID]
 |survey2022_a-2
 
 |Required for nested datasets
-|http://rs.tdwg.org/dwc/terms/parentEventID[_dwc:parentEventID_]
-|`survey2022'
+|term:dwc[dwc:parentEventID]
+|survey2022
 
-|Recommended |_http://rs.tdwg.org/eco/terms/siteCount[eco:siteCount]_
-|`75'
+|Recommended |dwc[eco:siteCount]
+|75
 
 |
-|_http://rs.tdwg.org/eco/terms/siteNestingDescription[eco:siteNestingDescription]_
-|`25 survey sites each with 3 1m2 quadrats'’
+|term:dwc[eco:siteNestingDescription]
+|25 survey sites each with 3 1m2 quadrats
 
 |Share if available
-|_http://rs.tdwg.org/dwc/terms/fieldNumber[dwc:fieldNumber]_ |`RV Sol
-87-03-08'
+|term:dwc[dwc:fieldNumber] 
+|RV Sol 87-03-08
 |===
 
 === Survey site
