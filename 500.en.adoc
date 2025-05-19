@@ -215,7 +215,7 @@ appropriate.
 |Ephemeral wetland
 
 |term:eco[eco:reportedWeather]
-|\{"minimumTemperatureInDegreesFahrenheit": 18, "maximumTemperatureInDegreesFahrenheit": 32\}
+|{"minimumTemperatureInDegreesFahrenheit": 18, "maximumTemperatureInDegreesFahrenheit": 32}
 
 |term:eco[eco:reportedExtremeConditions]
 |Site flooded
