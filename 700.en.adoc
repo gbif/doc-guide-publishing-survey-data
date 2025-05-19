@@ -175,60 +175,59 @@ absences:
 * In the *_Occurrence table_*:
 ** For each occurrence to be reported absent, the field
 term:dwc[dwc:occurrenceStatus]
-should be populated as `absent':
+should be populated as `absent`:
 
 term:dwc[dwc:occurrenceStatus] =
-`absent'
+`absent`
 
 * Recommended best practice is to also populate
 term:dwc[dwc:individualCount] and
-http://rs.tdwg.org/dwc/terms/organismQuantity[d__wc:organismQuantity__]
-as `0' and
-term:dwc[dwc:organismQuantityType]
-as `Individuals'. +
+term:dwc[dwc:organismQuantity]
+as `0` and term:dwc[dwc:organismQuantityType] as `Individuals`. +
 * In the *_Event table_*:
 ** If one or more absences are reported at any taxonomic level
 (term:dwc[dwc:occurrenceStatus] =
-`absent'), then _eco:isAbsenceReported_
-(http://rs.tdwg.org/eco/terms/isAbsenceReported) for parent Events at
-all relevant levels should be populated as `true'
+`absent`), then term:eco[eco:isAbsenceReported] for parent Events at all relevant levels should be populated as `true`
 
-_eco:isAbsenceReported_ = `true'
+term:eco[eco:isAbsenceReported] = `true`
 
-* A list of absent taxa can be provided using _eco:absentTaxa_
-(http://rs.tdwg.org/eco/terms/absentTaxa) at all relevant levels.
+* A list of absent taxa can be provided using term:eco[eco:absentTaxa] at all relevant levels.
 
 Absences should only be reported for taxa within the stated taxonomic
 and/or organismal scope of a survey. Absence cannot be asserted for
 bycatch.
 
-Terms to indicate absence, or non-detection, and their recommendation
-usage.
-
+[caption=""]
+.Terms to indicate absence, or non-detection, and their recommendation usage.
 [width="100%",cols="25%,25%,25%,25%",options="header",]
 |===
 |Table |Recommended usage |Term |Example entry
-|Occurrence |Required
-|_term:dwc[dwc:occurrenceStatus]_
-|`present' or `absent'
+|Occurrence
+|Required
+|term:dwc[dwc:occurrenceStatus]
+|`present` or `absent`
 
-|Occurrence |Recommended
-|_term:dwc[dwc:individualCount]_ |3
+|Occurrence
+.4+|Recommended
+|term:dwc[dwc:individualCount]
+|`3`
 
-|Occurrence |
-|http://rs.tdwg.org/dwc/terms/organismQuantity[d__wc:organismQuantity__]
-|3
+|Occurrence
+|term:dwc[dwc:organismQuantity]
+|`3`
 
-|Occurrence |
+|Occurrence
 |term:dwc[dwc:organismQuantityType]
-|`individuals'
+|`individuals`
 
-|Event |
+|Event
 |term:eco[eco:isAbsenceReported]
-|`true' or `false'
+|`true` or `false`
 
-|Event |Share if available
-|term:eco[eco:absentTaxa] |
+|Event
+|Share if available
+|term:eco[eco:absentTaxa]
+|
 |===
 
 === Abundance information
