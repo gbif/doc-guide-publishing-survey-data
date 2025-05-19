@@ -870,9 +870,8 @@ conditions not covered by existing
 https://eco.tdwg.org/terms/#taxonomic-scope[taxonomic] or
 https://eco.tdwg.org/terms/#organismal-scope[organismal] scope terms.
 
-General scope terms, their recommended usage (status), and example data
-entries.
-
+[caption=""]
+.General scope terms, their recommended usage (status), and example data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
@@ -887,10 +886,7 @@ Providing taxonomic scope enables reliable, quantitative,
 incl. statistical interpretation of survey and monitoring data. It is
 essential to interpret local non-detection as local absences. An
 explicitly stated targeted or intentionally excluded *taxonomic scope*
-should be reported using
-http://rs.tdwg.org/eco/terms/targetTaxonomicScope[__eco:targetTaxonomicScop__e]
-and
-term:eco[eco:excludedTaxonomicScope].
+should be reported using term:eco[eco:targetTaxonomicScope] and term:eco[eco:excludedTaxonomicScope].
 
 * If a specific person(s) or organization(s) are recorded as making the
 taxonomic identifications relevant to the stated survey scope(s), they
@@ -899,13 +895,8 @@ term:dwc[dwc:identifiedBy] (for one
 or more names) or
 term:dwc[dwc:identifiedByID] (for
 one or more unique identifiers such as, OrcID). +
-* If every organism included in
-http://rs.tdwg.org/eco/terms/targetTaxonomicScope[__eco:targetTaxonomicScop__e]
-that was observed during an event was reported, then
-term:eco[eco:isTaxonomicScopeFullyReported]
-= `true`; if not,
-term:eco[eco:isTaxonomicScopeFullyReported]
-= `false`.
+* If every organism included in terms:eco[eco:targetTaxonomicScope] that was observed during an event was reported, then
+term:eco[eco:isTaxonomicScopeFullyReported] = `true`; if not, term:eco[eco:isTaxonomicScopeFullyReported] = `false`.
 
 *Knowledge about taxonomic completeness* allows data users to determine
 how comprehensively an area was sampled. If taxonomic completeness is
@@ -918,37 +909,32 @@ If taxonomic completeness is not reported,
 term:eco[eco:taxonCompletenessReported]
 = `notReported`.
 
-Taxonomic scope terms, their recommended usage (status), and example
-data entries.
-
+[caption=""]
+.Taxonomic scope terms, their recommended usage (status), and example data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Recommended
-|_term:eco[eco:targetTaxonomicScop]_http://rs.tdwg.org/eco/terms/targetTaxonomicScope[e]
+.2+|Recommended
+|term:eco[eco:targetTaxonomicScope]
 |`Arthropods`
 
-|
-|_term:eco[eco:excludedTaxonomicScope]_
-|’Aves
+|term:eco[eco:excludedTaxonomicScope]
+|`Aves`
 
-|Share if available
+.5+|Share if available
 |_term:dwc[dwc:identifiedBy]_
-|’Cecilie Svenningsen
+|`Cecilie Svenningsen`
 
-| |_term:dwc[dwc:identifiedByID]_
-|https://orcid.org/0000-0002-9216-2917
+|_term:dwc[dwc:identifiedByID]_
+|`https://orcid.org/0000-0002-9216-2917` \| `https://orcid.org/0000-0002-0786-4069`
 
-|
-|_term:eco[eco:isTaxonomicScopeFullyReported]_
+|term:eco[eco:isTaxonomicScopeFullyReported]
 |`true` or `false`
 
-|
-|_term:eco[eco:taxonCompletenessReported]_
+|term:eco[eco:taxonCompletenessReported]
 |`reportedComplete`, `reportedIncomplete`, or `notReported`
 
-|
-|_term:eco[eco:taxonCompletenessProtocols]_
+|term:eco[eco:taxonCompletenessProtocols]
 |`Based on sampling effort`
 |===
 
