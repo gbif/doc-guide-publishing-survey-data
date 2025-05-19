@@ -1174,7 +1174,7 @@ be provided.
 
 
 [NOTE]
-.Updated recommended best practice
+.*Updated recommended best practice*
 ====
 Capture sampling effort information as structured data using the five (5) Humboldt extension terms:
 
