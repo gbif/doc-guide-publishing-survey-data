@@ -323,57 +323,53 @@ term:dwc[dwc:footprintSRS]. +
 of the site location, if available, can be shared using
 term:dwc[dwc:locality].
 
-Event site geographic locality and scope terms and their recommended
-usage (status), namespace abbreviation, and example data entries.
-
+[caption=""]
+.Event site geographic locality and scope terms and their recommended usage (status), namespace abbreviation, and example data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Recommended |*term:dwc[dwc:locationID*]
+.11+|Recommended
+|*term:dwc[dwc:locationID*]
 |`Trap_138'
 
-| |term:dwc[dwc:countryCode] |`SE'
+|term:dwc[dwc:countryCode]
+|`SE'
 
-| |term:dwc[dwc:decimalLatitude]
+|term:dwc[dwc:decimalLatitude]
 |`59.3168'
 
-| |term:dwc[dwc:decimalLongitude]
+|term:dwc[dwc:decimalLongitude]
 |`18.0627'
 
-| |term:dwc[dwc:geodeticDatum]
+|term:dwc[dwc:geodeticDatum]
 |`WGS84'
 
-|
 |term:eco[eco:geospatialScopeAreaValue]
 |`580000'
 
-|
 |term:eco[eco:geospatialScopeAreaUnit]
 |`km2'
 
-|
 |_term:eco[eco:totalAreaSampledValue]_
 |`40'
 
-|
 |term:eco[eco:totalAreaSampledUnit]
 |`m2'
 
-| |_term:dwc[dwc:sampleSizeValue]_
+|_term:dwc[dwc:sampleSizeValue]_
 |`200'
 
-| |_term:dwc[dwc:sampleSizeUnit]_
+|_term:dwc[dwc:sampleSizeUnit]_
 |`m3'
 
-|Share if available
-|term:dwc[dwc:footprintWKT] |`POLYGON
-((10 20, 11 20, 11 21, 10 21, 10 20))'
+.3+|Share if available
+|term:dwc[dwc:footprintWKT]
+|`POLYGON((10 20, 11 20, 11 21, 10 21, 10 20))'
 
-| |term:dwc[dwc:footprintSRS]
+|term:dwc[dwc:footprintSRS]
 |`epsg:4326'
 
-| |_term:dwc[dwc:locality]_ |`Agriculture
-site, Kongskilde Friluftsgård, Zealand'
+|_term:dwc[dwc:locality]_ |`Agriculture site, Kongskilde Friluftsgård, Zealand'
 |===
 
 ==== Vegetation cover
