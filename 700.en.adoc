@@ -236,59 +236,55 @@ To capture abundance information in a dataset or at a specific event
 level:
 
 * In the *Occurrence table*, use the paired terms
-http://rs.tdwg.org/dwc/terms/organismQuantity[d__wc:organismQuantity__]
-and
-term:dwc[dwc:organismQuantityType]
+term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType]
 to report the observed abundance for each reported occurrence. For
-example, if 3 individuals of a species were observed, the paired terms
+example, if three individuals of a species were observed, the paired terms
 would be populated as follows:
-** http://rs.tdwg.org/dwc/terms/organismQuantity[d__wc:organismQuantity__]
-= `3' +
-** term:dwc[dwc:organismQuantityType]
-= `Individuals' +
+** term:dwc[dwc:organismQuantity] = `3` +
+** term:dwc[dwc:organismQuantityType] = `Individuals` +
 * In the *Event table*:
 ** The inclusion of abundance information in the dataset should be
-indicated by populating _eco:isAbundanceReported_
-(http://rs.tdwg.org/eco/terms/isAbundanceReported) as `true'. +
+indicated by populating term:eco[eco:isAbundanceReported] as `true`. +
 ** If an abundance cap, and what that cap was reported, this should be
-captured using eco:_isAbundanceCapReported_
-(http://rs.tdwg.org/eco/terms/isAbundanceCapReported) and
-eco:_abundanceCap_ (http://rs.tdwg.org/eco/terms/abundanceCap).
+captured using term:eco[eco:isAbundanceCapReported] and term:eco[eco:abundanceCap].
 
 If the dataset or relevant event does not include abundance information
 is not included in the dataset, then it is recommended that the
 following terms be populated as follows in the *Event table*:
 
-* _eco:isAbundanceReported_
-(http://rs.tdwg.org/eco/terms/isAbundanceReported) = `false' +
-* eco:_isAbundanceCapReported_
-(http://rs.tdwg.org/eco/terms/isAbundanceCapReported) = `false.'
+* term:eco[eco:isAbundanceReported] = `false` +
+* term:eco[eco:isAbundanceCapReported] = `false`
 
-Terms to indicate abundance, the table on which they should be provided,
-and their recommendation usage.
-
+[caption=""]
+.Terms to indicate abundance, the table on which they should be provided, and their recommendation usage.
 [width="100%",cols="25%,25%,25%,25%",options="header",]
 |===
 |Table |Recommended usage |Term |Example entry
-|Occurrence |Recommended
-|_term:dwc[dwc:individualCount]_ |3
+|Occurrence
+.5+|Recommended
+|term:dwc[dwc:individualCount]
+|`3`
 
-|Occurrence |
-|http://rs.tdwg.org/dwc/terms/organismQuantity[d__wc:organismQuantity__]
-|3
+|Occurrence
+|term:dwc[dwc:organismQuantity]
+|`3`
 
-|Occurrence |
+|Occurrence
 |term:dwc[dwc:organismQuantityType]
-|`individuals'
+|`individuals`
 
-|Event | |_eco:isAbundanceReported_
-(http://rs.tdwg.org/eco/terms/isAbundanceReported) |`true' or `false'
+|Event
+|term:eco[eco:isAbundanceReported]
+|`true` or `false`
 
-|Event | |eco:_isAbundanceCapReported_
-(http://rs.tdwg.org/eco/terms/isAbundanceCapReported) |`true' or `false'
+|Event
+|term:eco[eco:isAbundanceCapReported]
+|`true` or `false`
 
-|Event |Share if available |eco:_abundanceCap_
-(http://rs.tdwg.org/eco/terms/abundanceCap) |5
+|Event
+|Share if available
+|term:eco[ecoabundanceCap]
+|`5`
 |===
 
 === Species’ co-occurrence and species’ interactions \{#species’-co-occurrence-and-species’-interactions}
