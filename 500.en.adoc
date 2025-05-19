@@ -389,10 +389,10 @@ https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[Relevé
 extension].
 
 If vegetation cover is reported, then
-term:eco[eco:_isVegetationCoverReported]
-= `true'; otherwise,
-term:eco[eco:_isVegetationCoverReported]
-= `false'.
+term:eco[eco:isVegetationCoverReported]
+= `true`; otherwise,
+term:eco[eco:isVegetationCoverReported]
+= `false`.
 
 === Survey date and time
 
