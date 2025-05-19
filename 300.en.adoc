@@ -167,7 +167,7 @@ Inventories].
 Creating a schematic of the dataset hierarchical structure such as in
 Figures 1 and 2 is particularly useful in exploring and effectively
 capturing survey design that generated the data collected (see also
-Figure 1 of De Pooter et al 2017). Once the event structure is
+Figure 1 of <<DePooter2017>>). Once the event structure is
 identified, the schematic can be expanded to identify which extensions
 (e.g., Humboldt, occurrence, extended measurement or facts) are
 necessary and where they will link to. After, you can proceed with
