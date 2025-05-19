@@ -70,7 +70,7 @@ Compilations may aggregate surveys using multiple protocols, processes,
 and observers, or other compiled data sources and literature searches.
 They are typically combinations of multiple broad studies performed
 within a broad spatial scope, for instance a checklist of a particular
-taxon within an area of interest (e.g. Dimaki & Legakis, 1999). This
+taxon within an area of interest (e.g. <<Dimaki1999>>). This
 type of data typically does not provide the detailed information of the
 survey process.
 
