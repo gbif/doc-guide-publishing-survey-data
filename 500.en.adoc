@@ -5,9 +5,10 @@ The following sections will guide you through the process of mapping
 Event level information specifically related to survey structure,
 location, protocols, scopes, and efforts.
 
-[width="100%",cols="100%",options="header",]
-|===
-|Survey level information in DWC-A files Survey event data should be
+[IMPORTANT]
+.Survey level information in DWC-A files
+====
+Survey event data should be
 saved to the DwC-A event table. This includes DwC Event terms (any term
 preceded by _`dwc'_, e.g.,
 http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_]) and Humboldt
@@ -39,7 +40,7 @@ in both Event records. Refer to
 https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in the
 Humboldt Extension for Ecological Inventories^] for guidance in
 populating Humboldt extension terms across event levels.
-|===
+====
 
 === Survey design
 
