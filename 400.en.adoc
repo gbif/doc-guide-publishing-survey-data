@@ -2,7 +2,7 @@
 
 [IMPORTANT] 
 ====
-|Resource metadata information should be saved to the DwC-A metafile.
+Resource metadata information should be saved to the DwC-A metafile.
 ====
 
 *Resource metadata* provides project- and/or dataset- level information
