@@ -11,9 +11,9 @@ location, protocols, scopes, and efforts.
 Survey event data should be
 saved to the DwC-A event table. This includes DwC Event terms (any term
 preceded by _`dwc'_, e.g.,
-http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_]) and Humboldt
+term:dwc[dwc:eventID]) and Humboldt
 extension terms (any term preceded by _`eco'_, e.g.,
-http://rs.tdwg.org/eco/terms/protocolNames[_eco:protocolNames_]).
+term:eco[eco:protocolNames]).
 
   - A
 comprehensive list of Darwin Core terms that can be applied at the event
@@ -57,14 +57,14 @@ populating Humboldt extension terms across event levels.
 Survey sampling design specifies survey strategy and how the stations or
 transects are laid out. Historically, only 2 terms were available to
 explicitly structure and relate different levels of survey design in a
-dataset: http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_] and
-http://rs.tdwg.org/dwc/terms/parentEventID[_dwc:parentEventID_]. One
+dataset: term:dwc[dwc:eventID] and
+term:dwc[dwc:parentEventID]. One
 additional Darwin Core event term,
-http://rs.tdwg.org/dwc/terms/fieldNumber[_dwc:fieldNumber_], provided a
+term:dwc[dwc:fieldNumber], provided a
 means by which to relate a sampling event with a dataset- or project-
 specific field number. Humboldt extension provides an additional 2
-terms—http://rs.tdwg.org/eco/terms/siteCount[_eco:siteCount_] and
-http://rs.tdwg.org/eco/terms/siteNestingDescription[_eco:siteNestingDescription_]—
+terms—term:eco[eco:siteCount] and
+term:eco[eco:siteNestingDescription]—
 to better support complex or nested dataset.
 
 [NOTE]
@@ -72,11 +72,11 @@ to better support complex or nested dataset.
 ====
 - Any dataset to be published using the DwC event core
 must have at least 1 event record with a unique
-http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_].
-- Each http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_] in a dataset must be
+term:dwc[dwc:eventID].
+- Each term:dwc[dwc:eventID] in a dataset must be
 unique within the dataset. Use of a persistent globally unique
 identifier (GUID) is recommended (this can be the original field
-number). A unique http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_]
+number). A unique term:dwc[dwc:eventID]
 should be reused between datasets where appropriate (for example, where
 data collected during the same sampling event are published as multiple
 datasets). See
@@ -86,7 +86,7 @@ persistent identifiers.
 - An event is not required to have associated
 organism occurrence data. If organism occurrence or non-detection data
 are available, they are connected via the
-http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_] to the event and the
+term:dwc[dwc:eventID] to the event and the
 https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[Occurrence
 extension]. 
 - DwC event core extensions, including
@@ -95,43 +95,43 @@ https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[e
 measurements or facts], and
 https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[Relevé]
 extensions, can be applied to any event level via the appropriate
-http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_].
+term:dwc[dwc:eventID].
 ====
 
 *Non-nested datasets*
 
 * Each event in a non-nested dataset must be assigned a unique
-http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_]. +
+term:dwc[dwc:eventID]. +
 * Non-nested datasets will not have a
-http://rs.tdwg.org/dwc/terms/parentEventID[_dwc:parentEventID_] and
-http://rs.tdwg.org/eco/terms/siteNestingDescription[_eco:siteNestingDescription_]
+term:dwc[dwc:parentEventID] and
+term:eco[eco:siteNestingDescription]
 does not need to be populated.
 
 *Nested datasets*
 
 Nested hierarchies are established by relating a child event to a parent
 event through the child Event’s
-http://rs.tdwg.org/dwc/terms/parentEventID[_dwc:parentEventID_]. As
+term:dwc[dwc:parentEventID]. As
 such, these more complex datasets require use of both
-http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_] and
-http://rs.tdwg.org/dwc/terms/parentEventID[_dwc:parentEventID_].
+term:dwc[dwc:eventID] and
+term:dwc[dwc:parentEventID].
 
 * Each event in a nested dataset must have a unique
-http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_]. +
+term:dwc[dwc:eventID]. +
 * Each parent event must have its own
-http://rs.tdwg.org/dwc/terms/parentEventID[_dwc:parentEventID_].
+term:dwc[dwc:parentEventID].
 
 In addition to event and parent event identifiers:
 
 * *Site count and site nesting description:* Nested datasets should, at
 the parent event level, include the total number of sites sampled in
-http://rs.tdwg.org/eco/terms/siteCount[_eco:siteCount_] and provide a
+term:eco[eco:siteCount] and provide a
 textual description of the survey design or site sampling structure
 using
-http://rs.tdwg.org/eco/terms/siteNestingDescription[_eco:siteNestingDescription_]. +
+term:eco[eco:siteNestingDescription]. +
 * *Field number:* If the survey data include a field number for each
 specific event, this should be shared using
-http://rs.tdwg.org/dwc/terms/fieldNumber[_dwc:fieldNumber_].
+term:dwc[dwc:fieldNumber].
 
 [caption=]
 .Event hierarchy terms, their recommended usage (status), and example data entries.
@@ -183,21 +183,21 @@ terms that shared for every event level that the information is
 available, including:
 
 * *Site names:* report individual sampling event site names using
-http://rs.tdwg.org/eco/terms/verbatimSiteNames[_eco:verbatimSiteNames_].
+term:eco[eco:verbatimSiteNames].
 A concatenated list of site names can be provided at higher event
 levels. +
 * *Habitat:* reported habitat at a sampling event site should be
-recorded in http://rs.tdwg.org/dwc/terms/habitat[_dwc:habitat_]. A
+recorded in term:dwc[dwc:habitat]. A
 concatenated list of habitats can be provided at higher event levels. +
 * *Weather:* reported weather at a sampling event site should be
 recorded in
-http://rs.tdwg.org/eco/terms/reportedWeather[_eco:reportedWeather_]. +
+term:eco[eco:reportedWeather]. +
 * *Extreme conditions:* reported extreme conditions at a sampling event
 site at the time of the survey event should be recorded in
-http://rs.tdwg.org/eco/terms/reportedExtremeConditions[_eco:reportedExtremeConditions_]. +
+term:eco[eco:reportedExtremeConditions]. +
 * *Verbatim site description:* verbatim comments (e.g., the original
 textual description) about a site or sites should be copied in
-http://rs.tdwg.org/eco/terms/verbatimSiteDescriptions[_eco:verbatimSiteDescriptions_].
+term:eco[eco:verbatimSiteDescriptions].
 
 These terms should be populated at any hierarchical event level that is
 appropriate.
@@ -257,34 +257,34 @@ targeted area and the area actually sampled to understand the geospatial
 scope of the survey. Two sets of paired terms are available to report
 the area of an event or survey site: _geospatial scope_ terms and _total
 area sampled_ terms. *_Geospatial scope_* terms
-(http://rs.tdwg.org/eco/terms/geospatialScopeAreaValue[_eco:geospatialScopeAreaValue_]
+(term:eco[eco:geospatialScopeAreaValue]
 and
-http://rs.tdwg.org/eco/terms/geospatialScopeAreaUnit[_eco:geospatialScopeAreaUnit_])
+term:eco[eco:geospatialScopeAreaUnit])
 define the geospatial scope or extent of a survey or sampling event.
 *_Total area sampled_* terms
-(http://rs.tdwg.org/eco/terms/totalAreaSampledValue[_eco:totalAreaSampledValue_]
+(term:eco[eco:totalAreaSampledValue]
 and
-http://rs.tdwg.org/eco/terms/totalAreaSampledUnit[_eco:totalAreaSampledUnit_])
+term:eco[eco:totalAreaSampledUnit])
 report the total area sampled during an event.
 
 * For *non-nested event datasets*,
-http://rs.tdwg.org/eco/terms/geospatialScopeAreaValue[_eco:geospatialScopeAreaValue_]
+term:eco[eco:geospatialScopeAreaValue]
 and
-http://rs.tdwg.org/eco/terms/geospatialScopeAreaUnit[_eco:geospatialScopeAreaUnit_],
+term:eco[eco:geospatialScopeAreaUnit],
 and
-http://rs.tdwg.org/eco/terms/totalAreaSampledValue[_eco:totalAreaSampledValue_]
+term:eco[eco:totalAreaSampledValue]
 and
-http://rs.tdwg.org/eco/terms/totalAreaSampledUnit[_eco:totalAreaSampledUnit_]
+term:eco[eco:totalAreaSampledUnit]
 may contain the same values. +
 * In *nested datasets*,
-http://rs.tdwg.org/eco/terms/geospatialScopeAreaValue[_eco:geospatialScopeAreaValue_]
+term:eco[eco:geospatialScopeAreaValue]
 and
-http://rs.tdwg.org/eco/terms/geospatialScopeAreaUnit[_eco:geospatialScopeAreaUnit_]
+term:eco[eco:geospatialScopeAreaUnit]
 should be used to report the full study extent at the parent event level
 (the total area surveyed in a series of survey Events) and
-http://rs.tdwg.org/eco/terms/totalAreaSampledValue[_eco:totalAreaSampledValue_]
+term:eco[eco:totalAreaSampledValue]
 and
-http://rs.tdwg.org/eco/terms/totalAreaSampledUnit[_eco:totalAreaSampledUnit_]
+term:eco[eco:totalAreaSampledUnit]
 should be used to relate the area of child event sites (e.g., individual
 survey sites). Geospatial scope value(s) should always be greater than
 or equal to that of total area sampled.
@@ -294,34 +294,34 @@ https://www.gbif.org/dataset/cd4eb3ec-0a18-42b4-bda4-155716ddd7b1[Biowide
 project] which surveyed 130 40x40m plots across Denmark. Here, the
 project-level parent event would report the full geographic extent of
 Denmark:
-http://rs.tdwg.org/eco/terms/geospatialScopeAreaValue[_eco:geospatialScopeAreaValue_]
+term:eco[eco:geospatialScopeAreaValue]
 = `42934' and
-http://rs.tdwg.org/eco/terms/geospatialScopeAreaUnit[_eco:geospatialScopeAreaUnit_]
+term:eco[eco:geospatialScopeAreaUnit]
 = `km2'. The associated 130 child events representing each individual
 survey site would then report the area of the site as
-http://rs.tdwg.org/eco/terms/totalAreaSampledValue[_eco:totalAreaSampledValue_]
+term:eco[eco:totalAreaSampledValue]
 = `40' and
-http://rs.tdwg.org/eco/terms/totalAreaSampledUnit[_eco:totalAreaSampledUnit_]
+term:eco[eco:totalAreaSampledUnit]
 = `m2'.
 
 *_If the sampled unit is not an area_* (such as a filtered volume of
 water in a zooplankton haul),
-http://rs.tdwg.org/dwc/terms/sampleSizeValue[_dwc:sampleSizeValue_] and
-http://rs.tdwg.org/dwc/terms/sampleSizeUnit[_dwc:sampleSizeUnit_] should
+term:dwc[dwc:sampleSizeValue] and
+term:dwc[dwc:sampleSizeUnit] should
 be used in place of
-http://rs.tdwg.org/eco/terms/totalAreaSampledValue[_eco:totalAreaSampledValue_]
+term:eco[eco:totalAreaSampledValue]
 and
-http://rs.tdwg.org/eco/terms/totalAreaSampledUnit[_eco:totalAreaSampledUnit_].
+term:eco[eco:totalAreaSampledUnit].
 
 ==== Additional survey site information
 
 * *Survey site geometry:* If available, the geometry of a survey site
 area should be shared using
-http://rs.tdwg.org/dwc/terms/footprintWKT[_dwc:footprintWKT_] and
-http://rs.tdwg.org/dwc/terms/footprintSRS[_dwc:footprintSRS_]. +
+term:dwc[dwc:footprintWKT] and
+term:dwc[dwc:footprintSRS]. +
 * *Verbatim site location information:* A more general text description
 of the site location, if available, can be shared using
-http://rs.tdwg.org/dwc/terms/locality[_dwc:locality_].
+term:dwc[dwc:locality].
 
 Event site geographic locality and scope terms and their recommended
 usage (status), namespace abbreviation, and example data entries.
@@ -329,50 +329,50 @@ usage (status), namespace abbreviation, and example data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Recommended |*http://rs.tdwg.org/dwc/terms/locationID[dwc:locationID*]
+|Recommended |*term:dwc[dwc:locationID*]
 |`Trap_138'
 
-| |http://rs.tdwg.org/dwc/terms/countryCode[_dwc:countryCode_] |`SE'
+| |term:dwc[dwc:countryCode] |`SE'
 
-| |http://rs.tdwg.org/dwc/terms/decimalLatitude[_dwc:decimalLatitude_]
+| |term:dwc[dwc:decimalLatitude]
 |`59.3168'
 
-| |http://rs.tdwg.org/dwc/terms/decimalLongitude[_dwc:decimalLongitude_]
+| |term:dwc[dwc:decimalLongitude]
 |`18.0627'
 
-| |http://rs.tdwg.org/dwc/terms/geodeticDatum[_dwc:geodeticDatum_]
+| |term:dwc[dwc:geodeticDatum]
 |`WGS84'
 
 |
-|http://rs.tdwg.org/eco/terms/geospatialScopeAreaValue[_eco:geospatialScopeAreaValue_]
+|term:eco[eco:geospatialScopeAreaValue]
 |`580000'
 
 |
-|http://rs.tdwg.org/eco/terms/geospatialScopeAreaUnit[_eco:geospatialScopeAreaUnit_]
+|term:eco[eco:geospatialScopeAreaUnit]
 |`km2'
 
 |
-|_http://rs.tdwg.org/eco/terms/totalAreaSampledValue[eco:totalAreaSampledValue]_
+|_term:eco[eco:totalAreaSampledValue]_
 |`40'
 
 |
-|http://rs.tdwg.org/eco/terms/totalAreaSampledUnit[_eco:totalAreaSampledUnit_]
+|term:eco[eco:totalAreaSampledUnit]
 |`m2'
 
-| |_http://rs.tdwg.org/dwc/terms/sampleSizeValue[dwc:sampleSizeValue]_
+| |_term:dwc[dwc:sampleSizeValue]_
 |`200'
 
-| |_http://rs.tdwg.org/dwc/terms/sampleSizeUnit[dwc:sampleSizeUnit]_
+| |_term:dwc[dwc:sampleSizeUnit]_
 |`m3'
 
 |Share if available
-|http://rs.tdwg.org/dwc/terms/footprintWKT[_dwc:footprintWKT_] |`POLYGON
+|term:dwc[dwc:footprintWKT] |`POLYGON
 ((10 20, 11 20, 11 21, 10 21, 10 20))'
 
-| |http://rs.tdwg.org/dwc/terms/footprintSRS[_dwc:footprintSRS_]
+| |term:dwc[dwc:footprintSRS]
 |`epsg:4326'
 
-| |_http://rs.tdwg.org/dwc/terms/locality[dwc:locality]_ |`Agriculture
+| |_term:dwc[dwc:locality]_ |`Agriculture
 site, Kongskilde Friluftsgård, Zealand'
 |===
 
@@ -382,7 +382,7 @@ Vegetation cover at a survey site can be reported in three ways:
 
 * *Verbatim vegetation cover:* a verbatim description of vegetation
 cover can be captured in
-http://rs.tdwg.org/eco/terms/verbatimSiteDescriptions[_eco:verbatimSiteDescriptions_]. +
+term:eco[eco:verbatimSiteDescriptions]. +
 * *Percent vegetation cover:* simple percent vegetation cover can be
 recorded as structured data using the
 https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[extended
@@ -393,9 +393,9 @@ https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[Relevé
 extension].
 
 If vegetation cover is reported, then
-http://rs.tdwg.org/eco/terms/isVegetationCoverReported[eco:_isVegetationCoverReported_]
+term:eco[eco:_isVegetationCoverReported]
 = `true'; otherwise,
-http://rs.tdwg.org/eco/terms/isVegetationCoverReported[eco:_isVegetationCoverReported_]
+term:eco[eco:_isVegetationCoverReported]
 = `false'.
 
 === Survey date and time
@@ -407,16 +407,16 @@ information about sampling conditions.
 *Event date, time, and duration*
 
 Each event should have a reported date or date range reported in
-http://rs.tdwg.org/dwc/terms/eventDate[_dwc:eventDate_] regardless of
+term:dwc[dwc:eventDate] regardless of
 its hierarchical level. *Nested datasets* should, at the parent event
 level, report a date range encompassing all survey dates.
 
 If available, the time and duration of each event should be reported
-using http://rs.tdwg.org/dwc/terms/eventTime[_dwc:eventTime_] and the
+using term:dwc[dwc:eventTime] and the
 paired terms
-http://rs.tdwg.org/eco/terms/eventDurationValue[_eco:eventDurationValue_]
+term:eco[eco:eventDurationValue]
 and
-http://rs.tdwg.org/eco/terms/eventDurationUnit[_eco:eventDurationUnit_].
+term:eco[eco:eventDurationUnit].
 
 Refer to GBIF’s technical documentation on
 https://techdocs.gbif.org/en/data-processing/temporal-interpretation[Date
@@ -429,18 +429,18 @@ and example data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Required |http://rs.tdwg.org/dwc/terms/eventDate[_dwc:eventDate_]
+|Required |term:dwc[dwc:eventDate]
 |`2018-08-29'
 
-|Recommended |_http://rs.tdwg.org/dwc/terms/eventTime[dwc:eventTime]_
+|Recommended |_term:dwc[dwc:eventTime]_
 |`08:00Z'
 
 |
-|http://rs.tdwg.org/eco/terms/eventDurationValue[_eco:eventDurationValue_]
+|term:eco[eco:eventDurationValue]
 |`1'
 
 |
-|http://rs.tdwg.org/eco/terms/eventDurationUnit[_eco:eventDurationUnit_]
+|term:eco[eco:eventDurationUnit]
 |`hour'
 |===
 
@@ -461,16 +461,16 @@ inferred between event levels._*
 Biological survey event data can result from a wide variety of effort
 types (e.g., Bioblitzes, inventories). The nature of the survey event
 should be reported using
-http://rs.tdwg.org/dwc/terms/eventType[_dwc:eventType_].
+term:dwc[dwc:eventType].
 
 [width="100%",cols="<100%",options="header",]
 |===
 |Identifying event type
-http://rs.tdwg.org/dwc/terms/eventType[_dwc:eventType_] should provide a
+term:dwc[dwc:eventType] should provide a
 high level overview of sampling effort type but should not be so
 specific as to overlap with sampling protocol. There is no single,
 standardized vocabulary for
-http://rs.tdwg.org/dwc/terms/eventType[_dwc:eventType_]. If your
+term:dwc[dwc:eventType]. If your
 organization or community has a controlled vocabulary, it is recommended
 to apply terms from that. Otherwise, you can refer to the common event
 types below for guidance. Project: Projects are structured initiatives
@@ -480,33 +480,33 @@ linked to non-biological information identifying participating
 organizations and people (agents), funding agencies, and other
 high-level administrative information. Biological sampling may only be
 one facet of a project’s scope. `Project' as a
-http://rs.tdwg.org/dwc/terms/eventType[_dwc:eventType_] is typically
+term:dwc[dwc:eventType] is typically
 most appropriate only at the highest (parent) event level in a nested
 dataset. Expedition: An expedition is an organized information gathering
 venture that inherently includes multiple sampling events and event
 types. Expeditions may include multiple taxonomic and/organismal scopes,
 any number of documented sampling protocols, and varying degrees of
 complexity in survey design. `Expedition' as a
-http://rs.tdwg.org/dwc/terms/eventType[_dwc:eventType_] is typically
+term:dwc[dwc:eventType] is typically
 most appropriate at higher (parent) event levels in nested hierarchies.
 Survey: A survey is a systematic effort to collect information about the
 biological organisms in a specific area at a given time. Surveys
 typically included at least one documented protocol and may or may not
 have an explicitly defined taxonomic and/or organismal scope. `Survey'
 is the most general event type term and can be applied as a
-http://rs.tdwg.org/dwc/terms/eventType[_dwc:eventType_] at any event
+term:dwc[dwc:eventType] at any event
 level. Inventory: An inventory is a comprehensive survey of the taxa
 present in a specific area over an explicit period of time. Inventories
 typically have an explicit taxonomic and/or organismal scope and a
 well-defined protocol. `Inventory' is typically most appropriate as a
-http://rs.tdwg.org/dwc/terms/eventType[_dwc:eventType_] at lower (child)
+term:dwc[dwc:eventType] at lower (child)
 event levels in nested hierarchies. Bioblitz: A bioblitz is a survey
 event aimed at finding and identifying as many species as possible in a
 specific area over a (typically) short, contiguous period of time.
 Bioblitzes often include participants (agents) with a wide range of
 backgrounds and levels of expertise in biodiversity sciences including
 formal biologists as well as the broader, general public. `Bioblitz' as
-a http://rs.tdwg.org/dwc/terms/eventType[_dwc:eventType_] is typically
+a term:dwc[dwc:eventType] is typically
 most appropriate at lower (child) event levels in nested hierarchies.
 Identification: An identification is the taxonomic identification of a
 material sample or samples collected during an event. This could be an
@@ -517,16 +517,16 @@ laboratory).
 
 *`Inventory' event types*
 
-* If http://rs.tdwg.org/dwc/terms/eventType[_dwc:eventType_] =
+* If term:dwc[dwc:eventType] =
 *`inventory'*, the type of search implemented (e.g., restricted search,
 open search, opportunistic search, trap or sample, compilation) must be
 reported in
-http://rs.tdwg.org/eco/terms/inventoryTypes[_eco:inventoryTypes_]. +
+term:eco[eco:inventoryTypes]. +
 * If _eco:inventoryTypes_ = ’*compilation’*, the compilation type should
 be reported using
-http://rs.tdwg.org/eco/terms/compilationTypes[_eco:compilationTypes_]
+term:eco[eco:compilationTypes]
 and data sources captured using
-http://rs.tdwg.org/eco/terms/compilationSourceTypes[_eco:compilationSourceTypes_].
+term:eco[eco:compilationSourceTypes].
 ** A compilation is a summary inventory resulting from the combination
 of multiple existing inventories (as described in Guralnick et
 al. 2018). Compilations are aggregates of multiple studies, and may
@@ -540,18 +540,18 @@ entries..
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Recommended |http://rs.tdwg.org/dwc/terms/eventType[_dwc:eventType_]
+|Recommended |term:dwc[dwc:eventType]
 |`Inventory'
 
 |Recommended if applicable
-|http://rs.tdwg.org/eco/terms/inventoryTypes[_eco:inventoryTypes_]
+|term:eco[eco:inventoryTypes]
 |`Open search'
 
-| |http://rs.tdwg.org/eco/terms/compilationTypes[_eco:compilationTypes_]
+| |term:eco[eco:compilationTypes]
 |`compilationOfExistingSourcesAndSamplingEvents'
 
 |
-|http://rs.tdwg.org/eco/terms/compilationSourceTypes[_eco:compilationSourceTypes_]
+|term:eco[eco:compilationSourceTypes]
 |`museumSpecimens'
 |===
 
@@ -559,28 +559,28 @@ entries..
 
 Four protocol terms currently exist, however, only 1 term is required to
 publish a sampling event dataset in GBIF:
-http://rs.tdwg.org/dwc/terms/samplingProtocol[_dwc:samplingProtocol_].
+term:dwc[dwc:samplingProtocol].
 This requirement is because the initial Darwin Core event classification
 only included the one term. The Humboldt Extension introduced 3 terms to
 capture information about sampling protocol in a more structured manner:
 
-* http://rs.tdwg.org/eco/terms/protocolNames[_eco:protocolNames_] +
-* http://rs.tdwg.org/eco/terms/protocolDescriptions[_eco:protocolDescriptions_] +
-* http://rs.tdwg.org/eco/terms/protocolReferences[_eco:protocolReferences_]
+* term:eco[eco:protocolNames] +
+* term:eco[eco:protocolDescriptions] +
+* term:eco[eco:protocolReferences]
 
 [width="100%",cols="<100%",options="header",]
 |===
 |Updated recommended best practice Report the name(s) of the sampling
 protocol with
-http://rs.tdwg.org/eco/terms/protocolNames[_eco:protocolNames_]. Capture
+term:eco[eco:protocolNames]. Capture
 details of the methods or protocols implemented using
-http://rs.tdwg.org/eco/terms/protocolDescriptions[_eco:protocolDescriptions_].
+term:eco[eco:protocolDescriptions].
 Provide citation information for the protocol via
-http://rs.tdwg.org/eco/terms/protocolReferences[_eco:protocolReferences_].
+term:eco[eco:protocolReferences].
 Retain
-http://rs.tdwg.org/dwc/terms/samplingProtocol[_dwc:samplingProtocol_] as
+term:dwc[dwc:samplingProtocol] as
 a verbatim field of
-http://rs.tdwg.org/eco/terms/protocolNames[_eco:protocolNames_].
+term:eco[eco:protocolNames].
 |===
 
 Survey event protocol terms, their recommended usage (status), and
@@ -590,15 +590,15 @@ example data entries.
 |===
 |Status |Term |Example entry
 |Required
-|http://rs.tdwg.org/dwc/terms/samplingProtocol[_dwc:samplingProtocol_]
+|term:dwc[dwc:samplingProtocol]
 |`Visual survey'
 
 |Recommended
-|http://rs.tdwg.org/eco/terms/protocolNames[_eco:protocolNames_]
+|term:eco[eco:protocolNames]
 |`Visual survey'
 
 |
-|http://rs.tdwg.org/eco/terms/protocolDescriptions[_eco:protocolDescriptions_]
+|term:eco[eco:protocolDescriptions]
 |`For each site a total list of lichen species (lichenized fungi) was
 produced based on a careful examination of soil, wood, stone surfaces
 and bark of trees up to 2 m at three time periods: October-November
@@ -610,7 +610,7 @@ registered in www.svampeatlas.dk, and the nomenclature used is in
 accordance with this database.'
 
 |
-|http://rs.tdwg.org/eco/terms/protocolReferences[_eco:protocolReferences_]
+|term:eco[eco:protocolReferences]
 |`See Appendix B of Brunbjerg, A.K., Bruun, H.H., Brøndum, L. et al. A
 systematic survey of regional multi-taxon biodiversity: evaluating
 strategies and coverage. BMC Ecol 19, 43 (2019).
@@ -628,10 +628,10 @@ change, and conservation planning and resource management.
 * If the dataset includes absence information for one or more
 occurrences (to be reported in the `occurrence' table as
 _dwc:occurrenceStatus_ = `absent'), then
-http://rs.tdwg.org/eco/terms/isAbsenceReported[_eco:isAbsenceReported_]
+term:eco[eco:isAbsenceReported]
 = `true'. +
 * A list of absent taxa can be provided using
-http://rs.tdwg.org/eco/terms/absentTaxa[_eco:absentTaxa_] at all
+term:eco[eco:absentTaxa] at all
 relevant levels. Absences should only be reported for taxa within the
 stated taxonomic and/or organismal scope of a survey. Absence cannot be
 asserted for bycatch.
@@ -646,14 +646,14 @@ biodiversity assessment, evaluating ecological health, managing invasive
 species, and informing effective habitat and ecosystem management.
 
 * If the dataset includes abundance information,
-http://rs.tdwg.org/eco/terms/isAbundanceReported[_eco:isAbundanceReported_]
+term:eco[eco:isAbundanceReported]
 = `true' for all appropriate Event levels. If there is an abundance cap,
 then
-http://rs.tdwg.org/eco/terms/isAbundanceCapReported[eco:_isAbundanceCapReported_]
+term:eco[eco:_isAbundanceCapReported]
 = `true' and the value of the cap should be reported in
-http://rs.tdwg.org/eco/terms/abundanceCap[_eco:abundanceCap_]. +
+term:eco[eco:abundanceCap]. +
 * If there is no abundance cap, then
-http://rs.tdwg.org/eco/terms/isAbundanceCapReported[eco:_isAbundanceCapReported_]
+term:eco[eco:_isAbundanceCapReported]
 = `false'.
 
 See the section `link:#abundance-information[Abundance information]' for
@@ -666,21 +666,21 @@ example data entries.
 |===
 |Status |Term |Example entry
 |Recommended
-|http://rs.tdwg.org/eco/terms/isAbsenceReported[_eco:isAbsenceReported_]
+|term:eco[eco:isAbsenceReported]
 |`true' or `false'
 
 |
-|http://rs.tdwg.org/eco/terms/isAbundanceReported[_eco:isAbundanceReported_]
+|term:eco[eco:isAbundanceReported]
 |`true' or `false'
 
 |
-|http://rs.tdwg.org/eco/terms/isAbundanceCapReported[eco:_isAbundanceCapReported_]
+|term:eco[eco:_isAbundanceCapReported]
 |`true' or `false'
 
 |Share if available
-|http://rs.tdwg.org/eco/terms/absentTaxa[_eco:absentTaxa_] |
+|term:eco[eco:absentTaxa] |
 
-| |http://rs.tdwg.org/eco/terms/abundanceCap[_eco:abundanceCap_] |`5'
+| |term:eco[eco:abundanceCap] |`5'
 |===
 
 ==== Material samples
@@ -693,16 +693,16 @@ genetic sample.
 
 If the dataset includes at least one material sample:
 
-* http://rs.tdwg.org/eco/terms/hasMaterialSamples[_eco:hasMaterialSamples_]
+* term:eco[eco:hasMaterialSamples]
 = `true' at the appropriate child event level and at any relevant parent
 event level, and +
 * the type(s) of materials collected should be listed under
-http://rs.tdwg.org/eco/terms/materialSampleTypes[_eco:materialSampleTypes_]
+term:eco[eco:materialSampleTypes]
 for each relevant event level.
 
 If the dataset or sampling event does _not_ include material samples:
 
-* http://rs.tdwg.org/eco/terms/hasMaterialSamples[_eco:hasMaterialSamples_]
+* term:eco[eco:hasMaterialSamples]
 = `false' at all appropriate sampling event levels.
 
 ==== Vouchers
@@ -713,16 +713,16 @@ effort.
 
 If the dataset has vouchers:
 
-* http://rs.tdwg.org/eco/terms/hasVouchers[_eco:hasVouchers_] = `true'
+* term:eco[eco:hasVouchers] = `true'
 at the appropriate child event level and at any relevant parent event
 level, and +
 * a list of institutions housing them should be shared in
-http://rs.tdwg.org/eco/terms/voucherInstitutions[_eco:voucherInstitutions_]
+term:eco[eco:voucherInstitutions]
 for each relevant event level.
 
 If the dataset or sampling event does _not_ include vouchers:
 
-* http://rs.tdwg.org/eco/terms/hasVouchers[_eco:hasVouchers_] = `false'
+* term:eco[eco:hasVouchers] = `false'
 at all appropriate sampling event levels.
 
 ==== Sensitive data: data generalization & information withheld \{#sensitive-data:-data-generalization-&-information-withheld}
@@ -734,9 +734,9 @@ publicly or even withhold information completely.
 
 Two terms are available to communicate if data are generalized or
 withheld from the data:
-http://rs.tdwg.org/dwc/terms/dataGeneralizations[_dwc:dataGeneralizations_]
+term:dwc[dwc:dataGeneralizations]
 and
-http://rs.tdwg.org/dwc/terms/informationWithheld[_dwc:informationWithheld_].
+term:dwc[dwc:informationWithheld].
 While it is the responsibility of the publisher to protect sensitive
 species occurrence data, it is also the data publisher’s responsibility
 to clearly communicate any relevant actions taken and to indicate if the
@@ -759,17 +759,17 @@ https://docs.gbif.org/sensitive-species-best-practices/master/es/[Spanish].
 When generalizing data you should try not to reduce the value of the
 data for analysis, and a clear summary of the data generalization
 process should be reported at the appropriate event level(s) using
-http://rs.tdwg.org/dwc/terms/dataGeneralizations[_dwc:dataGeneralizations_].
+term:dwc[dwc:dataGeneralizations].
 
 For example, if the spatial resolution of locality data for an event is
 reduced to the nearest half degree, then
-http://rs.tdwg.org/dwc/terms/dataGeneralizations[_dwc:dataGeneralizations_]
+term:dwc[dwc:dataGeneralizations]
 = `__Coordinates generalized from original GPS coordinates to the
 nearest half degree grid cell__' for each event to which this treatment
 was applied. If the location information was generalized for every
 sampling event site in a nested hierarchy, then at the parent event
 level
-http://rs.tdwg.org/dwc/terms/dataGeneralizations[_dwc:dataGeneralizations_]
+term:dwc[dwc:dataGeneralizations]
 = `__Coordinates for each event site generalized from original GPS
 coordinates to the nearest half degree grid cell__.'
 
@@ -777,24 +777,24 @@ coordinates to the nearest half degree grid cell__.'
 
 If specific data are not reported with the dataset, a clarifying
 statement should be provided at the appropriate event level using
-http://rs.tdwg.org/dwc/terms/informationWithheld[_dwc:informationWithheld_].
+term:dwc[dwc:informationWithheld].
 
 For example, if sensitive species data are not purposefully excluded
 from the published data,
-http://rs.tdwg.org/dwc/terms/informationWithheld[_dwc:informationWithheld_]
+term:dwc[dwc:informationWithheld]
 should include a statement along the lines of `__Sensitive species
 occurrence information not reported__.'
 
 ==== Least specific target category quantity inclusive
 
 The term
-http://rs.tdwg.org/eco/terms/isLeastSpecificTargetCategoryQuantityInclusive[_eco:isLeastSpecificTargetCategoryQuantityInclusive_]
+term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
 provides a means by which to indicate to data users if an organismal
 occurrence record for an specific event reporting an explicit quantity
 of that organism via the paired terms
-http://rs.tdwg.org/dwc/terms/organismQuantity[_dwc:organismQuantity_]
+term:dwc[dwc:organismQuantity]
 and
-http://rs.tdwg.org/dwc/terms/organismQuantityType[_dwc:organismQuantityType_]
+term:dwc[dwc:organismQuantityType]
 represents the total number of that organism observed during the event.
 That is, it answers the question: _is this the only record of that
 organism during the event?_
@@ -802,13 +802,13 @@ organism during the event?_
 * If the quantity reported using these paired terms includes all the
 organisms of the same taxon sampled/observed in that single occurrence
 record, then
-http://rs.tdwg.org/eco/terms/isLeastSpecificTargetCategoryQuantityInclusive[_eco:isLeastSpecificTargetCategoryQuantityInclusive_]
+term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
 = `true.' +
 * If the quantity reported using these paired terms does _not_ include
 all organisms of the same taxon sampled/observed in that single
 occurrence record (e.g., there are 2 or more occurrence records reported
 for the same event), then
-http://rs.tdwg.org/eco/terms/isLeastSpecificTargetCategoryQuantityInclusive[_eco:isLeastSpecificTargetCategoryQuantityInclusive_]
+term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
 = `false.'
 
 See https://eco.tdwg.org/inclusive/[Guidelines for
@@ -821,10 +821,10 @@ Two verbatim fields are available to provide additional information
 about an event.
 
 * *Field notes:* Field notes can be copied, transcribed verbatim, or
-linked into http://rs.tdwg.org/dwc/terms/fieldNotes[_dwc:fieldNotes_]. +
+linked into term:dwc[dwc:fieldNotes]. +
 * *Event remarks*: Additional comments about a particular Event that
 don’t fit in any other term can be shared using
-http://rs.tdwg.org/dwc/terms/eventRemarks[_dwc:eventRemarks_].
+term:dwc[dwc:eventRemarks].
 
 Both fields can be applied to any event at any level.
 
@@ -835,38 +835,38 @@ recommended usage (status), and example data entries.
 |===
 |Status |Term |Example entry
 |Recommended
-|http://rs.tdwg.org/eco/terms/hasMaterialSamples[_eco:hasMaterialSamples_]
+|term:eco[eco:hasMaterialSamples]
 |`true' or `false'
 
-| |http://rs.tdwg.org/eco/terms/hasVouchers[_eco:hasVouchers_] |`true'
+| |term:eco[eco:hasVouchers] |`true'
 or `false'
 
 |
-|http://rs.tdwg.org/eco/terms/isLeastSpecificTargetCategoryQuantityInclusive[_eco:isLeastSpecificTargetCategoryQuantityInclusive_]
+|term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
 |`true' or `false'
 
 |Share if available
-|http://rs.tdwg.org/eco/terms/materialSampleTypes[_eco:materialSampleTypes_]
+|term:eco[eco:materialSampleTypes]
 |`wholeOrganism'
 
 |
-|http://rs.tdwg.org/eco/terms/voucherInstitutions[_eco:voucherInstitutions_]
+|term:eco[eco:voucherInstitutions]
 |`AMNH'
 
 |
-|_http://rs.tdwg.org/dwc/terms/dataGeneralizations[dwc:dataGeneralizations]_
+|_term:dwc[dwc:dataGeneralizations]_
 |`Coordinates generalized from original GPS coordinates to the nearest
 half degree grid cell.'; `Coordinates for each event site generalized
 from original GPS coordinates to the nearest half degree grid cell'
 
 |
-|_http://rs.tdwg.org/dwc/terms/informationWithheld[dwc:informationWithheld]_
+|_term:dwc[dwc:informationWithheld]_
 |`Sensitive species occurrence information not reported'
 
-| |http://rs.tdwg.org/dwc/terms/fieldNotes[_dwc:fieldNotes_] |`Notes
+| |term:dwc[dwc:fieldNotes] |`Notes
 available in the Grinnell-Miller Library'
 
-| |http://rs.tdwg.org/dwc/terms/eventRemarks[_dwc:eventRemarks_] |
+| |term:dwc[dwc:eventRemarks] |
 |===
 
 === Scope and completeness
@@ -905,7 +905,7 @@ information was actually collected).
 The full verbatim scope explicitly identifying the full suite of stated
 parameters defining the breadth of a sampling event should be reported
 using
-http://rs.tdwg.org/eco/terms/verbatimTargetScope[_eco:verbatimTargetScope_].
+term:eco[eco:verbatimTargetScope].
 _eco:verbatimTargetScope_ is particularly useful for capturing scope
 conditions not covered by existing
 https://eco.tdwg.org/terms/#taxonomic-scope[taxonomic] or
@@ -918,7 +918,7 @@ entries.
 |===
 |Status |Term |Example entry
 |Recommended
-|http://rs.tdwg.org/eco/terms/verbatimTargetScope[_eco:verbatimTargetScope_]
+|term:eco[eco:verbatimTargetScope]
 |`Adult flying insects'
 |===
 
@@ -931,32 +931,32 @@ explicitly stated targeted or intentionally excluded *taxonomic scope*
 should be reported using
 http://rs.tdwg.org/eco/terms/targetTaxonomicScope[__eco:targetTaxonomicScop__e]
 and
-http://rs.tdwg.org/eco/terms/excludedTaxonomicScope[_eco:excludedTaxonomicScope_].
+term:eco[eco:excludedTaxonomicScope].
 
 * If a specific person(s) or organization(s) are recorded as making the
 taxonomic identifications relevant to the stated survey scope(s), they
 should be acknowledged using
-http://rs.tdwg.org/dwc/terms/identifiedByID[_dwc:identifiedBy_] (for one
+term:dwc[dwc:identifiedBy] (for one
 or more names) or
-http://rs.tdwg.org/dwc/terms/identifiedByID[_dwc:identifiedByID_] (for
+term:dwc[dwc:identifiedByID] (for
 one or more unique identifiers such as, OrcID). +
 * If every organism included in
 http://rs.tdwg.org/eco/terms/targetTaxonomicScope[__eco:targetTaxonomicScop__e]
 that was observed during an event was reported, then
-http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[_eco:isTaxonomicScopeFullyReported_]
+term:eco[eco:isTaxonomicScopeFullyReported]
 = `true'; if not,
-http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[_eco:isTaxonomicScopeFullyReported_]
+term:eco[eco:isTaxonomicScopeFullyReported]
 = `false'.
 
 *Knowledge about taxonomic completeness* allows data users to determine
 how comprehensively an area was sampled. If taxonomic completeness is
 known
-http://rs.tdwg.org/eco/terms/taxonCompletenessReported[_eco:taxonCompletenessReported_]
+term:eco[eco:taxonCompletenessReported]
 = `reportedComplete' or `reportedIncomplete' and the method used to
 assess completeness reported in
-_http://rs.tdwg.org/eco/terms/taxonCompletenessProtocols[eco:taxonCompletenessProtocols]_.
+_term:eco[eco:taxonCompletenessProtocols]_.
 If taxonomic completeness is not reported,
-http://rs.tdwg.org/eco/terms/taxonCompletenessReported[_eco:taxonCompletenessReported_]
+term:eco[eco:taxonCompletenessReported]
 = `notReported'.
 
 Taxonomic scope terms, their recommended usage (status), and example
@@ -966,30 +966,30 @@ data entries.
 |===
 |Status |Term |Example entry
 |Recommended
-|_http://rs.tdwg.org/eco/terms/targetTaxonomicScope[eco:targetTaxonomicScop]_http://rs.tdwg.org/eco/terms/targetTaxonomicScope[e]
+|_term:eco[eco:targetTaxonomicScop]_http://rs.tdwg.org/eco/terms/targetTaxonomicScope[e]
 |`Arthropods'
 
 |
-|_http://rs.tdwg.org/eco/terms/excludedTaxonomicScope[eco:excludedTaxonomicScope]_
+|_term:eco[eco:excludedTaxonomicScope]_
 |’Aves
 
 |Share if available
-|_http://rs.tdwg.org/dwc/terms/identifiedByID[dwc:identifiedBy]_
+|_term:dwc[dwc:identifiedBy]_
 |’Cecilie Svenningsen
 
-| |_http://rs.tdwg.org/dwc/terms/identifiedByID[dwc:identifiedByID]_
+| |_term:dwc[dwc:identifiedByID]_
 |https://orcid.org/0000-0002-9216-2917
 
 |
-|_http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[eco:isTaxonomicScopeFullyReported]_
+|_term:eco[eco:isTaxonomicScopeFullyReported]_
 |`true' or `false'
 
 |
-|_http://rs.tdwg.org/eco/terms/taxonCompletenessReported[eco:taxonCompletenessReported]_
+|_term:eco[eco:taxonCompletenessReported]_
 |`reportedComplete', `reportedIncomplete', or `notReported'
 
 |
-|_http://rs.tdwg.org/eco/terms/taxonCompletenessProtocols[eco:taxonCompletenessProtocols]_
+|_term:eco[eco:taxonCompletenessProtocols]_
 |`Based on sampling effort'
 |===
 
@@ -1013,17 +1013,17 @@ excluded from sampling.
 
 * If the survey targeted or excluded specific organismal life stages,
 the information should be reported in
-http://rs.tdwg.org/eco/terms/targetLifeStageScope[_eco:targetLifeStageScope_]
+term:eco[eco:targetLifeStageScope]
 and
-http://rs.tdwg.org/eco/terms/excludedLifeStageScope[_eco:excludedLifeStageScope_]. +
+term:eco[eco:excludedLifeStageScope]. +
 * If every organism that was included within the life stage scope, and
 was detected during the survey, was reported, then
-http://rs.tdwg.org/eco/terms/isLifeStageScopeFullyReported[_eco:isLifeStageScopeFullyReported_]
+term:eco[eco:isLifeStageScopeFullyReported]
 = `true'. Otherwise,
-http://rs.tdwg.org/eco/terms/isLifeStageScopeFullyReported[_eco:isLifeStageScopeFullyReported_]
+term:eco[eco:isLifeStageScopeFullyReported]
 = `false'.
 
-A corresponding http://rs.tdwg.org/dwc/terms/lifeStage[_dwc:lifeStage_]
+A corresponding term:dwc[dwc:lifeStage]
 term is available in the Occurrence extension. This term can be used to
 report life stage information for organism occurrences in the
 `occurrence' table.
@@ -1035,14 +1035,14 @@ in a given environment.
 
 * If the survey targeted or excluded specific organismal growth forms,
 the information should be reported in
-http://rs.tdwg.org/eco/terms/targetGrowthFormScope[_eco:targetGrowthFormScope_]
+term:eco[eco:targetGrowthFormScope]
 and
-http://rs.tdwg.org/eco/terms/isGrowthFormScopeFullyReported[_eco:isGrowthFormScopeFullyReported_]_http://rs.tdwg.org/eco/terms/excludedLifeStageScope[e]_. +
+term:eco[eco:isGrowthFormScopeFullyReported]_http://rs.tdwg.org/eco/terms/excludedLifeStageScope[e]_. +
 * If every organism that was included within the growth form scope, and
 was detected during the survey, was reported, then
-http://rs.tdwg.org/eco/terms/excludedGrowthFormScope[_eco:excludedGrowthFormScope_]
+term:eco[eco:excludedGrowthFormScope]
 = `true'. Otherwise,
-http://rs.tdwg.org/eco/terms/excludedGrowthFormScope[_eco:excludedGrowthFormScope_]
+term:eco[eco:excludedGrowthFormScope]
 = `false'.
 
 *Degree of establishment*
@@ -1050,22 +1050,22 @@ http://rs.tdwg.org/eco/terms/excludedGrowthFormScope[_eco:excludedGrowthFormScop
 Degree of establishment refers to `The degree to which a dwc:Organism
 survives, reproduces, and expands its range at the given place and time'
 (see
-http://rs.tdwg.org/dwc/terms/degreeOfEstablishment[_dwc:degreeOfEstablishment_]).
+term:dwc[dwc:degreeOfEstablishment]).
 
 * If the survey targeted or excluded specific organismal degree of
 establishment, the information should be reported in
-http://rs.tdwg.org/eco/terms/targetDegreeOfEstablishmentScope[_eco:targetDegreeOfEstablishmentScope_]
+term:eco[eco:targetDegreeOfEstablishmentScope]
 and
-http://rs.tdwg.org/eco/terms/excludedDegreeOfEstablishmentScope[_eco:excludedDegreeOfEstablishmentScope_]. +
+term:eco[eco:excludedDegreeOfEstablishmentScope]. +
 * If every organism that was included within the degree of
 establishment, and was detected during the survey, was reported, then
-http://rs.tdwg.org/eco/terms/isDegreeOfEstablishmentScopeFullyReported[_eco:isDegreeOfEstablishmentScopeFullyReported_]
+term:eco[eco:isDegreeOfEstablishmentScopeFullyReported]
 = `true'. Otherwise,
-http://rs.tdwg.org/eco/terms/isDegreeOfEstablishmentScopeFullyReported[_eco:isDegreeOfEstablishmentScopeFullyReported_]
+term:eco[eco:isDegreeOfEstablishmentScopeFullyReported]
 = `false.'
 
 A corresponding
-http://rs.tdwg.org/dwc/terms/degreeOfEstablishment[_dwc:degreeOfEstablishment_]
+term:dwc[dwc:degreeOfEstablishment]
 term is available in the Occurrence extension. This term can be used to
 report degree of establishment information for organism occurrences in
 the `occurrence' table.
@@ -1077,39 +1077,39 @@ data entries.
 |===
 |Status |Term |Example entry
 |Share if available
-|http://rs.tdwg.org/eco/terms/targetLifeStageScope[_eco:targetLifeStageScope_]
+|term:eco[eco:targetLifeStageScope]
 |`larva'
 
 |
-|http://rs.tdwg.org/eco/terms/excludedLifeStageScope[_eco:excludedLifeStageScope_]
+|term:eco[eco:excludedLifeStageScope]
 |’adult
 
 |
-|http://rs.tdwg.org/eco/terms/isLifeStageScopeFullyReported[_eco:isLifeStageScopeFullyReported_]
+|term:eco[eco:isLifeStageScopeFullyReported]
 |`true' or `false'
 
 |
-|http://rs.tdwg.org/eco/terms/targetDegreeOfEstablishmentScope[_eco:targetDegreeOfEstablishmentScope_]
+|term:eco[eco:targetDegreeOfEstablishmentScope]
 |`native'
 
 |
-|http://rs.tdwg.org/eco/terms/excludedDegreeOfEstablishmentScope[_eco:excludedDegreeOfEstablishmentScope_]
+|term:eco[eco:excludedDegreeOfEstablishmentScope]
 |`invasive'
 
 |
-|http://rs.tdwg.org/eco/terms/isDegreeOfEstablishmentScopeFullyReported[_eco:isDegreeOfEstablishmentScopeFullyReported_]
+|term:eco[eco:isDegreeOfEstablishmentScopeFullyReported]
 |`true' or `false'
 
 |
-|http://rs.tdwg.org/eco/terms/targetGrowthFormScope[_eco:targetGrowthFormScope_]
+|term:eco[eco:targetGrowthFormScope]
 |`tree'
 
 |
-|http://rs.tdwg.org/eco/terms/excludedGrowthFormScope[_eco:excludedGrowthFormScope_]
+|term:eco[eco:excludedGrowthFormScope]
 |`shrub'
 
 |
-|http://rs.tdwg.org/eco/terms/isGrowthFormScopeFullyReported[_eco:isGrowthFormScopeFullyReported_]
+|term:eco[eco:isGrowthFormScopeFullyReported]
 |`true' or `false'
 |===
 
@@ -1122,27 +1122,27 @@ dataset can be reported at the taxonomic and organismal levels.
 If *_taxonomic_* bycatch are included in the datasets:
 
 * Populate
-http://rs.tdwg.org/eco/terms/hasNonTargetTaxa[_eco:hasNonTargetTaxa_] as
+term:eco[eco:hasNonTargetTaxa] as
 true at all relevant event levels. +
 * If ALL *_taxonomic_* bycatch (_eco:hasNonTargetTaxa_ = `true')
 captured/observed during an Event are reported in the dataset
-** http://rs.tdwg.org/eco/terms/areNonTargetTaxaFullyReported[_eco:areNonTargetTaxaFullyReported_]
+** term:eco[eco:areNonTargetTaxaFullyReported]
 = `true' +
 ** and a list of taxonomic bycatch should be provided in
-http://rs.tdwg.org/eco/terms/nonTargetTaxa[_eco:nonTargetTaxa_].
+term:eco[eco:nonTargetTaxa].
 
 If *_organismal_* bycatch are included in the dataset:
 
 * Then
-http://rs.tdwg.org/eco/terms/hasNonTargetTaxa[_eco:hasNonTargetOrganisms_]
+term:eco[eco:hasNonTargetOrganisms]
 = `true' at all relevant event levels.
 
 If the dataset does NOT include taxonomic or organismal bycatch:
 
 * Populate
-http://rs.tdwg.org/eco/terms/hasNonTargetTaxa[_eco:hasNonTargetTaxa_]
+term:eco[eco:hasNonTargetTaxa]
 and
-http://rs.tdwg.org/eco/terms/hasNonTargetTaxa[_eco:hasNonTargetOrganisms_]
+term:eco[eco:hasNonTargetOrganisms]
 as `false' for all relevant events.
 
 Bycatch terms, their recommended usage (status), and example data
@@ -1152,18 +1152,18 @@ entries.
 |===
 |Status |Term |Example entry
 |Share if available
-|http://rs.tdwg.org/eco/terms/hasNonTargetTaxa[_eco:hasNonTargetTaxa_]
+|term:eco[eco:hasNonTargetTaxa]
 |`true' or `false'
 
 |
-|http://rs.tdwg.org/eco/terms/areNonTargetTaxaFullyReported[_eco:areNonTargetTaxaFullyReported_]
+|term:eco[eco:areNonTargetTaxaFullyReported]
 |`true' or `false'
 
-| |http://rs.tdwg.org/eco/terms/nonTargetTaxa[_eco:nonTargetTaxa_]
+| |term:eco[eco:nonTargetTaxa]
 |’Parabuteo unicinctus
 
 |
-|http://rs.tdwg.org/eco/terms/hasNonTargetTaxa[_eco:hasNonTargetOrganisms_]
+|term:eco[eco:hasNonTargetOrganisms]
 |`true' or `false'
 |===
 
@@ -1171,13 +1171,13 @@ entries.
 
 If the survey includes an explicitly stated targeted or excluded
 *habitat scope* these can be reported using the terms
-http://rs.tdwg.org/eco/terms/targetHabitatScope[_eco:targetHabitatScope_]
+term:eco[eco:targetHabitatScope]
 and
-http://rs.tdwg.org/eco/terms/excludedHabitatScope[_eco:excludedHabitatScope_].
+term:eco[eco:excludedHabitatScope].
 
 The actual habitat observed at a survey site during a sampling event
 should be reported in
-http://rs.tdwg.org/dwc/terms/habitat[_dwc:habitat_].
+term:dwc[dwc:habitat].
 
 Habitat scope terms, their recommended usage (status), and example data
 entries.
@@ -1186,11 +1186,11 @@ entries.
 |===
 |Status |Term |Example entry
 |Share if available
-|http://rs.tdwg.org/eco/terms/targetHabitatScope[_eco:targetHabitatScop_]
+|term:eco[eco:targetHabitatScop]
 |`deciduous forest'
 
 |
-|http://rs.tdwg.org/eco/terms/excludedHabitatScope[_eco:excludedHabitatScope_]
+|term:eco[eco:excludedHabitatScope]
 |`urban'
 |===
 
@@ -1203,7 +1203,7 @@ or biomass and is critical in assessing the ability to compare
 information and aggregate data across studies.
 
 The DwC event term
-http://rs.tdwg.org/dwc/terms/samplingEffort[_dwc:samplingEffort_] is
+term:dwc[dwc:samplingEffort] is
 currently a recommended field when publishing event datasets to GBIF,
 however, this term captures sampling effort in an unstructured way. The
 Humboldt extension includes 5 terms to more explicitly capture sampling
@@ -1214,9 +1214,9 @@ explicitly provide the following information:
 
 * *Is sampling effort reported?:* indicate if sampling effort is
 reported using the Boolean term
-http://rs.tdwg.org/eco/terms/isSamplingEffortReported[_eco:isSamplingEffortReported_], +
+term:eco[eco:isSamplingEffortReported], +
 * *Sampling effort protocol:*
-*http://rs.tdwg.org/eco/terms/samplingEffortProtocol[eco:samplingEffortProtocol*]
+*term:eco[eco:samplingEffortProtocol*]
 should contain a textual description of the sampling effort protocol
 (e.g., number and arrangement of people or sensors deployed, whether or
 not sensors were mobile or stationary, how frequently observation,
@@ -1224,18 +1224,18 @@ measurements, or samples were taken) and/or provide a link to the
 protocol used. +
 * *Sampling effort:* report sampling effort (the total amount of time of
 the sampling Event) value and units (e.g., 4 trap nights) using
-http://rs.tdwg.org/eco/terms/samplingEffortValue[_eco:samplingEffortValue_]
+term:eco[eco:samplingEffortValue]
 and
-http://rs.tdwg.org/eco/terms/samplingEffortUnit[_eco:samplingEffortUnit_],
+term:eco[eco:samplingEffortUnit],
 and +
 * *Sampling performed by:*
-http://rs.tdwg.org/eco/terms/samplingPerformedBy[_eco:samplingPerformedBy_]
+term:eco[eco:samplingPerformedBy]
 should be used to credit the people involved in the sampling
 eventSampling effort terms, their recommendation usage, and example data
 entries. Best practice is to use a unique identifier (e.g., OrcID) if
 available.
 ** NOTE: Because
-http://rs.tdwg.org/eco/terms/samplingPerformedBy[_eco:samplingPerformedBy_]
+term:eco[eco:samplingPerformedBy]
 has an IRI equivalent only a single OrcID can be provided (the term
 cannot support a list). Efforts are underway to enable the use of
 dwc:http://rs.tdwg.org/dwc/terms/recordedByID[recordedByID] at the event
@@ -1247,12 +1247,12 @@ be provided.
 |Updated r__ecommended best practice__ Capture sampling effort
 information as structured data using the five (5) Humboldt extension
 terms:
-http://rs.tdwg.org/eco/terms/isSamplingEffortReported[_eco:isSamplingEffortReported_]
-http://rs.tdwg.org/eco/terms/samplingEffortValue[_eco:samplingEffortValue_]
+term:eco[eco:isSamplingEffortReported]
+term:eco[eco:samplingEffortValue]
 and
-http://rs.tdwg.org/eco/terms/samplingEffortUnit[_eco:samplingEffortUnit_]
-http://rs.tdwg.org/eco/terms/samplingEffortProtocol[_eco:samplingEffortProtocol_]
-http://rs.tdwg.org/eco/terms/samplingPerformedBy[_eco:samplingPerformedBy_]
+term:eco[eco:samplingEffortUnit]
+term:eco[eco:samplingEffortProtocol]
+term:eco[eco:samplingPerformedBy]
 |===
 
 Sampling effort terms, their recommended usage (status), and example
@@ -1262,26 +1262,26 @@ data entries.
 |===
 |Status |Term |Example entry
 |Recommended
-|http://rs.tdwg.org/eco/terms/isSamplingEffortReported[_eco:isSamplingEffortReported_]
+|term:eco[eco:isSamplingEffortReported]
 |`true' or `false'
 
 |
-|_http://rs.tdwg.org/eco/terms/samplingEffortProtocol[eco:samplingEffortProtocol]_
+|_term:eco[eco:samplingEffortProtocol]_
 |`40 box traps deployed in the afternoon even spacings along 4 parallel
 100m transects placed 50m apart and visited after sunrise the next day'
 
 |
-|_http://rs.tdwg.org/eco/terms/samplingEffortValue[eco:samplingEffortValue]_
+|_term:eco[eco:samplingEffortValue]_
 |`40'
 
 |
-|_http://rs.tdwg.org/eco/terms/samplingEffortValue[eco:samplingEffortValue]_
+|_term:eco[eco:samplingEffortValue]_
 |`trap nights'
 
-| |_http://rs.tdwg.org/dwc/terms/samplingEffort[dwc:samplingEffort]_
+| |_term:dwc[dwc:samplingEffort]_
 |`40 trap nights'
 
 |
-|_http://rs.tdwg.org/eco/terms/samplingPerformedBy[eco:samplingPerformedBy]_
+|_term:eco[eco:samplingPerformedBy]_
 |`A. Townsend Peterson'
 |===
