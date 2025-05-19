@@ -462,16 +462,11 @@ should be reported using
 term:dwc[dwc:eventType].
 
 [NOTE]
-.Identifying event type
+.*Identifying event type*
 ====
-term:dwc[dwc:eventType] should provide a
-high level overview of sampling effort type but should not be so
-specific as to overlap with sampling protocol. There is no single,
-standardized vocabulary for
-term:dwc[dwc:eventType]. If your
-organization or community has a controlled vocabulary, it is recommended
-to apply terms from that. Otherwise, you can refer to the common event
-types below for guidance. 
+term:dwc[dwc:eventType] should provide a high level overview of sampling effort type but should not be so specific as to overlap with sampling protocol. There is no single,
+standardized vocabulary for term:dwc[dwc:eventType]. If your organization or community has a controlled vocabulary, it is recommended to apply terms from that. Otherwise, you can refer to the common event types below for guidance.
+
 - Project: Projects are structured initiatives
 with explicitly stated objective or suite of objectives and with clear
 targets, timelines, and deliverables. Projects typically are typically
