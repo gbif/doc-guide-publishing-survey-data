@@ -124,7 +124,7 @@ possible. Sections that may be of particular interest:
 |term:dwc[dwc:occurrenceID]
 |`uniqueObsID-2`
 
-|_term:dwc[dwc:scientificName]
+|term:dwc[dwc:scientificName]
 |`Gavialis gangeticus`
 
 |term:dwc[dwc:basisOfRecord]
