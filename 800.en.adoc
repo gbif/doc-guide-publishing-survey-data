@@ -40,9 +40,8 @@ https://docs.gbif.org/eia-best-practices/1.0/fr/[French] and
 https://docs.gbif.org/eia-best-practices/1.0/es/[Spanish].
 
 *Private companies* +
-A guide is available to help private companies navigate the process of
-becoming GBIF data publishers
-(https://doi.org/10.35035/doc-b8hq-me03[LINK]; Figueira et al 2020). The
+A https://doi.org/10.35035/doc-b8hq-me03[guide] is available to help private companies navigate the process of
+becoming GBIF data publishers <<Figueira2020>>. The
 guide is also available in
 https://docs.gbif.org/private-sector-data-publishing/2.0/fr/[French],
 https://docs.gbif.org/private-sector-data-publishing/2.0/pt/[Portuguese],
