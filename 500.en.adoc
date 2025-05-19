@@ -755,8 +755,7 @@ term:dwc[dwc:informationWithheld].
 For example, if sensitive species data are not purposefully excluded
 from the published data,
 term:dwc[dwc:informationWithheld]
-should include a statement along the lines of `__Sensitive species
-occurrence information not reported__.'
+should include a statement along the lines of `Sensitive species occurrence information not reported`.
 
 ==== Least specific target category quantity inclusive
 
@@ -776,17 +775,15 @@ organism during the event?_
 organisms of the same taxon sampled/observed in that single occurrence
 record, then
 term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
-= `true.` +
+= `true` +
 * If the quantity reported using these paired terms does _not_ include
 all organisms of the same taxon sampled/observed in that single
 occurrence record (e.g., there are 2 or more occurrence records reported
 for the same event), then
 term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
-= `false.`
+= `false`
 
-See https://eco.tdwg.org/inclusive/[Guidelines for
-_eco:isLeastSpecificTargetCategoryQuantityInclusive_] (TDWG Humboldt
-Extension Task Group 2024) for more information.
+See https://eco.tdwg.org/inclusive/[Guidelines for eco:isLeastSpecificTargetCategoryQuantityInclusive] (TDWG Humboldt Extension Task Group 2024) for more information.
 
 ==== Verbatim fields
 
