@@ -1,12 +1,10 @@
 == Mapping occurrence information
 
-[width="100%",cols="^100%",options="header",]
-|===
-|Occurrence information should be saved to a DWC-A occurrence file. For
-example, see the
-`https://docs.google.com/spreadsheets/d/1A5wvy-zK7zl2eL79QOeADkbtPQXQtHUl/edit?gid=885414781#gid=885414781[occurrence]'
-tab in the data mapping template.
-|===
+[IMPORTANT]
+====
+Occurrence information should be saved to a DWC-A occurrence file. 
+For example, see the `https://docs.google.com/spreadsheets/d/1A5wvy-zK7zl2eL79QOeADkbtPQXQtHUl/edit?gid=885414781#gid=885414781[occurrence]` tab in the data mapping template.
+====
 
 Organismal occurrence information is mapped and linked to a survey event
 using the DwC Occurrence extension
