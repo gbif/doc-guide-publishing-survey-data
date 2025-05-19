@@ -175,7 +175,7 @@ one or more `GBIF registered extensions'
 In GBIF, survey and monitoring data are broadly referred to as *sampling
 event data* and should be formatted as a DwC Event core. To publish to
 GBIF, the dataset will be structured as a DwC-A consisting of the
-following files (see Figure 1 in GBIF 2018):
+following files (see Figure 1 in <<GBIF2018>>):
 
 * *Metafile*: describes what files exist in the Darwin Core archive file
 and how the columns in the data files map to Darwin Core terms
