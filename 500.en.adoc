@@ -10,9 +10,9 @@ location, protocols, scopes, and efforts.
 ====
 Survey event data should be
 saved to the DwC-A event table. This includes DwC Event terms (any term
-preceded by _`dwc'_, e.g.,
+preceded by _`dwc`_, e.g.,
 term:dwc[dwc:eventID]) and Humboldt
-extension terms (any term preceded by _`eco'_, e.g.,
+extension terms (any term preceded by _`eco`_, e.g.,
 term:eco[eco:protocolNames]).
 
   - A
@@ -295,14 +295,14 @@ project] which surveyed 130 40x40m plots across Denmark. Here, the
 project-level parent event would report the full geographic extent of
 Denmark:
 term:eco[eco:geospatialScopeAreaValue]
-= `42934' and
+= `42934` and
 term:eco[eco:geospatialScopeAreaUnit]
-= `km2'. The associated 130 child events representing each individual
+= `km2`. The associated 130 child events representing each individual
 survey site would then report the area of the site as
 term:eco[eco:totalAreaSampledValue]
-= `40' and
+= `40` and
 term:eco[eco:totalAreaSampledUnit]
-= `m2'.
+= `m2`.
 
 *_If the sampled unit is not an area_* (such as a filtered volume of
 water in a zooplankton haul),
@@ -330,46 +330,46 @@ term:dwc[dwc:locality].
 |Status |Term |Example entry
 .11+|Recommended
 |*term:dwc[dwc:locationID*]
-|`Trap_138'
+|`Trap_138`
 
 |term:dwc[dwc:countryCode]
-|`SE'
+|`SE`
 
 |term:dwc[dwc:decimalLatitude]
-|`59.3168'
+|`59.3168`
 
 |term:dwc[dwc:decimalLongitude]
-|`18.0627'
+|`18.0627`
 
 |term:dwc[dwc:geodeticDatum]
-|`WGS84'
+|`WGS84`
 
 |term:eco[eco:geospatialScopeAreaValue]
-|`580000'
+|`580000`
 
 |term:eco[eco:geospatialScopeAreaUnit]
-|`km2'
+|`km2`
 
 |_term:eco[eco:totalAreaSampledValue]_
-|`40'
+|`40`
 
 |term:eco[eco:totalAreaSampledUnit]
-|`m2'
+|`m2`
 
 |_term:dwc[dwc:sampleSizeValue]_
-|`200'
+|`200`
 
 |_term:dwc[dwc:sampleSizeUnit]_
-|`m3'
+|`m3`
 
 .3+|Share if available
 |term:dwc[dwc:footprintWKT]
-|`POLYGON((10 20, 11 20, 11 21, 10 21, 10 20))'
+|`POLYGON((10 20, 11 20, 11 21, 10 21, 10 20))`
 
 |term:dwc[dwc:footprintSRS]
-|`epsg:4326'
+|`epsg:4326`
 
-|_term:dwc[dwc:locality]_ |`Agriculture site, Kongskilde Friluftsgård, Zealand'
+|_term:dwc[dwc:locality]_ |`Agriculture site, Kongskilde Friluftsgård, Zealand`
 |===
 
 ==== Vegetation cover
@@ -426,18 +426,18 @@ and example data entries.
 |===
 |Status |Term |Example entry
 |Required |term:dwc[dwc:eventDate]
-|`2018-08-29'
+|`2018-08-29`
 
 |Recommended |_term:dwc[dwc:eventTime]_
-|`08:00Z'
+|`08:00Z`
 
 |
 |term:eco[eco:eventDurationValue]
-|`1'
+|`1`
 
 |
 |term:eco[eco:eventDurationUnit]
-|`hour'
+|`hour`
 |===
 
 === Methodology/sampling protocol \{#methodology/sampling-protocol}
@@ -475,33 +475,33 @@ targets, timelines, and deliverables. Projects typically are typically
 linked to non-biological information identifying participating
 organizations and people (agents), funding agencies, and other
 high-level administrative information. Biological sampling may only be
-one facet of a project’s scope. `Project' as a
+one facet of a project’s scope. `Project` as a
 term:dwc[dwc:eventType] is typically
 most appropriate only at the highest (parent) event level in a nested
 dataset. Expedition: An expedition is an organized information gathering
 venture that inherently includes multiple sampling events and event
 types. Expeditions may include multiple taxonomic and/organismal scopes,
 any number of documented sampling protocols, and varying degrees of
-complexity in survey design. `Expedition' as a
+complexity in survey design. `Expedition` as a
 term:dwc[dwc:eventType] is typically
 most appropriate at higher (parent) event levels in nested hierarchies.
 Survey: A survey is a systematic effort to collect information about the
 biological organisms in a specific area at a given time. Surveys
 typically included at least one documented protocol and may or may not
-have an explicitly defined taxonomic and/or organismal scope. `Survey'
+have an explicitly defined taxonomic and/or organismal scope. `Survey`
 is the most general event type term and can be applied as a
 term:dwc[dwc:eventType] at any event
 level. Inventory: An inventory is a comprehensive survey of the taxa
 present in a specific area over an explicit period of time. Inventories
 typically have an explicit taxonomic and/or organismal scope and a
-well-defined protocol. `Inventory' is typically most appropriate as a
+well-defined protocol. `Inventory` is typically most appropriate as a
 term:dwc[dwc:eventType] at lower (child)
 event levels in nested hierarchies. Bioblitz: A bioblitz is a survey
 event aimed at finding and identifying as many species as possible in a
 specific area over a (typically) short, contiguous period of time.
 Bioblitzes often include participants (agents) with a wide range of
 backgrounds and levels of expertise in biodiversity sciences including
-formal biologists as well as the broader, general public. `Bioblitz' as
+formal biologists as well as the broader, general public. `Bioblitz` as
 a term:dwc[dwc:eventType] is typically
 most appropriate at lower (child) event levels in nested hierarchies.
 Identification: An identification is the taxonomic identification of a
@@ -511,10 +511,10 @@ it occurs at a time and place other than the survey site (e.g., a
 laboratory).
 |===
 
-*`Inventory' event types*
+*`Inventory` event types*
 
 * If term:dwc[dwc:eventType] =
-*`inventory'*, the type of search implemented (e.g., restricted search,
+*`inventory`*, the type of search implemented (e.g., restricted search,
 open search, opportunistic search, trap or sample, compilation) must be
 reported in
 term:eco[eco:inventoryTypes]. +
@@ -537,18 +537,18 @@ entries..
 |===
 |Status |Term |Example entry
 |Recommended |term:dwc[dwc:eventType]
-|`Inventory'
+|`Inventory`
 
 |Recommended if applicable
 |term:eco[eco:inventoryTypes]
-|`Open search'
+|`Open search`
 
 | |term:eco[eco:compilationTypes]
-|`compilationOfExistingSourcesAndSamplingEvents'
+|`compilationOfExistingSourcesAndSamplingEvents`
 
 |
 |term:eco[eco:compilationSourceTypes]
-|`museumSpecimens'
+|`museumSpecimens`
 |===
 
 ==== Sampling protocol
@@ -587,11 +587,11 @@ example data entries.
 |Status |Term |Example entry
 |Required
 |term:dwc[dwc:samplingProtocol]
-|`Visual survey'
+|`Visual survey`
 
 |Recommended
 |term:eco[eco:protocolNames]
-|`Visual survey'
+|`Visual survey`
 
 |
 |term:eco[eco:protocolDescriptions]
@@ -622,17 +622,17 @@ modeling species’ responses to climate- and human-induced environmental
 change, and conservation planning and resource management.
 
 * If the dataset includes absence information for one or more
-occurrences (to be reported in the `occurrence' table as
-_dwc:occurrenceStatus_ = `absent'), then
+occurrences (to be reported in the `occurrence` table as
+_dwc:occurrenceStatus_ = `absent`), then
 term:eco[eco:isAbsenceReported]
-= `true'. +
+= `true`. +
 * A list of absent taxa can be provided using
 term:eco[eco:absentTaxa] at all
 relevant levels. Absences should only be reported for taxa within the
 stated taxonomic and/or organismal scope of a survey. Absence cannot be
 asserted for bycatch.
 
-See the section `link:#reporting-absences[Reporting absences]' for
+See the section `link:#reporting-absences[Reporting absences]` for
 details on reporting absence information at the occurrence level.
 
 *Abundance* is the number of individuals of the same taxonomic
@@ -643,16 +643,16 @@ species, and informing effective habitat and ecosystem management.
 
 * If the dataset includes abundance information,
 term:eco[eco:isAbundanceReported]
-= `true' for all appropriate Event levels. If there is an abundance cap,
+= `true` for all appropriate Event levels. If there is an abundance cap,
 then
 term:eco[eco:_isAbundanceCapReported]
-= `true' and the value of the cap should be reported in
+= `true` and the value of the cap should be reported in
 term:eco[eco:abundanceCap]. +
 * If there is no abundance cap, then
 term:eco[eco:_isAbundanceCapReported]
-= `false'.
+= `false`.
 
-See the section `link:#abundance-information[Abundance information]' for
+See the section `link:#abundance-information[Abundance information]` for
 details on reporting absence information at the occurrence level.
 
 Absence and abundance terms, their recommended usage (status), and
@@ -663,26 +663,26 @@ example data entries.
 |Status |Term |Example entry
 |Recommended
 |term:eco[eco:isAbsenceReported]
-|`true' or `false'
+|`true` or `false`
 
 |
 |term:eco[eco:isAbundanceReported]
-|`true' or `false'
+|`true` or `false`
 
 |
 |term:eco[eco:_isAbundanceCapReported]
-|`true' or `false'
+|`true` or `false`
 
 |Share if available
 |term:eco[eco:absentTaxa] |
 
-| |term:eco[eco:abundanceCap] |`5'
+| |term:eco[eco:abundanceCap] |`5`
 |===
 
 ==== Material samples
 
 A *material sample* (http://rs.tdwg.org/dwc/terms/MaterialSample) is an
-entity `… that represents an entity of interest in whole or in part.'
+entity `… that represents an entity of interest in whole or in part.`
 Essentially, material samples are specimens collected during the survey
 event. They may consist of an entire organism, part of an organism, or a
 genetic sample.
@@ -690,7 +690,7 @@ genetic sample.
 If the dataset includes at least one material sample:
 
 * term:eco[eco:hasMaterialSamples]
-= `true' at the appropriate child event level and at any relevant parent
+= `true` at the appropriate child event level and at any relevant parent
 event level, and +
 * the type(s) of materials collected should be listed under
 term:eco[eco:materialSampleTypes]
@@ -699,7 +699,7 @@ for each relevant event level.
 If the dataset or sampling event does _not_ include material samples:
 
 * term:eco[eco:hasMaterialSamples]
-= `false' at all appropriate sampling event levels.
+= `false` at all appropriate sampling event levels.
 
 ==== Vouchers
 
@@ -709,7 +709,7 @@ effort.
 
 If the dataset has vouchers:
 
-* term:eco[eco:hasVouchers] = `true'
+* term:eco[eco:hasVouchers] = `true`
 at the appropriate child event level and at any relevant parent event
 level, and +
 * a list of institutions housing them should be shared in
@@ -718,7 +718,7 @@ for each relevant event level.
 
 If the dataset or sampling event does _not_ include vouchers:
 
-* term:eco[eco:hasVouchers] = `false'
+* term:eco[eco:hasVouchers] = `false`
 at all appropriate sampling event levels.
 
 ==== Sensitive data: data generalization & information withheld \{#sensitive-data:-data-generalization-&-information-withheld}
@@ -799,13 +799,13 @@ organism during the event?_
 organisms of the same taxon sampled/observed in that single occurrence
 record, then
 term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
-= `true.' +
+= `true.` +
 * If the quantity reported using these paired terms does _not_ include
 all organisms of the same taxon sampled/observed in that single
 occurrence record (e.g., there are 2 or more occurrence records reported
 for the same event), then
 term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
-= `false.'
+= `false.`
 
 See https://eco.tdwg.org/inclusive/[Guidelines for
 _eco:isLeastSpecificTargetCategoryQuantityInclusive_] (TDWG Humboldt
@@ -832,22 +832,22 @@ recommended usage (status), and example data entries.
 |Status |Term |Example entry
 |Recommended
 |term:eco[eco:hasMaterialSamples]
-|`true' or `false'
+|`true` or `false`
 
-| |term:eco[eco:hasVouchers] |`true'
-or `false'
+| |term:eco[eco:hasVouchers] |`true`
+or `false`
 
 |
 |term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
-|`true' or `false'
+|`true` or `false`
 
 |Share if available
 |term:eco[eco:materialSampleTypes]
-|`wholeOrganism'
+|`wholeOrganism`
 
 |
 |term:eco[eco:voucherInstitutions]
-|`AMNH'
+|`AMNH`
 
 |
 |_term:dwc[dwc:dataGeneralizations]_
@@ -857,7 +857,7 @@ from original GPS coordinates to the nearest half degree grid cell'
 
 |
 |_term:dwc[dwc:informationWithheld]_
-|`Sensitive species occurrence information not reported'
+|`Sensitive species occurrence information not reported`
 
 | |term:dwc[dwc:fieldNotes] |`Notes
 available in the Grinnell-Miller Library'
@@ -887,7 +887,7 @@ only at the event levels for which the information is relevant
 
 [width="100%",cols="<100%",options="header",]
 |===
-|NOTE: The `target' and `excluded' scope terms (e.g.,
+|NOTE: The `target` and `excluded` scope terms (e.g.,
 _eco:targetTaxonomicScope_) presented in this section are the only
 survey event terms designed to capture _intent_. That is, these terms
 capture the breadth of the information the biological survey _intended_
@@ -915,7 +915,7 @@ entries.
 |Status |Term |Example entry
 |Recommended
 |term:eco[eco:verbatimTargetScope]
-|`Adult flying insects'
+|`Adult flying insects`
 |===
 
 ==== Taxonomic scope
@@ -940,20 +940,20 @@ one or more unique identifiers such as, OrcID). +
 http://rs.tdwg.org/eco/terms/targetTaxonomicScope[__eco:targetTaxonomicScop__e]
 that was observed during an event was reported, then
 term:eco[eco:isTaxonomicScopeFullyReported]
-= `true'; if not,
+= `true`; if not,
 term:eco[eco:isTaxonomicScopeFullyReported]
-= `false'.
+= `false`.
 
 *Knowledge about taxonomic completeness* allows data users to determine
 how comprehensively an area was sampled. If taxonomic completeness is
 known
 term:eco[eco:taxonCompletenessReported]
-= `reportedComplete' or `reportedIncomplete' and the method used to
+= `reportedComplete` or `reportedIncomplete` and the method used to
 assess completeness reported in
 _term:eco[eco:taxonCompletenessProtocols]_.
 If taxonomic completeness is not reported,
 term:eco[eco:taxonCompletenessReported]
-= `notReported'.
+= `notReported`.
 
 Taxonomic scope terms, their recommended usage (status), and example
 data entries.
@@ -963,7 +963,7 @@ data entries.
 |Status |Term |Example entry
 |Recommended
 |_term:eco[eco:targetTaxonomicScop]_http://rs.tdwg.org/eco/terms/targetTaxonomicScope[e]
-|`Arthropods'
+|`Arthropods`
 
 |
 |_term:eco[eco:excludedTaxonomicScope]_
@@ -978,15 +978,15 @@ data entries.
 
 |
 |_term:eco[eco:isTaxonomicScopeFullyReported]_
-|`true' or `false'
+|`true` or `false`
 
 |
 |_term:eco[eco:taxonCompletenessReported]_
-|`reportedComplete', `reportedIncomplete', or `notReported'
+|`reportedComplete`, `reportedIncomplete`, or `notReported`
 
 |
 |_term:eco[eco:taxonCompletenessProtocols]_
-|`Based on sampling effort'
+|`Based on sampling effort`
 |===
 
 ==== Organismal scope
@@ -1015,14 +1015,14 @@ term:eco[eco:excludedLifeStageScope]. +
 * If every organism that was included within the life stage scope, and
 was detected during the survey, was reported, then
 term:eco[eco:isLifeStageScopeFullyReported]
-= `true'. Otherwise,
+= `true`. Otherwise,
 term:eco[eco:isLifeStageScopeFullyReported]
-= `false'.
+= `false`.
 
 A corresponding term:dwc[dwc:lifeStage]
 term is available in the Occurrence extension. This term can be used to
 report life stage information for organism occurrences in the
-`occurrence' table.
+`occurrence` table.
 
 *Growth form*
 
@@ -1037,9 +1037,9 @@ term:eco[eco:isGrowthFormScopeFullyReported]_http://rs.tdwg.org/eco/terms/exclud
 * If every organism that was included within the growth form scope, and
 was detected during the survey, was reported, then
 term:eco[eco:excludedGrowthFormScope]
-= `true'. Otherwise,
+= `true`. Otherwise,
 term:eco[eco:excludedGrowthFormScope]
-= `false'.
+= `false`.
 
 *Degree of establishment*
 
@@ -1056,15 +1056,15 @@ term:eco[eco:excludedDegreeOfEstablishmentScope]. +
 * If every organism that was included within the degree of
 establishment, and was detected during the survey, was reported, then
 term:eco[eco:isDegreeOfEstablishmentScopeFullyReported]
-= `true'. Otherwise,
+= `true`. Otherwise,
 term:eco[eco:isDegreeOfEstablishmentScopeFullyReported]
-= `false.'
+= `false.`
 
 A corresponding
 term:dwc[dwc:degreeOfEstablishment]
 term is available in the Occurrence extension. This term can be used to
 report degree of establishment information for organism occurrences in
-the `occurrence' table.
+the `occurrence` table.
 
 Organismal scope terms, their recommended usage (status), and example
 data entries.
@@ -1074,7 +1074,7 @@ data entries.
 |Status |Term |Example entry
 |Share if available
 |term:eco[eco:targetLifeStageScope]
-|`larva'
+|`larva`
 
 |
 |term:eco[eco:excludedLifeStageScope]
@@ -1082,31 +1082,31 @@ data entries.
 
 |
 |term:eco[eco:isLifeStageScopeFullyReported]
-|`true' or `false'
+|`true` or `false`
 
 |
 |term:eco[eco:targetDegreeOfEstablishmentScope]
-|`native'
+|`native`
 
 |
 |term:eco[eco:excludedDegreeOfEstablishmentScope]
-|`invasive'
+|`invasive`
 
 |
 |term:eco[eco:isDegreeOfEstablishmentScopeFullyReported]
-|`true' or `false'
+|`true` or `false`
 
 |
 |term:eco[eco:targetGrowthFormScope]
-|`tree'
+|`tree`
 
 |
 |term:eco[eco:excludedGrowthFormScope]
-|`shrub'
+|`shrub`
 
 |
 |term:eco[eco:isGrowthFormScopeFullyReported]
-|`true' or `false'
+|`true` or `false`
 |===
 
 ==== Bycatch
@@ -1120,10 +1120,10 @@ If *_taxonomic_* bycatch are included in the datasets:
 * Populate
 term:eco[eco:hasNonTargetTaxa] as
 true at all relevant event levels. +
-* If ALL *_taxonomic_* bycatch (_eco:hasNonTargetTaxa_ = `true')
+* If ALL *_taxonomic_* bycatch (_eco:hasNonTargetTaxa_ = `true`)
 captured/observed during an Event are reported in the dataset
 ** term:eco[eco:areNonTargetTaxaFullyReported]
-= `true' +
+= `true` +
 ** and a list of taxonomic bycatch should be provided in
 term:eco[eco:nonTargetTaxa].
 
@@ -1131,7 +1131,7 @@ If *_organismal_* bycatch are included in the dataset:
 
 * Then
 term:eco[eco:hasNonTargetOrganisms]
-= `true' at all relevant event levels.
+= `true` at all relevant event levels.
 
 If the dataset does NOT include taxonomic or organismal bycatch:
 
@@ -1139,7 +1139,7 @@ If the dataset does NOT include taxonomic or organismal bycatch:
 term:eco[eco:hasNonTargetTaxa]
 and
 term:eco[eco:hasNonTargetOrganisms]
-as `false' for all relevant events.
+as `false` for all relevant events.
 
 Bycatch terms, their recommended usage (status), and example data
 entries.
@@ -1149,18 +1149,18 @@ entries.
 |Status |Term |Example entry
 |Share if available
 |term:eco[eco:hasNonTargetTaxa]
-|`true' or `false'
+|`true` or `false`
 
 |
 |term:eco[eco:areNonTargetTaxaFullyReported]
-|`true' or `false'
+|`true` or `false`
 
 | |term:eco[eco:nonTargetTaxa]
 |’Parabuteo unicinctus
 
 |
 |term:eco[eco:hasNonTargetOrganisms]
-|`true' or `false'
+|`true` or `false`
 |===
 
 ==== Habitat scope
@@ -1183,11 +1183,11 @@ entries.
 |Status |Term |Example entry
 |Share if available
 |term:eco[eco:targetHabitatScop]
-|`deciduous forest'
+|`deciduous forest`
 
 |
 |term:eco[eco:excludedHabitatScope]
-|`urban'
+|`urban`
 |===
 
 === Sampling Effort
@@ -1259,7 +1259,7 @@ data entries.
 |Status |Term |Example entry
 |Recommended
 |term:eco[eco:isSamplingEffortReported]
-|`true' or `false'
+|`true` or `false`
 
 |
 |_term:eco[eco:samplingEffortProtocol]_
@@ -1268,16 +1268,16 @@ data entries.
 
 |
 |_term:eco[eco:samplingEffortValue]_
-|`40'
+|`40`
 
 |
 |_term:eco[eco:samplingEffortValue]_
-|`trap nights'
+|`trap nights`
 
 | |_term:dwc[dwc:samplingEffort]_
-|`40 trap nights'
+|`40 trap nights`
 
 |
 |_term:eco[eco:samplingPerformedBy]_
-|`A. Townsend Peterson'
+|`A. Townsend Peterson`
 |===
