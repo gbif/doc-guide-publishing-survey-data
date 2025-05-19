@@ -52,4 +52,4 @@ include::900.en.adoc[]
 
 //include::glossary.en.adoc[]
 
-//include::bibliography.en.adoc[]
+include::bibliography.en.adoc[]
