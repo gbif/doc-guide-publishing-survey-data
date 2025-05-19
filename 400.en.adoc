@@ -58,6 +58,6 @@ the date of the download, and a reference to gbif.org.
 See the
 https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile[GBIF
 Metadata Profile – How-to Guide] for comprehensive guidelines and list
-of available terms for resource metadata (GBIF 2011).
+of available terms for resource metadata <<GBIF2011>>.
 
 <<<
