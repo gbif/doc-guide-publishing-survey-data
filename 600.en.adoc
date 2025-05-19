@@ -41,3 +41,5 @@ For an example implementation of the Relevé extension
 (https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml), see the
 example dataset https://doi.org/10.15468/pkx4tg[Vegetation plots
 collected in dry grasslands throughout Bulgaria and Romanian Dobrudzha].
+
+<<<
