@@ -948,8 +948,7 @@ as local absences.
 Three categories of terms are available by which to report an explicitly
 stated target or excluded *organismal scope*, and state whether or not
 all target organisms observed were reported. Other organismal scopes
-should be reported using _eco:verbatimTargetScope_
-(http://rs.tdwg.org/eco/terms/verbatimTargetScope).
+should be reported using term:eco[eco:verbatimTargetScope].
 
 *Life stage*
 
@@ -982,13 +981,12 @@ in a given environment.
 the information should be reported in
 term:eco[eco:targetGrowthFormScope]
 and
-term:eco[eco:isGrowthFormScopeFullyReported]_http://rs.tdwg.org/eco/terms/excludedLifeStageScope[e]_. +
+term:eco[eco:isGrowthFormScopeFullyReported] +
 * If every organism that was included within the growth form scope, and
 was detected during the survey, was reported, then
 term:eco[eco:excludedGrowthFormScope]
 = `true`. Otherwise,
-term:eco[eco:excludedGrowthFormScope]
-= `false`.
+term:eco[eco:excludedGrowthFormScope] = `false`.
 
 *Degree of establishment*
 
