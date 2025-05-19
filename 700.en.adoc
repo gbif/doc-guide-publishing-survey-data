@@ -1,0 +1,310 @@
+== Mapping occurrence information
+
+[width="100%",cols="^100%",options="header",]
+|===
+|Occurrence information should be saved to a DWC-A occurrence file. For
+example, see the
+`https://docs.google.com/spreadsheets/d/1A5wvy-zK7zl2eL79QOeADkbtPQXQtHUl/edit?gid=885414781#gid=885414781[occurrence]'
+tab in the data mapping template.
+|===
+
+Organismal occurrence information is mapped and linked to a survey event
+using the DwC Occurrence extension
+(https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[LINK]).
+Occurrences can be mapped to only a single survey Event, however they
+can link to any event level. In the case of a nested hierarchy, the best
+practice recommendation is to link occurrence information to the lowest
+possible event level to maintain specificity. Occurrence information
+should be contained as a table in the Occurrence file of the DwC-A.
+
+Each organism occurrence must include the following information:
+
+* *Event ID:* A link the occurrence to the correct survey event with
+http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_]. +
+* *Occurrence ID:* A unique
+http://rs.tdwg.org/dwc/terms/Occurrence[_dwc:occurrenceID_]. +
+* *Scientific name:* The most specific taxonomic identification of the
+organism in
+http://rs.tdwg.org/dwc/terms/scientificName[_dwc:scientificName_]. +
+* *Basis of record:* The nature of the occurrence (e.g. human
+observation, material specimen) must be reported in
+http://rs.tdwg.org/dwc/terms/basisOfRecord[_dwc:basisOfRecord_].
+
+*Reporting multiple individuals as a single occurrence*
+
+If multiple individuals of the same taxonomic classification are
+observed and no additional information about the organisms (e.g., life
+stage, sex) is collected other than taxonomic identification, report as
+a single occurrence (e.g., 1 row in the table), with the following
+information:
+
+* a unique http://rs.tdwg.org/dwc/terms/Occurrence[_dwc:occurrenceID_] +
+* taxonomic classification of the organisms reported in
+http://rs.tdwg.org/dwc/terms/scientificName[_dwc:scientificName_] +
+* the quantity and unit of organisms observed reported in the paired
+terms
+http://rs.tdwg.org/dwc/terms/organismQuantity[_dwc:organismQuantity_]
+and
+http://rs.tdwg.org/dwc/terms/organismQuantityType[_dwc:organismQuantityType_]
+
+For example, if 4 hooded crows (_Corvus cornix_) were observed, a single
+occurrence with one unique
+http://rs.tdwg.org/dwc/terms/Occurrence[_dwc:occurrenceID_] should be
+reported.
+
+[width="99%",cols="<20%,<16%,<16%,<16%,16%,16%",options="header",]
+|===
+|_http://rs.tdwg.org/dwc/terms/eventID[dwc:eventID]_
+|http://rs.tdwg.org/dwc/terms/Occurrence[_dwc:occurrenceID_]
+|_http://rs.tdwg.org/dwc/terms/basisOfRecord[dwc:basisOfRecord]_
+|http://rs.tdwg.org/dwc/terms/scientificName[_dwc:scientificName_]
+|http://rs.tdwg.org/dwc/terms/organismQuantity[_dwc:organismQuantity_]
+|http://rs.tdwg.org/dwc/terms/organismQuantityType[_dwc:organismQuantityType_]
+|uniqueEventID |uniqueObsID |HumanObservation |Corvus cornix |4
+|individuals
+|===
+
+*Reporting multiple individuals as multiple occurrences*
+
+If multiple individuals of the same taxonomic classification are
+observed
+
+If multiple individuals of the same taxonomic classification are
+observed and additional information about the organisms (e.g., life
+stage, sex) is collected, then a unique occurrence (row in the table)
+should exist for each unique suite of taxonomic identification-organism
+traits should be created.
+
+For example, if 1 adult male and 3 adult females Indian gharials
+(_Gavialis gangeticus_) were observed alive, two occurrences, each with
+a unique http://rs.tdwg.org/dwc/terms/Occurrence[_dwc:occurrenceID_]
+would be reported.
+
+[width="99%",cols="<12%,<11%,<11%,<11%,11%,11%,11%,11%,11%",options="header",]
+|===
+|_http://rs.tdwg.org/dwc/terms/eventID[dwc:eventID]_
+|http://rs.tdwg.org/dwc/terms/Occurrence[_dwc:occurrenceID_]
+|_http://rs.tdwg.org/dwc/terms/basisOfRecord[dwc:basisOfRecord]_
+|http://rs.tdwg.org/dwc/terms/scientificName[_dwc:scientificName_]
+|http://rs.tdwg.org/dwc/terms/organismQuantity[_dwc:organismQuantity_]
+|http://rs.tdwg.org/dwc/terms/organismQuantityType[_dwc:organismQuantityType_]
+|http://rs.tdwg.org/dwc/terms/sex[_dwc:sex_]
+|http://rs.tdwg.org/dwc/terms/lifeStage[_dwc:lifeStage_]
+|http://rs.tdwg.org/dwc/terms/vitality[_dwc:vitality_]
+|uniqueEventID-1 |uniqueObsID-1 |HumanObservation |Gavialis gangeticus
+|1 |individuals |male |adult |alive
+
+|uniqueEventID-1 |uniqueObsID-2 |HumanObservation |Gavialis gangeticus
+|3 |individuals |female |adult |alive
+|===
+
+The table below outlines the minimum required and recommended terms as
+well some of the more commonly used terms and their recommended usage.
+However, Darwin Core includes many more terms. It is recommended that
+you take some time to review the DwC quick reference guide
+(https://dwc.tdwg.org/terms/) and to identify and include any and all
+terms available that allow you to share the richest version of your data
+possible. Sections that may be of particular interest:
+
+* occurrence (https://dwc.tdwg.org/terms/#occurrence) +
+* identification (https://dwc.tdwg.org/terms/#identification) +
+* taxon (https://dwc.tdwg.org/terms/#taxon)
+
+Species occurrence terms, their recommended usage (status), and example
+data entries.
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|Status |Term |Example entry
+|Required |_http://rs.tdwg.org/dwc/terms/eventID[dwc:eventID]_
+|`uniqueEventID-1'
+
+| |http://rs.tdwg.org/dwc/terms/Occurrence[_dwc:occurrenceID_]
+|`uniqueObsID-2'
+
+| |_http://rs.tdwg.org/dwc/terms/scientificName[dwc:scientificName]_
+|`Gavialis gangeticus'
+
+| |_http://rs.tdwg.org/dwc/terms/basisOfRecord[dwc:basisOfRecord]_
+|`HumanObservation'
+
+|Recommended |_http://rs.tdwg.org/dwc/terms/taxonRank[dwc:taxonRank]_
+|`species'
+
+| |_http://rs.tdwg.org/dwc/terms/kingdom[dwc:kingdom]_ |`Animalia'
+
+| |_http://rs.tdwg.org/dwc/terms/organismQuantity[dwc:organismQuantity]_
+|`3'
+
+|
+|_http://rs.tdwg.org/dwc/terms/organismQuantityType[dwc:organismQuantityType]_
+|`individuals'
+
+| |_http://rs.tdwg.org/dwc/terms/occurrenceStatus[dwc:occurrenceStatus]_
+|`present' or `absent'
+
+|Share if available
+|_http://rs.tdwg.org/dwc/terms/vernacularName[dwc:vernacularName]_
+|`Indian gharial'
+
+| |_http://rs.tdwg.org/dwc/terms/sex[dwc:sex]_ |`female'
+
+| |_http://rs.tdwg.org/dwc/terms/lifeStage[dwc:lifeStage]_ |`adult'
+
+|
+|_http://rs.tdwg.org/dwc/terms/establishmentMeans[dwc:establishmentMeans]_
+|`native'
+
+|
+|_http://rs.tdwg.org/dwc/terms/degreeOfEstablishment[dwc:degreeOfEstablishment]_
+|`native'
+
+| |_http://rs.tdwg.org/dwc/terms/vitality[dwc:vitality]_ |`dead'
+|===
+
+=== Reporting absences
+
+*Absences* are defined here as the lack of detection of organisms
+explicitly stated as part of the target taxonomic scope. To document
+absences:
+
+* In the *_Occurrence table_*:
+** For each occurrence to be reported absent, the field
+http://rs.tdwg.org/dwc/terms/occurrenceStatus[_dwc:occurrenceStatus_]
+should be populated as `absent':
+
+http://rs.tdwg.org/dwc/terms/occurrenceStatus[_dwc:occurrenceStatus_] =
+`absent'
+
+* Recommended best practice is to also populate
+http://rs.tdwg.org/dwc/terms/individualCount[_dwc:individualCount_] and
+http://rs.tdwg.org/dwc/terms/organismQuantity[d__wc:organismQuantity__]
+as `0' and
+http://rs.tdwg.org/dwc/terms/organismQuantityType[_dwc:organismQuantityType_]
+as `Individuals'. +
+* In the *_Event table_*:
+** If one or more absences are reported at any taxonomic level
+(http://rs.tdwg.org/dwc/terms/occurrenceStatus[_dwc:occurrenceStatus_] =
+`absent'), then _eco:isAbsenceReported_
+(http://rs.tdwg.org/eco/terms/isAbsenceReported) for parent Events at
+all relevant levels should be populated as `true'
+
+_eco:isAbsenceReported_ = `true'
+
+* A list of absent taxa can be provided using _eco:absentTaxa_
+(http://rs.tdwg.org/eco/terms/absentTaxa) at all relevant levels.
+
+Absences should only be reported for taxa within the stated taxonomic
+and/or organismal scope of a survey. Absence cannot be asserted for
+bycatch.
+
+Terms to indicate absence, or non-detection, and their recommendation
+usage.
+
+[width="100%",cols="25%,25%,25%,25%",options="header",]
+|===
+|Table |Recommended usage |Term |Example entry
+|Occurrence |Required
+|_http://rs.tdwg.org/dwc/terms/occurrenceStatus[dwc:occurrenceStatus]_
+|`present' or `absent'
+
+|Occurrence |Recommended
+|_http://rs.tdwg.org/dwc/terms/individualCount[dwc:individualCount]_ |3
+
+|Occurrence |
+|http://rs.tdwg.org/dwc/terms/organismQuantity[d__wc:organismQuantity__]
+|3
+
+|Occurrence |
+|http://rs.tdwg.org/dwc/terms/organismQuantityType[_dwc:organismQuantityType_]
+|`individuals'
+
+|Event |
+|http://rs.tdwg.org/eco/terms/isAbsenceReported[_eco:isAbsenceReported_]
+|`true' or `false'
+
+|Event |Share if available
+|http://rs.tdwg.org/eco/terms/absentTaxa[_eco:absentTaxa_] |
+|===
+
+=== Abundance information
+
+To capture abundance information in a dataset or at a specific event
+level:
+
+* In the *Occurrence table*, use the paired terms
+http://rs.tdwg.org/dwc/terms/organismQuantity[d__wc:organismQuantity__]
+and
+http://rs.tdwg.org/dwc/terms/organismQuantityType[_dwc:organismQuantityType_]
+to report the observed abundance for each reported occurrence. For
+example, if 3 individuals of a species were observed, the paired terms
+would be populated as follows:
+** http://rs.tdwg.org/dwc/terms/organismQuantity[d__wc:organismQuantity__]
+= `3' +
+** http://rs.tdwg.org/dwc/terms/organismQuantityType[_dwc:organismQuantityType_]
+= `Individuals' +
+* In the *Event table*:
+** The inclusion of abundance information in the dataset should be
+indicated by populating _eco:isAbundanceReported_
+(http://rs.tdwg.org/eco/terms/isAbundanceReported) as `true'. +
+** If an abundance cap, and what that cap was reported, this should be
+captured using eco:_isAbundanceCapReported_
+(http://rs.tdwg.org/eco/terms/isAbundanceCapReported) and
+eco:_abundanceCap_ (http://rs.tdwg.org/eco/terms/abundanceCap).
+
+If the dataset or relevant event does not include abundance information
+is not included in the dataset, then it is recommended that the
+following terms be populated as follows in the *Event table*:
+
+* _eco:isAbundanceReported_
+(http://rs.tdwg.org/eco/terms/isAbundanceReported) = `false' +
+* eco:_isAbundanceCapReported_
+(http://rs.tdwg.org/eco/terms/isAbundanceCapReported) = `false.'
+
+Terms to indicate abundance, the table on which they should be provided,
+and their recommendation usage.
+
+[width="100%",cols="25%,25%,25%,25%",options="header",]
+|===
+|Table |Recommended usage |Term |Example entry
+|Occurrence |Recommended
+|_http://rs.tdwg.org/dwc/terms/individualCount[dwc:individualCount]_ |3
+
+|Occurrence |
+|http://rs.tdwg.org/dwc/terms/organismQuantity[d__wc:organismQuantity__]
+|3
+
+|Occurrence |
+|http://rs.tdwg.org/dwc/terms/organismQuantityType[_dwc:organismQuantityType_]
+|`individuals'
+
+|Event | |_eco:isAbundanceReported_
+(http://rs.tdwg.org/eco/terms/isAbundanceReported) |`true' or `false'
+
+|Event | |eco:_isAbundanceCapReported_
+(http://rs.tdwg.org/eco/terms/isAbundanceCapReported) |`true' or `false'
+
+|Event |Share if available |eco:_abundanceCap_
+(http://rs.tdwg.org/eco/terms/abundanceCap) |5
+|===
+
+=== Species’ co-occurrence and species’ interactions \{#species’-co-occurrence-and-species’-interactions}
+
+The Resource Relationship extension
+(https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml) can
+be used to link information related across multiple occurrences (may be
+from the same or from different events), such as:
+
+* an occurrence with another occurrence +
+* an occurrence with a material sample +
+* a material sample with another material sample
+
+[width="100%",cols="<100%",options="header",]
+|===
+|Using the Resource Relationship extension
+(https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml)
+Create a new `resourceRelationship' table Add dwc:eventID as a column
+header so to link the record to the `Event' table. Add the Resource
+relationship extension fields as column headers. For each related set of
+information,…
+|===
