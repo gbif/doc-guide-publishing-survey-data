@@ -815,10 +815,10 @@ Both fields can be applied to any event at any level.
 
 .5+|Share if available
 |term:eco[eco:materialSampleTypes]
-|`wholeOrganism`
+|`wholeOrganism` \| `blood`
 
 |term:eco[eco:voucherInstitutions]
-|`AMNH`
+|`AMNH` \| `KUNHM`
 
 |_term:dwc[dwc:dataGeneralizations]_
 |`Coordinates generalized from original GPS coordinates to the nearest half degree grid cell.`; `Coordinates for each event site generalized from original GPS coordinates to the nearest half degree grid cell`
@@ -827,7 +827,7 @@ Both fields can be applied to any event at any level.
 |term:dwc[dwc:informationWithheld]
 |`Sensitive species occurrence information not reported`
 
-|term:dwc[dwc:fieldNotes] |`Notes available in the Grinnell-Miller Library'
+|term:dwc[dwc:fieldNotes] |`Notes available in the Grinnell-Miller Library`
 
 |
 |term:dwc[dwc:eventRemarks]
