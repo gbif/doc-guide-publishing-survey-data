@@ -1182,7 +1182,7 @@ Capture sampling effort information as structured data using the five (5) Humbol
 - term:eco[eco:samplingEffortValue] and term:eco[eco:samplingEffortUnit]
 - term:eco[eco:samplingEffortProtocol]
 - term:eco[eco:samplingPerformedBy]
-|===
+====
 
 [caption=""]
 .Sampling effort terms, their recommended usage (status), and example data entries.
