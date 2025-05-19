@@ -1,0 +1,70 @@
+== Specific biological survey types
+
+This section aims to help data publishers identify what to do and where
+to go with specific types of survey data.
+
+=== Camera trap survey data
+
+Refer to 'https://doi.org/10.35035/doc-0qzp-2x37[Best Practices for
+Managing and Publishing Camera Trap Data]' (Reyserhove, Norton, and
+Desmet 2023) for help in standardizing and publishing camera trap data.
+
+An R package, https://camtrap-dp.tdwg.org/[camtrapDP] (Bubnicki et al
+2023), is available to read and restructure camera trap data into Darwin
+Core. NOTE: The camtrapDP package currently only transforms data into
+occurrence core format but is nonetheless useful in structuring species
+occurrences derived from camera trap data into Darwin Core standard
+format.
+
+=== DNA and metabarcoding data
+
+Refer to 'https://doi.org/10.35035/doc-vf1a-nr22[Publishing DNA-derived
+data through biodiversity data platform]' (Abarenkov et al 2023) for
+help in standardizing and publishing DNA and metabarcoding data. The
+guide is also available in
+https://docs.gbif.org/publishing-dna-derived-data/fr/[French],
+https://docs.gbif.org/publishing-dna-derived-data/es/[Spanish], and
+https://docs.gbif.org/publishing-dna-derived-data/zh-TW/[Chinese]. And,
+review terms in the DNA derived data extension here:
+https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2022-02-23.xml.
+
+The GBIF Metabarcoding Data Toolkit (MDT) may be a useful resource.
+Learn more about the MDT at https://www.gbif.org/metabarcoding.
+
+=== Environmental impact assessments
+
+Refer to 'https://doi.org/10.35035/doc-5xdm-8762[Best Practices for
+Publishing Biodiversity Data from Environmental Impact Assessments]'
+(GBIF Secretariat & IAIA 2020) for help with primary data resulting from
+environmental impact assessments. The guide is also available in
+https://docs.gbif.org/eia-best-practices/1.0/fr/[French] and
+https://docs.gbif.org/eia-best-practices/1.0/es/[Spanish].
+
+*Private companies* +
+A guide is available to help private companies navigate the process of
+becoming GBIF data publishers
+(https://doi.org/10.35035/doc-b8hq-me03[LINK]; Figueira et al 2020). The
+guide is also available in
+https://docs.gbif.org/private-sector-data-publishing/2.0/fr/[French],
+https://docs.gbif.org/private-sector-data-publishing/2.0/pt/[Portuguese],
+and
+https://docs.gbif.org/private-sector-data-publishing/2.0/es/[Spanish].
+The guide is also available in
+https://docs.gbif.org/private-sector-data-publishing/2.0/fr/[French],
+https://docs.gbif.org/private-sector-data-publishing/2.0/pt/[Portuguese],
+and
+https://docs.gbif.org/private-sector-data-publishing/2.0/es/[Spanish].
+
+=== Freshwater biodiversity data
+
+The
+https://docs.gbif.org/freshwater-data-publishing-guide/en/[Freshwater
+Data Publishing Guide] (Lento & Schmidt-Kloiber 2025) supports
+freshwater data holders by describing best practices and presenting
+detailed lists of required and recommended data and metadata fields for
+preparing and sharing such data through GBIF.
+
+=== Vector-pathogen data
+
+The Secretariat is currently preparing a guide and data template for
+disease vector data. The guide will be shared here when completed.
