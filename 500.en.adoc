@@ -990,9 +990,7 @@ term:eco[eco:excludedGrowthFormScope] = `false`.
 
 *Degree of establishment*
 
-Degree of establishment refers to `The degree to which a dwc:Organism
-survives, reproduces, and expands its range at the given place and time'
-(see
+Degree of establishment refers to "The degree to which a term:dwc[dwc:Organism] survives, reproduces, and expands its range at the given place and time" (see
 term:dwc[dwc:degreeOfEstablishment]).
 
 * If the survey targeted or excluded specific organismal degree of
