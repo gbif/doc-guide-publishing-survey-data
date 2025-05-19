@@ -36,6 +36,8 @@ include::400.en.adoc[]
 
 include::500.en.adoc[]
 
+include::600.en.adoc[]
+
 :sectnums!:
 
 //include::afterword.en.adoc[]
