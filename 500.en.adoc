@@ -515,11 +515,11 @@ laboratory).
 *`Inventory` event types*
 
 * If term:dwc[dwc:eventType] =
-*`inventory`*, the type of search implemented (e.g., restricted search,
+`inventory`, the type of search implemented (e.g., restricted search,
 open search, opportunistic search, trap or sample, compilation) must be
 reported in
 term:eco[eco:inventoryTypes]. +
-* If _eco:inventoryTypes_ = ’*compilation’*, the compilation type should
+* If _eco:inventoryTypes_ = `compilation`, the compilation type should
 be reported using
 term:eco[eco:compilationTypes]
 and data sources captured using
@@ -531,23 +531,22 @@ combine surveys employing different protocols, processes, and observers,
 often with variable reporting of the methods employed or other compiled
 data sources and literature searches.
 
-Event type terms, their recommended usage (status), and example data
-entries..
-
+[caption=""]
+.Event type terms, their recommended usage (status), and example data entries
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
 |Recommended |term:dwc[dwc:eventType]
 |`Inventory`
 
-|Recommended if applicable
+.3+|Recommended if applicable
 |term:eco[eco:inventoryTypes]
 |`Open search`
 
-| |term:eco[eco:compilationTypes]
+|term:eco[eco:compilationTypes]
 |`compilationOfExistingSourcesAndSamplingEvents`
 
-|
+
 |term:eco[eco:compilationSourceTypes]
 |`museumSpecimens`
 |===
