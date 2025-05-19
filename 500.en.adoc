@@ -649,7 +649,7 @@ details on reporting absence information at the occurrence level.
 |`true` or `false`
 
 
-|term:eco[eco:_isAbundanceCapReported]
+|term:eco[eco:isAbundanceCapReported]
 |`true` or `false`
 
 .2+|Share if available
@@ -661,7 +661,7 @@ details on reporting absence information at the occurrence level.
 ==== Material samples
 
 A *material sample* (http://rs.tdwg.org/dwc/terms/MaterialSample) is an
-entity `… that represents an entity of interest in whole or in part.`
+entity "…that represents an entity of interest in whole or in part."
 Essentially, material samples are specimens collected during the survey
 event. They may consist of an entire organism, part of an organism, or a
 genetic sample.
@@ -700,7 +700,7 @@ If the dataset or sampling event does _not_ include vouchers:
 * term:eco[eco:hasVouchers] = `false`
 at all appropriate sampling event levels.
 
-==== Sensitive data: data generalization & information withheld \{#sensitive-data:-data-generalization-&-information-withheld}
+==== Sensitive data: data generalization & information withheld
 
 Although the general recommendation is to share all biodiversity data
 available at its highest spatio-temporal resolution, situations exist
@@ -721,8 +721,8 @@ How you generalize sensitive data (e.g. restrict the resolution of the
 data) depends on the species’ category of sensitivity. Where there is
 low risk of adverse outcomes, unrestricted publication of sensitive
 species data remains appropriate. See the published guide
-`https://doi.org/10.15468/doc-5jp4-5g10[Current Best Practices for
-Generalizing Sensitive Species Occurrence Data]' for guidance on when
+https://doi.org/10.15468/doc-5jp4-5g10['Current Best Practices for
+Generalizing Sensitive Species Occurrence Data'] for guidance on when
 and how to generalize or withhold information sensitive biodiversity
 data (Chapman 2020). The guide is also available in
 https://docs.gbif.org/sensitive-species-best-practices/master/fr/[French]
