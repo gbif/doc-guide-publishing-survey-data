@@ -67,9 +67,10 @@ terms—http://rs.tdwg.org/eco/terms/siteCount[_eco:siteCount_] and
 http://rs.tdwg.org/eco/terms/siteNestingDescription[_eco:siteNestingDescription_]—
 to better support complex or nested dataset.
 
-[width="100%",cols="<100%",options="header",]
-|===
-|Event data in GBIF Any dataset to be published using the DwC event core
+[NOTE]
+.Event data in GBIF
+====
+Any dataset to be published using the DwC event core
 must have at least 1 event record with a unique
 http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_]. Each
 http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_] in a dataset must be
@@ -93,7 +94,7 @@ measurements or facts], and
 https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[Relevé]
 extensions, can be applied to any event level via the appropriate
 http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_].
-|===
+====
 
 *Non-nested datasets*
 
