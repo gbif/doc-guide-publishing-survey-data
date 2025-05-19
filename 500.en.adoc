@@ -461,9 +461,9 @@ types (e.g., Bioblitzes, inventories). The nature of the survey event
 should be reported using
 term:dwc[dwc:eventType].
 
-[width="100%",cols="<100%",options="header",]
-|===
-|Identifying event type
+[NOTE]
+.Identifying event type
+====
 term:dwc[dwc:eventType] should provide a
 high level overview of sampling effort type but should not be so
 specific as to overlap with sampling protocol. There is no single,
@@ -471,7 +471,8 @@ standardized vocabulary for
 term:dwc[dwc:eventType]. If your
 organization or community has a controlled vocabulary, it is recommended
 to apply terms from that. Otherwise, you can refer to the common event
-types below for guidance. Project: Projects are structured initiatives
+types below for guidance. 
+- Project: Projects are structured initiatives
 with explicitly stated objective or suite of objectives and with clear
 targets, timelines, and deliverables. Projects typically are typically
 linked to non-biological information identifying participating
@@ -480,25 +481,28 @@ high-level administrative information. Biological sampling may only be
 one facet of a project’s scope. `Project` as a
 term:dwc[dwc:eventType] is typically
 most appropriate only at the highest (parent) event level in a nested
-dataset. Expedition: An expedition is an organized information gathering
+dataset.
+- Expedition: An expedition is an organized information gathering
 venture that inherently includes multiple sampling events and event
 types. Expeditions may include multiple taxonomic and/organismal scopes,
 any number of documented sampling protocols, and varying degrees of
 complexity in survey design. `Expedition` as a
 term:dwc[dwc:eventType] is typically
 most appropriate at higher (parent) event levels in nested hierarchies.
-Survey: A survey is a systematic effort to collect information about the
+- Survey: A survey is a systematic effort to collect information about the
 biological organisms in a specific area at a given time. Surveys
 typically included at least one documented protocol and may or may not
 have an explicitly defined taxonomic and/or organismal scope. `Survey`
 is the most general event type term and can be applied as a
 term:dwc[dwc:eventType] at any event
-level. Inventory: An inventory is a comprehensive survey of the taxa
+level.
+- Inventory: An inventory is a comprehensive survey of the taxa
 present in a specific area over an explicit period of time. Inventories
 typically have an explicit taxonomic and/or organismal scope and a
 well-defined protocol. `Inventory` is typically most appropriate as a
 term:dwc[dwc:eventType] at lower (child)
-event levels in nested hierarchies. Bioblitz: A bioblitz is a survey
+event levels in nested hierarchies.
+- Bioblitz: A bioblitz is a survey
 event aimed at finding and identifying as many species as possible in a
 specific area over a (typically) short, contiguous period of time.
 Bioblitzes often include participants (agents) with a wide range of
@@ -506,12 +510,12 @@ backgrounds and levels of expertise in biodiversity sciences including
 formal biologists as well as the broader, general public. `Bioblitz` as
 a term:dwc[dwc:eventType] is typically
 most appropriate at lower (child) event levels in nested hierarchies.
-Identification: An identification is the taxonomic identification of a
+- Identification: An identification is the taxonomic identification of a
 material sample or samples collected during an event. This could be an
 identification by a professional taxonomist or through DNA analysis, but
 it occurs at a time and place other than the survey site (e.g., a
 laboratory).
-|===
+====
 
 *`Inventory` event types*
 
