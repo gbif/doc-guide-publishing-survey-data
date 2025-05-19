@@ -23,7 +23,7 @@ site. The extension facilitates explicit reporting of:
 * The description of the plant community associated the survey +
 * Aspect and inclination at the survey site +
 * Percent total cover of all plants and percent cover of trees, shrubs,
-herbs, crytpograms, mosses, lichens, algae, litter, water, and rocks +
+herbs, cryptograms, mosses, lichens, algae, litter, water, and rocks +
 * Heights of tree, shrub, and herbaceous layers +
 * Whether or not mosses or lichens are identified
 
