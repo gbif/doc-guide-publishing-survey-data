@@ -157,6 +157,17 @@ http://rs.tdwg.org/dwc/terms/fieldNumber[_dwc:fieldNumber_].
 |RV Sol 87-03-08
 |===
 
+[cols="1,2,3", options="header"]
+|===
+| Header 1 | Header 2 | Header 3
+
+| Row 1, Col 1 | Row 1, Col 2 | Row 1, Col 3
+| Row 2, Col 1 | Row 2, Col 2 | Row 2, Col 3
+| Row 3, Col 1, colspan=2 | Row 3, Col 2 | Row 3, Col 3
+| Row 5, Col 1 | Row 4, Col 2 | Row 4, Col 3
+| Row 5, Col 1 | Row 5, Col 2 | Row 5, Col 3
+|===
+
 === Survey site
 
 An event *_site_* is the location at which observations are made or
