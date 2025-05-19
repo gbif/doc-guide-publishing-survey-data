@@ -34,7 +34,7 @@ Learn more about the MDT at https://www.gbif.org/metabarcoding.
 
 Refer to 'https://doi.org/10.35035/doc-5xdm-8762[Best Practices for
 Publishing Biodiversity Data from Environmental Impact Assessments]'
-(GBIF Secretariat & IAIA 2020) for help with primary data resulting from
+<<GBIFIAIA2020>> for help with primary data resulting from
 environmental impact assessments. The guide is also available in
 https://docs.gbif.org/eia-best-practices/1.0/fr/[French] and
 https://docs.gbif.org/eia-best-practices/1.0/es/[Spanish].
