@@ -8,7 +8,7 @@ location, protocols, scopes, and efforts.
 [IMPORTANT]
 .Survey level information in DWC-A files
 ====
-a|Survey event data should be
+Survey event data should be
 saved to the DwC-A event table. This includes DwC Event terms (any term
 preceded by _`dwc'_, e.g.,
 http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_]) and Humboldt
