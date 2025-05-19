@@ -364,7 +364,7 @@ term:dwc[dwc:locality].
 
 .3+|Share if available
 |term:dwc[dwc:footprintWKT]
-|`POLYGON ((10 20, 11 20, 11 21, 10 21, 10 20))`
+|```POLYGON ((10 20, 11 20, 11 21, 10 21, 10 20))```
 
 |term:dwc[dwc:footprintSRS]
 |`epsg:4326`
