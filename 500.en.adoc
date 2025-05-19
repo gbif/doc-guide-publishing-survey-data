@@ -1168,50 +1168,43 @@ available.
 term:eco[eco:samplingPerformedBy]
 has an IRI equivalent only a single OrcID can be provided (the term
 cannot support a list). Efforts are underway to enable the use of
-dwc:http://rs.tdwg.org/dwc/terms/recordedByID[recordedByID] at the event
+term:dwc[dwc:recordedByID] at the event
 level so a list of OrcID’s (using the pipe separator between values) can
 be provided.
 
-[width="100%",cols="<100%",options="header",]
-|===
-|Updated r__ecommended best practice__ Capture sampling effort
-information as structured data using the five (5) Humboldt extension
-terms:
-term:eco[eco:isSamplingEffortReported]
-term:eco[eco:samplingEffortValue]
-and
-term:eco[eco:samplingEffortUnit]
-term:eco[eco:samplingEffortProtocol]
-term:eco[eco:samplingPerformedBy]
+
+[NOTE]
+.Updated recommended best practice
+====
+Capture sampling effort information as structured data using the five (5) Humboldt extension terms:
+
+- term:eco[eco:isSamplingEffortReported]
+- term:eco[eco:samplingEffortValue] and term:eco[eco:samplingEffortUnit]
+- term:eco[eco:samplingEffortProtocol]
+- term:eco[eco:samplingPerformedBy]
 |===
 
-Sampling effort terms, their recommended usage (status), and example
-data entries.
-
+[caption=""]
+.Sampling effort terms, their recommended usage (status), and example data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Recommended
+.6+|Recommended
 |term:eco[eco:isSamplingEffortReported]
 |`true` or `false`
 
-|
-|_term:eco[eco:samplingEffortProtocol]_
-|`40 box traps deployed in the afternoon even spacings along 4 parallel
-100m transects placed 50m apart and visited after sunrise the next day'
+|term:eco[eco:samplingEffortProtocol]
+|`40 box traps deployed in the afternoon even spacings along 4 parallel 100m transects placed 50m apart and visited after sunrise the next day`
 
-|
-|_term:eco[eco:samplingEffortValue]_
+|term:eco[eco:samplingEffortValue]
 |`40`
 
-|
-|_term:eco[eco:samplingEffortValue]_
+|term:eco[eco:samplingEffortValue]
 |`trap nights`
 
-| |_term:dwc[dwc:samplingEffort]_
+|term:dwc[dwc:samplingEffort]
 |`40 trap nights`
 
-|
-|_term:eco[eco:samplingPerformedBy]_
+|term:eco[eco:samplingPerformedBy]
 |`A. Townsend Peterson`
 |===
