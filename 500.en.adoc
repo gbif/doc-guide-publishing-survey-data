@@ -232,7 +232,7 @@ datasets in GBIF:
 
 * *Location ID:* a unique identifier for each sampling event site should
 be shared in
-*http://rs.tdwg.org/dwc/terms/locationID[dwc:locationID*]. +
+term:dwc[dwc:locationID]. +
 * *Country code:* the two letter code for the country in which the
 survey takes place should be provided in
 *http://rs.tdwg.org/dwc/terms/countryCode[dwc:countryCode*]. +
