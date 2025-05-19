@@ -139,8 +139,8 @@ data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Required |http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_]
-|`survey2022_a-2'
+|Required |term:dwc[dwc:eventID]]
+|survey2022_a-2
 
 |Required for nested datasets
 |http://rs.tdwg.org/dwc/terms/parentEventID[_dwc:parentEventID_]
