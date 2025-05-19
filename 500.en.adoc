@@ -419,28 +419,29 @@ https://techdocs.gbif.org/en/data-processing/temporal-interpretation[Date
 and time interpretation] for more guidance on reporting event dates and
 times.
 
-Event date and temporal scope terms, their recommended usage (status),
-and example data entries.
-
+[caption=""]
+.Event date and temporal scope terms, their recommended usage (status), and example data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Required |term:dwc[dwc:eventDate]
+|Required
+|term:dwc[dwc:eventDate]
 |`2018-08-29`
 
-|Recommended |_term:dwc[dwc:eventTime]_
+.3+|Recommended
+|_term:dwc[dwc:eventTime]_
 |`08:00Z`
 
-|
+
 |term:eco[eco:eventDurationValue]
 |`1`
 
-|
+
 |term:eco[eco:eventDurationUnit]
 |`hour`
 |===
 
-=== Methodology/sampling protocol \{#methodology/sampling-protocol}
+=== Methodology/sampling protocol
 
 *Sampling protocol* provides the details of how the sampling was
 conducted. Clear communication of the sampling protocol implemented is
