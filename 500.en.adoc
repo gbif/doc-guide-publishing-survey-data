@@ -635,28 +635,27 @@ term:eco[eco:_isAbundanceCapReported]
 See the section `link:#abundance-information[Abundance information]` for
 details on reporting absence information at the occurrence level.
 
-Absence and abundance terms, their recommended usage (status), and
-example data entries.
-
+[caption=""]
+.Absence and abundance terms, their recommended usage (status), and example data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Recommended
+.3+|Recommended
 |term:eco[eco:isAbsenceReported]
 |`true` or `false`
 
-|
+
 |term:eco[eco:isAbundanceReported]
 |`true` or `false`
 
-|
+
 |term:eco[eco:_isAbundanceCapReported]
 |`true` or `false`
 
-|Share if available
+.2+|Share if available
 |term:eco[eco:absentTaxa] |
 
-| |term:eco[eco:abundanceCap] |`5`
+|term:eco[eco:abundanceCap] |`5`
 |===
 
 ==== Material samples
