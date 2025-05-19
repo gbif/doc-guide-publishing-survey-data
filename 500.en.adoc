@@ -24,23 +24,30 @@ suite of Humboldt Extension terms is available on the Humboldt
 Ecological Inventories page in the GBIF Registry of Schemas
 (https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml) and in the
 Humboldt Extension Quick Reference Guide (https://eco.tdwg.org/terms/).
+
 Fields for which there is no data to share at any hierarchical level can
 be left blank or simply not included in the Event table. Populating
-terms across event levels (e.g., from parent event to child event) Each
-event level can have its own set of attributes and measurements, which
+terms across event levels (e.g., from parent event to child event) 
+
+Each event level can have its own set of attributes and measurements, which
 can be captured using the Humboldt and/or other Extension(s) and be
 unambiguously linked to the corresponding level through the appropriate
-__dwc:eventID__s. A parent Event should not be populated by deriving or
+__dwc:eventID__s. 
+
+A parent Event should not be populated by deriving or
 summarizing information from child Events; rather, fields SHOULD be
 populated explicitly with information directly appropriate to the nature
 and level of the event itself (see Section _3.2.3 Principle of
 non-derivation_ in the `https://eco.tdwg.org/hierarchy/[Properties of
 hierarchical events in the Humboldt Extension for Ecological
-Inventories]'). A child event SHOULD NOT implicitly inherit the value of
+Inventories]'). 
+
+A child event SHOULD NOT implicitly inherit the value of
 any property of any of its parent Event(s). If a value is in common
 between an Event and its parent, the value should be included explicitly
-in both Event records. Refer to
-https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in the
+in both Event records. 
+
+Refer to https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in the
 Humboldt Extension for Ecological Inventories^] for guidance in
 populating Humboldt extension terms across event levels.
 ====
