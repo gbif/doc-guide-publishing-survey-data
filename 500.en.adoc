@@ -1111,17 +1111,15 @@ The actual habitat observed at a survey site during a sampling event
 should be reported in
 term:dwc[dwc:habitat].
 
-Habitat scope terms, their recommended usage (status), and example data
-entries.
-
+[caption=""]
+.Habitat scope terms, their recommended usage (status), and example data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Share if available
+.2+|Share if available
 |term:eco[eco:targetHabitatScop]
 |`deciduous forest`
 
-|
 |term:eco[eco:excludedHabitatScope]
 |`urban`
 |===
