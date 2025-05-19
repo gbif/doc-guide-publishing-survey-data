@@ -724,7 +724,7 @@ species data remains appropriate. See the published guide
 'https://doi.org/10.15468/doc-5jp4-5g10[Current Best Practices for
 Generalizing Sensitive Species Occurrence Data]' for guidance on when
 and how to generalize or withhold information sensitive biodiversity
-data (Chapman 2020). The guide is also available in
+data <<Chapman2020>>. The guide is also available in
 https://docs.gbif.org/sensitive-species-best-practices/master/fr/[French]
 and
 https://docs.gbif.org/sensitive-species-best-practices/master/es/[Spanish].
