@@ -739,14 +739,12 @@ term:dwc[dwc:dataGeneralizations].
 For example, if the spatial resolution of locality data for an event is
 reduced to the nearest half degree, then
 term:dwc[dwc:dataGeneralizations]
-= `__Coordinates generalized from original GPS coordinates to the
-nearest half degree grid cell__' for each event to which this treatment
+= `Coordinates generalized from original GPS coordinates to the nearest half degree grid cell` for each event to which this treatment
 was applied. If the location information was generalized for every
 sampling event site in a nested hierarchy, then at the parent event
 level
 term:dwc[dwc:dataGeneralizations]
-= `__Coordinates for each event site generalized from original GPS
-coordinates to the nearest half degree grid cell__.'
+= `Coordinates for each event site generalized from original GPS coordinates to the nearest half degree grid cell`.
 
 *Reporting information withheld*
 
