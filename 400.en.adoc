@@ -1,0 +1,104 @@
+== Resource metadata
+
+[width="100%",cols="^100%",options="header",]
+|===
+|Resource metadata information should be saved to the DwC-A metafile.
+|===
+
+*Resource metadata* provides project- and/or dataset- level information
+for potential data users to understand the context of the dataset. GBIF
+uses https://eml.ecoinformatics.org/[Ecological Metadata Language]
+(EML), a metadata standard administered and maintained by
+https://knb.ecoinformatics.org/[The Knowledge Network for Biocomplexity]
+that records information about ecological datasets in a series of
+modular and extensible XML document types. Each Darwin Core Archive
+should include a resource metadata (EML file) written in XML format.
+
+GBIF currently requires 8 and strongly recommends 1 dataset-level
+metadata terms (see
+https://www.gbif.org/data-quality-requirements-sampling-events[Data
+Quality Requirements for Sampling Events] for more information; Table
+4):
+
+* *_title:_* The title under which the dataset will be published at
+gbif.org. The title should be brief, but descriptive, characterizing the
+dataset in an international context and distinguishing it from similar
+datasets in other institutions. +
+* *_description:_* An English language text, describing the dataset.
+This may include a longer version of title, a description of geographic,
+temporal and taxonomic scope of the dataset, methodology and purpose of
+the underlying data compilation (e.g. protected habitat surveillance,
+faunistic inventory, deep sea trawl data), relevant literature
+references, and any other information you consider relevant to
+characterize the dataset. Essentially a resource abstract. +
+* *_publishing organization:_* The title of the institution or
+organization that will be listed as the data publisher at gbif.org. The
+publishing organization is the institution which holds or owns the
+dataset and is in charge of its contents and maintenance. +
+* *_type:_* The type of dataset aligns with the DwC core implemented.
+Type for survey and monitoring datasets will be `samplingEvent'. +
+* *_license:_* A machine-readable statement of the rights attached to
+the published dataset. GBIF supports the following Creative Commons
+licenses: CC0, CC BY, and CC BY-NC (see https://www.gbif.org/terms). +
+* *_contact(s):_* Contact information for the person or institution to
+contact with questions about the use and/or interpretation of the
+dataset. This information is required to ensure the possibility of
+communication about the dataset. Minimum required information is contact
+name and email address. +
+* *_creator(s):_* Contact information for the creator of the dataset. +
+* *_metadata provider(s):_* Contact information for the author(s) of the
+dataset metadata. Minimum required information is contact name and email
+address. +
+* *_citation:_* A text specifying how your dataset should be cited in
+publications that make use of your data. If no suggested citation is
+specified, GBIF will automatically supply a standard format citation
+that includes the dataset name, the name of the publishing institution,
+the date of the download, and a reference to gbif.org.
+
+See the
+https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile[GBIF
+Metadata Profile – How-to Guide] for comprehensive guidelines and list
+of available terms for resource metadata (GBIF 2011).
+
+[[survey-event-data:-capturing-the-context-of-biological-surveys]]
+== Survey event data: capturing the context of biological surveys
+
+The following sections will guide you through the process of mapping
+Event level information specifically related to survey structure,
+location, protocols, scopes, and efforts.
+
+[width="100%",cols="100%",options="header",]
+|===
+|Survey level information in DWC-A files Survey event data should be
+saved to the DwC-A event table. This includes DwC Event terms (any term
+preceded by _`dwc'_, e.g.,
+http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_]) and Humboldt
+extension terms (any term preceded by _`eco'_, e.g.,
+http://rs.tdwg.org/eco/terms/protocolNames[_eco:protocolNames_]). A
+comprehensive list of Darwin Core terms that can be applied at the event
+level can be found on the Darwin Core Event page in the GBIF Registry of
+Schemas (https://rs.gbif.org/core/dwc_event_2024-02-19.xml). The full
+suite of Humboldt Extension terms is available on the Humboldt
+Ecological Inventories page in the GBIF Registry of Schemas
+(https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml) and in the
+Humboldt Extension Quick Reference Guide (https://eco.tdwg.org/terms/).
+Fields for which there is no data to share at any hierarchical level can
+be left blank or simply not included in the Event table. Populating
+terms across event levels (e.g., from parent event to child event) Each
+event level can have its own set of attributes and measurements, which
+can be captured using the Humboldt and/or other Extension(s) and be
+unambiguously linked to the corresponding level through the appropriate
+__dwc:eventID__s. A parent Event should not be populated by deriving or
+summarizing information from child Events; rather, fields SHOULD be
+populated explicitly with information directly appropriate to the nature
+and level of the event itself (see Section _3.2.3 Principle of
+non-derivation_ in the `https://eco.tdwg.org/hierarchy/[Properties of
+hierarchical events in the Humboldt Extension for Ecological
+Inventories]'). A child event SHOULD NOT implicitly inherit the value of
+any property of any of its parent Event(s). If a value is in common
+between an Event and its parent, the value should be included explicitly
+in both Event records. Refer to
+https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in the
+Humboldt Extension for Ecological Inventories^] for guidance in
+populating Humboldt extension terms across event levels.
+|===
