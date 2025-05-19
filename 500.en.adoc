@@ -1208,3 +1208,5 @@ Capture sampling effort information as structured data using the five (5) Humbol
 |term:eco[eco:samplingPerformedBy]
 |`A. Townsend Peterson`
 |===
+
+<<<
