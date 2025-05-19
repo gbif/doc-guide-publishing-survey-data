@@ -854,16 +854,10 @@ practice is to report as much information as is explicitly available but
 only at the event levels for which the information is relevant
 (information should not be inferred up or down an event hierarchy).
 
-[width="100%",cols="<100%",options="header",]
-|===
-|NOTE: The `target` and `excluded` scope terms (e.g.,
-_eco:targetTaxonomicScope_) presented in this section are the only
-survey event terms designed to capture _intent_. That is, these terms
-capture the breadth of the information the biological survey _intended_
-to capture. All other terms should be used to report the actuality of
-the survey (e.g., what protocol was in practice implemented, and what
-information was actually collected).
-|===
+[NOTE]
+====
+The `target` and `excluded` scope terms (e.g., _eco:targetTaxonomicScope_) presented in this section are the only survey event terms designed to capture _intent_. That is, these terms capture the breadth of the information the biological survey _intended_ to capture. All other terms should be used to report the actuality of the survey (e.g., what protocol was in practice implemented, and what information was actually collected).
+====
 
 *Verbatim scope*
 
