@@ -306,3 +306,5 @@ from the same or from different events), such as:
 - Add the Resource relationship extension fields as column headers. 
 - For each related set of information,…
 ====
+
+<<<
