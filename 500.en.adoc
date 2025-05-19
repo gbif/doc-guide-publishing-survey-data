@@ -68,12 +68,12 @@ http://rs.tdwg.org/eco/terms/siteNestingDescription[_eco:siteNestingDescription_
 to better support complex or nested dataset.
 
 [NOTE]
-.Event data in GBIF
+.*Event data in GBIF*
 ====
-Any dataset to be published using the DwC event core
+- Any dataset to be published using the DwC event core
 must have at least 1 event record with a unique
-http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_]. Each
-http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_] in a dataset must be
+http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_].
+- Each http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_] in a dataset must be
 unique within the dataset. Use of a persistent globally unique
 identifier (GUID) is recommended (this can be the original field
 number). A unique http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_]
@@ -82,12 +82,14 @@ data collected during the same sampling event are published as multiple
 datasets). See
 https://assets.ctfassets.net/uo17ejk9rkwj/8aIUAbLo0oycyMiM2IKUS/363edf7ab4558460cfe1ef140567450f/persistent_identifiers_guide_en_v1.pdf[A
 Beginner’s Guide to Persistent Identifiers] for guidance in creating
-persistent identifiers. An event is not required to have associated
+persistent identifiers. 
+- An event is not required to have associated
 organism occurrence data. If organism occurrence or non-detection data
 are available, they are connected via the
 http://rs.tdwg.org/dwc/terms/eventID[_dwc:eventID_] to the event and the
 https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[Occurrence
-extension]. DwC event core extensions, including
+extension]. 
+- DwC event core extensions, including
 https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[occurrence],
 https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[extended
 measurements or facts], and
