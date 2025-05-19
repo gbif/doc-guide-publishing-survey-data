@@ -449,9 +449,10 @@ essential to ensuring the reliability, reproducibility, and reusability
 of a dataset as detailed knowledge of survey methods facilitates data
 integration and subsequent analysis.
 
-*_Sampling protocol terms should be populated at every event level
-possible as inheritance in either direction should not be assumed or
-inferred between event levels._*
+[IMPORTANT]
+====
+Sampling protocol terms should be populated at every event level possible as inheritance in either direction should not be assumed or inferred between event levels.
+====
 
 ==== Event type
 
