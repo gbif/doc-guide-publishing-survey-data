@@ -1,7 +1,7 @@
 [[mapping-additional-survey-event-information:-dwc-extensions]]
 == Mapping additional survey event information: DwC Extensions
 
-=== Extended Measurement or Fact (eMoF) \{#extended-measurement-or-fact-(emof)}
+=== Extended Measurement or Fact (eMoF)
 
 Additional measurements about a site including values and units of
 measurement and related protocols can be shared for any event level
@@ -11,9 +11,7 @@ https://obis.org/), and detailed instructions about implementing the
 extension are available in the OBIS manual
 (https://manual.obis.org/format_emof.html).
 
-eMoF extension information as a GBIF registered extension is available
-at
-https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml.
+eMoF extension information as a GBIF registered extension is available at https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml.
 
 === Relevé extension
 
@@ -29,17 +27,17 @@ herbs, crytpograms, mosses, lichens, algae, litter, water, and rocks +
 * Heights of tree, shrub, and herbaceous layers +
 * Whether or not mosses or lichens are identified
 
-[width="100%",cols="<100%",options="header",]
-|===
-|Using the Relevé extension
-(https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml) Create a
+[NOTE]
+.*Using the Relevé extension* (https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml) 
+====
+Create a
 new `Relevé' table Add dwc:eventID as a column header so to link the
 record to the `Event' table. Add the Relevé extension fields as column
 headers. The _dwc:eventID_ will link the record to the `Event' table For
 each unique survey event (_dwc:eventID_), populate the relevant
 extension field. Information for a unique _dwc:eventID_ should require
 only one row in the table.
-|===
+====
 
 For an example implementation of the Relevé extension
 (https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml), see the
