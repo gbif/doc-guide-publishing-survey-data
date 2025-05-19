@@ -234,19 +234,16 @@ datasets in GBIF:
 be shared in
 term:dwc[dwc:locationID]. +
 * *Country code:* the two letter code for the country in which the
-survey takes place should be provided in
-*http://rs.tdwg.org/dwc/terms/countryCode[dwc:countryCode*]. +
+survey takes place should be provided in term:dwc[dwc:countryCode]. +
 * *Latitude-Longitude:* The decimal latitude and longitude and geodetic
-datum location of the Event site should be provided in
-http://rs.tdwg.org/dwc/terms/decimalLatitude[_dwc:decimalLatitude_],
-http://rs.tdwg.org/dwc/terms/decimalLongitude[_dwc:decimalLongitude_],
-and http://rs.tdwg.org/dwc/terms/geodeticDatum[_dwc:geodeticDatum_].
+datum location of the Event site should be provided in term:dwc[dwc:decimalLatitude], term:dwc[dwc:decimalLongitude],
+and term:dwc[dwc:geodeticDatum].
 ** If geographic coordinates are not in decimal latitude and decimal
 longitude format, populate
-http://rs.tdwg.org/dwc/terms/verbatimLatitude[_dwc:verbatimLatitude_],
-http://rs.tdwg.org/dwc/terms/verbatimLongitude[_dwc:verbatimLongitude_],
+term:dwc[dwc:verbatimLatitude],
+term:dwc[dwc:verbatimLongitude],
 and
-http://rs.tdwg.org/dwc/terms/verbatimCoordinateSystem[_dwc:verbatimCoordinateSystem_]
+term:dwc[dwc:verbatimCoordinateSystem]
 instead.
 
 The Humboldt extension includes additional terms that provide greater
