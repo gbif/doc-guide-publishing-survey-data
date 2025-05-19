@@ -298,12 +298,11 @@ from the same or from different events), such as:
 * an occurrence with a material sample +
 * a material sample with another material sample
 
-[width="100%",cols="<100%",options="header",]
-|===
-|Using the Resource Relationship extension
-(https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml)
-Create a new `resourceRelationship' table Add dwc:eventID as a column
-header so to link the record to the `Event' table. Add the Resource
-relationship extension fields as column headers. For each related set of
-information,…
-|===
+[NOTE]
+.*Using the Resource Relationship extension* (https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml)
+===
+- Create a new `resourceRelationship` table
+- Add term:dwc[dwc:eventID] as a column header so to link the record to the `Event` table.
+- Add the Resource relationship extension fields as column headers. 
+- For each related set of information,…
+====
