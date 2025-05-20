@@ -386,9 +386,9 @@ extension].
 
 If vegetation cover is reported, then
 term:eco[eco:isVegetationCoverReported]
-= 'true'; otherwise,
+= `true`; otherwise,
 term:eco[eco:isVegetationCoverReported]
-= 'false'.
+= `false`.
 
 === Survey date and time
 
@@ -600,7 +600,7 @@ change, and conservation planning and resource management.
 occurrences (to be reported in the 'occurrence' table as
 _dwc:occurrenceStatus_ = 'absent'), then
 term:eco[eco:isAbsenceReported]
-= 'true'. +
+= `true`. +
 * A list of absent taxa can be provided using
 term:eco[eco:absentTaxa] at all
 relevant levels. Absences should only be reported for taxa within the
@@ -618,14 +618,14 @@ species, and informing effective habitat and ecosystem management.
 
 * If the dataset includes abundance information,
 term:eco[eco:isAbundanceReported]
-= 'true' for all appropriate Event levels. If there is an abundance cap,
+= `true` for all appropriate Event levels. If there is an abundance cap,
 then
 term:eco[eco:_isAbundanceCapReported]
-= 'true' and the value of the cap should be reported in
+= `true` and the value of the cap should be reported in
 term:eco[eco:abundanceCap]. +
 * If there is no abundance cap, then
 term:eco[eco:_isAbundanceCapReported]
-= 'false'.
+= `false`.
 
 See the section 'link:#abundance-information[Abundance information]' for
 details on reporting absence information at the occurrence level.
@@ -664,7 +664,7 @@ genetic sample.
 If the dataset includes at least one material sample:
 
 * term:eco[eco:hasMaterialSamples]
-= 'true' at the appropriate child event level and at any relevant parent
+= `true` at the appropriate child event level and at any relevant parent
 event level, and +
 * the type(s) of materials collected should be listed under
 term:eco[eco:materialSampleTypes]
@@ -673,7 +673,7 @@ for each relevant event level.
 If the dataset or sampling event does _not_ include material samples:
 
 * term:eco[eco:hasMaterialSamples]
-= 'false' at all appropriate sampling event levels.
+= `false` at all appropriate sampling event levels.
 
 ==== Vouchers
 
@@ -683,7 +683,7 @@ effort.
 
 If the dataset has vouchers:
 
-* term:eco[eco:hasVouchers] = 'true'
+* term:eco[eco:hasVouchers] = `true`
 at the appropriate child event level and at any relevant parent event
 level, and +
 * a list of institutions housing them should be shared in
@@ -692,7 +692,7 @@ for each relevant event level.
 
 If the dataset or sampling event does _not_ include vouchers:
 
-* term:eco[eco:hasVouchers] = 'false'
+* term:eco[eco:hasVouchers] = `false`
 at all appropriate sampling event levels.
 
 ==== Sensitive data: data generalization & information withheld
@@ -770,13 +770,13 @@ organism during the event?_
 organisms of the same taxon sampled/observed in that single occurrence
 record, then
 term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
-= 'true' +
+= `true` +
 * If the quantity reported using these paired terms does _not_ include
 all organisms of the same taxon sampled/observed in that single
 occurrence record (e.g., there are 2 or more occurrence records reported
 for the same event), then
 term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
-= 'false'
+= `false`
 
 See https://eco.tdwg.org/inclusive/[Guidelines for eco:isLeastSpecificTargetCategoryQuantityInclusive] <<tdwg2024a>> for more information.
 
@@ -892,7 +892,7 @@ or more names) or
 term:dwc[dwc:identifiedByID] (for
 one or more unique identifiers such as, OrcID). +
 * If every organism included in terms:eco[eco:targetTaxonomicScope] that was observed during an event was reported, then
-term:eco[eco:isTaxonomicScopeFullyReported] = 'true'; if not, term:eco[eco:isTaxonomicScopeFullyReported] = 'false'.
+term:eco[eco:isTaxonomicScopeFullyReported] = `true`; if not, term:eco[eco:isTaxonomicScopeFullyReported] = `false`.
 
 *Knowledge about taxonomic completeness* allows data users to determine
 how comprehensively an area was sampled. If taxonomic completeness is
@@ -959,9 +959,9 @@ term:eco[eco:excludedLifeStageScope]. +
 * If every organism that was included within the life stage scope, and
 was detected during the survey, was reported, then
 term:eco[eco:isLifeStageScopeFullyReported]
-= 'true'. Otherwise,
+= `true`. Otherwise,
 term:eco[eco:isLifeStageScopeFullyReported]
-= 'false'.
+= `false`.
 
 A corresponding term:dwc[dwc:lifeStage]
 term is available in the Occurrence extension. This term can be used to
@@ -981,8 +981,8 @@ term:eco[eco:isGrowthFormScopeFullyReported] +
 * If every organism that was included within the growth form scope, and
 was detected during the survey, was reported, then
 term:eco[eco:excludedGrowthFormScope]
-= 'true'. Otherwise,
-term:eco[eco:excludedGrowthFormScope] = 'false'.
+= `true`. Otherwise,
+term:eco[eco:excludedGrowthFormScope] = `false`.
 
 *Degree of establishment*
 
@@ -997,7 +997,7 @@ term:eco[eco:excludedDegreeOfEstablishmentScope]. +
 * If every organism that was included within the degree of
 establishment, and was detected during the survey, was reported, then
 term:eco[eco:isDegreeOfEstablishmentScopeFullyReported]
-= 'true'. Otherwise,
+= `true`. Otherwise,
 term:eco[eco:isDegreeOfEstablishmentScopeFullyReported]
 = 'false.'
 
@@ -1052,10 +1052,10 @@ If *_taxonomic_* bycatch are included in the datasets:
 * Populate
 term:eco[eco:hasNonTargetTaxa] as
 true at all relevant event levels. +
-* If ALL *_taxonomic_* bycatch (term:eco[eco:hasNonTargetTaxa] = 'true')
+* If ALL *_taxonomic_* bycatch (term:eco[eco:hasNonTargetTaxa] = `true`)
 captured/observed during an Event are reported in the dataset
 ** term:eco[eco:areNonTargetTaxaFullyReported]
-= 'true' +
+= `true` +
 ** and a list of taxonomic bycatch should be provided in
 term:eco[eco:nonTargetTaxa].
 
@@ -1063,7 +1063,7 @@ If *_organismal_* bycatch are included in the dataset:
 
 * Then
 term:eco[eco:hasNonTargetOrganisms]
-= 'true' at all relevant event levels.
+= `true` at all relevant event levels.
 
 If the dataset does NOT include taxonomic or organismal bycatch:
 
@@ -1071,7 +1071,7 @@ If the dataset does NOT include taxonomic or organismal bycatch:
 term:eco[eco:hasNonTargetTaxa]
 and
 term:eco[eco:hasNonTargetOrganisms]
-as 'false' for all relevant events.
+as `false` for all relevant events.
 
 [caption=""]
 .Bycatch terms, their recommended usage (status), and example data entries.
