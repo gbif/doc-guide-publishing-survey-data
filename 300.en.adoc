@@ -94,7 +94,7 @@ unique sampling event as a DwC event.
 === Non-nested datasets
 
 *Non-nested datasets* are datasets reflecting a flat survey design
-structure (Figure 1). These are typically simple datasets consisting of:
+structure (<<fig1>>). These are typically simple datasets consisting of:
 
 * a single sampling event occurring at a particular place and time and
 conducted using a single standardized sampling protocol that is not
