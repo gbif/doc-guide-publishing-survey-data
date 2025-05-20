@@ -1014,31 +1014,31 @@ the 'occurrence' table.
 |Status |Term |Example entry
 .8+|Share if available
 |term:eco[eco:targetLifeStageScope]
-|'larva'
+|`larva`
 
 |term:eco[eco:excludedLifeStageScope]
-|'adult' \| 'juvenile'
+|`adult` \| `juvenile`
 
 |term:eco[eco:isLifeStageScopeFullyReported]
-|'true' or 'false'
+|`true` or `false`
 
 |term:eco[eco:targetDegreeOfEstablishmentScope]
-|'native'
+|`native`
 
 |term:eco[eco:excludedDegreeOfEstablishmentScope]
-|'invasive'
+|`invasive`
 
 |term:eco[eco:isDegreeOfEstablishmentScopeFullyReported]
-|'true' or 'false'
+|`true` or `false`
 
 |term:eco[eco:targetGrowthFormScope]
-|'tree'
+|`tree`
 
 |term:eco[eco:excludedGrowthFormScope]
-|'shrub'
+|`shrub`
 
 |term:eco[eco:isGrowthFormScopeFullyReported]
-|'true' or 'false'
+|`true` or `false`
 |===
 
 ==== Bycatch
@@ -1081,18 +1081,18 @@ as 'false' for all relevant events.
 |Status |Term |Example entry
 .4+|Share if available
 |term:eco[eco:hasNonTargetTaxa]
-|'true' or 'false'
+|`true` or `false`
 
 
 |term:eco[eco:areNonTargetTaxaFullyReported]
-|'true' or 'false'
+|`true` or `false`
 
 |term:eco[eco:nonTargetTaxa]
-|'Parabuteo unicinctus \| Geranoaetus melanoleucus; Cetoniinae \| Aclopinae \| Cyclocephala modesta'
+|`Parabuteo unicinctus \| Geranoaetus melanoleucus; Cetoniinae \| Aclopinae \| Cyclocephala modesta`
 
 
 |term:eco[eco:hasNonTargetOrganisms]
-|'true' or 'false'
+|`true` or `false`
 |===
 
 ==== Habitat scope
@@ -1114,10 +1114,10 @@ term:dwc[dwc:habitat].
 |Status |Term |Example entry
 .2+|Share if available
 |term:eco[eco:targetHabitatScop]
-|'deciduous forest'
+|`deciduous forest`
 
 |term:eco[eco:excludedHabitatScope]
-|'urban'
+|`urban`
 |===
 
 === Sampling Effort
@@ -1187,22 +1187,22 @@ Capture sampling effort information as structured data using the five (5) Humbol
 |Status |Term |Example entry
 .6+|Recommended
 |term:eco[eco:isSamplingEffortReported]
-|'true' or 'false'
+|`true` or `false`
 
 |term:eco[eco:samplingEffortProtocol]
-|'40 box traps deployed in the afternoon even spacings along 4 parallel 100m transects placed 50m apart and visited after sunrise the next day'
+|`40 box traps deployed in the afternoon even spacings along 4 parallel 100m transects placed 50m apart and visited after sunrise the next day`
 
 |term:eco[eco:samplingEffortValue]
-|'40'
+|`40`
 
 |term:eco[eco:samplingEffortValue]
-|'trap nights'
+|`trap nights`
 
 |term:dwc[dwc:samplingEffort]
-|'40 trap nights'
+|`40 trap nights`
 
 |term:eco[eco:samplingPerformedBy]
-|'A. Townsend Peterson'
+|`A. Townsend Peterson`
 |===
 
 <<<
