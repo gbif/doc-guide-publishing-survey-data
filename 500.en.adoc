@@ -135,23 +135,24 @@ term:dwc[dwc:fieldNumber].
 [width="100%",cols="34%,33%,33%",options="header",]
 |===
 |Status |Term |Example entry
-|Required |term:dwc[dwc:eventID]
-|survey2022_a-2
+|Required
+|term:dwc[dwc:eventID]
+|`survey2022_a-2`
 
 |Required for nested datasets
 |term:dwc[dwc:parentEventID]
-|survey2022
+|`survey2022`
 
 .2+|Recommended
 |term:eco[eco:siteCount]
-|75
+|`75`
 
 |term:eco[eco:siteNestingDescription]
-|25 survey sites each with 3 1m2 quadrats
+|`25 survey sites each with 3 1m2 quadrats`
 
 |Share if available
 |term:dwc[dwc:fieldNumber] 
-|RV Sol 87-03-08
+|`RV Sol 87-03-08`
 |===
 
 
