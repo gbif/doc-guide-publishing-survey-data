@@ -70,11 +70,9 @@ these data through GBIF.
 
 This guide aims to help those with biodiversity survey data improve the
 interoperability of their data, thus facilitating increased data reuse,
-through the application of the Darwin Core Archive
-(https://dwc.tdwg.org/text/[+++https://dwc.tdwg.org/text/+++]). The
+through the application of the https://dwc.tdwg.org/text/[Darwin Core Archive]. The
 guide provides an overview of the primary components of biodiversity
-survey data in the context of the Darwin Core standard, https://dwc.tdwg.org/terms/#event[DwC Events] and the Humboldt extension for ecological inventories
-(https://eco.tdwg.org/[+++https://eco.tdwg.org/+++]) and, in particular
+survey data in the context of the Darwin Core standard, https://dwc.tdwg.org/terms/#event[DwC Events] and the https://eco.tdwg.org[Humboldt extension for ecological inventories] and, in particular
 assists the reader in structuring their data as a Darwin Core Archive
 and walks the reader through the process of mapping their data to DwC
 terms. Readers will be pointed to existing additional documentation
@@ -87,7 +85,7 @@ any organization or group (be they commercial, government agencies,
 non-governmental organizations, research groups, or other) wanting to
 standardize and share biodiversity survey data, specifically those
 aiming to format their data with the intent of publishing these data to
-GBIF (https://www.gbif.org/[+++https://www.gbif.org/+++]).
+https://www.gbif.org/[GBIF].
 
 If you are already comfortable with Darwin Core event datasets and are
 simply seeking guidance in applying the Humboldt extension, refer to the
