@@ -2,17 +2,16 @@
 
 Need more information? Check out the following documentation:
 
-* Humboldt extension for ecological inventories
-(https://eco.tdwg.org/) +
-* GBIF Technical Documents (https://techdocs.gbif.org/en/) +
-* The OBIS Manual (https://manual.obis.org/)
+* https://eco.tdwg.org/[Humboldt extension for ecological inventories] +
+* https://techdocs.gbif.org/en/[GBIF Technical Documents] +
+* https://manual.obis.org/[The OBIS Manual]
 
 Or, reach out for assistance from:
 
 * https://github.com/tdwg/hc[Humboldt Extension GitHub repository]:
 questions about usage, issues with the vocabulary, and recommendations
 for new terms should be reported as an Issue. +
-* GBIF community forum on Discourse (https://discourse.gbif.org/) +
+* The https://discourse.gbif.org/[GBIF community forum] +
 * The GBIF Node for your country or organization
 ** If your country or organization is a member of GBIF and has an
 established node, you can read out directly to your node.
@@ -22,8 +21,7 @@ here]. +
 ** If your country or organization is not a member of GBIF, reach out to
 the GBIF help desk (helpdesk@gbif.org) +
 * GBIF help desk
-** create an issue on the GitHub tech-docs project
-(https://techdocs.gbif.org/en/) +
-** or, send an email (helpdesk@gbif.org)
+** create an issue on the https://techdocs.gbif.org/en/[GitHub tech-docs project] +
+** or, send an email to the helpdesk@gbif.org[GBIF helpdesk] 
 
 <<<
