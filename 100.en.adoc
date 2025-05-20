@@ -102,8 +102,7 @@ _dwc:eventID_ and the Humboldt Extension term for verbatim target scope
 will be written as _eco:verbatimTargetScope_.
 
 Terms are linked with their respective term internationalized resource
-identifier (IRI, ex.,
-http://rs.tdwg.org/eco/terms/protocolNames[_+++eco:protocolNames+++_]).
+identifier (IRI, ex., term:eco[eco:protocolNames]).
 
 Namespace abbreviations and usage examples for DwC terms.
 
