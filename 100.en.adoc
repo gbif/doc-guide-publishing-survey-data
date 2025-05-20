@@ -38,7 +38,7 @@ https://journals.plos.org/plosone/[PLOS ONE],
 https://www.nature.com/sdata/policies/data-policies[+++Nature Research
 Journals+++]) are increasingly adopting the requirement that
 biodiversity data should be shared as FAIR (findable, accessible,
-interoperable, reusable) and open (Wilkinson et al 2016). These mandates
+interoperable, reusable) and open <<Wilkinson2016>>. These mandates
 are designed to enhance transparency, reproducibility, and the
 collective impact of biodiversity research and conservation efforts.
 Although biodiversity data are increasingly findable and accessible
