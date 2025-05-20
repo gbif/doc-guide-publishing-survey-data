@@ -31,7 +31,7 @@ terms across event levels (e.g., from parent event to child event)
 Each event level can have its own set of attributes and measurements, which
 can be captured using the Humboldt and/or other Extension(s) and be
 unambiguously linked to the corresponding level through the appropriate
-__dwc:eventID__s. 
+term:dwc[dwc:eventID]s. 
 
 A parent Event should not be populated by deriving or
 summarizing information from child Events; rather, fields SHOULD be
