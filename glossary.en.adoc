@@ -63,10 +63,9 @@ accessibility, interoperability, and reusability (FAIR)
 [[HumboldtExt]]Humboldt extension for ecological inventories:: a vocabulary extension
 to the Darwin Core Event class aimed at capturing sampling context
 information (e.g., survey protocols, scopes, and effort) in a more
-structured manner. See https://eco.tdwg.org/.
+structured manner. See https://eco.tdwg.org/[Humboldt Extension for Ecological Inventories].
 
-[[materialSample]]material sample:: A *material sample*
-(http://rs.tdwg.org/dwc/terms/MaterialSample) is an entity `… that
+[[materialSample]]material sample:: A *material sample* (term:dwc[dwc:MaterialSample]) is an entity `… that
 represents an entity of interest in whole or in part.' Essentially,
 material samples are specimens collected during the survey event.
 
@@ -78,25 +77,20 @@ sampling event with a single standardized sampling protocol that is not
 repeated or a series of single sampling events that are not joined by a
 larger parent event.
 
-[[occurrence]]occurrence:: An existence of an Organism (sensu
-http://rs.tdwg.org/dwc/terms/Organism) at a particular place at a
-particular time
+[[occurrence]]occurrence:: An existence of an Organism (sensu term:dwc[dwc:Organism]) at a particular place at a particular time
 
 [[openData]]open data:: data that can be freely used, re-used and redistributed by
 anyone
 
 [[pairedTerms]]paired terms:: mutually exclusive sets of terms that must be populated
-together such as
-http://rs.tdwg.org/eco/terms/eventDurationValue[_eco:eventDurationValue_]
-and eco:eventDurationUnit.
+together such as term:eco[eco:eventDurationValue] and term:eco[eco:eventDurationUnit].
 
 [[samplingEffort]]sampling effort:: sampling intensity during a sampling event.
 
 [[samplingEventData]]sampling event data:: capture the broader context surrounding the
 detection (or non-detection) of an organism in a particular time and
 place with a documented protocol and sampling effort where sampling
-effort relates to sampling intensity (following
-http://rs.tdwg.org/dwc/terms/samplingEffort[dwc:samplingEffort]). These
+effort relates to sampling intensity (following term:dwc[dwc:samplingEffort]). These
 datasets can include species occurrences, material samples (such as
 whole or partial specimens), genetic sequences, multimedia, etc.
 Sampling event data are typically quantitative, calibrated, and follow
