@@ -23,7 +23,7 @@ curiosity.
 Governing body and international organizational reports consistently
 emphasize that data availability is scarce for a proper assessment of
 nearly all facets of biodiversity in response to the current global
-biodiversity crisis (IPBES 2019). The only way to address these needs
+biodiversity crisis <<IPBES2019>>. The only way to address these needs
 are to aggregate existing data from prior and disparate biological
 surveys and monitoring efforts. International organizations (e.g.,
 https://www.cbd.int/gbf/targets/21[+++Convention on Biological
