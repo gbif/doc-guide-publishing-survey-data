@@ -48,7 +48,7 @@ standard. Essentially a self-contained set of interconnected CSV files
 and an XML document describing included files and data columns, and
 their mutual relationships.
 
-*data mapping*: the process of matching fields from one database to
+data [[mapping]]mapping:: the process of matching fields from one database to
 another.
 
 *Digital object identifier (DOI):* Long-lasting reference used to
