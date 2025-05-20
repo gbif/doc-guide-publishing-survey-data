@@ -94,7 +94,7 @@ GBIF (https://www.gbif.org/[+++https://www.gbif.org/+++]).
 If you are already comfortable with Darwin Core event datasets and are
 simply seeking guidance in applying the Humboldt extension, refer to the
 https://doi.org/10.35035/doc-7t3p-ve38[+++Survey and monitoring data
-quick start guide+++] (Ingenloff, 2025).
+quick start guide+++] <<Ingenloff2025>>.
 
 === Using this guide
 
