@@ -598,7 +598,7 @@ change, and conservation planning and resource management.
 
 * If the dataset includes <<absence>> information for one or more
 occurrences (to be reported in the 'occurrence' table as
-_dwc:occurrenceStatus_ = 'absent'), then
+_dwc:occurrenceStatus_ = `absent`), then
 term:eco[eco:isAbsenceReported]
 = `true`. +
 * A list of absent taxa can be provided using
@@ -734,12 +734,12 @@ term:dwc[dwc:dataGeneralizations].
 For example, if the spatial resolution of locality data for an event is
 reduced to the nearest half degree, then
 term:dwc[dwc:dataGeneralizations]
-= 'Coordinates generalized from original GPS coordinates to the nearest half degree grid cell' for each event to which this treatment
+= `Coordinates generalized from original GPS coordinates to the nearest half degree grid cell` for each event to which this treatment
 was applied. If the location information was generalized for every
 sampling event site in a nested hierarchy, then at the parent event
 level
 term:dwc[dwc:dataGeneralizations]
-= 'Coordinates for each event site generalized from original GPS coordinates to the nearest half degree grid cell'.
+= `Coordinates for each event site generalized from original GPS coordinates to the nearest half degree grid cell`.
 
 *Reporting information withheld*
 
@@ -898,12 +898,12 @@ term:eco[eco:isTaxonomicScopeFullyReported] = `true`; if not, term:eco[eco:isTax
 how comprehensively an area was sampled. If taxonomic completeness is
 known
 term:eco[eco:taxonCompletenessReported]
-= 'reportedComplete' or 'reportedIncomplete' and the method used to
+= `reportedComplete` or `reportedIncomplete` and the method used to
 assess completeness reported in
 _term:eco[eco:taxonCompletenessProtocols]_.
 If taxonomic completeness is not reported,
 term:eco[eco:taxonCompletenessReported]
-= 'notReported'.
+= `notReported`.
 
 [caption=""]
 .Taxonomic scope terms, their recommended usage (status), and example data entries.
