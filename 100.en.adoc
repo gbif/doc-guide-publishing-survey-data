@@ -94,12 +94,11 @@ quick start guide+++] <<Ingenloff2025>>.
 
 === Using this guide
 
-Throughout the guide, Darwin Core terms will be written in italics and
+Throughout the guide, Darwin Core terms will be written in fixed width font and
 preceded by their namespace abbreviation and a colon (‘dwc’ or ‘eco’) to
 denote the DwC core or extension to which the term belongs. For example,
 Darwin Core terms, such as the event ID term, will appear as
-_dwc:eventID_ and the Humboldt Extension term for verbatim target scope
-will be written as _eco:verbatimTargetScope_.
+term:dwc[dwc:eventID] and the Humboldt Extension term for verbatim target scope will be written as term:eco[eco:verbatimTargetScope].
 
 Terms are linked with their respective term internationalized resource
 identifier (IRI, ex., term:eco[eco:protocolNames]).
