@@ -207,7 +207,7 @@ a| * https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2024-04-17.xml[DNA-
 |===
 
 A Darwin Core Archive for biodiversity survey data will require at least
-two tables: `metadata' and `event'. The DwC-A will have an additional
+two tables: 'metadata' and 'event'. The DwC-A will have an additional
 table for each extension (e.g., occurrence, extended measurements or
 facts) included with the archive.
 
