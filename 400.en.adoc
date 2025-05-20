@@ -36,7 +36,7 @@ organization that will be listed as the data publisher at gbif.org. The
 publishing organization is the institution which holds or owns the
 dataset and is in charge of its contents and maintenance. +
 * *_type:_* The type of dataset aligns with the DwC core implemented.
-Type for survey and monitoring datasets will be `samplingEvent'. +
+Type for survey and monitoring datasets will be 'samplingEvent'. +
 * *_license:_* A machine-readable statement of the rights attached to
 the published dataset. GBIF supports the following Creative Commons
 licenses: CC0, CC BY, and CC BY-NC (see https://www.gbif.org/terms[GBIF Terms of use]). +
