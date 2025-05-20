@@ -594,7 +594,7 @@ capture information about sampling protocol in a more structured manner:
 
 ==== Absence and abundance
 
-*Organismal absences* are defined here as the lack of detection of
+*Organismal <<absence, absences>>* are defined here as the lack of detection of
 organisms explicitly stated as part of the target taxonomic scope.
 Absence information is critical to understanding species’ biogeography,
 modeling species’ responses to climate- and human-induced environmental
