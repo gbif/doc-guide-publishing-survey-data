@@ -181,7 +181,7 @@ Observatory Network (NEON) to develop a comprehensive example dataset to
 accompany this guide. The guide will be updated as soon as the data are
 available.
 
-The GBIF datasets listed below implement at least some Humbodlt
+The GBIF datasets listed below implement at least some Humboldt
 extension terms and may serve as useful references on event dataset
 structure and term usage.
 
