@@ -161,13 +161,12 @@ https://ipt.gbif.org/manual/en/ipt/latest/occurrence-data[occurrences],
 or
 https://ipt.gbif.org/manual/en/ipt/latest/sampling-event-data[sampling
 events]. The dataset classes checklist, occurrence and sampling event
-are each associated with a `core'
+are each associated with a 'core'
 (https://rs.gbif.org/core/dwc_taxon_2022-02-02.xml[*Taxon*],
 https://rs.gbif.org/core/dwc_occurrence_2022-02-02.xml[*Occurrence*],
 https://rs.gbif.org/core/dwc_event_2022-02-02.xml[*Event*]) to which the
 data should be formatted to. Each dataset core can be supplemented with
-one or more `GBIF registered extensions'
-(https://rs.gbif.org/extensions.html).
+one or more 'https://rs.gbif.org/extensions.html[GBIF registered extensions]'.
 
 In GBIF, survey and monitoring data are broadly referred to as *sampling
 event data* and should be formatted as a DwC Event core. To publish to
@@ -190,7 +189,7 @@ species occurrence information. +
 for an overview of GBIF registered extensions.
 
 [caption=]
-.A non-exhaustive list of GBIF registered extensions (https://rs.gbif.org/extensions.html) that can and cannot currently be published with a Darwin Core event dataset to GBIF.
+.A non-exhaustive list of https://rs.gbif.org/extensions.html[GBIF registered extensions] that can and cannot currently be published with a Darwin Core event dataset to GBIF.
 [width="100%",cols="<20%,<80%",]
 |===
 |DwC extensions that can currently be published through GBIF with a DwC Event core dataset
