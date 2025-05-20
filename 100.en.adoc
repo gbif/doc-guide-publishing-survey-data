@@ -73,7 +73,7 @@ interoperability of their data, thus facilitating increased data reuse,
 through the application of the Darwin Core Archive
 (https://dwc.tdwg.org/text/[+++https://dwc.tdwg.org/text/+++]). The
 guide provides an overview of the primary components of biodiversity
-survey data in the context of the Darwin Core standard, DwC Events (term:dwc[dwc:#Event]) and the Humboldt extension for ecological inventories
+survey data in the context of the Darwin Core standard, DwC Events (https://dwc.tdwg.org/terms/#event[+++https://dwc.tdwg.org/terms/#event+++]) and the Humboldt extension for ecological inventories
 (https://eco.tdwg.org/[+++https://eco.tdwg.org/+++]) and, in particular
 assists the reader in structuring their data as a Darwin Core Archive
 and walks the reader through the process of mapping their data to DwC
