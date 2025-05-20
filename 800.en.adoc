@@ -6,8 +6,7 @@ to go with specific types of survey data.
 === Camera trap survey data
 
 Refer to 'https://doi.org/10.35035/doc-0qzp-2x37[Best Practices for
-Managing and Publishing Camera Trap Data]' (Reyserhove, Norton, and
-Desmet 2023) for help in standardizing and publishing camera trap data.
+Managing and Publishing Camera Trap Data]' <<Reyserhove2023>> for help in standardizing and publishing camera trap data.
 
 An R package, https://camtrap-dp.tdwg.org/[camtrapDP] <<Bubnicki2024>>, is available to read and restructure camera trap data into Darwin
 Core. NOTE: The camtrapDP package currently only transforms data into
