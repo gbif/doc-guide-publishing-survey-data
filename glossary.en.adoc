@@ -9,4 +9,132 @@
 [[decimal-degrees]]decimal degrees:: degrees expressed as a single real number (e.g. −22.343456°). Note that latitudes south of the equator are negative, as are longitudes west of the prime meridian to −180 degrees.
 [[generalization]]generalization:: refers here to any modifications carried out to source data to conceal sensitive content, typically by reducing the precision of the data (such as reporting at the level of a watershed, grid or county, citing just the nearest named place, or by deleting some parts of the data). In geographic terms it refers to the conversion of a geographic representation to one with less resolution and less information content; traditionally associated with a change in scale. Also referred elsewhere to as: _fuzzying_, _dummying-up_, etc.
 
+[[absence]]absence:: the lack of detection of organisms explicitly stated as part of the target taxonomic scope.
+
+*abundance:* the number of individuals of the same taxonomic designation
+in a particular area at a specific time
+
+*biological or biodiversity survey:* a systematic effort to collect
+information about the biological organisms of a specific area at a given
+time, are critical to helping us understand and monitor changes in our
+environment.
+
+*bycatch*: organisms detected during a survey that were not explicitly
+targeted in the scope of a study, should be indicated if included in the
+dataset.
+
+*compilation:* a summary inventory resulting from the combination of
+multiple existing inventories (as described in Guralnick et al. 2018).
+Compilations are aggregates of multiple studies, and may combine surveys
+employing different protocols, processes, and observers, often with
+variable reporting of the methods employed or other compiled data
+sources and literature searches.
+
+*completeness:* indicates the thoroughness of a survey relative to the
+stated scope.
+
+*controlled vocabulary:* a list of accepted values that can be used for
+the term
+
+*Darwin Core (DwC) standard:* Standard for sharing and publishing
+biodiversity data, originating from the Biodiversity Information
+Standards (TDWG) community. In principle, a set of terms used for
+describing different entities of biodiversity observations, such as
+sampling events, occurrences and taxa. Current Darwin Core terms are
+described in the Quick Reference Guide.
+
+*Darwin Core Archive (DwC-A):* Compressed (ZIP) file format for exchange
+of biodiversity data compiled in accordance with the Darwin Core (DwC)
+standard. Essentially a self-contained set of interconnected CSV files
+and an XML document describing included files and data columns, and
+their mutual relationships.
+
+*data mapping*: the process of matching fields from one database to
+another.
+
+*Digital object identifier (DOI):* Long-lasting reference used to
+uniquely identify (and locate) digital information objects, such as a
+biodiversity data set or a scientific publication.
+
+*ecological monitoring:* efforts aimed at evaluating ecosystem health
+and ecological response to climate change, supporting conservation
+efforts, informing policy and management, and improving public awareness
+and education about the values of biodiversity
+
+*event*: A process occurring at a particular
+https://docs.gbif.org/georeferencing-best-practices/1.0/en/#location[location]
+during a period of time. Used generically to cover various kinds of
+collecting events, sampling events, and observations.
+
+*FAIR data*: data that meets the FAIR principles of findability,
+accessibility, interoperability, and reusability (FAIR)
+
+*Humboldt extension for ecological inventories*: a vocabulary extension
+to the Darwin Core Event class aimed at capturing sampling context
+information (e.g., survey protocols, scopes, and effort) in a more
+structured manner. See https://eco.tdwg.org/.
+
+*material sample:* A *material sample*
+(http://rs.tdwg.org/dwc/terms/MaterialSample) is an entity `… that
+represents an entity of interest in whole or in part.' Essentially,
+material samples are specimens collected during the survey event.
+
+*nested dataset:* complex survey dataset consisting of multiple nested
+event levels.
+
+*non-nested dataset:* simple survey dataset consisting of a single
+sampling event with a single standardized sampling protocol that is not
+repeated or a series of single sampling events that are not joined by a
+larger parent event.
+
+*occurrence:* An existence of an Organism (sensu
+http://rs.tdwg.org/dwc/terms/Organism) at a particular place at a
+particular time
+
+*open data*: data that can be freely used, re-used and redistributed by
+anyone
+
+*paired terms:* mutually exclusive sets of terms that must be populated
+together such as
+http://rs.tdwg.org/eco/terms/eventDurationValue[_eco:eventDurationValue_]
+and eco:eventDurationUnit.
+
+*sampling effort:* sampling intensity during a sampling event.
+
+*sampling event data:* capture the broader context surrounding the
+detection (or non-detection) of an organism in a particular time and
+place with a documented protocol and sampling effort where sampling
+effort relates to sampling intensity (following
+http://rs.tdwg.org/dwc/terms/samplingEffort[dwc:samplingEffort]). These
+datasets can include species occurrences, material samples (such as
+whole or partial specimens), genetic sequences, multimedia, etc.
+Sampling event data are typically quantitative, calibrated, and follow
+documented protocols resulting from sampling Events such as biological
+inventories, systematic monitoring surveys, and collecting expeditions,
+as well as structured citizen science efforts. These data can range in
+complexity from very simple—a single event with a single occurrence or
+no occurrences—to hierarchically complex, with multiple layers of
+Parent-Child Events and any combination of accompanying data types
+(occurrences, material samples, etc.).
+
+*sampling event hierarchy:* the translation of a survey’s sampling
+design into an event-based perspective using Darwin Core terms
+
+*sampling protocol:* A *Sampling protocol* provides the details of how
+the sampling was conducted including explicit reporting of survey type
+and method…
+
+*scope:* relates to the biodiversity targeted (or not targeted) during a
+survey
+
+*site:* An event *_site_* is a location at which observations are made
+or samples and/or measurements are taken.
+
+*survey design:* details the sampling strategy and how the survey event
+sites (e.g., stations, plots, transects) are laid out.
+
+*voucher:* a specimen or material sample collected and accessioned into
+a museum collection in support of a specific project or survey effort.
+
+
 <<<
