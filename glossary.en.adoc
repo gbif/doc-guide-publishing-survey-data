@@ -32,7 +32,7 @@ sources and literature searches.
 [[completeness]]completeness:: indicates the thoroughness of a survey relative to the
 stated scope.
 
-controlled [[vocabulary]]vocabulary:: a list of accepted values that can be used for
+controlled [[controlledvocabulary]]vocabulary:: a list of accepted values that can be used for
 the term
 
 Darwin Core standard - [[DwC]]DwC:: Standard for sharing and publishing
@@ -48,14 +48,14 @@ standard. Essentially a self-contained set of interconnected CSV files
 and an XML document describing included files and data columns, and
 their mutual relationships.
 
-data [[mapping]]mapping:: the process of matching fields from one database to
+data [[datamapping]]mapping:: the process of matching fields from one database to
 another.
 
 Digital object identifier - [[DOI]]DOI:: Long-lasting reference used to
 uniquely identify (and locate) digital information objects, such as a
 biodiversity data set or a scientific publication.
 
-*ecological monitoring:* efforts aimed at evaluating ecosystem health
+ecological [[ecomonitoring]]monitoring:: efforts aimed at evaluating ecosystem health
 and ecological response to climate change, supporting conservation
 efforts, informing policy and management, and improving public awareness
 and education about the values of biodiversity
