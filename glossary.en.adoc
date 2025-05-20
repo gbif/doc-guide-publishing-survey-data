@@ -90,8 +90,7 @@ together such as term:eco[eco:eventDurationValue] and term:eco[eco:eventDuration
 [[samplingEventData]]sampling event data:: capture the broader context surrounding the
 detection (or non-detection) of an organism in a particular time and
 place with a documented protocol and sampling effort where sampling
-effort relates to sampling intensity (following
-http://rs.tdwg.org/dwc/terms/samplingEffort[dwc:samplingEffort]). These
+effort relates to sampling intensity (following term:dwc[dwc:samplingEffort]). These
 datasets can include species occurrences, material samples (such as
 whole or partial specimens), genetic sequences, multimedia, etc.
 Sampling event data are typically quantitative, calibrated, and follow
