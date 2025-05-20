@@ -98,8 +98,7 @@ structure (<<fig1, Figure 1>>). These are typically simple datasets consisting o
 
 * a single sampling event occurring at a particular place and time and
 conducted using a single standardized sampling protocol that is not
-repeated and is not part of a spatially larger sampling schema (Figure
-4a), or +
+repeated and is not part of a spatially larger sampling schema (<<fig2a,Figure 2a>>), or +
 * a series of single sampling events that are not joined by a larger
 parent event. A compilation dataset (combination of surveys, compiled
 data sources and/or literature searches, see Biological survey data
