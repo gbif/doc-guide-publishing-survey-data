@@ -11,10 +11,9 @@
 
 [[absence]]absence:: the lack of detection of organisms explicitly stated as part of the target taxonomic scope.
 
-*abundance:* the number of individuals of the same taxonomic designation
-in a particular area at a specific time
+[[abundance]]abundance:: the number of individuals of the same taxonomic designation in a particular area at a specific time
 
-*biological or biodiversity survey:* a systematic effort to collect
+biological or biodiversity [[survey]]survey:: a systematic effort to collect
 information about the biological organisms of a specific area at a given
 time, are critical to helping us understand and monitor changes in our
 environment.
