@@ -35,7 +35,7 @@ stated scope.
 controlled [[vocabulary]]vocabulary:: a list of accepted values that can be used for
 the term
 
-Darwin Core [[DwC]]DwC:: Standard for sharing and publishing
+Darwin Core ([[DwC]]DwC::) Standard for sharing and publishing
 biodiversity data, originating from the Biodiversity Information
 Standards (TDWG) community. In principle, a set of terms used for
 describing different entities of biodiversity observations, such as
