@@ -9,7 +9,7 @@
 
 Ingenloff K, Svenningsen C, Earl C, Shimabukuro PHF, Sica Y, Gan Y-M, Kachian ZR, Brenton P, Hochachka W, Wieczorek J, Stevenson R, Kazem A, Baskauf S, Zermoglio PF, Bloom D, Rodrigues A, Gamboa Martínez J & Schigel D. Guide for publishing biological survey data to GBIF. GBIF Secretariat: Copenhagen. 
 // Uncomment once a DOI is assigned
-//https://doi.org/10.35035/doc-ynvs-eh84
+https://doi.org/10.35035/doc-ynvs-eh84
 
 === Authors
 
@@ -23,15 +23,15 @@ https://orcid.org/0000-0001-5942-9053#[Ingenloff K], https://orcid.org/0000-0002
 
 The document _Guide for publishing biological survey data to GBIF_ is licensed under https://creativecommons.org/licenses/by-sa/4.0[Creative Commons Attribution-ShareAlike 4.0 Unported License].
 
-// === Persistent URI
+=== Persistent URI
 //
 // #TODO: Assign a DOI before publication#
 // Uncomment once a DOI is assigned
-// 10.35035/doc-ynvs-eh84
+https://doi.org/10.35035/doc-ynvs-eh84
 
 === Document control
 
-First edition, June 2025
+First edition, May 2025
 
 // include reference to provenance if possible/relevant
 // https://doi.org/10.EXAMPLE/2ND-EXAMPLE[Second edition], March 2015, by Due Autore and https://orcid.org/0000-0000-0000-0000[Troisième Auteur].
