@@ -15,7 +15,7 @@ is the process of translating the sampling design of a biological survey
 (or series of surveys) to Darwin Core event format. Does the dataset
 consist of a single survey at a single location? Multiple surveys at
 different times at the same location? Or a series of surveys at
-different locations? See `Translating survey design to DwC event data
+different locations? See 'Translating survey design to DwC event data
 structure' below. +
 * *Identify data composition and DwC vocabulary needs:* Identify the
 vocabulary extensions that will be necessary to report all data (or as
@@ -23,10 +23,10 @@ much data as possible) from the dataset. Refer to https://rs.gbif.org/extensions
 extensions] and https://www.tdwg.org/standards/[TDWG biodiversity
 information standards]. +
 * *Map survey (Event) information to DwC event terms:* Information about
-each biological survey (simply referred to as an `Event' or `sampling
+each biological survey (simply referred to as an 'Event' or 'sampling
 Event') will be mapped to https://dwc.tdwg.org/terms/#event[DwC Event
 class] and https://eco.tdwg.org/terms/[Humboldt extension] terms and
-saved in an independent `event' table. This is the contextual
+saved in an independent 'event' table. This is the contextual
 information that applies to all occurrence and ancillary data collected
 or recorded during an event such as information about the survey design,
 site (e.g., location, date), protocol(s), scope(s), and sampling effort.
@@ -36,7 +36,7 @@ tab in the template]. +
 * *Map occurrence data to the DwC occurrence extension:* Organism
 occurrence information collected during biological surveys (e.g.,
 scientific name, additional organismal information) will be shared in an
-independent `occurrence' table using the
+independent 'occurrence' table using the
 https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[occurrence
 extension]. Resource: see the
 https://docs.google.com/spreadsheets/d/1A5wvy-zK7zl2eL79QOeADkbtPQXQtHUl/edit?usp=sharing&ouid=100202681437108536507&rtpof=true&sd=true['occurrence'
@@ -115,7 +115,7 @@ image::img/fig1.png[]
 
 *Nested datasets* can capture more complex survey designs, for example,
 those consisting of repeated sampling events and/or multiple sampling
-protocols. The top-most event level is the `**parent Event.**' A parent
+protocols. The top-most event level is the '**parent Event.**' A parent
 event encompasses all other Events in the dataset. Subsequent Events
 (*child Events*) represent either multiple sampling sites, protocols, or
 repeated sampling at the same locality using the same protocol. For any
