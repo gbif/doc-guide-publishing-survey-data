@@ -287,8 +287,7 @@ following terms be populated as follows in the *Event table*:
 
 === Species’ co-occurrence and species’ interactions
 
-The Resource Relationship extension
-(https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml) can
+The https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[Resource Relationship extension] can
 be used to link information related across multiple occurrences (may be
 from the same or from different events), such as:
 
@@ -297,7 +296,7 @@ from the same or from different events), such as:
 * a material sample with another material sample
 
 [NOTE]
-.*Using the Resource Relationship extension* (https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml)
+.*Using the https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[Resource Relationship extension]*
 ====
 - Create a new `resourceRelationship` table
 - Add term:dwc[dwc:eventID] as a column header so to link the record to the `Event` table.
