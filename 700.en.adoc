@@ -92,11 +92,25 @@ would be reported.
 |term:dwc[dwc:sex]
 |term:dwc[dwc:lifeStage]
 |term:dwc[dwc:vitality]
-|uniqueEventID-1 |uniqueObsID-1 |HumanObservation |Gavialis gangeticus
-|1 |individuals |male |adult |alive
+|`uniqueEventID-1` 
+|`uniqueObsID-1`
+|`HumanObservation`
+|`Gavialis gangeticus`
+|`1`
+|`individuals`
+|`male` 
+|`adult`
+|`alive`
 
-|uniqueEventID-1 |uniqueObsID-2 |HumanObservation |Gavialis gangeticus
-|3 |individuals |female |adult |alive
+|`uniqueEventID-1`
+|`uniqueObsID-2`
+|`HumanObservation` 
+|`Gavialis gangeticus`
+|`3` 
+|`individuals` 
+|`female` 
+|`adult` 
+|`alive`
 |===
 
 The table below outlines the minimum required and recommended terms as
