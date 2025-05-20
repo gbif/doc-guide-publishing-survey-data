@@ -19,9 +19,9 @@ different locations? See `Translating survey design to DwC event data
 structure' below. +
 * *Identify data composition and DwC vocabulary needs:* Identify the
 vocabulary extensions that will be necessary to report all data (or as
-much data as possible) from the dataset. Refer to GBIF registered
-extensions (https://rs.gbif.org/extensions.html) and TDWG biodiversity
-information standards (https://www.tdwg.org/standards/). +
+much data as possible) from the dataset. Refer to https://rs.gbif.org/extensions.html[GBIF registered
+extensions] and https://www.tdwg.org/standards/[TDWG biodiversity
+information standards]. +
 * *Map survey (Event) information to DwC event terms:* Information about
 each biological survey (simply referred to as an `Event' or `sampling
 Event') will be mapped to https://dwc.tdwg.org/terms/#event[DwC Event
