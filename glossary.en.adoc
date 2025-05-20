@@ -18,21 +18,21 @@ information about the biological organisms of a specific area at a given
 time, are critical to helping us understand and monitor changes in our
 environment.
 
-*bycatch*: organisms detected during a survey that were not explicitly
+[[bycatch]]bycatch:: organisms detected during a survey that were not explicitly
 targeted in the scope of a study, should be indicated if included in the
 dataset.
 
-*compilation:* a summary inventory resulting from the combination of
+[[compilation]]compilation:: a summary inventory resulting from the combination of
 multiple existing inventories (as described in Guralnick et al. 2018).
 Compilations are aggregates of multiple studies, and may combine surveys
 employing different protocols, processes, and observers, often with
 variable reporting of the methods employed or other compiled data
 sources and literature searches.
 
-*completeness:* indicates the thoroughness of a survey relative to the
+[[completeness]]completeness:: indicates the thoroughness of a survey relative to the
 stated scope.
 
-*controlled vocabulary:* a list of accepted values that can be used for
+[[controlled vocabulary]]controlled vocabulary:: a list of accepted values that can be used for
 the term
 
 *Darwin Core (DwC) standard:* Standard for sharing and publishing
