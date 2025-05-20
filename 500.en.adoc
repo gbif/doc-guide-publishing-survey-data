@@ -600,7 +600,7 @@ Absence information is critical to understanding species’ biogeography,
 modeling species’ responses to climate- and human-induced environmental
 change, and conservation planning and resource management.
 
-* If the dataset includes absence information for one or more
+* If the dataset includes <<absence>> information for one or more
 occurrences (to be reported in the `occurrence` table as
 _dwc:occurrenceStatus_ = `absent`), then
 term:eco[eco:isAbsenceReported]
