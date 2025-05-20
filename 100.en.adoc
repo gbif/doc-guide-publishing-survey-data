@@ -115,10 +115,10 @@ Darwin Core
 (applies to event core, occurrence extension, measurements or facts
 extension, and related resource extension terms)
 
-|http://rs.tdwg.org/dwc/terms/eventID[_+++dwc:eventID+++_]
+|term:dwc[dwc:eventID]
 
 |eco |Humboldt extension for ecological inventories
-|http://rs.tdwg.org/eco/terms/verbatimTargetScope[_+++eco:verbatimTargetScope+++_]
+|term:eco[eco:verbatimTargetScope]
 |===
 
 *+++Term usage recommendations+++*
