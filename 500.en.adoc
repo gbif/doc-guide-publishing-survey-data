@@ -782,7 +782,7 @@ for the same event), then
 term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
 = `false`
 
-See https://eco.tdwg.org/inclusive/[Guidelines for eco:isLeastSpecificTargetCategoryQuantityInclusive] (TDWG Humboldt Extension Task Group 2024) for more information.
+See https://eco.tdwg.org/inclusive/[Guidelines for eco:isLeastSpecificTargetCategoryQuantityInclusive] <<TDWG2024a>> for more information.
 
 ==== Verbatim fields
 
