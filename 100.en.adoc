@@ -150,10 +150,8 @@ data tabs (event and occurrence) and a ‘README’ tab.
 Data table
 
 Terms in the event tab should be used to capture survey event
-information including survey design, protocol(s), scopes, and effort.
-(https://rs.gbif.org/core/dwc_event_2024-02-19.xml[Terms from both Darwin Core Event class])
-and the (https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt extension])
-are included.
+information including survey design, protocol(s), scopes, and effort. Terms from both the (https://rs.gbif.org/core/dwc_event_2024-02-19.xml[Darwin Core Event class])
+and the (https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt extension]) are included.
 
 Column heads are populated with the DwC Event core and Humboldt
 extension terms referenced in this guide. In the rows beneath each term,
@@ -164,8 +162,7 @@ GBIF, and additional comments or usage guidance.
 Data table
 
 Terms in the occurrence tab should be used to capture occurrence
-information with terms from the Darwin Core Occurrence extension
-(https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[+++https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml+++]).
+information with terms from the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[Darwin Core Occurrence extension].
 
 Column heads are populated with the DwC occurrence extension terms
 referenced in this guide. In the rows beneath each term, the term
