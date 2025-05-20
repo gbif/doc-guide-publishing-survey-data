@@ -346,16 +346,16 @@ term:dwc[dwc:locality].
 |term:eco[eco:geospatialScopeAreaUnit]
 |`km2`
 
-|_term:eco[eco:totalAreaSampledValue]_
+|term:eco[eco:totalAreaSampledValue]
 |`40`
 
 |term:eco[eco:totalAreaSampledUnit]
 |`m2`
 
-|_term:dwc[dwc:sampleSizeValue]_
+|term:dwc[dwc:sampleSizeValue]
 |`200`
 
-|_term:dwc[dwc:sampleSizeUnit]_
+|term:dwc[dwc:sampleSizeUnit]
 |`m3`
 
 .3+|Share if available
@@ -365,7 +365,7 @@ term:dwc[dwc:locality].
 |term:dwc[dwc:footprintSRS]
 |`epsg:4326`
 
-|_term:dwc[dwc:locality]_ |`Agriculture site, Kongskilde Friluftsgård, Zealand`
+|term:dwc[dwc:locality]_ |`Agriculture site, Kongskilde Friluftsgård, Zealand`
 |===
 
 ==== Vegetation cover
@@ -425,7 +425,7 @@ times.
 |`2018-08-29`
 
 .3+|Recommended
-|_term:dwc[dwc:eventTime]_
+|term:dwc[dwc:eventTime]
 |`08:00Z`
 
 
@@ -620,11 +620,11 @@ species, and informing effective habitat and ecosystem management.
 term:eco[eco:isAbundanceReported]
 = `true` for all appropriate Event levels. If there is an abundance cap,
 then
-term:eco[eco:_isAbundanceCapReported]
+term:eco[eco:isAbundanceCapReported]
 = `true` and the value of the cap should be reported in
 term:eco[eco:abundanceCap]. +
 * If there is no abundance cap, then
-term:eco[eco:_isAbundanceCapReported]
+term:eco[eco:isAbundanceCapReported]
 = `false`.
 
 See the section 'link:#abundance-information[Abundance information]' for
@@ -815,7 +815,7 @@ Both fields can be applied to any event at any level.
 |term:eco[eco:voucherInstitutions]
 |`AMNH` \| `KUNHM`
 
-|_term:dwc[dwc:dataGeneralizations]_
+|term:dwc[dwc:dataGeneralizations]
 |`Coordinates generalized from original GPS coordinates to the nearest half degree grid cell.'; 'Coordinates for each event site generalized from original GPS coordinates to the nearest half degree grid cell`
 
 
@@ -861,7 +861,7 @@ The full verbatim scope explicitly identifying the full suite of stated
 parameters defining the breadth of a sampling event should be reported
 using
 term:eco[eco:verbatimTargetScope].
-_eco:verbatimTargetScope_ is particularly useful for capturing scope
+eco:verbatimTargetScope is particularly useful for capturing scope
 conditions not covered by existing
 https://eco.tdwg.org/terms/#taxonomic-scope[taxonomic] or
 https://eco.tdwg.org/terms/#organismal-scope[organismal] scope terms.
@@ -900,7 +900,7 @@ known
 term:eco[eco:taxonCompletenessReported]
 = `reportedComplete` or `reportedIncomplete` and the method used to
 assess completeness reported in
-_term:eco[eco:taxonCompletenessProtocols]_.
+term:eco[eco:taxonCompletenessProtocols].
 If taxonomic completeness is not reported,
 term:eco[eco:taxonCompletenessReported]
 = `notReported`.
@@ -918,10 +918,10 @@ term:eco[eco:taxonCompletenessReported]
 |`Aves`
 
 .5+|Share if available
-|_term:dwc[dwc:identifiedBy]_
+|term:dwc[dwc:identifiedBy]
 |`Cecilie Svenningsen`
 
-|_term:dwc[dwc:identifiedByID]_
+|term:dwc[dwc:identifiedByID]
 |`https://orcid.org/0000-0002-9216-2917` \| `https://orcid.org/0000-0002-0786-4069`
 
 |term:eco[eco:isTaxonomicScopeFullyReported]
@@ -1133,7 +1133,7 @@ term:dwc[dwc:samplingEffort] is
 currently a recommended field when publishing event datasets to GBIF,
 however, this term captures sampling effort in an unstructured way. The
 Humboldt extension includes 5 terms to more explicitly capture sampling
-effort information. The updated r**_ecommended best practice_** is to
+effort information. The updated **_recommended best practice_** is to
 capture sampling effort information as structured data using the 5 terms
 from the Humboldt Extension. Through these terms, data providers may
 explicitly provide the following information:
