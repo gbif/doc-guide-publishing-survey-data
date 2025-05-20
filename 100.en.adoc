@@ -104,7 +104,7 @@ Terms are linked with their respective term internationalized resource
 identifier (IRI, ex., term:eco[eco:protocolNames]).
 
 [caption=""]
-.Namespace abbreviations and usage examples for DwC terms.
+.Namespace abbreviations and usage examples for DwC terms
 [width="100%",cols="20%,48%,32%",options="header",]
 |===
 |*Namespace abbreviation* |*Core or extension name* |*Example*
