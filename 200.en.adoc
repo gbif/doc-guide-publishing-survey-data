@@ -149,8 +149,7 @@ a means by which to share biological inventory data in a structured
 manner, increasing the findability of datasets, and thereby improving
 chances of dataset re-use. The extension added 55 terms to the DwC Event
 class vocabulary by which to capture components of survey design
-previously lost as unstructured metadata (see the terms list in TDWG
-Humboldt Extension Task Group [2]).
+previously lost as unstructured metadata (see the terms list in <<tdwg2024b>>).
 
 === Biological survey data in GBIF: Darwin Core Archives (DwC-A)
 
