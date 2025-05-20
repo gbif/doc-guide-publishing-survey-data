@@ -65,14 +65,14 @@ necessary for your data*.
 ====
 Populate all terms for which information is available. 
 
-Each term in this document is linked with its respective term internationalized resource identifier (IRI) alias (ex., http://rs.tdwg.org/eco/terms/protocolNames[_eco:protocolNames_]). Always use these links to refer to the definition, comments, and examples
+Each term in this document is linked with its respective term internationalized resource identifier (IRI) alias (ex., term:eco[eco:protocolNames]). Always use these links to refer to the definition, comments, and examples
 provided when populating a term. 
 
-*Paired terms*, mutually exclusive sets of terms, must be populated together. Often these terms are designed to offer the data publisher some level of flexibility in reporting data. Paired terms are most common in terms available for reporting a variable value and associated unit of measure (for example, http://rs.tdwg.org/dwc/terms/sampleSizeValue[_dwc:sampleSizeValue_] and http://rs.tdwg.org/dwc/terms/sampleSizeUnit[_dwc:sampleSizeUnit_]). 
+*Paired terms*, mutually exclusive sets of terms, must be populated together. Often these terms are designed to offer the data publisher some level of flexibility in reporting data. Paired terms are most common in terms available for reporting a variable value and associated unit of measure (for example, term:dwc[dwc:sampleSizeValue] and term:dwc[dwc:sampleSizeUnit]). 
 
 *No data, missing data, and data values of '0'*
 
-  * Cells with a value of '0' should be populated as '0'.
+  * Cells with a value of '0' (zero) should be populated as `0`.
   * Cells with missing data or NULL values should be left empty. 
   * Terms for which there is no data to share at any hierarchical level can be excluded from the data table.
 ====
