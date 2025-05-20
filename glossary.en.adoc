@@ -32,7 +32,7 @@ sources and literature searches.
 [[completeness]]completeness:: indicates the thoroughness of a survey relative to the
 stated scope.
 
-[[controlled vocabulary]]controlled vocabulary:: a list of accepted values that can be used for
+controlled [[vocabulary]]vocabulary:: a list of accepted values that can be used for
 the term
 
 *Darwin Core (DwC) standard:* Standard for sharing and publishing
