@@ -94,7 +94,7 @@ unique sampling event as a DwC event.
 === Non-nested datasets
 
 *Non-nested datasets* are datasets reflecting a flat survey design
-structure <<fig1, Figure 1>>. These are typically simple datasets consisting of:
+structure (<<fig1, Figure 1>>). These are typically simple datasets consisting of:
 
 * a single sampling event occurring at a particular place and time and
 conducted using a single standardized sampling protocol that is not
@@ -130,22 +130,25 @@ commonly are structured as a function of sampling location, protocol,
 and date.
 
 * *Locality–protocol:* center first around study site second and
-secondarily on protocol (Figure 5a) *locality 🡪 sampling protocol 🡪
+secondarily on protocol (<<fig2a, Figure 2a>>) *locality 🡪 sampling protocol 🡪
 occurrence* +
 * *Protocol–locality:* or conversely, focusing on protocol at higher
-hierarchical levels and secondarily on locality (Figure 5b) .. *protocol
+hierarchical levels and secondarily on locality (<<fig2b, Figure 2b>>) .. *protocol
 → locality → occurrence* emphasizes taxonomic scope at higher levels +
 * *Time-series:* Time-series datasets are temporally nested datasets
-(Figure 5c)
+(<<fig2c, Figure 2c>>)
 
+[[fig2a]]
 [caption="Figure 2a. "]
 .Simplified example schematic of a nested event dataset structure representing a survey (Parent Event, dark red oval) with two survey sites (child-Events, medium red ovals) at each of which two protocols (child-child-Events, light red ovals) are implemented and occurrence information is collected and related to each sampling event using the occurrence extension. 
 image::img/fig2a.png[]
 
+[[fig2b]]
 [caption="Figure 2b. "]
 .Simplified example schematic of a nested event dataset structure representing a survey (Parent Event, dark red oval) with two protocols (child-Events, medium red ovals) which are each implemented at two survey sites (four independently surveyed child-child-Events, light red ovals) wherein occurrence information is collected in four occurrences lists and related to each sampling event using the occurrence extension.
 image::img/fig2b.png[]
 
+[[fig2b]]
 [caption="Figure 2c. "]
 .Simplified example schematic of a nested event dataset structure representing a time series survey (Parent Event, dark red oval) with two survey sites (child-Events, medium red ovals) which are each independently sampled at two different times (four independently surveyed child-child-Events, light red ovals) wherein occurrence information is collected in four occurrences lists and related to each sampling event using the occurrence extension.
 image::img/fig2c.png[]
