@@ -63,9 +63,7 @@ protocol used to assess effort.
 
 At a higher level of aggregation, *compilations* are a type of
 biological survey which results from combining existing surveys, rather
-than generated de novo from observations or samples (see
-https://eco.tdwg.org/terms/#eco:inventoryTypes[_eco:inventoryTypes_] and
-https://eco.tdwg.org/terms/#eco:compilationTypes[_eco:compilationTypes_]).
+than generated de novo from observations or samples (see term:eco[eco:inventoryTypes] and term:eco[eco:compilationTypes].
 Compilations may aggregate surveys using multiple protocols, processes,
 and observers, or other compiled data sources and literature searches.
 They are typically combinations of multiple broad studies performed
