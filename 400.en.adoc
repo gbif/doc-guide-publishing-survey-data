@@ -39,7 +39,7 @@ dataset and is in charge of its contents and maintenance. +
 Type for survey and monitoring datasets will be `samplingEvent'. +
 * *_license:_* A machine-readable statement of the rights attached to
 the published dataset. GBIF supports the following Creative Commons
-licenses: CC0, CC BY, and CC BY-NC (see https://www.gbif.org/terms). +
+licenses: CC0, CC BY, and CC BY-NC (see https://www.gbif.org/terms[GBIF Terms of use]). +
 * *_contact(s):_* Contact information for the person or institution to
 contact with questions about the use and/or interpretation of the
 dataset. This information is required to ensure the possibility of
