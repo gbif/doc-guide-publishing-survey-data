@@ -18,7 +18,7 @@
 //* [[[Lapatas2015, Lapatas et al 2015]]] Lapatas V, Stefanidakis M, Jimenez RC, Via A, Schneider MV. Data integration in biological research: an overview. J Biol Res (Thessalon).2015 Sep 2;22(1):9. doi: 10.1186/s40709-015-0032-5. 
 * [[[Lento2025, Lento & Schmidt-Kloiber 2025]]] Lento J & Schmidt-Kloiber A (2025) Freshwater Data Publishing Guide.Copenhagen: GBIF Secretariat. https://doi.org/10.35035/doc-sw3k-w725 
 * [[[Reyserhove2023, Reyserhove et al 2023]]] Reyserhove L, Norton B & Desmet P (2023) Best Practices for Managingand Publishing Camera Trap Data. GBIF Secretariat: Copenhagen.https://doi.org/10.35035/doc-0qzp-2x37 
-* [[[Sampling-event-data,Sampling event Data]]] Sampling event Data:https://ipt.gbif.org/manual/en/ipt/latest/sampling-event-data 
+// * [[[Sampling-event-data,Sampling event Data]]] Sampling event Data:https://ipt.gbif.org/manual/en/ipt/latest/sampling-event-data 
 * [[[tdwg2024a, TDWG Humboldt Extension Task Group 2024]]] TDWG Humboldt Extension Task Group [1]. 2024.isLeastSpecificTargetCategoryQuantityInclusive Guidelines. BiodiversityInformation Standards (TDWG).http://rs.tdwg.org/dwc/doc/inclusive/2024-02-28 
 * [[[tdwg2024b, TDWG Humboldt Extension Task Group 2024]]] TDWG Humboldt Extension Task Group [2]. 2024. Humboldt ExtensionVocabulary List of Terms. Biodiversity Information Standards (TDWG).http://rs.tdwg.org/dwc/doc/eco/2024-03-26 
 * [[[Wieczorek2012,Wieczorek et al 2012]]] Wieczorek J, Bloom D, Guralnick R, Blum S, Döring M, Giovanni R, etal. (2012) Darwin Core: An Evolving Community-Developed BiodiversityData Standard. PLoS ONE 7(1): e29715.https://doi.org/10.1371/journal.pone.0029715 
