@@ -7,8 +7,7 @@ For example, see the `https://docs.google.com/spreadsheets/d/1A5wvy-zK7zl2eL79QO
 ====
 
 Organismal occurrence information is mapped and linked to a survey event
-using the DwC Occurrence extension
-(https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml]).
+using the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[DwC Occurrence extension].
 Occurrences can be mapped to only a single survey Event, however they
 can link to any event level. In the case of a nested hierarchy, the best
 practice recommendation is to link occurrence information to the lowest
@@ -103,14 +102,13 @@ would be reported.
 The table below outlines the minimum required and recommended terms as
 well some of the more commonly used terms and their recommended usage.
 However, Darwin Core includes many more terms. It is recommended that
-you take some time to review the DwC quick reference guide
-(https://dwc.tdwg.org/terms/) and to identify and include any and all
+you take some time to review the https://dwc.tdwg.org/terms/[DwC quick reference guide] and to identify and include any and all
 terms available that allow you to share the richest version of your data
 possible. Sections that may be of particular interest:
 
-* occurrence (https://dwc.tdwg.org/terms/#occurrence) +
-* identification (https://dwc.tdwg.org/terms/#identification) +
-* taxon (https://dwc.tdwg.org/terms/#taxon)
+* https://dwc.tdwg.org/terms/#occurrence[occurrence]
+* https://dwc.tdwg.org/terms/#identification[identification]
+* https://dwc.tdwg.org/terms/#taxon[taxon]
 
 [caption=""]
 .Species occurrence terms, their recommended usage (status), and example data entries.
