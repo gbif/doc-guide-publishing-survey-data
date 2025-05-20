@@ -205,19 +205,19 @@ appropriate.
 |Status |Term |Example entry
 .5+|Share if available
 |term:eco[eco:verbatimSiteNames]
-|Trap_18\|Trap_27\|Trap_54\|Trap_96\|Annala\|Kumpula
+|`Trap_18\|Trap_27\|Trap_54\|Trap_96\|Annala\|Kumpula`
 
 |term:dwc[dwc:habitat]
-|Ephemeral wetland
+|`Ephemeral wetland`
 
 |term:eco[eco:reportedWeather]
-|{"minimumTemperatureInDegreesFahrenheit": 18, "maximumTemperatureInDegreesFahrenheit": 32}
+|`{"minimumTemperatureInDegreesFahrenheit": 18, "maximumTemperatureInDegreesFahrenheit": 32}`
 
 |term:eco[eco:reportedExtremeConditions]
-|Site flooded
+|`Site flooded`
 
 |term:eco[eco:verbatimSiteDescriptions]
-|Coastal sand dunes at dry oak forest edge. Vegetation: Ammophila arenaria, Betula pendula, Leymus arenarius, Pinus sylvestris
+|`Coastal sand dunes at dry oak forest edge. Vegetation: Ammophila arenaria, Betula pendula, Leymus arenarius, Pinus sylvestris`
 |===
 
 ==== Site locality
@@ -326,44 +326,44 @@ term:dwc[dwc:locality].
 |Status |Term |Example entry
 .11+|Recommended
 |*term:dwc[dwc:locationID*]
-|'Trap_138'
+|`Trap_138`
 
 |term:dwc[dwc:countryCode]
-|'SE'
+|`SE`
 
 |term:dwc[dwc:decimalLatitude]
-|'59.3168'
+|`59.3168`
 
 |term:dwc[dwc:decimalLongitude]
-|'18.0627'
+|`18.0627`
 
 |term:dwc[dwc:geodeticDatum]
-|'WGS84'
+|`WGS84`
 
 |term:eco[eco:geospatialScopeAreaValue]
-|'580000'
+|`580000`
 
 |term:eco[eco:geospatialScopeAreaUnit]
-|'km2'
+|`km2`
 
 |_term:eco[eco:totalAreaSampledValue]_
-|'40'
+|`40`
 
 |term:eco[eco:totalAreaSampledUnit]
-|'m2'
+|`m2`
 
 |_term:dwc[dwc:sampleSizeValue]_
-|'200'
+|`200`
 
 |_term:dwc[dwc:sampleSizeUnit]_
-|'m3'
+|`m3`
 
 .3+|Share if available
 |term:dwc[dwc:footprintWKT]
-|'POLYGON \((10 20, 11 20, 11 21, 10 21, 10 20))'
+|`POLYGON \((10 20, 11 20, 11 21, 10 21, 10 20))`
 
 |term:dwc[dwc:footprintSRS]
-|'epsg:4326'
+|`epsg:4326`
 
 |_term:dwc[dwc:locality]_ |'Agriculture site, Kongskilde Friluftsgård, Zealand'
 |===
@@ -422,19 +422,19 @@ times.
 |Status |Term |Example entry
 |Required
 |term:dwc[dwc:eventDate]
-|'2018-08-29'
+|`2018-08-29`
 
 .3+|Recommended
 |_term:dwc[dwc:eventTime]_
-|'08:00Z'
+|`08:00Z`
 
 
 |term:eco[eco:eventDurationValue]
-|'1'
+|`1`
 
 
 |term:eco[eco:eventDurationUnit]
-|'hour'
+|`hour`
 |===
 
 === Methodology/sampling protocol
@@ -532,18 +532,18 @@ data sources and literature searches.
 |===
 |Status |Term |Example entry
 |Recommended |term:dwc[dwc:eventType]
-|'Inventory'
+|`Inventory`
 
 .3+|Recommended if applicable
 |term:eco[eco:inventoryTypes]
-|'Open search'
+|`Open search`
 
 |term:eco[eco:compilationTypes]
-|'compilationOfExistingSourcesAndSamplingEvents'
+|`compilationOfExistingSourcesAndSamplingEvents`
 
 
 |term:eco[eco:compilationSourceTypes]
-|'museumSpecimens'
+|`museumSpecimens`
 |===
 
 ==== Sampling protocol
@@ -575,17 +575,17 @@ capture information about sampling protocol in a more structured manner:
 |Status |Term |Example entry
 |Required
 |term:dwc[dwc:samplingProtocol]
-|'Visual survey'
+|`Visual survey`
 
 .3+|Recommended
 |term:eco[eco:protocolNames]
-|'Visual survey'
+|`Visual survey`
 
 |term:eco[eco:protocolDescriptions]
-|'For each site a total list of lichen species (lichenized fungi) was produced based on a careful examination of soil, wood, stone surfaces and bark of trees up to 2 m at three time periods: October-November 2014, February-December 2015 and March and May 2016. Specimens that were not possible to identify with certainty in the field were sampled and subsequently identified in the laboratory. For each species the substrate, e.g. phorophyte (host) species was recorded. All records were registered in www.svampeatlas.dk, and the nomenclature used is in accordance with this database.'
+|`For each site a total list of lichen species (lichenized fungi) was produced based on a careful examination of soil, wood, stone surfaces and bark of trees up to 2 m at three time periods: October-November 2014, February-December 2015 and March and May 2016. Specimens that were not possible to identify with certainty in the field were sampled and subsequently identified in the laboratory. For each species the substrate, e.g. phorophyte (host) species was recorded. All records were registered in www.svampeatlas.dk, and the nomenclature used is in accordance with this database.`
 
 |term:eco[eco:protocolReferences]
-|'See Appendix B of Brunbjerg, A.K., Bruun, H.H., Brøndum, L. et al. A systematic survey of regional multi-taxon biodiversity: evaluating strategies and coverage. BMC Ecol 19, 43 (2019). https://doi.org/10.1186/s12898-019-0260-x \| https://doi.org/10.17504/protocols.io.kxygx3jwkg8j/v1'
+|`See Appendix B of Brunbjerg, A.K., Bruun, H.H., Brøndum, L. et al. A systematic survey of regional multi-taxon biodiversity: evaluating strategies and coverage. BMC Ecol 19, 43 (2019). https://doi.org/10.1186/s12898-019-0260-x \| https://doi.org/10.17504/protocols.io.kxygx3jwkg8j/v1`
 |===
 
 ==== Absence and abundance
@@ -637,20 +637,20 @@ details on reporting absence information at the occurrence level.
 |Status |Term |Example entry
 .3+|Recommended
 |term:eco[eco:isAbsenceReported]
-|'true' or 'false'
+|`true` or `false`
 
 
 |term:eco[eco:isAbundanceReported]
-|'true' or 'false'
+|`true` or `false`
 
 
 |term:eco[eco:isAbundanceCapReported]
-|'true' or 'false'
+|`true` or `false`
 
 .2+|Share if available
 |term:eco[eco:absentTaxa] |
 
-|term:eco[eco:abundanceCap] |'5'
+|term:eco[eco:abundanceCap] |`5`
 |===
 
 ==== Material samples
@@ -800,29 +800,30 @@ Both fields can be applied to any event at any level.
 |Status |Term |Example entry
 .3+|Recommended
 |term:eco[eco:hasMaterialSamples]
-|'true' or 'false'
+|`true` or `false`
 
 |term:eco[eco:hasVouchers]
-|'true' or 'false'
+|`true` or `false`
 
 |term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
-|'true' or 'false'
+|`true` or `false`
 
 .5+|Share if available
 |term:eco[eco:materialSampleTypes]
-|'wholeOrganism' \| 'blood'
+|`wholeOrganism` \| `blood`
 
 |term:eco[eco:voucherInstitutions]
-|'AMNH' \| 'KUNHM'
+|`AMNH` \| `KUNHM`
 
 |_term:dwc[dwc:dataGeneralizations]_
-|'Coordinates generalized from original GPS coordinates to the nearest half degree grid cell.'; 'Coordinates for each event site generalized from original GPS coordinates to the nearest half degree grid cell'
+|`Coordinates generalized from original GPS coordinates to the nearest half degree grid cell.'; 'Coordinates for each event site generalized from original GPS coordinates to the nearest half degree grid cell`
 
 
 |term:dwc[dwc:informationWithheld]
-|'Sensitive species occurrence information not reported'
+|`Sensitive species occurrence information not reported`
 
-|term:dwc[dwc:fieldNotes] |'Notes available in the Grinnell-Miller Library'
+|term:dwc[dwc:fieldNotes]
+|`Notes available in the Grinnell-Miller Library`
 
 |
 |term:dwc[dwc:eventRemarks]
@@ -872,7 +873,7 @@ https://eco.tdwg.org/terms/#organismal-scope[organismal] scope terms.
 |Status |Term |Example entry
 |Recommended
 |term:eco[eco:verbatimTargetScope]
-|'Adult flying insects'
+|`Adult flying insects`
 |===
 
 ==== Taxonomic scope
@@ -911,26 +912,26 @@ term:eco[eco:taxonCompletenessReported]
 |Status |Term |Example entry
 .2+|Recommended
 |term:eco[eco:targetTaxonomicScope]
-|'Arthropods'
+|`Arthropods`
 
 |term:eco[eco:excludedTaxonomicScope]
-|'Aves'
+|`Aves`
 
 .5+|Share if available
 |_term:dwc[dwc:identifiedBy]_
-|'Cecilie Svenningsen'
+|`Cecilie Svenningsen`
 
 |_term:dwc[dwc:identifiedByID]_
-|'https://orcid.org/0000-0002-9216-2917' \| 'https://orcid.org/0000-0002-0786-4069'
+|`https://orcid.org/0000-0002-9216-2917` \| `https://orcid.org/0000-0002-0786-4069`
 
 |term:eco[eco:isTaxonomicScopeFullyReported]
-|'true' or 'false'
+|`true` or `false`
 
 |term:eco[eco:taxonCompletenessReported]
-|'reportedComplete', 'reportedIncomplete', or 'notReported'
+|`reportedComplete`, `reportedIncomplete`, or `notReported`
 
 |term:eco[eco:taxonCompletenessProtocols]
-|'Based on sampling effort'
+|`Based on sampling effort`
 |===
 
 ==== Organismal scope
