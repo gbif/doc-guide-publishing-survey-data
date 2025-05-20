@@ -83,9 +83,7 @@ larger parent event.
 anyone
 
 [[pairedTerms]]paired terms:: mutually exclusive sets of terms that must be populated
-together such as
-http://rs.tdwg.org/eco/terms/eventDurationValue[_eco:eventDurationValue_]
-and eco:eventDurationUnit.
+together such as term:eco[eco:eventDurationValue] and term:eco[eco:eventDurationUnit].
 
 [[samplingEffort]]sampling effort:: sampling intensity during a sampling event.
 
