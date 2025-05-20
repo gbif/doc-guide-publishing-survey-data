@@ -22,6 +22,6 @@ here]. +
 the GBIF help desk (helpdesk@gbif.org) +
 * GBIF help desk
 ** create an issue on the https://techdocs.gbif.org/en/[GitHub tech-docs project] +
-** or, send an email to the helpdesk@gbif.org[GBIF helpdesk] 
+** or, send an email to the mailto:helpdesk@gbif.org[GBIF helpdesk] 
 
 <<<
