@@ -23,11 +23,9 @@ guide is also available in
 https://docs.gbif.org/publishing-dna-derived-data/fr/[French],
 https://docs.gbif.org/publishing-dna-derived-data/es/[Spanish], and
 https://docs.gbif.org/publishing-dna-derived-data/zh-TW/[Chinese]. And,
-review terms in the DNA derived data extension here:
-https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2022-02-23.xml.
+review terms in the https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2022-02-23.xml[DNA derived data extension].
 
-The GBIF Metabarcoding Data Toolkit (MDT) may be a useful resource.
-Learn more about the MDT at https://www.gbif.org/metabarcoding.
+The GBIF Metabarcoding Data Toolkit (MDT) may be a useful resource. Learn more about the MDT at the https://www.gbif.org/metabarcoding[GBIF website].
 
 === Environmental impact assessments
 
