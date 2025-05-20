@@ -29,35 +29,35 @@ of information that can be captured from structured reporting of
 biological survey design alongside the actual data recorded during a
 survey includes:
 
-* *Survey structure.*–This information identifies the study area and
+* *Survey structure:* This information identifies the study area and
 sampling units of the survey, providing a means by which to understand
 how data collected in the survey relate to each other in location,
 scope, and sampling date and time. +
-* *Survey methods.*–Biodiversity survey methods information includes
+* *Survey methods:* Biodiversity survey methods information includes
 detailed information about the sampling protocol implemented (e.g.,
 protocol name, relevant references, details of techniques implemented
 and equipment used), the type of data collected, and sampling effort and
 completeness. +
-* *Survey scope.*–Scopes define the overall objectives of a survey.
+* *Survey scope:* Scopes define the overall objectives of a survey.
 Survey scope will vary depending on the purpose of the survey. Common
 scope types include:
-** *Spatial scope.*–Spatial scope refers to the geographic area of
+** *Spatial scope:* Spatial scope refers to the geographic area of
 interest of a survey. It can include information about the location of
 each survey site including geographic coordinates with geodetic datum,
 site description (locality name, habitat type, microhabitat), and
 environmental data (e.g., physical parameters, vegetarian, water
 quality). It can also identify any areas or habitats specifically
 targeted for, or excluded from, survey effort. +
-** *Temporal scope.*–Temporal scope identifies the time during which a
+** *Temporal scope:* Temporal scope identifies the time during which a
 survey will take place (e.g., a single day, single season, multiple
 seasons). +
-** *Taxonomic scope.*–Taxonomic scope identifies any group(s) of
+** *Taxonomic scope:* Taxonomic scope identifies any group(s) of
 organisms specifically targeted for, or excluded from, the survey. +
-** *Organismal scope.*–Organismal scope identifies the type(s) of
+** *Organismal scope:* Organismal scope identifies the type(s) of
 organisms specifically targeted for, or excluded from, the survey.
 Organismal scope may include age, sex, life stage, reproductive status,
 etc. +
-* *Survey effort.*–Survey effort defines the amount of effort (for
+* *Survey effort:* Survey effort defines the amount of effort (for
 example, the number of trap nights per sample site) and describes any
 protocol used to assess effort.
 
