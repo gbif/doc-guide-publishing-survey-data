@@ -21,7 +21,7 @@
 // * [[[Sampling-event-data,Sampling event Data]]] Sampling event Data:https://ipt.gbif.org/manual/en/ipt/latest/sampling-event-data 
 * [[[tdwg2024a, TDWG Humboldt Extension Task Group 2024]]] TDWG Humboldt Extension Task Group [1]. 2024.isLeastSpecificTargetCategoryQuantityInclusive Guidelines. BiodiversityInformation Standards (TDWG).http://rs.tdwg.org/dwc/doc/inclusive/2024-02-28 
 * [[[tdwg2024b, TDWG Humboldt Extension Task Group 2024]]] TDWG Humboldt Extension Task Group [2]. 2024. Humboldt ExtensionVocabulary List of Terms. Biodiversity Information Standards (TDWG).http://rs.tdwg.org/dwc/doc/eco/2024-03-26 
-* [[[Wieczorek2012,Wieczorek et al 2012]]] Wieczorek J, Bloom D, Guralnick R, Blum S, Döring M, Giovanni R, etal. (2012) Darwin Core: An Evolving Community-Developed BiodiversityData Standard. PLoS ONE 7(1): e29715.https://doi.org/10.1371/journal.pone.0029715 
+// * [[[Wieczorek2012,Wieczorek et al 2012]]] Wieczorek J, Bloom D, Guralnick R, Blum S, Döring M, Giovanni R, etal. (2012) Darwin Core: An Evolving Community-Developed BiodiversityData Standard. PLoS ONE 7(1): e29715.https://doi.org/10.1371/journal.pone.0029715 
 * [[[Wilkinson2016, Wilkinson et al 2016]]] Wilkinson, M., Dumontier, M., Aalbersberg, I. _et al._ The FAIRGuiding Principles for scientific data management and stewardship. _SciData_ 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18.
 
 <<<
