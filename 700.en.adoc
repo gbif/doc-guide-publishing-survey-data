@@ -44,7 +44,7 @@ term:dwc[dwc:organismQuantity]
 and
 term:dwc[dwc:organismQuantityType]
 
-For example, if 4 hooded crows (_Corvus cornix_) were observed, a single
+For example, if four hooded crows (_Corvus cornix_) were observed, a single
 occurrence with one unique
 term:dwc[dwc:occurrenceID] should be
 reported.
@@ -57,12 +57,12 @@ reported.
 |term:dwc[dwc:scientificName]
 |term:dwc[dwc:organismQuantity]
 |term:dwc[dwc:organismQuantityType]
-|uniqueEventID
-|uniqueObsID
-|HumanObservation
-|Corvus cornix
-|4
-|individuals
+|`<uniqueEventID>`
+|`<uniqueObsID>`
+|`HumanObservation`
+|`Corvus cornix`
+|`4`
+|`individuals`
 |===
 
 *Reporting multiple individuals as multiple occurrences*
