@@ -60,39 +60,39 @@ collecting events, sampling events, and observations.
 [[FAIRdata]]FAIR data:: data that meets the FAIR principles of findability,
 accessibility, interoperability, and reusability (FAIR)
 
-*Humboldt extension for ecological inventories*: a vocabulary extension
+[[HumboldtExt]]Humboldt extension for ecological inventories:: a vocabulary extension
 to the Darwin Core Event class aimed at capturing sampling context
 information (e.g., survey protocols, scopes, and effort) in a more
 structured manner. See https://eco.tdwg.org/.
 
-*material sample:* A *material sample*
+[[materialSample]]material sample:: A *material sample*
 (http://rs.tdwg.org/dwc/terms/MaterialSample) is an entity `… that
 represents an entity of interest in whole or in part.' Essentially,
 material samples are specimens collected during the survey event.
 
-*nested dataset:* complex survey dataset consisting of multiple nested
+[[nestedDataset]]nested dataset:: complex survey dataset consisting of multiple nested
 event levels.
 
-*non-nested dataset:* simple survey dataset consisting of a single
+[[nonNestedDataset]]non-nested dataset:: simple survey dataset consisting of a single
 sampling event with a single standardized sampling protocol that is not
 repeated or a series of single sampling events that are not joined by a
 larger parent event.
 
-*occurrence:* An existence of an Organism (sensu
+[[occurrence]]occurrence:: An existence of an Organism (sensu
 http://rs.tdwg.org/dwc/terms/Organism) at a particular place at a
 particular time
 
-*open data*: data that can be freely used, re-used and redistributed by
+[[openData]]open data:: data that can be freely used, re-used and redistributed by
 anyone
 
-*paired terms:* mutually exclusive sets of terms that must be populated
+[[pairedTerms]]paired terms:: mutually exclusive sets of terms that must be populated
 together such as
 http://rs.tdwg.org/eco/terms/eventDurationValue[_eco:eventDurationValue_]
 and eco:eventDurationUnit.
 
-*sampling effort:* sampling intensity during a sampling event.
+[[samplingEffort]]sampling effort:: sampling intensity during a sampling event.
 
-*sampling event data:* capture the broader context surrounding the
+[[samplingEventData]]sampling event data:: capture the broader context surrounding the
 detection (or non-detection) of an organism in a particular time and
 place with a documented protocol and sampling effort where sampling
 effort relates to sampling intensity (following
@@ -108,23 +108,23 @@ no occurrences—to hierarchically complex, with multiple layers of
 Parent-Child Events and any combination of accompanying data types
 (occurrences, material samples, etc.).
 
-*sampling event hierarchy:* the translation of a survey’s sampling
+[[samplingEventHierarchy]]sampling event hierarchy:: the translation of a survey’s sampling
 design into an event-based perspective using Darwin Core terms
 
-*sampling protocol:* A *Sampling protocol* provides the details of how
+[[samplingProtocol]]sampling protocol:: A *Sampling protocol* provides the details of how
 the sampling was conducted including explicit reporting of survey type
 and method…
 
-*scope:* relates to the biodiversity targeted (or not targeted) during a
+[[scope]]scope:: relates to the biodiversity targeted (or not targeted) during a
 survey
 
-*site:* An event *_site_* is a location at which observations are made
+[[site]]site:: An event *_site_* is a location at which observations are made
 or samples and/or measurements are taken.
 
-*survey design:* details the sampling strategy and how the survey event
+[[surveyDesign]]survey design:: details the sampling strategy and how the survey event
 sites (e.g., stations, plots, transects) are laid out.
 
-*voucher:* a specimen or material sample collected and accessioned into
+[[voucher]]voucher:: a specimen or material sample collected and accessioned into
 a museum collection in support of a specific project or survey effort.
 
 
