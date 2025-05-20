@@ -103,8 +103,8 @@ term:dwc[dwc:eventID] and the Humboldt Extension term for verbatim target scope 
 Terms are linked with their respective term internationalized resource
 identifier (IRI, ex., term:eco[eco:protocolNames]).
 
-Namespace abbreviations and usage examples for DwC terms.
-
+[caption=""]
+.Namespace abbreviations and usage examples for DwC terms.
 [width="100%",cols="20%,48%,32%",options="header",]
 |===
 |*Namespace abbreviation* |*Core or extension name* |*Example*
@@ -138,8 +138,8 @@ than required and recommended terms.
 A basic
 https://docs.google.com/spreadsheets/d/1A5wvy-zK7zl2eL79QOeADkbtPQXQtHUl/edit?usp=sharing&ouid=100202681437108536507&rtpof=true&sd=true[+++biodiversity
 survey data template+++] is available to facilitate mapping of survey
-data and preparation for formatting of a DwC-A. The spreadsheet has 2
-data tabs (event and occurrence) and a ‘README’ tab.
+data and preparation for formatting of a DwC-A. The spreadsheet has two
+data tabs ('event' and 'occurrence') and a 'README' tab.
 
 [width="100%",cols="20%,80%",options="header",]
 |===
