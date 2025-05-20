@@ -57,7 +57,7 @@ https://docs.gbif.org/private-sector-data-publishing/2.0/es/[Spanish].
 
 The
 https://docs.gbif.org/freshwater-data-publishing-guide/en/[Freshwater
-Data Publishing Guide] (Lento & Schmidt-Kloiber 2025) supports
+Data Publishing Guide] <<Lento2025>> supports
 freshwater data holders by describing best practices and presenting
 detailed lists of required and recommended data and metadata fields for
 preparing and sharing such data through GBIF.
