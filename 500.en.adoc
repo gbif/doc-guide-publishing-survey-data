@@ -291,14 +291,14 @@ project] which surveyed 130 40x40m plots across Denmark. Here, the
 project-level parent event would report the full geographic extent of
 Denmark:
 term:eco[eco:geospatialScopeAreaValue]
-= '42934' and
+= `42934` and
 term:eco[eco:geospatialScopeAreaUnit]
-= 'km2'. The associated 130 child events representing each individual
+= `km2`. The associated 130 child events representing each individual
 survey site would then report the area of the site as
 term:eco[eco:totalAreaSampledValue]
-= '40' and
+= `40` and
 term:eco[eco:totalAreaSampledUnit]
-= 'm2'.
+= `m2`.
 
 *_If the sampled unit is not an area_* (such as a filtered volume of
 water in a zooplankton haul),
@@ -365,7 +365,7 @@ term:dwc[dwc:locality].
 |term:dwc[dwc:footprintSRS]
 |`epsg:4326`
 
-|_term:dwc[dwc:locality]_ |'Agriculture site, Kongskilde Friluftsgård, Zealand'
+|_term:dwc[dwc:locality]_ |`Agriculture site, Kongskilde Friluftsgård, Zealand`
 |===
 
 ==== Vegetation cover
@@ -999,7 +999,7 @@ establishment, and was detected during the survey, was reported, then
 term:eco[eco:isDegreeOfEstablishmentScopeFullyReported]
 = `true`. Otherwise,
 term:eco[eco:isDegreeOfEstablishmentScopeFullyReported]
-= 'false.'
+= `false`
 
 A corresponding
 term:dwc[dwc:degreeOfEstablishment]
