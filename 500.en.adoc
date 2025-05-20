@@ -469,7 +469,7 @@ targets, timelines, and deliverables. Projects typically are typically
 linked to non-biological information identifying participating
 organizations and people (agents), funding agencies, and other
 high-level administrative information. Biological sampling may only be
-one facet of a project’s scope. 'Project' as a
+one facet of a project’s scope. `Project` as a
 term:dwc[dwc:eventType] is typically
 most appropriate only at the highest (parent) event level in a nested
 dataset.
@@ -477,20 +477,20 @@ dataset.
 venture that inherently includes multiple sampling events and event
 types. Expeditions may include multiple taxonomic and/organismal scopes,
 any number of documented sampling protocols, and varying degrees of
-complexity in survey design. 'Expedition' as a
+complexity in survey design. `Expedition` as a
 term:dwc[dwc:eventType] is typically
 most appropriate at higher (parent) event levels in nested hierarchies.
 - *Survey*: A survey is a systematic effort to collect information about the
 biological organisms in a specific area at a given time. Surveys
 typically included at least one documented protocol and may or may not
-have an explicitly defined taxonomic and/or organismal scope. 'Survey'
+have an explicitly defined taxonomic and/or organismal scope. `Survey`
 is the most general event type term and can be applied as a
 term:dwc[dwc:eventType] at any event
 level.
 - *Inventory*: An inventory is a comprehensive survey of the taxa
 present in a specific area over an explicit period of time. Inventories
 typically have an explicit taxonomic and/or organismal scope and a
-well-defined protocol. 'Inventory' is typically most appropriate as a
+well-defined protocol. `Inventory` is typically most appropriate as a
 term:dwc[dwc:eventType] at lower (child)
 event levels in nested hierarchies.
 - *Bioblitz*: A bioblitz is a survey
@@ -498,7 +498,7 @@ event aimed at finding and identifying as many species as possible in a
 specific area over a (typically) short, contiguous period of time.
 Bioblitzes often include participants (agents) with a wide range of
 backgrounds and levels of expertise in biodiversity sciences including
-formal biologists as well as the broader, general public. 'Bioblitz' as
+formal biologists as well as the broader, general public. `Bioblitz` as
 a term:dwc[dwc:eventType] is typically
 most appropriate at lower (child) event levels in nested hierarchies.
 - *Identification*: An identification is the taxonomic identification of a
