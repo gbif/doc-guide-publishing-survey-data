@@ -17,13 +17,12 @@ term:eco[eco:protocolNames]).
 
   - A
 comprehensive list of Darwin Core terms that can be applied at the event
-level can be found on the Darwin Core Event page in the GBIF Registry of
-Schemas (https://rs.gbif.org/core/dwc_event_2024-02-19.xml). 
+level can be found on the https://rs.gbif.org/core/dwc_event_2024-02-19.xml[Darwin Core Event page in the GBIF Registry of
+Schemas]. 
   - The full
-suite of Humboldt Extension terms is available on the Humboldt
-Ecological Inventories page in the GBIF Registry of Schemas
-(https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml) and in the
-Humboldt Extension Quick Reference Guide (https://eco.tdwg.org/terms/).
+suite of Humboldt Extension terms is available on the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt
+Ecological Inventories page in the GBIF Registry of Schemas] and in the
+https://eco.tdwg.org/terms/[Humboldt Extension Quick Reference Guide].
 
 Fields for which there is no data to share at any hierarchical level can
 be left blank or simply not included in the Event table. Populating
@@ -38,9 +37,7 @@ A parent Event should not be populated by deriving or
 summarizing information from child Events; rather, fields SHOULD be
 populated explicitly with information directly appropriate to the nature
 and level of the event itself (see Section _3.2.3 Principle of
-non-derivation_ in the `https://eco.tdwg.org/hierarchy/[Properties of
-hierarchical events in the Humboldt Extension for Ecological
-Inventories]'). 
+non-derivation_ in the 'https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories]'). 
 
 A child event SHOULD NOT implicitly inherit the value of
 any property of any of its parent Event(s). If a value is in common
@@ -172,9 +169,7 @@ environmental data (e.g., physical parameters, vegetarian, water
 quality) should be populated at every event level.
 
 NOTE: The Darwin Core site terms listed in this section are not
-comprehensive. Explore all Darwin Core Location class terms
-(http://purl.org/dc/terms/Location) and the Humboldt Extension site
-terms (https://eco.tdwg.org/terms/#site).
+comprehensive. Explore all http://purl.org/dc/terms/Location[Darwin Core Location class terms] and the https://eco.tdwg.org/terms/#site[Humboldt Extension site terms].
 
 ==== Site description
 
@@ -659,7 +654,7 @@ details on reporting absence information at the occurrence level.
 
 ==== Material samples
 
-A *material sample* (http://rs.tdwg.org/dwc/terms/MaterialSample) is an
+A *material sample* (term:dwc[dwc:MaterialSample]) is an
 entity "…that represents an entity of interest in whole or in part."
 Essentially, material samples are specimens collected during the survey
 event. They may consist of an entire organism, part of an organism, or a
