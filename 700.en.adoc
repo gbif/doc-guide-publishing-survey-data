@@ -303,19 +303,66 @@ following terms be populated as follows in the *Event table*:
 
 The https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[Resource Relationship extension] can
 be used to link information related across multiple occurrences (may be
-from the same or from different events), such as:
+from the same or from different events), including:
 
-* an occurrence with another occurrence +
-* an occurrence with a material sample +
-* a material sample with another material sample
+* an occurrence with another occurrence.
 
-[NOTE]
-.*Using the https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[Resource Relationship extension]*
-====
-- Create a new `resourceRelationship` table
-- Add term:dwc[dwc:eventID] as a column header so to link the record to the `Event` table.
-- Add the Resource relationship extension fields as column headers. 
-- For each related set of information,…
-====
+The table below highlights an example from https://doi.org/10.15468/xdzgbt. In this example, a _Bombus ephippiatus_ bee visits a species of runner bean, _Phaseolus coccineus_.
+
+[width="100%",cols="25%,25%,25%,25%",options="header",]
+|===
+|Table |Recommended usage |Term |Example entry
+|Occurrence
+.3+|Required
+|term:dwc[dwc:occurrenceID]
+|`ECOSUR-SC:ECOAB:861`
+
+|ResourceRelationship
+|term:dwc[dwc:resourceID]
+|`ECOSUR-SC:ECOAB:861`
+
+|ResourceRelationship
+|term:dwc[dwc:relatedResourceID]
+|`PHACOC`
+
+|ResourceRelationship
+.2+|Recommended
+|term:dwc[dwc:relationshipOfResource]
+|`visits flowers of`
+
+|ResourceRelationship
+|term:dwc[dwc:relationshipOfResourceID]
+|`http://purl.obolibrary.org/obo/RO_0002622`
+|===
+
+* an occurrence with a material sample. 
+
+The table below highlights an example from https://doi.org/10.15468/g3bard. In this example, a skin sample from a female toad of _Bufo americanus_ is preserved at the University of Michigan Museum of Zoology along with other body parts.
+
+[width="100%",cols="25%,25%,25%,25%",options="header",]
+|===
+|Table |Recommended usage |Term |Example entry
+|Occurrence
+.3+|Required
+|term:dwc[dwc:occurrenceID]
+|`3df9bda0-c41a-4130-83bf-8603ae9c22bb`
+
+|ResourceRelationship
+|term:dwc[dwc:resourceID]
+|`3df9bda0-c41a-4130-83bf-8603ae9c22bb`
+
+|ResourceRelationship
+|term:dwc[dwc:relatedResourceID]
+|`urn:catalog:UMMZ:Herps:22`
+
+|ResourceRelationship
+.2+|Recommended
+|term:dwc[dwc:relationshipEsetablishedDate]
+|`2019-01-14`
+
+|ResourceRelationship
+|term:dwc[dwc:relationshipAccordingTo]
+|`VertNet`
+|===
 
 <<<
