@@ -354,7 +354,7 @@ The table below highlights an example from https://doi.org/10.15468/g3bard. In t
 |`urn:catalog:UMMZ:Herps:22`
 
 |ResourceRelationship
-.2+|Recommended
+.1+|Recommended
 |term:dwc[dwc:relationshipEsetablishedDate]
 |`2019-01-14`
 
