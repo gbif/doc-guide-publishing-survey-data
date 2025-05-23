@@ -303,7 +303,7 @@ following terms be populated as follows in the *Event table*:
 
 The https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[Resource Relationship extension] can
 be used to link information related across multiple occurrences (may be
-from the same or from different events), inclduing:
+from the same or from different events), including:
 
 * an occurrence with another occurrence.
 
