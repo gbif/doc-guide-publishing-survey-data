@@ -312,7 +312,7 @@ The table below highlights an example from https://doi.org/10.15468/xdzgbt. In t
 |===
 |Table |Recommended usage |Term |Example entry
 |Occurrence
-.2+|Required
+.3+|Required
 |term:dwc[dwc:occurrenceID]
 |`ECOSUR-SC:ECOAB:861`
 
@@ -325,7 +325,7 @@ The table below highlights an example from https://doi.org/10.15468/xdzgbt. In t
 |`PHACOC`
 
 |ResourceRelationship
-.1+|Recommended
+.2+|Recommended
 |term:dwc[dwc:relationshipOfResource]
 |`visits flowers of`
 
@@ -341,7 +341,7 @@ The table below highlights an example from https://doi.org/10.15468/g3bard. In t
 |===
 |Table |Recommended usage |Term |Example entry
 |Occurrence
-.2+|Required
+.3+|Required
 |term:dwc[dwc:occurrenceID]
 |`3df9bda0-c41a-4130-83bf-8603ae9c22bb`
 
@@ -354,7 +354,7 @@ The table below highlights an example from https://doi.org/10.15468/g3bard. In t
 |`urn:catalog:UMMZ:Herps:22`
 
 |ResourceRelationship
-.1+|Recommended
+.2+|Recommended
 |term:dwc[dwc:relationshipEsetablishedDate]
 |`2019-01-14`
 
