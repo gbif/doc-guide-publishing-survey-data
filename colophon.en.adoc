@@ -23,6 +23,11 @@ https://orcid.org/0000-0001-5942-9053#[Ingenloff K], https://orcid.org/0000-0002
 
 The document _Guide for publishing biological survey data to GBIF_ is licensed under https://creativecommons.org/licenses/by-sa/4.0[Creative Commons Attribution-ShareAlike 4.0 Unported License].
 
+=== Acknowledgement
+
+This guide was produced under https://biodt.eu[the BioDT project^], which received funding from the European Union’s Horizon Europe research and innovation programme under https://doi.org/10.3030/101057437[grant agreement No 101057437^].
+
+
 === Persistent URI
 //
 // #TODO: Assign a DOI before publication#
