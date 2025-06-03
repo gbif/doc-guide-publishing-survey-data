@@ -501,11 +501,7 @@ backgrounds and levels of expertise in biodiversity sciences including
 formal biologists as well as the broader, general public. `Bioblitz` as
 a term:dwc[dwc:eventType] is typically
 most appropriate at lower (child) event levels in nested hierarchies.
-- *Identification*: An identification is the taxonomic identification of a
-material sample or samples collected during an event. This could be an
-identification by a professional taxonomist or through DNA analysis, but
-it occurs at a time and place other than the survey site (e.g., a
-laboratory).
+- *Site visit*: A site visit is a single survey, inventory, or sampling at a pre-established geographic location at a discrete time. 'Site visit' as a term:dwc[dwc:eventType] is typically most appropriate at the lowest event level in a nested hierarchy.
 ====
 
 *'Inventory' event types*
