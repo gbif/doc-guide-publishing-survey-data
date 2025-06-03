@@ -61,7 +61,6 @@ preparing and sharing such data through GBIF.
 
 === Vector-pathogen data
 
-The Secretariat is currently preparing a guide and data template for
-disease vector data. The guide will be shared here when completed.
+A https://www.gbif.org/news/373fXAjxexu648VyZXeEDB/new-disease-vector-hosts-and-pathogen-data-publishing-guide-opens-for-community-review[guide and data template] for disease vector data is currently open for community review. 
 
 <<<
