@@ -1,7 +1,7 @@
 // add cover image to img directory and update filename below
-// ifdef::backend-html5[]
-// image::img/web/fullguide-cover.png[]
-// endif::backend-html5[]
+ifdef::backend-html5[]
+image::img/web/fullguide-cover.png[]
+endif::backend-html5[]
 
 == Colophon
 
