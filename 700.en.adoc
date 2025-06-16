@@ -187,10 +187,7 @@ absences:
 * In the *_Occurrence table_*:
 ** For each occurrence to be reported absent, the field
 term:dwc[dwc:occurrenceStatus]
-should be populated as `absent`:
-
-term:dwc[dwc:occurrenceStatus] =
-`absent`
+should be populated as `absent`: term:dwc[dwc:occurrenceStatus] = `absent`.
 
 * Recommended best practice is to also populate
 term:dwc[dwc:individualCount] and
@@ -199,9 +196,7 @@ as `0` and term:dwc[dwc:organismQuantityType] as `Individuals`. +
 * In the *_Event table_*:
 ** If one or more absences are reported at any taxonomic level
 (term:dwc[dwc:occurrenceStatus] =
-`absent`), then term:eco[eco:isAbsenceReported] for parent Events at all relevant levels should be populated as `true`
-
-term:eco[eco:isAbsenceReported] = `true`
+`absent`), then term:eco[eco:isAbsenceReported] at each relevant evvent level should be populated as `true` (term:eco[eco:isAbsenceReported] = `true`).
 
 * A list of absent taxa can be provided using term:eco[eco:absentTaxa] at all relevant levels.
 
@@ -305,7 +300,7 @@ The https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[Resource 
 be used to link information related across multiple occurrences (may be
 from the same or from different events), including:
 
-* an occurrence with another occurrence.
+*an occurrence with another occurrence*
 
 The table below highlights an example from https://doi.org/10.15468/xdzgbt. In this example, a _Bombus ephippiatus_ bee visits a species of runner bean, _Phaseolus coccineus_.
 
@@ -335,7 +330,7 @@ The table below highlights an example from https://doi.org/10.15468/xdzgbt. In t
 |`http://purl.obolibrary.org/obo/RO_0002622`
 |===
 
-* an occurrence with a material sample. 
+*an occurrence with a material sample* 
 
 The table below highlights an example from https://doi.org/10.15468/g3bard. In this example, a skin sample from a female toad of _Bufo americanus_ is preserved at the University of Michigan Museum of Zoology along with other body parts.
 
