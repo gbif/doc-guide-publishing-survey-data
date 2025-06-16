@@ -3,20 +3,12 @@
 
 The following sections will guide you through the process of mapping
 Event level information specifically related to survey structure,
-location, protocols, scopes, and efforts.
+location, protocols, scopes, and efforts. 
 
-[IMPORTANT]
-.*Survey level information in DWC-A files*
-====
-Survey event data should be
-saved to the DwC-A event table. This includes DwC Event terms (any term
-preceded by _'dwc'_, e.g.,
-term:dwc[dwc:eventID]) and Humboldt
-extension terms (any term preceded by _'eco'_, e.g.,
-term:eco[eco:protocolNames]).
+Each term in this document is linked with its respective term internationalized resource identifier (IRI) alias (ex., term:eco[eco:protocolNames]). Always use these links to refer to the definition, comments, and examples provided when populating a term. 
 
-  - A
-comprehensive list of Darwin Core terms that can be applied at the event
+- A
+comprehensive list of Darwin Core terms that can be used at the event
 level can be found on the https://rs.gbif.org/core/dwc_event_2024-02-19.xml[Darwin Core Event page in the GBIF Registry of
 Schemas]. 
   - The full
@@ -24,29 +16,42 @@ suite of Humboldt Extension terms is available on the https://rs.gbif.org/extens
 Ecological Inventories page in the GBIF Registry of Schemas] and in the
 https://eco.tdwg.org/terms/[Humboldt Extension Quick Reference Guide].
 
-Fields for which there is no data to share at any hierarchical level can
-be left blank or simply not included in the Event table. Populating
-terms across event levels (e.g., from parent event to child event) 
 
-Each event level can have its own set of attributes and measurements, which
+[IMPORTANT]
+.*Data mapping tips*
+====
+Survey event data should be saved to the DwC-A `event` table. This includes DwC Event terms (any term preceded by _'dwc'_, e.g., term:dwc[dwc:eventID]) and Humboldt extension terms (any term preceded by _'eco'_, e.g.,
+term:eco[eco:protocolNames]).
+
+Populate all terms for which information is available. 
+
+*Paired terms*, mutually exclusive sets of terms, must be populated together. Often these terms are designed to offer the data publisher some level of flexibility in reporting data. Paired terms are most common in terms available for reporting a variable value and associated unit of measure (for example, term:dwc[dwc:sampleSizeValue] and term:dwc[dwc:sampleSizeUnit]). 
+
+
+*No data, missing data, and data values of '0'*
+
+  * Cells with a value of '0' (zero) should be populated as `0`.
+  * Cells with missing data or NULL values should be left empty. 
+  * Terms for which there is `no data` to share at any hierarchical level can be excluded from the data table.
+
+
+*Populating terms across event levels (e.g., from parent event to child event)* 
+
+* Each event level can have its own set of attributes and measurements, which
 can be captured using the Humboldt and/or other Extension(s) and be
 unambiguously linked to the corresponding level through the appropriate
-term:dwc[dwc:eventID]s. 
-
-A parent Event should not be populated by deriving or
+term:dwc[dwc:eventID]s. +
+* A parent Event should not be populated by deriving or
 summarizing information from child Events; rather, fields SHOULD be
 populated explicitly with information directly appropriate to the nature
 and level of the event itself (see Section _3.2.3 Principle of
-non-derivation_ in the 'https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories]'). 
-
-A child event SHOULD NOT implicitly inherit the value of
+non-derivation_ in the 'https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories]'). +
+* A child event SHOULD NOT implicitly inherit the value of
 any property of any of its parent Event(s). If a value is in common
 between an Event and its parent, the value should be included explicitly
 in both Event records. 
 
-Refer to https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in the
-Humboldt Extension for Ecological Inventories^] for guidance in
-populating Humboldt extension terms across event levels.
+Refer to https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^] for more guidance in populating Humboldt extension terms across event levels.
 ====
 
 === Survey design
@@ -97,38 +102,24 @@ term:dwc[dwc:eventID].
 
 *Non-nested datasets*
 
-* Each event in a non-nested dataset must be assigned a unique
-term:dwc[dwc:eventID]. +
-* Non-nested datasets will not have a
-term:dwc[dwc:parentEventID] and
-term:eco[eco:siteNestingDescription]
-does not need to be populated.
+* Each event in a non-nested dataset have a unique term:dwc[dwc:eventID]. +
+* Non-nested datasets will not have a term:dwc[dwc:parentEventID]. 
+
 
 *Nested datasets*
 
-Nested hierarchies are established by relating a child event to a parent
-event through the child Event’s
-term:dwc[dwc:parentEventID]. As
-such, these more complex datasets require use of both
-term:dwc[dwc:eventID] and
-term:dwc[dwc:parentEventID].
+Nested hierarchies are established by relating a child event to a parent event through the child Event’s term:dwc[dwc:parentEventID]. As such, these more complex datasets require use of both term:dwc[dwc:eventID] and term:dwc[dwc:parentEventID].
 
-* Each event in a nested dataset must have a unique
-term:dwc[dwc:eventID]. +
-* Each parent event must have its own
-term:dwc[dwc:parentEventID].
+* Each event in a nested dataset must have a unique term:dwc[dwc:eventID]. +
+* Each parent event must a unique term:dwc[dwc:parentEventID]. +
+* Each child event should include the unique term:dwc[dwc:parentEventID] to which event is related.
+
 
 In addition to event and parent event identifiers:
 
-* *Site count and site nesting description:* Nested datasets should, at
-the parent event level, include the total number of sites sampled in
-term:eco[eco:siteCount] and provide a
-textual description of the survey design or site sampling structure
-using
-term:eco[eco:siteNestingDescription]. +
-* *Field number:* If the survey data include a field number for each
-specific event, this should be shared using
-term:dwc[dwc:fieldNumber].
+* *Site count and site nesting description:* Nested datasets should, at the parent event level(s), include the total number of sites sampled in
+term:eco[eco:siteCount] and provide a textual description of the survey design or site sampling structure using term:eco[eco:siteNestingDescription]. +
+* *Field number:* If the survey data include a field number for each specific event, this should be shared using term:dwc[dwc:fieldNumber].
 
 [caption=]
 .Event hierarchy terms, their recommended usage (status), and example data entries.
@@ -236,11 +227,8 @@ datum location of the Event site should be provided in term:dwc[dwc:decimalLatit
 and term:dwc[dwc:geodeticDatum].
 ** If geographic coordinates are not in decimal latitude and decimal
 longitude format, populate
-term:dwc[dwc:verbatimLatitude],
-term:dwc[dwc:verbatimLongitude],
-and
-term:dwc[dwc:verbatimCoordinateSystem]
-instead.
+term:dwc[dwc:verbatimLatitude], term:dwc[dwc:verbatimLongitude],
+and term:dwc[dwc:verbatimCoordinateSystem] instead.
 
 The Humboldt extension includes additional terms that provide greater
 contextual information about the geospatial scope of a sampling event or
@@ -501,7 +489,7 @@ backgrounds and levels of expertise in biodiversity sciences including
 formal biologists as well as the broader, general public. `Bioblitz` as
 a term:dwc[dwc:eventType] is typically
 most appropriate at lower (child) event levels in nested hierarchies.
-- *Site visit*: A site visit is a single survey, inventory, or sampling at a pre-established geographic location at a discrete time. 'Site visit' as a term:dwc[dwc:eventType] is typically most appropriate at the lowest event level in a nested hierarchy.
+- *Site visit*: A site visit is a single survey, inventory, or sampling at a pre-established geographic location at a discrete time. `Site visit` as a term:dwc[dwc:eventType] is typically most appropriate at the lowest event level in a nested hierarchy.
 ====
 
 *'Inventory' event types*
