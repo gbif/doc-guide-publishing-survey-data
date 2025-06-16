@@ -17,8 +17,7 @@ should include a resource metadata (EML file) written in XML format.
 GBIF currently requires 8 and strongly recommends 1 dataset-level
 metadata terms (see
 https://www.gbif.org/data-quality-requirements-sampling-events[Data
-Quality Requirements for Sampling Events] for more information; Table
-4):
+Quality Requirements for Sampling Events] for more information):
 
 * *_title:_* The title under which the dataset will be published at
 gbif.org. The title should be brief, but descriptive, characterizing the
