@@ -868,13 +868,8 @@ essential to interpret local non-detection as local absences. An
 explicitly stated targeted or intentionally excluded *taxonomic scope*
 should be reported using term:eco[eco:targetTaxonomicScope] and term:eco[eco:excludedTaxonomicScope].
 
-* If a specific person(s) or organization(s) are recorded as making the
-taxonomic identifications relevant to the stated survey scope(s), they
-should be acknowledged using
-term:dwc[dwc:identifiedBy] (for one
-or more names) or
-term:dwc[dwc:identifiedByID] (for
-one or more unique identifiers such as, OrcID). +
+* If a specific person(s) or organization(s) are recorded as making the taxonomic identifications relevant to the stated survey scope(s), they
+should be acknowledged using term:dwc[dwc:identifiedBy] (for one or more names) or term:dwc[dwc:identifiedByID] (for one or more unique identifiers such as, OrcID). Presently, however, these terms can NOT be used with the Event core. Therefore, the term(s) should be populated for each relevant occurrence and located on the `occurrence` table. +
 * If every organism included in terms:eco[eco:targetTaxonomicScope] that was observed during an event was reported, then
 term:eco[eco:isTaxonomicScopeFullyReported] = `true`; if not, term:eco[eco:isTaxonomicScopeFullyReported] = `false`.
 
@@ -901,13 +896,7 @@ term:eco[eco:taxonCompletenessReported]
 |term:eco[eco:excludedTaxonomicScope]
 |`Aves`
 
-.5+|Share if available
-|term:dwc[dwc:identifiedBy]
-|`Cecilie Svenningsen`
-
-|term:dwc[dwc:identifiedByID]
-|`https://orcid.org/0000-0002-9216-2917` \| `https://orcid.org/0000-0002-0786-4069`
-
+.3+|Share if available
 |term:eco[eco:isTaxonomicScopeFullyReported]
 |`true` or `false`
 
@@ -1144,13 +1133,7 @@ should be used to credit the people involved in the sampling
 eventSampling effort terms, their recommendation usage, and example data
 entries. Best practice is to use a unique identifier (e.g., OrcID) if
 available.
-** NOTE: Because
-term:eco[eco:samplingPerformedBy]
-has an IRI equivalent only a single OrcID can be provided (the term
-cannot support a list). Efforts are underway to enable the use of
-term:dwc[dwc:recordedByID] at the event
-level so a list of OrcID’s (using the pipe separator between values) can
-be provided.
+** NOTE: Because term:eco[eco:samplingPerformedBy] has an IRI equivalent only a single OrcID can be provided (the term cannot support a list). If more than one OrcID needs to be shared, a list of OrcID’s (using the pipe separator between values) can be supplied using the term term:dwc[dwc:recordedByID] used BUT it must be applied to each relevant occurrence and located on the `occurrence` table. 
 
 
 [NOTE]
