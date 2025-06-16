@@ -36,7 +36,7 @@ https://doi.org/10.35035/doc-ynvs-eh84
 
 === Document control
 
-First edition, May 2025
+Community review edition, v0.1, June 2025
 
 // include reference to provenance if possible/relevant
 // https://doi.org/10.EXAMPLE/2ND-EXAMPLE[Second edition], March 2015, by Due Autore and https://orcid.org/0000-0000-0000-0000[Troisième Auteur].
