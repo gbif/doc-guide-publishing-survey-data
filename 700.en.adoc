@@ -238,7 +238,7 @@ bycatch.
 |
 |===
 
-=== Abundance information
+=== Reporting abundance information
 
 To capture abundance information in a dataset or at a specific event
 level:
