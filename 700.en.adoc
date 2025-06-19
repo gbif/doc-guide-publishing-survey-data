@@ -28,7 +28,7 @@ term:dwc[dwc:scientificName]. +
 observation, material specimen) must be reported in
 term:dwc[dwc:basisOfRecord].
 
-*Reporting multiple individuals as a single occurrence*
+=== Reporting multiple individuals as a single occurrence
 
 If multiple individuals of the same taxonomic classification are
 observed and no additional information about the organisms (e.g., life
@@ -66,7 +66,7 @@ reported.
 |`individuals`
 |===
 
-*Reporting multiple individuals as multiple occurrences*
+=== Reporting multiple individuals as multiple occurrences
 
 If multiple individuals of the same taxonomic classification are
 observed
