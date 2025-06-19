@@ -295,7 +295,7 @@ following terms be populated as follows in the *Event table*:
 |`5`
 |===
 
-=== Species’ co-occurrence and species’ interactions
+=== Capturing species’ co-occurrence and species’ interactions
 
 The https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[Resource Relationship extension] can
 be used to link information related across multiple occurrences (may be
