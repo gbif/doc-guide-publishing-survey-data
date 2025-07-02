@@ -353,7 +353,7 @@ term:dwc[dwc:locality].
 |term:dwc[dwc:footprintSRS]
 |`epsg:4326`
 
-|term:dwc[dwc:locality]_ |`Agriculture site, Kongskilde Friluftsgård, Zealand`
+|term:dwc[dwc:locality] |`Agriculture site, Kongskilde Friluftsgård, Zealand`
 |===
 
 ==== Vegetation cover
