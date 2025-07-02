@@ -802,7 +802,7 @@ Both fields can be applied to any event at any level.
 |`AMNH` \| `KUNHM`
 
 |term:dwc[dwc:dataGeneralizations]
-|`Coordinates generalized from original GPS coordinates to the nearest half degree grid cell.'; 'Coordinates for each event site generalized from original GPS coordinates to the nearest half degree grid cell`
+|`Coordinates generalized from original GPS coordinates to the nearest half degree grid cell.`, `Coordinates for each event site generalized from original GPS coordinates to the nearest half degree grid cell`
 
 
 |term:dwc[dwc:informationWithheld]
