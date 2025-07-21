@@ -7,13 +7,8 @@ Occurrence information should be saved to a DWC-A occurrence file.
 See the occurrence table in the data mapping template.
 ====
 
-Organismal occurrence information is mapped and linked to a survey event
-using the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[DwC Occurrence extension].
-Occurrences can be mapped to only a single survey Event, however they
-can link to any event level. In the case of a nested hierarchy, the best
-practice recommendation is to link occurrence information to the lowest
-possible event level to maintain specificity. Occurrence information
-should be contained as a table in the Occurrence file of the DwC-A.
+Each DwC Event can be associated with one or more Occurrence records of individual organisms or taxa. Occurrence information is mapped and linked to a survey event
+using the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[DwC Occurrence extension]. Each Occurrence record can be mapped to only a single survey Event; however, Occurrence records can be link to any event level. In the case of a nested hierarchy, the recommended best practice is to link each Occurrence to the lowest possible event level to maintain specificity. Occurrence information should be contained in the Occurrence file of the DwC-A.
 
 Each organism occurrence must include the following information:
 
@@ -68,14 +63,7 @@ reported.
 
 === Reporting multiple individuals as multiple occurrences
 
-If multiple individuals of the same taxonomic classification are
-observed
-
-If multiple individuals of the same taxonomic classification are
-observed and additional information about the organisms (e.g., life
-stage, sex) is collected, then a unique occurrence (row in the table)
-should exist for each unique suite of taxonomic identification-organism
-traits should be created.
+If multiple individuals of the same taxonomic classification are observed and additional information about the organisms (e.g., life stage, sex) is collected, then a unique occurrence record (row in the table) should be created for each unique combination of taxonomic identification-organism traits.
 
 For example, if 1 adult male and 3 adult females Indian gharials
 (_Gavialis gangeticus_) were observed alive, two occurrences, each with
@@ -114,16 +102,11 @@ would be reported.
 |`alive`
 |===
 
-The table below outlines the minimum required and recommended terms as
-well some of the more commonly used terms and their recommended usage.
-However, Darwin Core includes many more terms. It is recommended that
-you take some time to review the https://dwc.tdwg.org/terms/[DwC quick reference guide] and to identify and include any and all
-terms available that allow you to share the richest version of your data
-possible. Sections that may be of particular interest:
+The table below outlines the minimum required and recommended terms for each occurrence record, as well some of the more commonly used terms and their recommended usages. However, Darwin Core includes many more terms. It is advisable to take some time to review the DwC quick reference guide 'https://dwc.tdwg.org/terms/[DwC quick reference guide]' to identify and include any and all terms available that allow you to share the richest version of your data possible. Sections that may be of particular interest:
 
-* https://dwc.tdwg.org/terms/#occurrence[occurrence]
-* https://dwc.tdwg.org/terms/#identification[identification]
-* https://dwc.tdwg.org/terms/#taxon[taxon]
+* 'https://dwc.tdwg.org/terms/#occurrence[occurrence]'
+* 'https://dwc.tdwg.org/terms/#identification[identification]'
+* 'https://dwc.tdwg.org/terms/#taxon[taxon]'
 
 [caption=""]
 .Species occurrence terms, their recommended usage (status), and example data entries.
@@ -172,7 +155,7 @@ possible. Sections that may be of particular interest:
 |term:dwc[dwc:establishmentMeans]
 |`native`
 
-|term:dwc[dwc:degreeOfEstablishment]_
+|term:dwc[dwc:degreeOfEstablishment]
 |`native`
 
 |term:dwc[dwc:vitality]
@@ -181,9 +164,15 @@ possible. Sections that may be of particular interest:
 
 === Reporting absences
 
-*Absences* are defined here as the lack of detection of organisms
-explicitly stated as part of the target taxonomic scope. To document
-absences:
+*Absences* are defined here as the lack of detection of organisms that are explicitly stated to be part of the target taxonomic scope. Information regarding the absence of detection of a type of taxon can be reported explicitly or implicitly within a DwC-A. When the taxonomic scope is highly constrained, for example being restricted to only one or a few taxa, it is feasible to include occurrence records for each of the non-detected taxa within the data, with each absence being denoted by setting dwc:OccurrenceStatus to `absent`. However, when taxonomic scopes are broader, and include hundreds or thousands of species (e.g., a taxonomic scope of a dataset that includes all species of birds in the world), then it becomes infeasible to add occurrence records of zero individuals for all of the species not detected.
+
+The reporting of absences only provides useful information when term:eco[eco:isTaxonomicScopeFullyReported] is `true`. If term:eco[eco:isTaxonomicScopeFullyReported] is `false` then occurrence records of zero individuals are uninterpretable because the user of these data does not know whether there are any taxa that were not detected but were not reported with occurrence records of zero individuals. Implicit reporting of absences is impossible if term:eco[eco:isTaxonomicScopeFullyReported] is `false`.
+
+If absences are implicitly reported, each end user of data will need to reconstruct explicit absences for themselves for each taxon of interest to them, because any unreported taxon (i.e. any taxon without an occurrence record) is known to be absent. Again, this will only be possible if term:eco[eco:isTaxonomicScopeFullyReported] is `true` and a taxonomic scope is reported.
+
+*Explicit documentation of absences*
+
+To document absences with a DwC-A by including zero-count occurrence records:
 
 * In the *_Occurrence table_*:
 ** For each occurrence to be reported absent, the field
@@ -205,6 +194,18 @@ Absences should only be reported for taxa within the stated taxonomic
 and/or organismal scope of a survey. Absence cannot be asserted for
 bycatch.
 
+*Implicit documentation of absences*
+
+To implicitly document absences in a DwC-A To document absences with a DwC-A term:eco[eco:isTaxonomicScopeFullyReported] must be `true`for the event, and either term:eco[eco:targetTaxonomicScope] or term:eco[eco:excludedTaxonomicScope] must be specified. Then:
+* In the *_Occurrence table_*: +
+** For each taxon to be implicitly reported absent, there will not be any Occurrence record created.
+* In the *_Event table_*: +
+** Because no absences are explicitly reported, then term:eco[eco:isAbsenceReported] for parent Events at all relevant levels should be populated as `false` (term:eco[eco:isAbsenceReported] = `false`).
+
+Absences should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey. Absence cannot be asserted for bycatch.
+
+
+
 [caption=""]
 .Terms to indicate absence, or non-detection, and their recommendation usage.
 [width="100%",cols="25%,25%,25%,25%",options="header",]
@@ -216,7 +217,7 @@ bycatch.
 |`present` or `absent`
 
 |Occurrence
-.4+|Recommended
+.5+|Recommended
 |term:dwc[dwc:individualCount]
 |`3`
 
@@ -233,6 +234,10 @@ bycatch.
 |`true` or `false`
 
 |Event
+|term:eco[eco:isTaxonomicScopeFullyReported]
+|`true` or `false`
+
+|Event
 |Share if available
 |term:eco[eco:absentTaxa]
 |
@@ -243,22 +248,20 @@ bycatch.
 To capture abundance information in a dataset or at a specific event
 level:
 
-* In the *Occurrence table*, use the paired terms
+* In the *_Occurrence table_*, use the paired terms
 term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType]
 to report the observed abundance for each reported occurrence. For
 example, if three individuals of a species were observed, the paired terms
 would be populated as follows:
 ** term:dwc[dwc:organismQuantity] = `3` +
 ** term:dwc[dwc:organismQuantityType] = `Individuals` +
-* In the *Event table*:
-** The inclusion of abundance information in the dataset should be
+* In the *_Event table_*:
+** The inclusion of abundance information in the datasett, even if this information is not reported for all taxa, should be
 indicated by populating term:eco[eco:isAbundanceReported] as `true`. +
 ** If an abundance cap, and what that cap was reported, this should be
 captured using term:eco[eco:isAbundanceCapReported] and term:eco[eco:abundanceCap].
 
-If the dataset or relevant event does not include abundance information
-is not included in the dataset, then it is recommended that the
-following terms be populated as follows in the *Event table*:
+If the dataset or relevant event does not include abundance information, then it is recommended that the following terms be populated as follows in the *Event table* at the appropriate level within the Event hierarchy:
 
 * term:eco[eco:isAbundanceReported] = `false` +
 * term:eco[eco:isAbundanceCapReported] = `false`
@@ -303,7 +306,7 @@ from the same or from different events), including:
 
 *an occurrence with another occurrence*
 
-The table below highlights an example from https://doi.org/10.15468/xdzgbt. In this example, a _Bombus ephippiatus_ bee visits a species of runner bean, _Phaseolus coccineus_.
+The table below highlights an example from the dataset https://doi.org/10.15468/xdzgbt[Potential host plant records recovered from ECOAB wild bee collection, Mexico] published by _Comisión nacional para el conocimiento y uso de la biodiversidad_. In this example, a _Bombus ephippiatus_ bee visits a species of runner bean, _Phaseolus coccineus_.
 
 [width="100%",cols="25%,25%,25%,25%",options="header",]
 |===
@@ -333,7 +336,7 @@ The table below highlights an example from https://doi.org/10.15468/xdzgbt. In t
 
 *an occurrence with a material sample* 
 
-The table below highlights an example from https://doi.org/10.15468/g3bard. In this example, a skin sample from a female toad of _Bufo americanus_ is preserved at the University of Michigan Museum of Zoology along with other body parts.
+The table below highlights an example from the dataset https://doi.org/10.15468/g3bard[University of Michigan Museum of Zoology, Division of Reptiles & Amphibians] published by University of Michigan Museum of Zoology. In this example, a skin sample from a female toad of _Bufo americanus_ is preserved at the University of Michigan Museum of Zoology along with other body parts.
 
 [width="100%",cols="25%,25%,25%,25%",options="header",]
 |===
