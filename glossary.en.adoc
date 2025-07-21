@@ -1,31 +1,19 @@
 [glossary][#glossary]
 == Glossary
 
-[[absence]]absence:: the lack of detection of organisms explicitly stated as part of the target taxonomic scope.
+[[absence]]absence:: The lack of detection of organisms explicitly stated as belonging to a target taxonomic scope.
 
-[[abundance]]abundance:: the number of individuals of the same taxonomic designation in a particular area at a specific time
+[[abundance]]abundance:: The number of individuals of the same taxonomic designation in a specific area at a specific time.
 
-biological or biodiversity [[biosurvey]]survey:: a systematic effort to collect
-information about the biological organisms of a specific area at a given
-time, are critical to helping us understand and monitor changes in our
-environment.
+biological or biodiversity [[biosurvey]]survey:: A systematic effort to collect information about the biological organisms of a specific area at a given time.
 
-[[bycatch]]bycatch:: organisms detected during a survey that were not explicitly
-targeted in the scope of a study, should be indicated if included in the
-dataset.
+[[bycatch]]bycatch:: Organisms detected during a survey that were not explicitly targeted in the survey scope.
 
-[[compilation]]compilation:: a summary inventory resulting from the combination of
-multiple existing inventories (as described in Guralnick et al. 2018).
-Compilations are aggregates of multiple studies, and may combine surveys
-employing different protocols, processes, and observers, often with
-variable reporting of the methods employed or other compiled data
-sources and literature searches.
+[[compilation]]compilation:: A summary inventory resulting from the combination of information from multiple existing sources (as described in Guralnick et al. 2018), which may be compiled from other data sources and literature searches. Compilations are aggregations of multiple studies, and may combine surveys employing different protocols, processes, and observers, often with variable reporting of the methods employed.
 
-[[completeness]]completeness:: indicates the thoroughness of a survey relative to the
-stated scope.
+[[completeness]]completeness:: An indication of the thoroughness of a survey relative to the stated scope.
 
-controlled [[controlledvocabulary]]vocabulary:: a list of accepted values that can be used for
-the term
+controlled [[controlledvocabulary]]vocabulary:: A list of accepted values that can be used for a term.
 
 Darwin Core standard - [[DwC]]DwC:: Standard for sharing and publishing
 biodiversity data, originating from the Biodiversity Information
@@ -40,86 +28,51 @@ standard. Essentially a self-contained set of interconnected CSV files
 and an XML document describing included files and data columns, and
 their mutual relationships.
 
-data [[datamapping]]mapping:: the process of matching fields from one database to
-another.
+data [[datamapping]]mapping:: The process of matching fields from one database to another.
 
 Digital object identifier - [[DOI]]DOI:: Long-lasting reference used to
 uniquely identify (and locate) digital information objects, such as a
 biodiversity data set or a scientific publication.
 
-ecological [[ecomonitoring]]monitoring:: efforts aimed at evaluating ecosystem health
-and ecological response to climate change, supporting conservation
-efforts, informing policy and management, and improving public awareness
-and education about the values of biodiversity
+ecological [[ecomonitoring]]monitoring:: The collection of information about the state of a system in the natural world through repeated surveys.
 
-[[event]]event:: A process occurring at a particular
+[[event]]event:: A process occurring at a specific
 https://docs.gbif.org/georeferencing-best-practices/1.0/en/#location[location]
-during a period of time. Used generically to cover various kinds of
-collecting events, sampling events, and observations.
+during a period of time.
 
-[[FAIRdata]]FAIR data:: data that meets the FAIR principles of findability,
-accessibility, interoperability, and reusability (FAIR)
+[[FAIRdata]]FAIR data:: Data that meet the FAIR principles of *F*indability, *A*ccessibility, *I*nteroperability, and *R*eusability.
 
-[[HumboldtExt]]Humboldt extension for ecological inventories:: a vocabulary extension
+[[HumboldtExt]]Humboldt extension for ecological inventories:: A vocabulary extension
 to the Darwin Core Event class aimed at capturing sampling context
 information (e.g., survey protocols, scopes, and effort) in a more
 structured manner. See https://eco.tdwg.org/[Humboldt Extension for Ecological Inventories].
 
-[[materialSample]]material sample:: A *material sample* (term:dwc[dwc:MaterialSample]) is an entity '… that
-represents an entity of interest in whole or in part.' Essentially,
-material samples are specimens collected during the survey event.
+[[materialSample]]material sample:: An entity ‘... that represents an entity of interest in whole or in part’ (term:dwc[dwc:MaterialSample]). Essentially all material samples are physical specimens collected during the survey event.
 
-[[nestedDataset]]nested dataset:: complex survey dataset consisting of multiple nested
-event levels.
+[[nestedDataset]]nested dataset:: A complex survey dataset consisting of multiple related event levels.
 
-[[nonNestedDataset]]non-nested dataset:: simple survey dataset consisting of a single
-sampling event with a single standardized sampling protocol that is not
-repeated or a series of single sampling events that are not joined by a
-larger parent event.
+[[nonNestedDataset]]non-nested dataset:: A simple survey dataset consisting of a single sampling event with a single standardized sampling protocol with relationships to other events that do not need to be represented explicitly in a hierarchical (i.e. nested) structure by creating higher-level parent events.
 
-[[occurrence]]occurrence:: An existence of an Organism (sensu term:dwc[dwc:Organism]) at a particular place at a particular time
+[[occurrence]]occurrence:: An existence of an Organism (sensu term:dwc[dwc:Organism]) at a specific place at a specific time.
 
-[[openData]]open data:: data that can be freely used, re-used and redistributed by
-anyone
+[[openData]]open data:: Data that can be freely used, re-used, and redistributed by anyone.
 
-[[pairedTerms]]paired terms:: mutually exclusive sets of terms that must be populated
-together such as term:eco[eco:eventDurationValue] and term:eco[eco:eventDurationUnit].
+[[pairedTerms]]paired terms:: Mutually interdependent sets of terms that must be populated together for complete information to be present, for example with term:eco[eco:eventDurationValue] and term:eco[eco:eventDurationUnit].
 
-[[samplingEffort]]sampling effort:: sampling intensity during a sampling event.
+[[samplingEffort]]sampling effort:: Aspects of observer behaviour that can vary from one sampling event to another, and which influence the probability that an organism will be detected given that the organism is present.
 
-[[samplingEventData]]sampling event data:: capture the broader context surrounding the
-detection (or non-detection) of an organism in a particular time and
-place with a documented protocol and sampling effort where sampling
-effort relates to sampling intensity (following term:dwc[dwc:samplingEffort]). These
-datasets can include species occurrences, material samples (such as
-whole or partial specimens), genetic sequences, multimedia, etc.
-Sampling event data are typically quantitative, calibrated, and follow
-documented protocols resulting from sampling Events such as biological
-inventories, systematic monitoring surveys, and collecting expeditions,
-as well as structured citizen science efforts. These data can range in
-complexity from very simple—a single event with a single occurrence or
-no occurrences—to hierarchically complex, with multiple layers of
-Parent-Child Events and any combination of accompanying data types
-(occurrences, material samples, etc.).
+[[samplingEventData]]sampling event data:: Structured information that describes the broader context surrounding the detection (or non-detection) of an organism in a specific time and place, including documentation of sampling protocol and sampling effort (see definitions for these terms in this Glossary. Sampling event data encompasses species occurrences, material samples (such as whole or partial specimens), genetic sequences, multimedia, etc. Sampling event data are typically quantitative and follow documented protocols resulting from sampling Events such as biological inventories, systematic monitoring surveys, and collecting expeditions, as well as structured citizen science efforts. These data can range in complexity from very simple—a single event with a single occurrence or no occurrences—to hierarchically complex, with multiple layers of Parent-Child Events and any combination of accompanying data types (occurrences, material samples, etc.).
 
-[[samplingEventHierarchy]]sampling event hierarchy:: the translation of a survey’s sampling
-design into an event-based perspective using Darwin Core terms
+[[samplingEventHierarchy]]sampling event hierarchy:: The description of a survey’s sampling design as a nested structure of events using Darwin Core terms.
 
-[[samplingProtocol]]sampling protocol:: A *Sampling protocol* provides the details of how
-the sampling was conducted including explicit reporting of survey type
-and method…
+[[samplingProtocol]]sampling protocol:: Details of how the sampling was conducted.
 
-[[scope]]scope:: relates to the biodiversity targeted (or not targeted) during a
-survey
+[[scope]]scope:: A description of the restrictions placed on the range of types of organisms being targeted (or not targeted) during a survey, such as the range of species or ages.
 
-[[site]]site:: An event *_site_* is a location at which observations are made
-or samples and/or measurements are taken.
+[[site]]site:: The location at which observations are made or samples and/or measurements are taken. The configuration of an event site can vary in configuration from a point in space to an area.
 
-[[surveyDesign]]survey design:: details the sampling strategy and how the survey event
-sites (e.g., stations, plots, transects) are laid out.
+[[surveyDesign]]survey design:: A description of the pre-determined constraints of sampling strategy, including how the survey event sites (e.g., stations, plots, transects) are laid out. 
 
-[[voucher]]voucher:: a specimen or material sample collected and accessioned into
-a museum collection in support of a specific project or survey effort.
-
+[[voucher]]voucher:: A physical specimen or other material sample collected and accessioned into a museum collection in support of a specific project or survey effort.
 
 <<<
