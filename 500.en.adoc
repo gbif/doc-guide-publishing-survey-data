@@ -871,7 +871,7 @@ If taxonomic completeness is not reported,
 term:eco[eco:taxonCompletenessReported]
 = `notReported`.
 
-If a specific person(s) or organization(s) are recorded as making the taxonomic identifications relevant to the stated survey scope(s), they should be acknowledged using the term:dwc[dwc:identifiedBy]. A list of names can be be shared with values separated by a `|`. Note that it is not currently possible to share a list of unique identifiers such as OrcID's at the Event level. It is possible to provide a list of unique identifiers for each relevant on the `occurrence` table using the term term:dwc[dwc:identifiedByID].
+If a specific person(s) or organization(s) are recorded as making the taxonomic identifications relevant to the stated survey scope(s), they should be acknowledged using the term:dwc[dwc:identifiedBy]. A list of names can be be shared with values separated by a `|`. Note that it is not currently possible to share a list of unique identifiers such as OrcID's at the Event level. 
 
 
 [caption=""]
