@@ -103,7 +103,7 @@ The structure of nested datasets can take various forms and it is sometimes poss
 
 * *Locality–protocol-date:* This structure establishes location, or survey site, at the highest event levels. Subsequent events center around sampling protocol such that the lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time (<<fig2a, Figure 2A>>). +
 * *Protocol–locality-date:* This structure establishes sampling protocol at the highest event levels. Subsequent events are thus centered around location, or survey site, and date. The lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time (<<fig2b, Figure 2B>>). +
-* *Time-series:* Many survey datasets include multiple visits to a site or series of sites on different dates, but using only a single protocol. These time-series datasets may take either approach and will include, at the child-most event level, an event for each unique site visit (<<fig2c, Figure 2C>>).
+
 
 [[fig2a]]
 [caption="Figure 2A. "]
@@ -114,11 +114,6 @@ image::img/fig2a.png[]
 [caption="Figure 2B. "]
 .Simplified example schematic of a nested event dataset structure representing a survey (parent Event, dark purple rectangles) with two distinct sampling protocols (child-Events, medium purple rectangles) implemented at two sites (child-child-Events, light purple rectangles) wherein organismal occurrence information is collected and related to each sampling event using the occurrence extension (blue rectangles).
 image::img/fig2b.png[]
-
-[[fig2c]]
-[caption="Figure 2C. "]
-.Simplified example schematic of a nested event dataset structure representing a survey (parent Event, dark purple rectangles) with two distinct survey sites (child-Events, medium purple rectangles). Each survey site is sampled twice using the same protocol (child-child-Events, light purple rectangles). Organismal occurrence information is collected at each of the four site visits and related to appropriate sampling event using the occurrence extension (blue rectangles).
-image::img/fig2c.png[]
 
 
 Note that the above examples include a unique parent Event level. *This is not necessary or useful for all datasets.* Creating a parent Event level above protocol, location, and sampling date information may only be relevant for a dataset that is part of a larger project or network producing many datasets. Generally, if the additional event level will be useful in facilitating data discovery and relating multiple datasets, then consider including it. If it’s just another level of information that can easily be inferred from information recorded at lower event levels (e.g., repeated visits to a site that can be inferred from looking for identical locations in multiple records), then do not create the additional level.
