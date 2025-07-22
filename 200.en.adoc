@@ -1,43 +1,16 @@
 [[biological-survey-data]]
 == Biological survey data
 
-Biological (a.k.a. biodiversity) surveys aim to identify and document a
-particular group of organisms (taxonomic scope) in a specific location
-or series of locations (spatial scope) over a defined period (temporal
-scope) using an explicit methodological approach (protocols, sampling
-design). A simple biological survey may take place at a single location
-or site, implementing a single sampling protocol, and occurring at a
-single time with no repeated visits to the survey site. More complex
-surveys may take place at multiple sites, employ a broad suite of
-methods, including field observations, sampling techniques, deployment
-of camera traps, acoustic monitoring, genetic analysis, and remote
-sensing, with one or more repeat visits to some or all of the surveyed
-sites. As such, biological survey data typically include a wide range of
-information to comprehensively document the methods implemented, and
-recorded presence, abundance, and condition of species and their
-habitats. Incidental or opportunistically collected data are not
-considered survey data.
+Biological (a.k.a. biodiversity) surveys aim to identify and document the presence of a particular group of organisms (taxonomic scope) in a specific location or series of locations (spatial scope) over a defined period (temporal scope) using an explicit methodological approach (protocols, sampling design). A simple biological survey may take place at a single location or site, implementing a single sampling protocol, and  occurring at a single time with no repeated visits to the survey site. More complex surveys may take place at multiple sites, employ a broad suite of methods, including field observations, sampling techniques, deployment of camera traps, acoustic monitoring, genetic analysis, and remote sensing, with one or more repeat visits to some or all of the surveyed sites. As such, biological survey data typically need to include a wide range of information to comprehensively document the methods implemented, and recorded presence, abundance, and condition of species and their habitats. Incidental or opportunistically collected data are not considered survey data. 
 
-The details about the survey (how it was carried out, the
-spatio-temporal scope, the taxonomic group targeted, who was involved,
-etc.) are very important to properly understand the structure of the
-data and how it can be reused for other purposes. Despite their inherent
-value, this detailed information is often treated as metadata and
-captured in an unstructured manner that makes it nearly impossible to
-take full advantage of the breadth of information available. The breadth
-of information that can be captured from structured reporting of
-biological survey design alongside the actual data recorded during a
-survey includes:
+The details about the survey (how it was carried out, the spatio-temporal scope, the taxonomic group targeted, who was involved, etc.) are very important to properly understand the structure of the data and how it can be reused for other purposes. Despite its inherent value, this detailed information is often treated as metadata and captured in an unstructured manner that makes it nearly impossible to take full advantage of the breadth of information available. The breadth of information that can be captured from structured reporting of biological survey design alongside the actual data recorded during a survey includes: 
+
 
 * *Survey structure:* This information identifies the study area and
 sampling units of the survey, providing a means by which to understand
 how data collected in the survey relate to each other in location,
 scope, and sampling date and time. +
-* *Survey methods:* Biodiversity survey methods information includes
-detailed information about the sampling protocol implemented (e.g.,
-protocol name, relevant references, details of techniques implemented
-and equipment used), the type of data collected, and sampling effort and
-completeness. +
+* *Survey methods:* Information about biodiversity survey methods includes detailed information about the sampling protocol implemented (e.g., protocol name, relevant references, details of techniques implemented and equipment used), the type of data collected, and sampling effort and completeness. +
 * *Survey scope:* Scopes define the overall objectives of a survey.
 Survey scope will vary depending on the purpose of the survey. Common
 scope types include:
@@ -74,8 +47,8 @@ survey process.
 
 === Making biological survey data FAIR and open
 
-Making biological data FAIR and open data enhances scientific research
-and collaboration, enables large-scale analyses facilitating data
+Making biological data FAIR and open enhances scientific research
+and collaboration, enables large-scale analyses through data
 aggregation, improves data quality, fosters innovation, and promotes
 efficient use of resources.
 
@@ -116,10 +89,7 @@ facilitate the exchange of biological data. DwC *terms* are used to
 describe and share biodiversity data. Each term has an accepted
 definition accompanied by comment(s),a usage example (for example, see
 https://eco.tdwg.org/terms/#eco:verbatimTargetScope[_verbatimTargetScope_]
-and https://eco.tdwg.org/terms/#eco:protocolNames[_protocolNames_]), and
-in some cases contains controlled vocabularies (a list of accepted
-values that can be used for the term). Populating DwC terms with
-information from a particular dataset is called *mapping*. Use of the
+and https://eco.tdwg.org/terms/#eco:protocolNames[_protocolNames_]), and in some cases are based on or recommend use of controlled vocabularies (a list of accepted values that can be used for the term). The process of mapping data or information from one dataset to the terms of another such as DwC is called *mapping*. Use of the
 standard can help reduce errors and inconsistencies in data, enhance
 data discoverability, and facilitate data reuse. DwC includes
 standardized terms for describing species occurrences and biodiversity
@@ -151,7 +121,7 @@ previously lost as unstructured metadata (see the terms list in <<tdwg2024b>>).
 
 === Biological survey data in GBIF: Darwin Core Archives (DwC-A)
 
-Biodiversity data can be shared with GBIF in multiple ways, however,
+Biodiversity data can be shared with GBIF in multiple ways; however,
 data need to be shaped to conform to the current data model which is
 structured around *Darwin Core Archives* (DwC-A). Data published to GBIF
 is shared as *dataset categories,* which are either
@@ -179,14 +149,9 @@ and how the columns in the data files map to Darwin Core terms
 * *Resource metadata*: describes the dataset context in more detail
 e.g., description of the dataset, people involved, etc. using Ecological
 Metadata Language (https://eml.ecoinformatics.org/[EML]). +
-* *Event core file*: File with the table including the DwC Event and
-Humboldt extension terms describing survey level information (e.g.,
-protocol, survey scope, sampling effort and completeness). +
-* *Occurrence file*: File with the table describing the associated
-species occurrence information. +
-* *DwC extension file(s)*: Optional. One file for each extension used
-(see below for more information about extensions). See the table below
-for an overview of GBIF registered extensions.
+* *Event core*:  table(s) that include the DwC Event and Humboldt extension terms describing survey-level information (e.g., protocol, survey scope, sampling effort and completeness). +
+* *Occurrence*: extension file(s) to the event core file that contains the associated species occurrence information. +
+* *DwC extension file(s)*: Optional. Contains data that further expands on details relating to the event (see below for more information about extensions). See the table below for an overview of GBIF registered extensions.
 
 [caption=]
 .A non-exhaustive list of https://rs.gbif.org/extensions.html[GBIF registered extensions] that can and cannot currently be published with a Darwin Core event dataset to GBIF.
@@ -214,7 +179,7 @@ facts) included with the archive.
 [NOTE] 
 .A note on extensions and DwC-A
 ==== 
-The current GBIF data model limits how many layers of extensions a DwC-A can contain in the GBIF infrastructure. For example, a sampling event dataset can have occurrences as an extension, as well as other relevant extensions. But the occurrences cannot have an extension with additional information on the specific occurrences. Furthermore, some extensions can only be used in combination with a specific core while others can be used with multiple cores. For example, the https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2024-04-17.xml[DNA-derived data extension] can currently only be used in conjunction with a dataset being published as an Occurrence core and the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt extension for ecological inventories] can only be used with the event core. This limitation applies only to publishing the data to GBIF.
+The current GBIF data model limits how many layers of extensions a DwC-A can contain in the GBIF infrastructure. For example, a sampling event dataset can have occurrences as an extension, as well as other relevant extensions. But the occurrences cannot have an extension with additional information on the specific occurrences. Furthermore, some extensions can only be used in combination with a specific core while others can be used with multiple cores. For example, the https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2024-04-17.xml[DNA-derived data extension] can currently only be used in conjunction with a dataset being published as an Occurrence core, although it was developed for Occurrence and Event core, and the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt extension for ecological inventories] can only be used with the event core. This limitation applies only to publishing the data to GBIF.
 ====
 
 <<<
