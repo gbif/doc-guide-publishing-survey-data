@@ -1,9 +1,7 @@
 [[mapping-survey-data-to-dwc]]
 == Mapping survey data to Darwin Core
 
-*Data mapping* is the process of matching fields from one database to
-another with the intention of facilitating integration of data from
-heterogeneous sources. The following sections will guide you through the
+The following sections will guide you through the
 process of mapping your the Event-level (sampling context) information of your biodiversity survey data to the Darwin Core data standard.
 
 In practice, the process of mapping survey and monitoring data to the
@@ -25,7 +23,7 @@ information standards]. +
 each biological survey (simply referred to as an 'Event' or 'sampling
 Event') will be mapped to https://dwc.tdwg.org/terms/#event[DwC Event
 class] and https://eco.tdwg.org/terms/[Humboldt extension] terms and
-saved in an independent 'event' table. Event-level data include the contextual
+saved in an `event` table or tables. Event-level data include the contextual
 information that applies to all occurrence and ancillary data collected
 or recorded during an event. Examples include information about the survey design,
 site (e.g., location, date), protocol(s), scope(s), and sampling effort.
@@ -68,7 +66,7 @@ is the most difficult part of mapping a dataset. DwC defines an event as
 ’_an action that occurs at some location during some time’_, such as a
 specimen collection process, a camera trap image capture, or a marine
 trawl. This broad definition of event means biological surveys can be
-framed as a single event or as a series of Events within Events using a
+framed as a single event or as a series of Events nested within Events using a
 Parent-Child relationship as necessary. 
 
 The *sampling event hierarchy* is the translation of the survey sampling 
@@ -81,7 +79,7 @@ each spatiotemporally unique sampling event as a DwC event.
 structure (<<fig1, Figure 1>>). These datasets typically consist of:
 
 * a single sampling event occurring at a particular place and time and
-conducted using a single standardized sampling protocol that is not
+conducted using a single standardized sampling protocol that is not necessarily
 repeated and is not part of a spatially larger sampling schema (<<fig2a,Figure 2A>>), or +
 * a series of single sampling events that are not joined by a larger
 parent event (<<fig2b,Figure 2B>>). A *compilation dataset*, which combines multiple surveys from
@@ -91,29 +89,21 @@ the compilation itself (e.g the broad area where multiple surveys are aggregated
 which results in several occurrences.
 
 [[fig1]]
-.A simple schematic of a non-nested event dataset structure (a) consisting of a single event with associated occurrences related to the event via the occurrence extension and (b) a series of individual events with associated occurrences related to the appropriate event via the occurrence extension. 
+.A simple schematic of a non-nested event dataset structure (a) consisting of a single event with associated occurrences related to the event via the occurrence extension or (b) a series of individual events with associated occurrences related to the appropriate event via the occurrence extension. 
 image::img/fig1.png[]
 
 === Nested datasets
 
-*Nested datasets* capture more complex survey designs, for example,
-those consisting of repeated sampling events and/or multiple sampling
-protocols. The top-most event level is the '**parent Event.**' A parent
-event encompasses all other Events in the dataset. Subsequent Events
-(*child Events*) represent either multiple sampling sites, protocols, or
-repeated sampling at the same locality using the same protocol. For any
-given term, a parent event should encompass the full scope of values
-contained in all of its child Events (see details in
-http://rs.tdwg.org/dwc/doc/hierarchy/2024-02-28[Hierarchical Events in
-Humboldt Extension for Ecological Inventories] document).
+*Nested datasets* capture more complex survey designs, for example, those consisting of repeated sampling events and/or multiple sampling protocols using parent-child relationships. In a nested dataset, a **parent event** encompasses all child Events beneath it in the dataset. The top-most Event level does not have a parent event. All events *_except the lowest Event level* are considered the ‘parent Event’ to any events beneath it. These **child events** may represent either multiple sampling sites, protocols, or repeated sampling at the same locality using the same protocol. For any given term, a parent event should encompass the full scope of values contained in all of its child Events (see details in http://rs.tdwg.org/dwc/doc/hierarchy/2024-02-28[Hierarchical Events in Humboldt Extension for Ecological Inventories] document).
 
-NOTE: Creating nested event levels may be important to relating the full story a dataset has to tell and to facilitating downstream analysis of the data. The parent-most event levels may  include more general information that applies to all subsequent and lower events. Lower or child-most event levels will include more detailed or explicit information. The lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time. However, it is important keep the structure as simple as possible. Do not create unnecessary sub-events.
 
-The structure of nested datasets can take various forms and there is no single correct structure. However, structure is most commonly defined as a function of sampling location, protocol, and date. For example:
+NOTE: Creating nested event levels may be important to relating the full story a dataset has to tell and to facilitating downstream analysis of the data. The parent-most event levels may  include more general information that applies to all subsequent and lower events. Lower or child-most event levels will include more detailed or explicit information. The lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time. However, it is important to keep the structure as simple as possible. Do not create unnecessary sub-events.
+
+The structure of nested datasets can take various forms and it is sometimes possible for the same dataset to be described as having more than one structure of nesting. There is no single correct structure. However, structure is most commonly defined as a function of sampling location, protocol, and date. For example:
 
 * *Locality–protocol-date:* This structure establishes location, or survey site, at the highest event levels. Subsequent events center around sampling protocol such that the lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time (<<fig2a, Figure 2A>>). +
-* *Protocol–locality-date:* This structure establishes sampling protocol at the highest event levels. Subsequent events thsu center location, or survey site, and date. The lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time (<<fig2b, Figure 2B>>). +
-* *Time-series:* Many survey datasets include multiple visits to a site or series of sites on different dates. These time-series datasets may take either approach and will include, at the child-most event level, an event for each unique site visit (<<fig2c, Figure 2C>>).
+* *Protocol–locality-date:* This structure establishes sampling protocol at the highest event levels. Subsequent events are thus centered around location, or survey site, and date. The lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time (<<fig2b, Figure 2B>>). +
+* *Time-series:* Many survey datasets include multiple visits to a site or series of sites on different dates, but using only a single protocol. These time-series datasets may take either approach and will include, at the child-most event level, an event for each unique site visit (<<fig2c, Figure 2C>>).
 
 [[fig2a]]
 [caption="Figure 2A. "]
@@ -131,7 +121,7 @@ image::img/fig2b.png[]
 image::img/fig2c.png[]
 
 
-Note that the above examples include a unique parent Event level. *This is not necessary or useful for all datasets.* Creating a parent Event level above protocol, location, and sampling date information may only be relevant for a dataset that is part of a larger project or network producing many datasets. Generally, if the additional event level will be useful in facilitating data discovery and relating multiple datasets, then consider including it. If it's just another level of information that can easily be included in lower event levels, then do not create the additional level.
+Note that the above examples include a unique parent Event level. *This is not necessary or useful for all datasets.* Creating a parent Event level above protocol, location, and sampling date information may only be relevant for a dataset that is part of a larger project or network producing many datasets. Generally, if the additional event level will be useful in facilitating data discovery and relating multiple datasets, then consider including it. If it’s just another level of information that can easily be inferred from information recorded at lower event levels (e.g., repeated visits to a site that can be inferred from looking for identical locations in multiple records), then do not create the additional level.
 
 
 ==== Constructing a dataset schematic
@@ -155,7 +145,7 @@ capturing survey design that generated the data collected (see also
 Figure 1 of <<DePooter2017>>). Once the event structure is
 identified, the schematic can be expanded to identify which extensions
 (e.g., Humboldt, occurrence, extended measurement or facts) are
-necessary and where they will link to. After, you can proceed with
+necessary and where they will link. After, you can proceed with
 mapping your data to the
 https://docs.google.com/document/d/1v_CpHj4C8xHF3mFfmRbcIBZ5pRAjJ-hzTZcBWzsnQOs/edit#heading=h.xx2n2qywocd7[DwC
 event Core] and the
