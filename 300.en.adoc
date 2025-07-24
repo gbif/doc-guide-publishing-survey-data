@@ -134,6 +134,7 @@ This structure establishes location, or survey site, at the highest event levels
 image::img/fig2a.png[]
 
 
+
 **Protocol–Locality-Date**
 
 This structure establishes sampling protocol at the highest event levels. Subsequent events are thus centered around location, or survey site, and date. The lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time (Figure 2B). In this example, two sampling protocols (Protocol a and Protocol b) implemented are two of four survey sites: Protocol a is implemented at Site 1 and Site 3 and Protocol b is implemented at Site 2 and Site 4. Each site is visited twice and sampled using one of the protocols. 
