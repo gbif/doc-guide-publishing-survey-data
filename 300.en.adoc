@@ -82,7 +82,7 @@ structure (<<fig1, Figure 1>>). These datasets typically consist of:
 
 [[fig1]]
 .A simple schematic of a non-nested event dataset (a) consisting of a single event with associated occurrences related to the event via the occurrence extension or (b) a series of individual events with associated occurrences related to the appropriate event via the occurrence extension 
-image::img/fig1.png[]
+image::img/Fig1_updatedDraft.jpg[]
 
 === Nested datasets
 
@@ -131,7 +131,7 @@ This structure establishes location, or survey site, at the highest event levels
 [[fig2a]]
 [caption="Figure 2A. "]
 .Simplified example schematic of a nested event dataset structure representing a survey (parent Event, dark purple rectangles) with two distinct survey sites (child-Events, medium purple rectangles). At each survey site, two sampling protocols are implemented (child-child-Events, light purple rectangles) and occurrence information is collected and related to each sampling event using the occurrence extension (blue rectangles). 
-image::img/fig2a.png[]
+image::img/Fig2a_updatedDraft.jpg[]
 
 
 
@@ -158,7 +158,7 @@ This structure establishes sampling protocol at the highest event levels. Subseq
 [[fig2b]]
 [caption="Figure 2B. "]
 .Simplified example schematic of a nested event dataset structure representing a survey (parent Event, dark purple rectangles) with two distinct sampling protocols (child-Events, medium purple rectangles) implemented at two sites (child-child-Events, light purple rectangles) wherein organismal occurrence information is collected and related to each sampling event using the occurrence extension (blue rectangles).
-image::img/fig2b.png[]
+image::img/Fig2b_updatedDraft.jpg[]
 
 
 Figures 2A and 2B present only basic schematics capturing survey design in a nested event structure, but they should provide a starting point of how to think about this process of translating survey design into an hierarchical dataset structure. It may take some reflection on the data itself and exploration of different configurations to find the best fit. When attempting to identify the best structure for a dataset, it is useful to consider the following questions:
@@ -174,7 +174,7 @@ Creating an Event level above protocol, location, and sampling date information 
 [[fig3]]
 [caption="Figure 3. "]
 .Simplified example schematic of a nested event dataset structure representing a project (orange box) that includes a series of surveys conducted at at least one site (gray rectangles). Two survey scopes are targeted at each site (Scopes a and b, pink boxes). Two distinct sampling protocols (Protocol a1 and a2, blue boxes) are implemented in surveys targeting survey Scope a, and one protocol (Protocol b1) implemented in surveys targeting Scope b at each site on at least two different dates (Site visit t1 and Site visit t2, orange boxes) with associated occurrences related to the appropriate event via the occurrence extension (yellow boxes).
-image::img/fig3.png[]
+image::img/Fig3_updatedDraft.jpg[]
 
 
 ==== Constructing a dataset schematic
@@ -185,7 +185,7 @@ Creating a schematic of the dataset hierarchical structure such as in Figures 1-
 [[fig4]]
 [caption="Figure 4. "]
 .Generalized dataset structure for NEON biological datasets. The dataset implements a more complex version of the locality-protocol-date presented in Figure 2A where the ‘locality’ component encompassess 3 hierarchical levels to more distinctly capture specific information about NEON’s ecoclimatic domains, sites, and plots (gray boxes). For each site visit (orange boxes), or survey conducted at a plot, additional information about the event is shared using the Humboldt extension (purple box) and extended measurements or facts extension (emof, blue box). The occurrence information here is reported using two separate tables (yellow boxes) to simplify data reporting and to illustrate the implementation of the resource relationship extension (purple box).
-image::img/fig4.png[]
+image::img/Fig4_updatedDraft.jpg[]
 
 As an example, the structure of an example dataset from the National Ecological Observatory Network (NEON) is presented in Figure 4. This dataset reports is tick-pathogen data derived from two NEON datasets–https://data.neonscience.org/data-products/DP1.10093.001[Ticks sampled using drag cloths] and https://data.neonscience.org/data-products/DP1.10092.001[Tick pathogen status]–to maintain the linkages between pathogens identified and the host ticks.
 
