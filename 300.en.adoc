@@ -102,7 +102,7 @@ There is no single correct dataset correct structure; and, identifying the data 
 If possible, it is ideal to structure a dataset such that each implemented protocol and unique site location should be established as a specific event such that it is clear what protocol was implemented where to capture the occurrence or other information connected to the lowest event level. However, it is not always possible to disentangle information collected using multiple protocols.
 
 
-**Locality–Protocol-Date**
+===== Locality–Protocol-Date
 
 This structure establishes location, or survey site, at the highest event levels. Subsequent events center around sampling protocols such that the lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time (Figure 2A). In this example, there are two survey sites (Site 1 and Site 3) with two protocols (Protocol a and Protocol b) implemented at each site. Each site is visited twice and sampled using one of the protocols. 
 
@@ -135,7 +135,7 @@ image::img/Fig2a_updatedDraft.jpg[]
 
 
 
-**Protocol–Locality-Date**
+===== Protocol–Locality-Date
 
 This structure establishes sampling protocol at the highest event levels. Subsequent events are thus centered around location, or survey site, and date. The lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time (Figure 2B). In this example, two sampling protocols (Protocol a and Protocol b) implemented are two of four survey sites: Protocol a is implemented at Site 1 and Site 3 and Protocol b is implemented at Site 2 and Site 4. Each site is visited twice and sampled using one of the protocols. 
 
@@ -159,6 +159,7 @@ This structure establishes sampling protocol at the highest event levels. Subseq
 [caption="Figure 2B. "]
 .Simplified example schematic of a nested event dataset structure representing a survey (parent Event, dark purple rectangles) with two distinct sampling protocols (child-Events, medium purple rectangles) implemented at two sites (child-child-Events, light purple rectangles) wherein organismal occurrence information is collected and related to each sampling event using the occurrence extension (blue rectangles).
 image::img/Fig2b_updatedDraft.jpg[]
+
 
 
 Figures 2A and 2B present only basic schematics capturing survey design in a nested event structure, but they should provide a starting point of how to think about this process of translating survey design into an hierarchical dataset structure. It may take some reflection on the data itself and exploration of different configurations to find the best fit. When attempting to identify the best structure for a dataset, it is useful to consider the following questions:
