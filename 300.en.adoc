@@ -77,8 +77,8 @@ design into an event-based perspective using Darwin Core.
 *Non-nested datasets* are datasets reflecting a simple survey design
 structure (<<fig1, Figure 1>>). These datasets typically consist of:
 
-* a single sampling event occurring at a particular place and time and conducted using a single standardized sampling protocol that is not repeated and is not necessarily part of a spatially larger sampling schema (Figure 4a), or +
-* a series of single sampling events that are not joined by a larger parent event. A compilation dataset (combination of surveys, compiled data sources and/or literature searches, see Biological survey data section) could be a special case of non-nested dataset where there is a unique event level that describes the compilation itself (e.g the broad area where multiple surveys are aggregated) which results in several occurrences.
+* a single sampling event occurring at a particular place and time and conducted using a single standardized sampling protocol that is not repeated and is not necessarily part of a spatially larger sampling schema (Figure 1a), or +
+* a series of single sampling events that are not joined by a larger parent event (Figure 1b). A compilation dataset (combination of surveys, compiled data sources and/or literature searches, see Biological survey data section) could be a special case of non-nested dataset where there is a unique event level that describes the compilation itself (e.g the broad area where multiple surveys are aggregated) which results in several occurrences.
 
 [[fig1]]
 .A simple schematic of a non-nested event dataset (a) consisting of a single event with associated occurrences related to the event via the occurrence extension or (b) a series of individual events with associated occurrences related to the appropriate event via the occurrence extension 
@@ -104,7 +104,14 @@ If possible, it is ideal to structure a dataset such that each implemented proto
 
 ===== Locality–Protocol-Date
 
-This structure establishes location, or survey site, at the highest event levels. Subsequent events center around sampling protocols such that the lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time (Figure 2A). In this example, there are two survey sites (Site 1 and Site 3) with two protocols (Protocol a and Protocol b) implemented at each site. Each site is visited twice and sampled using one of the protocols. 
+This structure establishes location, or survey site, at the highest event levels. Subsequent events center around sampling protocols such that the lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time (Figure 2A). 
+
+[[fig2a]]
+[caption="Figure 2A. "]
+.Simplified example schematic of a nested event dataset structure representing a survey (parent Event, dark purple rectangles) with two distinct survey sites (child-Events, medium purple rectangles). At each survey site, two sampling protocols are implemented (child-child-Events, light purple rectangles) and occurrence information is collected and related to each sampling event using the occurrence extension (blue rectangles). 
+image::img/Fig2a_updatedDraft.jpg[]
+
+In this example, there are two survey sites (Site 1 and Site 3) with two protocols (Protocol a and Protocol b) implemented at each site. Each site is visited twice and sampled using one of the protocols. 
 
 * The two survey sites are established at the highest event level. All information provided at this level will be inherited by the child events nested below it. +
 ** Site 1 + 
@@ -128,16 +135,16 @@ This structure establishes location, or survey site, at the highest event levels
 
 * Organismal occurrence information collected during a site visit will be linked to the relevant site visit.
 
-[[fig2a]]
-[caption="Figure 2A. "]
-.Simplified example schematic of a nested event dataset structure representing a survey (parent Event, dark purple rectangles) with two distinct survey sites (child-Events, medium purple rectangles). At each survey site, two sampling protocols are implemented (child-child-Events, light purple rectangles) and occurrence information is collected and related to each sampling event using the occurrence extension (blue rectangles). 
-image::img/Fig2a_updatedDraft.jpg[]
-
-
-
 ===== Protocol–Locality-Date
 
-This structure establishes sampling protocol at the highest event levels. Subsequent events are thus centered around location, or survey site, and date. The lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time (Figure 2B). In this example, two sampling protocols (Protocol a and Protocol b) implemented are two of four survey sites: Protocol a is implemented at Site 1 and Site 3 and Protocol b is implemented at Site 2 and Site 4. Each site is visited twice and sampled using one of the protocols. 
+This structure establishes sampling protocol at the highest event levels. Subsequent events are thus centered around location, or survey site, and date. The lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time (Figure 2B). 
+
+[[fig2b]]
+[caption="Figure 2B. "]
+.Simplified example schematic of a nested event dataset structure representing a survey (parent Event, dark purple rectangles) with two distinct sampling protocols (child-Events, medium purple rectangles) implemented at two sites (child-child-Events, light purple rectangles) wherein organismal occurrence information is collected and related to each sampling event using the occurrence extension (blue rectangles).
+image::img/Fig2b_updatedDraft.jpg[]
+
+In this example, two sampling protocols (Protocol a and Protocol b) implemented are two of four survey sites: Protocol a is implemented at Site 1 and Site 3 and Protocol b is implemented at Site 2 and Site 4. Each site is visited twice and sampled using one of the protocols. 
 
 * The two sampling protocols established at the highest event level. All information provided at this level will be inherited by the child events nested below it. 
 ** Protocol a +
@@ -153,12 +160,6 @@ This structure establishes sampling protocol at the highest event levels. Subseq
 ** Protocol b - Site 4 - date 1 +
 ** Protocol b - Site 4 - date 2 +
 * Organismal occurrence information collected during a site visit will be linked to the relevant site visit.
-
-
-[[fig2b]]
-[caption="Figure 2B. "]
-.Simplified example schematic of a nested event dataset structure representing a survey (parent Event, dark purple rectangles) with two distinct sampling protocols (child-Events, medium purple rectangles) implemented at two sites (child-child-Events, light purple rectangles) wherein organismal occurrence information is collected and related to each sampling event using the occurrence extension (blue rectangles).
-image::img/Fig2b_updatedDraft.jpg[]
 
 
 
