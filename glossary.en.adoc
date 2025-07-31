@@ -9,6 +9,8 @@ biological or biodiversity [[biosurvey]]survey:: A systematic effort to collect 
 
 [[bycatch]]bycatch:: Organisms detected during a survey that were not explicitly targeted in the survey scope.
 
+[[childEvent]]child Event: A child dwc:Event is any dwc:Event whose dwc:parentEventID is populated with the dwc:eventID of another dwc:Event.
+
 [[compilation]]compilation:: A summary inventory resulting from the combination of information from multiple existing sources (as described in Guralnick et al. 2018), which may be compiled from other data sources and literature searches. Compilations are aggregations of multiple studies, and may combine surveys employing different protocols, processes, and observers, often with variable reporting of the methods employed.
 
 [[completeness]]completeness:: An indication of the thoroughness of a survey relative to the stated scope.
@@ -28,7 +30,7 @@ standard. Essentially a self-contained set of interconnected CSV files
 and an XML document describing included files and data columns, and
 their mutual relationships.
 
-data [[datamapping]]mapping:: The process of matching fields from one database to another.
+data [[datamapping]] mapping:: The process of matching fields from one database to another.
 
 Digital object identifier - [[DOI]]DOI:: Long-lasting reference used to
 uniquely identify (and locate) digital information objects, such as a
@@ -58,6 +60,8 @@ structured manner. See https://eco.tdwg.org/[Humboldt Extension for Ecological I
 [[openData]]open data:: Data that can be freely used, re-used, and redistributed by anyone.
 
 [[pairedTerms]]paired terms:: Mutually interdependent sets of terms that must be populated together for complete information to be present, for example with term:eco[eco:eventDurationValue] and term:eco[eco:eventDurationUnit].
+
+[[parentEvent]]parent Event: A parent dwc:Event is any dwc:Event whose dwc:eventID is a dwc:parentEventID for at least one other dwc:Event.
 
 [[samplingEffort]]sampling effort:: Aspects of observer behaviour that can vary from one sampling event to another, and which influence the probability that an organism will be detected given that the organism is present.
 
