@@ -3,11 +3,7 @@
 
 === Extended Measurement or Fact (eMoF)
 
-Additional measurements about a site including values and units of
-measurement and related protocols can be shared for any event level
-using the extended measurement or fact extension (eMOF). The extension
-was developed by the https://obis.org/[Ocean Biodiversity Information System] (OBIS), and detailed instructions about implementing the
-extension are available in the https://manual.obis.org/format_emof.html[OBIS manual].
+Additional measurements about a site including values and units of measurement and related protocols can be shared for any Event level using the extended measurement or fact extension (eMOF). The extension was developed by the https://obis.org/[Ocean Biodiversity Information System] (OBIS), and detailed instructions about implementing the extension are available in the https://manual.obis.org/format_emof.html[OBIS manual].
 
 Specific information about the terms included in the eMoF extension (e.g., term names, definitions, and comments) is available in the https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[GBIF Repository of Schemas].
 
@@ -15,21 +11,18 @@ Specific information about the terms included in the eMoF extension (e.g., term 
 .*Using the https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[extended measurements or facts (emof) extension]* 
 ====
 - Create a new `emof` table
-- Add term:dwc[dwc:eventID] as a column header. The dwc:eventID will link the record to the `Event` table.
+- Add term:dwc[dwc:eventID] as a column header. The dwc:eventID will link the record to the `event` table.
 - Add each emof extension field needed as a column header. 
-- For each unique survey event (term:dwc[dwc:eventID]), populate the relevant extension field(s). 
+- Populate the relevant extension field(s) for each survey Event (term:dwc[dwc:eventID]) as necessary. 
 ====
 
 === Relevé extension
 
-The https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[Relevé extension] is
-designed to capture vegetation plot survey measurements at a survey
-site. The extension facilitates explicit reporting of:
+The https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[Relevé extension] is designed to capture vegetation plot survey measurements at a survey site. The extension facilitates explicit reporting of:
 
 * The description of the plant community associated the survey +
 * Aspect and inclination at the survey site +
-* Percent total cover of all plants and percent cover of trees, shrubs,
-herbs, cryptograms, mosses, lichens, algae, litter, water, and rocks +
+* Percent total cover of all plants and percent cover of trees, shrubs, herbs, cryptograms, mosses, lichens, algae, litter, water, and rocks +
 * Heights of tree, shrub, and herbaceous layers +
 * Whether or not mosses or lichens are identified
 
@@ -39,7 +32,7 @@ herbs, cryptograms, mosses, lichens, algae, litter, water, and rocks +
 - Create a new `Relevé` table
 - Add term:dwc[dwc:eventID] as a column header. The dwc:eventID will link the record to the `Event` table.
 - Add each Relevé extension field needed as a column header. 
-- For each unique survey event (term:dwc[dwc:eventID]), populate the relevant extension field(s). Information for a unique term:dwc[dwc:eventID] should require only one row in the table.
+- Populate the relevant extension field(s) for each survey Event (term:dwc[dwc:eventID]) as necessary. Information for a unique term:dwc[dwc:eventID] should require only one row in the table.
 ====
 
 For an example implementation of the https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[Relevé extension], see the example dataset https://doi.org/10.15468/pkx4tg[Vegetation plots collected in dry grasslands throughout Bulgaria and Romanian Dobrudzha].
