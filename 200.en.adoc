@@ -123,19 +123,16 @@ previously lost as unstructured metadata (see the terms list in <<tdwg2024b>>).
 
 Biodiversity data can be shared with GBIF in multiple ways; however,
 data need to be shaped to conform to the current data model which is
-structured around *Darwin Core Archives* (DwC-A). Data published to GBIF
-is shared as *dataset categories,* which are either
+structured around *Darwin Core Archives* (DwC-A). Data published to GBIF are shared as one of three *dataset categories*: 
 https://ipt.gbif.org/manual/en/ipt/latest/resource-metadata[metadata-only],
-https://ipt.gbif.org/manual/en/ipt/latest/checklist-data[checklists],
+https://ipt.gbif.org/manual/en/ipt/latest/checklist-data[taxonomic checklists],
 https://ipt.gbif.org/manual/en/ipt/latest/occurrence-data[occurrences],
 or
 https://ipt.gbif.org/manual/en/ipt/latest/sampling-event-data[sampling
-events]. The dataset classes checklist, occurrence and sampling event
-are each associated with a 'core'
+events]. These categories are each associated with a 'core'
 (https://rs.gbif.org/core/dwc_taxon_2022-02-02.xml[*Taxon*],
 https://rs.gbif.org/core/dwc_occurrence_2022-02-02.xml[*Occurrence*],
-https://rs.gbif.org/core/dwc_event_2022-02-02.xml[*Event*]) to which the
-data should be formatted to. Each dataset core can be supplemented with
+https://rs.gbif.org/core/dwc_event_2022-02-02.xml[*Event*]) which defines how the data should be formatted. Each dataset core can be supplemented with
 one or more 'https://rs.gbif.org/extensions.html[GBIF registered extensions]'.
 
 In GBIF, survey and monitoring data are broadly referred to as *sampling
