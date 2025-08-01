@@ -157,7 +157,7 @@ Metadata Language (https://eml.ecoinformatics.org/[EML]). +
 |DwC extensions that can currently be published through GBIF with a DwC Event core dataset
 a| * https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[Occurrence] - terms to capture the content of occurrence based records 
    * https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt extension for ecological inventories] - extended support for data coming from ecological inventories
-   * https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[Extended measurements or facts] - Support for generic measurements or facts, extended version linking to occurrences. When used with event Core it allows to create an additional link between the eMoF and the occurrence extension.
+   * https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[Extended measurement or fact] - Support for generic measurements or facts, extended version linking to occurrences. When used with event Core it allows to create an additional link between the eMoF and the occurrence extension.
    * https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[Resource relationship] - extended support for capturing relationships between the core dataset and extensions or external data)
    * https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[Relevé] - support for vegetation plot survey measurements 
    * https://rs.gbif.org/extension/ac/audubon_2020_10_06.xml[Media] - support for metadata from biodiversity multimedia resources and collections applied to an Event
