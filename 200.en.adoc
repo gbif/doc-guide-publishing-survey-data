@@ -58,21 +58,21 @@ efficient use of resources.
 |===
 | Findable
 a|
-  * Metadata: Create comprehensive metadata describing the dataset using a standardized schema such as Ecological Metadata Language (https://eml.ecoinformatics.org/[EML]) 
+  * Metadata: Create comprehensive metadata describing the dataset using a standardized schema such as Ecological Metadata Language (https://eml.ecoinformatics.org/[EML^]) 
   * Persistent identifiers: Assign persistent identifiers (e.g., Digital Object Identifiers, DOIs) to datasets to ensure they can always be found. 
   * Register data in repositories: Submit datasets to reputable data repositories that support metadata standards and publish the dataset through GBIF to enhance discoverability.
 | Accessible
 a|
-  * Open licensing: Apply open licenses such as https://creativecommons.org/[Creative Commons] (CC0, CC-BY) to allow others to freely access and use the data. 
+  * Open licensing: Apply open licenses such as https://creativecommons.org/[Creative Commons^] (CC0, CC-BY) to allow others to freely access and use the data. 
   * Public repositories: Store data in publicly accessible repositories that do not require subscriptions or memberships. Data availability statement: Include data availability statements in publications with links to the repositories where data are stored.
 | Interoperable
 a|
   * Standard formats: Use standard, non-proprietary data formats (e.g., CSV, JSON, XML) to ensure broad compatibility with software tools.
-  * Data standards: Adhere to relevant data standards and schemas, such as https://dwc.tdwg.org/[Darwin Core], to facilitate integration with other datasets.
+  * Data standards: Adhere to relevant data standards and schemas, such as https://dwc.tdwg.org/[Darwin Core^], to facilitate integration with other datasets.
   * Controlled vocabularies: Use controlled vocabularies and ontologies to ensure consistent terminology and semantic clarity.
 | Reusable
 a|
-  * Data reuse terms: Clearly state the terms of use through licenses like https://creativecommons.org/[Creative Commons] to ensure users understand how they can reuse the data legally.
+  * Data reuse terms: Clearly state the terms of use through licenses like https://creativecommons.org/[Creative Commons^] to ensure users understand how they can reuse the data legally.
   * Data documentation: Include detailed documentation covering data collection methods, data processing steps, and any limitations or uncertainties in the data. 
   * Data provenance: Document the origin and lineage of the data to provide context and credibility.
   * Validation and cleaning: Ensure data quality by performing validation, error checking, and data cleaning. Document these processes to maintain transparency.
@@ -88,8 +88,8 @@ DwC provides a set of terms, definitions, and guidelines designed to
 facilitate the exchange of biological data. DwC *terms* are used to
 describe and share biodiversity data. Each term has an accepted
 definition accompanied by comment(s),a usage example (for example, see
-https://eco.tdwg.org/terms/#eco:verbatimTargetScope[_verbatimTargetScope_]
-and https://eco.tdwg.org/terms/#eco:protocolNames[_protocolNames_]), and in some cases are based on or recommend use of controlled vocabularies (a list of accepted values that can be used for the term). The process of mapping data or information from one dataset to the terms of another such as DwC is called *mapping*. Use of the
+https://eco.tdwg.org/terms/#eco:verbatimTargetScope[_verbatimTargetScope_^]
+and https://eco.tdwg.org/terms/#eco:protocolNames[_protocolNames_^]), and in some cases are based on or recommend use of controlled vocabularies (a list of accepted values that can be used for the term). The process of mapping data or information from one dataset to the terms of another such as DwC is called *mapping*. Use of the
 standard can help reduce errors and inconsistencies in data, enhance
 data discoverability, and facilitate data reuse. DwC includes
 standardized terms for describing species occurrences and biodiversity
@@ -101,7 +101,7 @@ to particular needs, such as data on ecological interactions, genetic
 sequences, or sampling events.
 
 In a Darwin Core context, biological survey data are best captured as
-https://dwc.tdwg.org/list/#dwc_Event[Events], where time- and
+https://dwc.tdwg.org/list/#dwc_Event[Events^], where time- and
 space-specific detection are documented centrally and separately from
 the list of species recorded in each event. Historically, DwC evolved
 from collections to other biodiversity data contexts, and until recently
@@ -124,16 +124,16 @@ previously lost as unstructured metadata (see the terms list in <<tdwg2024b>>).
 Biodiversity data can be shared with GBIF in multiple ways; however,
 data need to be shaped to conform to the current data model which is
 structured around *Darwin Core Archives* (DwC-A). Data published to GBIF are shared as one of three *dataset categories*: 
-https://ipt.gbif.org/manual/en/ipt/latest/resource-metadata[metadata-only],
-https://ipt.gbif.org/manual/en/ipt/latest/checklist-data[taxonomic checklists],
-https://ipt.gbif.org/manual/en/ipt/latest/occurrence-data[occurrences],
+https://ipt.gbif.org/manual/en/ipt/latest/resource-metadata[metadata-only^],
+https://ipt.gbif.org/manual/en/ipt/latest/checklist-data[taxonomic checklists^],
+https://ipt.gbif.org/manual/en/ipt/latest/occurrence-data[occurrences^],
 or
 https://ipt.gbif.org/manual/en/ipt/latest/sampling-event-data[sampling
 events]. These categories are each associated with a 'core'
-(https://rs.gbif.org/core/dwc_taxon_2022-02-02.xml[*Taxon*],
-https://rs.gbif.org/core/dwc_occurrence_2022-02-02.xml[*Occurrence*],
-https://rs.gbif.org/core/dwc_event_2022-02-02.xml[*Event*]) which defines how the data should be formatted. Each dataset core can be supplemented with
-one or more 'https://rs.gbif.org/extensions.html[GBIF registered extensions]'.
+(https://rs.gbif.org/core/dwc_taxon_2022-02-02.xml[Taxon^],
+https://rs.gbif.org/core/dwc_occurrence_2022-02-02.xml[Occurrence^],
+https://rs.gbif.org/core/dwc_event_2022-02-02.xml[Event^]) which defines how the data should be formatted. Each dataset core can be supplemented with
+one or more 'https://rs.gbif.org/extensions.html[GBIF registered extensions^]'.
 
 In GBIF, survey and monitoring data are broadly referred to as *sampling
 event data* and should be formatted as a DwC Event core. To publish to
@@ -145,27 +145,27 @@ and how the columns in the data files map to Darwin Core terms
 (essentially a resource map). +
 * *Resource metadata*: describes the dataset context in more detail
 e.g., description of the dataset, people involved, etc. using Ecological
-Metadata Language (https://eml.ecoinformatics.org/[EML]). +
+Metadata Language (https://eml.ecoinformatics.org/[EML^]). +
 * *Event core*:  table(s) that include the DwC Event and Humboldt extension terms describing survey-level information (e.g., protocol, survey scope, sampling effort and completeness). +
 * *Occurrence*: extension file(s) to the event core file that contains the associated species occurrence information. +
 * *DwC extension file(s)*: Optional. Contains data that further expands on details relating to the event (see below for more information about extensions). See the table below for an overview of GBIF registered extensions.
 
 [caption=]
-.A non-exhaustive list of https://rs.gbif.org/extensions.html[GBIF registered extensions] that can and cannot currently be published with a Darwin Core event dataset to GBIF.
+.A non-exhaustive list of https://rs.gbif.org/extensions.html[GBIF registered extensions^] that can and cannot currently be published with a Darwin Core event dataset to GBIF.
 [width="100%",cols="<20%,<80%",]
 |===
 |DwC extensions that can currently be published through GBIF with a DwC Event core dataset
-a| * https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[Occurrence] - terms to capture the content of occurrence based records 
-   * https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt extension for ecological inventories] - extended support for data coming from ecological inventories
-   * https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[Extended measurement or fact] - Support for generic measurements or facts, extended version linking to occurrences. When used with event Core it allows to create an additional link between the eMoF and the occurrence extension.
-   * https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[Resource relationship] - extended support for capturing relationships between the core dataset and extensions or external data)
-   * https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[Relevé] - support for vegetation plot survey measurements 
-   * https://rs.gbif.org/extension/ac/audubon_2020_10_06.xml[Media] - support for metadata from biodiversity multimedia resources and collections applied to an Event
+a| * https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[Occurrence^] - terms to capture the content of occurrence based records 
+   * https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt extension for ecological inventories^] - extended support for data coming from ecological inventories
+   * https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[Extended measurement or fact^] - Support for generic measurements or facts, extended version linking to occurrences. When used with event Core it allows to create an additional link between the eMoF and the occurrence extension.
+   * https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[Resource relationship^] - extended support for capturing relationships between the core dataset and extensions or external data)
+   * https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[Relevé^] - support for vegetation plot survey measurements 
+   * https://rs.gbif.org/extension/ac/audubon_2020_10_06.xml[Media^] - support for metadata from biodiversity multimedia resources and collections applied to an Event
 |DwC extensions that *cannot* currently be published through GBIF with a DwC Event core dataset
-a| * https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2024-04-17.xml[DNA-derived data] -An extension to Occurrence and event cores to capture information relating to DNA-derived data. GBIF currently recommends the extension is used with Occurrence Core to be able to capture sequence/occurrence specific information.
-   * https://rs.gbif.org/extension/ac/audubon_2020_10_06.xml[Media] - support for metadata from biodiversity multimedia resources and collections applied to occurrences
-   * https://rs.gbif.org/extension/zooarchnet/ChronometricAge_2020-10-06.xml[Chronometric age] - to capture the true age information of a historic specimen collected long after the dwc:organism was deceased 
-   * https://rs.gbif.org/extension/identification_history_2024-02-19.xm[Identification history] - specific for occurrences and used as an extended support to capture multiple identifications of the same dwc:Organism
+a| * https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2024-04-17.xml[DNA-derived data^] -An extension to Occurrence and event cores to capture information relating to DNA-derived data. GBIF currently recommends the extension is used with Occurrence Core to be able to capture sequence/occurrence specific information.
+   * https://rs.gbif.org/extension/ac/audubon_2020_10_06.xml[Media^] - support for metadata from biodiversity multimedia resources and collections applied to occurrences
+   * https://rs.gbif.org/extension/zooarchnet/ChronometricAge_2020-10-06.xml[Chronometric age^] - to capture the true age information of a historic specimen collected long after the dwc:organism was deceased 
+   * https://rs.gbif.org/extension/identification_history_2024-02-19.xm[Identification history^] - specific for occurrences and used as an extended support to capture multiple identifications of the same dwc:Organism
 |===
 
 A Darwin Core Archive for biodiversity survey data will require at least
@@ -176,7 +176,7 @@ facts) included with the archive.
 [NOTE] 
 .A note on extensions and DwC-A
 ==== 
-The current GBIF data model limits how many layers of extensions a DwC-A can contain in the GBIF infrastructure. For example, a sampling event dataset can have occurrences as an extension, as well as other relevant extensions. But the occurrences cannot have an extension with additional information on the specific occurrences. Furthermore, some extensions can only be used in combination with a specific core while others can be used with multiple cores. For example, the https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2024-04-17.xml[DNA-derived data extension] can currently only be used in conjunction with a dataset being published as an Occurrence core, although it was developed for Occurrence and Event core, and the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt extension for ecological inventories] can only be used with the event core. This limitation applies only to publishing the data to GBIF.
+The current GBIF data model limits how many layers of extensions a DwC-A can contain in the GBIF infrastructure. For example, a sampling event dataset can have occurrences as an extension, as well as other relevant extensions. But the occurrences cannot have an extension with additional information on the specific occurrences. Furthermore, some extensions can only be used in combination with a specific core while others can be used with multiple cores. For example, the https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2024-04-17.xml[DNA-derived data extension^] can currently only be used in conjunction with a dataset being published as an Occurrence core, although it was developed for Occurrence and Event core, and the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt extension^] can only be used with the Event core. This limitation applies only to publishing the data to GBIF.
 ====
 
 <<<
