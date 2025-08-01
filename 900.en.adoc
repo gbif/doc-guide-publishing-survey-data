@@ -8,14 +8,14 @@ Need more information? Check out the following documentation:
 
 Or, reach out for assistance from:
 
-* https://github.com/tdwg/hc[Humboldt Extension GitHub repository]: questions about usage, issues with the vocabulary, and recommendations for new terms should be reported as an Issue. +
-* The https://discourse.gbif.org/[GBIF community forum] +
+* https://github.com/tdwg/hc[Humboldt Extension GitHub repository^]: questions about usage, issues with the vocabulary, and recommendations for new terms should be reported as an Issue. +
+* The https://discourse.gbif.org/[GBIF community forum^] +
 * The GBIF Node for your country or organization
 ** If your country or organization is a member of GBIF and has an established node, you can reach out directly to your node.
-*** If you’re uncertain if your country or organization is part of the GBIF network you can https://www.gbif.org/the-gbif-network[search here]. +
+*** If you’re uncertain if your country or organization is part of the GBIF network you can https://www.gbif.org/the-gbif-network[search here^]. +
 ** If your country or organization is not a member of GBIF, reach out to the mailto:helpdesk@gbif.org[GBIF helpdesk]. +
 * GBIF help desk
-** Create an issue on the https://techdocs.gbif.org/en/[GitHub tech-docs project]. +
+** Create an issue on the https://techdocs.gbif.org/en/[GitHub tech-docs project^]. +
 ** Send an email to the mailto:helpdesk@gbif.org[GBIF helpdesk]. 
 
 <<<
