@@ -7,7 +7,7 @@ endif::backend-html5[]
 
 === Suggested citation
 
-Ingenloff K, Svenningsen C, Earl C, Shimabukuro PHF, Sica Y, Gan Y-M, Kachian ZR, Brenton P, Hochachka W, Wieczorek J, Stevenson R, Kazem A, Baskauf S, Zermoglio PF, Bloom D, Rodrigues A, Gamboa Martínez J & Schigel D. Guide for publishing biological survey data to GBIF. GBIF Secretariat: Copenhagen. 
+Ingenloff K, Svenningsen C, Earl C, Shimabukuro PHF, Sica Y, Gan Y-M, Kachian ZR, Brenton P, Hochachka W, Wieczorek J, Stevenson R, Kazem A, Baskauf S, Zermoglio PF, Bloom D, Rodrigues A, Gamboa Martínez J & Schigel D. Guide for publishing biological survey and monitoring data to GBIF. GBIF Secretariat: Copenhagen. 
 // Uncomment once a DOI is assigned
 https://doi.org/10.35035/doc-ynvs-eh84
 
@@ -21,7 +21,7 @@ https://orcid.org/0000-0001-5942-9053#[Ingenloff K], https://orcid.org/0000-0002
 
 === Licence
 
-The document _Guide for publishing biological survey data to GBIF_ is licensed under https://creativecommons.org/licenses/by-sa/4.0[Creative Commons Attribution-ShareAlike 4.0 Unported License].
+The document _Guide for publishing biological survey and monitoring data to GBIF_ is licensed under https://creativecommons.org/licenses/by-sa/4.0[Creative Commons Attribution-ShareAlike 4.0 Unported License].
 
 === Acknowledgement
 
