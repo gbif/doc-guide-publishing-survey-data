@@ -123,7 +123,7 @@ Project-level information will always be shared at the highest event level. This
 
 [[fig3]]
 [caption="Figure 3. "]
-.Simplest nested hierarchy with an additional event level to consolidate all survey Events under the context of a project (orange box).
+.Simplest nested hierarchy with an additional event level to consolidate all survey Events under the context of a project (purple box).
 image::img/Fig3.png[]
 
 
