@@ -20,13 +20,11 @@ Populate all terms for which information is available.
 
 *Paired terms* must be populated together. Often these terms are designed to offer the data publisher some level of flexibility in reporting data. Paired terms are most common in terms available for reporting a variable value and associated unit of measure (for example, term:dwc[dwc:sampleSizeValue] and term:dwc[dwc:sampleSizeUnit]). 
 
-
 *No data, missing data, and data values of `0`*
 
   * Cells with a value of `0` (zero) should be populated as `0`.
   * Cells with missing data or `NULL` values should be left empty. 
   * Terms for which there is `no data` to share at any hierarchical level can be excluded from the data table.
-
 
 *Populating terms across event levels (e.g., from parent event to child event)* 
 
@@ -514,7 +512,7 @@ Both fields can be applied to any Event at any level.
 |term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
 |`true` or `false`
 
-.5+|Share if available
+.6+|Share if available
 |term:eco[eco:materialSampleTypes]
 |`wholeOrganism`, `blood`
 
@@ -524,14 +522,12 @@ Both fields can be applied to any Event at any level.
 |term:dwc[dwc:dataGeneralizations]
 |`Coordinates generalized from original GPS coordinates to the nearest half degree grid cell`, `Coordinates for each event site generalized from original GPS coordinates to the nearest half degree grid cell`
 
-
 |term:dwc[dwc:informationWithheld]
 |`Sensitive species occurrence information not reported`
 
 |term:dwc[dwc:fieldNotes]
 |`Notes available in the Grinnell-Miller Library`
 
-|
 |term:dwc[dwc:eventRemarks]
 |
 |===
@@ -544,15 +540,14 @@ Both fields can be applied to any Event at any level.
 
 The 'target' and 'excluded' scope terms (e.g., term:eco[eco:targetTaxonomicScope]) presented in this section are the only survey event terms designed to capture _intent_. That is, these terms capture the breadth of the information the biological survey _intended_ to capture. All other terms should be used to report the actuality of the survey (e.g., what protocol was in practice implemented, and what information was actually collected).
 
-[NOTE]
-.*Implementing scope terms*
-====
+****
+[discrete]
+==== Implementing scope terms
 * Scope terms can be applied at any Event level. +
 * Recommended best practice is to populate scope terms for the highest level Event to which they apply, and all of its child Events. This information should be reported ONLY at the event levels for which the information is explicitly stated (information should not be inferred up or down an event hierarchy). +
 * Scope terms of an Event MUST be populated whenever the scope was in effect to be able to infer absence of detection within that Event, whenever the Occurrences linked to that dwc:Event do not explicitly state zero counts or when there are no Occurrence records for a given taxon that fell within the taxonomic scope(see Section 3.2.4 Principle of inference in https://eco.tdwg.org/hierarchy/#324-principle-of-inference[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^]). +
 * Do NOT retrospectively infer scope terms.
-
-====
+****
 
 *Verbatim scope*
 
