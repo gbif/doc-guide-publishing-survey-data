@@ -4,10 +4,10 @@
 ====
 Occurrence information should be saved to a DWC-A `occurrence` file. 
 
-See the data/event_template_wHE_occurrence-table.csv[occurrence] table in the data mapping template.
+See the data/event_template_wHE_occurrence-table.csv[occurrence^] table in the data mapping template.
 ====
 
-Each DwC Event can be associated with one or more Occurrence records of individual organisms or taxa. Occurrence information is mapped and linked to a survey Event using the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[DwC Occurrence extension]. Each Occurrence record can be mapped to only a single survey Event; however, Occurrence records can be link to any event level. In the case of a nested hierarchy, the recommended best practice is to link each Occurrence to the lowest possible event level to maintain specificity. Occurrence information should be contained in the 'occurrence' table of the DwC-A.
+Each DwC Event can be associated with one or more Occurrence records of individual organisms or taxa. Occurrence information is mapped and linked to a survey Event using the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[DwC Occurrence extension^]. Each Occurrence record can be mapped to only a single survey Event; however, Occurrence records can be link to any event level. In the case of a nested hierarchy, the recommended best practice is to link each Occurrence to the lowest possible event level to maintain specificity. Occurrence information should be contained in the 'occurrence' table of the DwC-A.
 
 Each organism occurrence must include the following information:
 
@@ -80,7 +80,7 @@ For example, if 1 adult male and 3 adult females Indian gharials (_Gavialis gang
 |`alive`
 |===
 
-The table below outlines the minimum required and recommended terms for each occurrence record, as well some of the more commonly used terms and their recommended usages. However, Darwin Core includes many more terms. It is advisable to take some time to review the DwC quick reference guide https://dwc.tdwg.org/terms/[DwC quick reference guide] to identify and include any and all terms available that allow you to share the richest version of your data possible. Sections that may be of particular interest:
+The table below outlines the minimum required and recommended terms for each occurrence record, as well some of the more commonly used terms and their recommended usages. However, Darwin Core includes many more terms. It is advisable to take some time to review the DwC quick reference guide https://dwc.tdwg.org/terms/[DwC quick reference guide^] to identify and include any and all terms available that allow you to share the richest version of your data possible. Sections that may be of particular interest:
 
 * 'https://dwc.tdwg.org/terms/#occurrence[occurrence]'
 * 'https://dwc.tdwg.org/terms/#identification[identification]'
@@ -263,11 +263,11 @@ If the dataset or relevant event does not include abundance information, then it
 
 === Capturing species’ co-occurrence and species’ interactions
 
-The https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[Resource Relationship extension] can be used to link information related across multiple occurrences (may be from the same or from different events), such as:
+The https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[resource relationship extension^] can be used to link information related across multiple occurrences (may be from the same or from different events), such as:
 
 *An occurrence with another occurrence*
 
-The table below highlights an example from the dataset https://doi.org/10.15468/xdzgbt[Potential host plant records recovered from ECOAB wild bee collection, Mexico] published by _Comisión nacional para el conocimiento y uso de la biodiversidad_. In this example, a _Bombus ephippiatus_ bee visits a species of runner bean, _Phaseolus coccineus_.
+The table below highlights an example from the dataset https://doi.org/10.15468/xdzgbt[Potential host plant records recovered from ECOAB wild bee collection, Mexico^] published by _Comisión nacional para el conocimiento y uso de la biodiversidad_. In this example, a _Bombus ephippiatus_ bee visits a species of runner bean, _Phaseolus coccineus_.
 
 [width="100%",cols="25%,25%,25%,25%",options="header",]
 |===
@@ -297,7 +297,7 @@ The table below highlights an example from the dataset https://doi.org/10.15468/
 
 *An occurrence with a material sample* 
 
-The table below highlights an example from the dataset https://doi.org/10.15468/g3bard[University of Michigan Museum of Zoology, Division of Reptiles & Amphibians] published by University of Michigan Museum of Zoology. In this example, a skin sample from a female toad of _Bufo americanus_ is preserved at the University of Michigan Museum of Zoology along with other body parts.
+The table below highlights an example from the dataset https://doi.org/10.15468/g3bard[University of Michigan Museum of Zoology, Division of Reptiles & Amphibians^] published by University of Michigan Museum of Zoology. In this example, a skin sample from a female toad of _Bufo americanus_ is preserved at the University of Michigan Museum of Zoology along with other body parts.
 
 [width="100%",cols="25%,25%,25%,25%",options="header",]
 |===
