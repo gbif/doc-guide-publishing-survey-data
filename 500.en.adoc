@@ -285,12 +285,13 @@ Sampling protocol terms should be populated at every event level possible as inh
 
 Biological survey event data can result from a wide variety of effort types (e.g., Bioblitzes, inventories). The nature of the survey event should be reported using term:dwc[dwc:eventType].
 
-[NOTE]
-.*Identifying event type*
-====
+****
+[discrete]
+==== Identifying event type
+
 term:dwc[dwc:eventType] should provide a high level overview of sampling effort type but should not be so specific as to overlap with sampling protocol. There is no single, standardized vocabulary for term:dwc[dwc:eventType]. If your organization or community has a controlled vocabulary, it is recommended to apply terms from that. Otherwise, you can refer to the common event types below for guidance.
 
-- *Project*: Projects are structured initiatives
+* *Project*: Projects are structured initiatives
 with an explicitly stated objective or suite of objectives and with clear
 targets, timelines, and deliverables. Projects typically are linked to non-biological information identifying participating
 organizations and people (agents), funding agencies, and other
@@ -299,26 +300,26 @@ one facet of a project’s scope. `Project` as an
 term:dwc[dwc:eventType] is typically
 most appropriate only at the highest Event level in a nested
 dataset.
-- *Expedition*: An expedition is an organized information gathering
+* *Expedition*: An expedition is an organized information gathering
 venture that inherently includes multiple sampling Events and event
 types. Expeditions may include multiple taxonomic and/organismal scopes,
 any number of documented sampling protocols, and varying degrees of
 complexity in survey design. `Expedition` as an
 term:dwc[dwc:eventType] is typically
 most appropriate at higher Event levels in nested hierarchies.
-- *Survey*: A survey is a systematic effort to collect information about the
+* *Survey*: A survey is a systematic effort to collect information about the
 biological organisms in a specific area at a given time. Surveys
 typically included at least one documented protocol and may or may not
 have an explicitly defined taxonomic and/or organismal scope. `Survey`
 is the most general Event type term and can be applied as an
 term:dwc[dwc:eventType] at any event
 level.
-- *Inventory*: An inventory is a comprehensive survey of the taxa
+* *Inventory*: An inventory is a comprehensive survey of the taxa
 present in a specific area over an explicit period of time. Inventories
 typically have an explicit taxonomic and/or organismal scope and a
 well-defined protocol. `Inventory` is typically most appropriate as an
 term:dwc[dwc:eventType] at lower Event levels in nested hierarchies.
-- *Bioblitz*: A bioblitz is a survey
+* *Bioblitz*: A bioblitz is a survey
 Event aimed at finding and identifying as many species as possible in a
 specific area over a (typically) short, contiguous period of time.
 Bioblitzes often include participants (agents) with a wide range of
@@ -326,8 +327,8 @@ backgrounds and levels of expertise in biodiversity sciences including
 formal biologists as well as the broader, general public. `Bioblitz` as
 an term:dwc[dwc:eventType] is typically
 most appropriate at lower Event levels in nested hierarchies.
-- *Site visit*: A site visit is a single survey, inventory, or sampling at a pre-established geographic location at a discrete time. `Site visit` as an term:dwc[dwc:eventType] is typically most appropriate at the lowest event level in a nested hierarchy.
-====
+* *Site visit*: A site visit is a single survey, inventory, or sampling at a pre-established geographic location at a discrete time. `Site visit` as an term:dwc[dwc:eventType] is typically most appropriate at the lowest event level in a nested hierarchy.
+****
 
 *'Inventory' event types*
 
@@ -394,7 +395,7 @@ Four protocol terms currently exist, however, only 1 term is required to publish
 
 ==== Absence
 
-*Organismal <<absence, absences>>* are defined here as the lack of detection of organisms that are members of an explicitly stated as part of the target taxonomic scope. Absence information is critical to understanding species´ biogeography, modeling species´ responses to climate- and human-induced environmental change, and conservation planning and resource management.
+*Organismal <<absence, absences>>* are defined here as the lack of detection of organisms that are members of an explicitly stated as part of the target taxonomic scope. Absence information is critical to understanding species´ biogeography, modeling species' responses to climate- and human-induced environmental change, and conservation planning and resource management.
 
 * If the dataset includes absence information for one or more occurrences (to be reported in the ´occurrence´ table as term:dwc[dwc:occurrenceStatus] = `absent`), then term:eco[eco:isAbsenceReported] = `true`. +
 * A list of absent taxa can be provided using term:eco[eco:absentTaxa] at all relevant levels. Absences should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey. Absence cannot be asserted for bycatch.
@@ -699,13 +700,11 @@ If the dataset does NOT include taxonomic or organismal bycatch:
 |term:eco[eco:hasNonTargetTaxa]
 |`true` or `false`
 
-
 |term:eco[eco:areNonTargetTaxaFullyReported]
 |`true` or `false`
 
 |term:eco[eco:nonTargetTaxa]
 |`Parabuteo unicinctus \| Geranoaetus melanoleucus; Cetoniinae \| Aclopinae \| Cyclocephala modesta`
-
 
 |term:eco[eco:hasNonTargetOrganisms]
 |`true` or `false`
