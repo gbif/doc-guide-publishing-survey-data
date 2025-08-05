@@ -70,6 +70,8 @@ framed as a single event or as a series of Events nested within Events using a
 Parent-Child relationship as necessary. The *sampling event hierarchy* is the translation of the survey sampling 
 design into an event-based perspective using Darwin Core.
 
+Sharing biodiversity data in a way that clearly and accurately reflects the survey design helps ensure accurate understanding and interpretation of the information contained in the dataset enabling potential data users to more readily assess the appropriateness of the data in their own analyses. 
+
 === Non-nested datasets
 
 *Non-nested datasets* are datasets reflecting a simple or flat survey design structure (<<fig1, Figure 1>>). These are typically simple datasets consisting of:
@@ -83,7 +85,7 @@ image::img/Fig1.png[]
 
 === Nested datasets
 
-*Nested datasets* use parent-child relationships to capture information collected through more complex survey design, such as datasets resulting from repeated sampling events and/or multiple sampling protocols. Creating nested Event levels may be important to relating the full story a dataset has to tell and to facilitating downstream analysis of the data.
+*Nested datasets* use parent-child relationships to capture information collected through more complex survey design, such as datasets resulting from repeated sampling events and/or multiple sampling protocols. Creating nested Event levels may be important or even essential to relating the full story a dataset has to tell, and to facilitating downstream analysis of the data by including the necessary information for connecting related records as part of the data.
 
 [NOTE] 
 .*In a nested dataset:*
@@ -148,7 +150,7 @@ Consider the dataset https://obis.org/dataset/96844ba5-08c1-4299-b778-0db31986b6
 * Simple nested dataset structure (Figure 4b): As a simple nested dataset, the data structure would consist of two Event levels with the highest Event level capturing information about the overall cruise or campaign (gray box) and second Event level represents the daytime and nighttime sampling events at each station as a series of unique Events (orange boxes). +
 * Deeply nested dataset structure (Figure 4c): As a more deeply nested dataset, the structure would consist of three Event levels such that the highest Event level represents the Survey (that is, the overall cruise or campaign; gray box), the middle Event level represents each of the 20 survey stations (blue boxes), and the lowest Event level represents the daytime and nighttime sampling events at each station (orange boxes. Note that the child Events of each parent Event are used to report independent replicates of the same type within the same parent Event and/or to preserve individual sampling units. 
 
-If the survey was a unique event, this simpler two Event level structure would likely suffice. However, the stations sampled during the survey are standard sampling locations used in other survey efforts. To make it easier to link information from this dataset to others conducted at the same localities, a more complex nested structure was deemed appropriate. 
+If the survey was a unique event, this simpler two Event level structure would likely suffice. However, the stations sampled during the survey are standard sampling locations used in other survey efforts. To make it easier to link information from this dataset to data from other surveys conducted at the same localities, a more complex nested structure was deemed appropriate. 
 
 ==== Constructing a dataset schematic
 Some datasets may be very simple and have no hierarchical structure (**non-nested datasets**) with singular observations of individual taxa at a single location. Others may be complex and hierarchically structured (**nested datasets**), with a series of nested survey events (e.g., sampling designs with traps within plots within sites). Multiple structural scenarios may fit a dataset, particularly for more complex data resulting from ongoing monitoring or repeated sampling efforts. We recommend keeping the structure as simple as possible. Refer to https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories] for additional guidance on how to capture the details of nested observations (dwc:Event hierarchies).  
