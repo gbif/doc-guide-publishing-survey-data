@@ -27,14 +27,11 @@ saved in an `event` table or tables. Event-level data include the contextual
 information that applies to all occurrence and ancillary data collected
 or recorded during an event. Examples include information about the survey design,
 site (e.g., location, date), protocol(s), scope(s), and sampling effort.
-Resource: see the
-data/event_template_wHE_event-table.csv['event'
-table in the data mapping template^]. +
+Resource: see the data/event_template_wHE_event-table.csv['event' table in the data mapping template^]. +
 * *Mapping of occurrence data to the DwC occurrence extension:* Organism
 occurrence information collected during biological surveys (e.g.,
 scientific name, additional organismal information) will be shared in an
-independent 'occurrence' table using the
-https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[occurrence
+independent 'occurrence' table using the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[occurrence
 extension^]. See the
 data/event_template_wHE_occurrence-table.csv['occurrence'
 table in the data mapping template^]. +
@@ -60,7 +57,7 @@ necessary for your data*.
 
 === Translating survey design into Darwin Core event structure
 
-*Biological survey design*, or the sampling structure of a biological
+<<surveyDesign, *Biological survey design*>>, the sampling structure of a biological
 survey, varies widely and identifying how surveys relate to a DwC event
 is the most difficult part of mapping a dataset. DwC defines an event as
 '_an action that occurs at some location during some time_’, such as a
