@@ -1,11 +1,11 @@
 [[mapping-additional-survey-event-information:-dwc-extensions]]
 == Mapping additional survey event information: DwC Extensions
 
-=== Extended Measurement or Fact (eMoF)
+=== Extended mMeasurement or fact (eMoF) extension
 
 Additional measurements about a site including values and units of measurement and related protocols can be shared for any Event level using the extended measurement or fact extension (eMOF). The extension was developed by the https://obis.org/[Ocean Biodiversity Information System^] (OBIS), and detailed instructions about implementing the extension are available in the https://manual.obis.org/format_emof.html[OBIS manual^].
 
-Specific information about the terms included in the eMoF extension (e.g., term names, definitions, and comments) is available in the https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[GBIF Repository of Schemas^].
+Specific information about the terms included in the emof extension (e.g., term names, definitions, and comments) is available in the https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[GBIF Repository of Schemas^].
 
 [NOTE]
 .*Using the https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[extended measurement or fact (emof) extension^]* 
