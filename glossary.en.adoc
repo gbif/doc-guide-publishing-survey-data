@@ -27,7 +27,7 @@ Digital object identifier - [[DOI]]DOI:: Long-lasting reference used to uniquely
 
 ecological [[ecomonitoring]]monitoring:: The collection of information about the state of a system in the natural world through repeated surveys.
 
-[[event]]event:: A process occurring at a specific https://docs.gbif.org/georeferencing-best-practices/1.0/en/#location[location] during a period of time.
+[[event]]event:: An action that occurs at some location during some time (see  term:dwc[dwc:Event]).
 
 [[FAIRdata]]FAIR data:: Data that meet the FAIR principles of *F*indability, *A*ccessibility, *I*nteroperability, and *R*eusability.
 
