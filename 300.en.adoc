@@ -59,19 +59,19 @@ necessary for your data*.
 
 <<surveyDesign, *Biological survey design*>>, the sampling structure of a biological
 survey, varies widely and identifying how surveys relate to a DwC event
-is the most difficult part of mapping a dataset. DwC defines an event as
+is the most difficult part of mapping a dataset. DwC defines an <<event, Event>> as
 '_an action that occurs at some location during some time_’, such as a
 specimen collection process, a camera trap image capture, or a marine
-trawl. This broad definition of event means biological surveys can be
-framed as a single event or as a series of Events nested within Events using a
-Parent-Child relationship as necessary. The *sampling event hierarchy* is the translation of the survey sampling 
-design into an event-based perspective using Darwin Core.
+trawl. This broad definition of Event means biological surveys can be
+framed as a single Event or as a series of Events nested within Events using a
+<<parentEvent, Parent>>-<<childEvent, Child>> relationship as necessary. The <<samplingEventHierarchy, *sampling Event hierarchy*>> is the translation of the survey sampling 
+design into an Event-based perspective using Darwin Core.
 
 Sharing biodiversity data in a way that clearly and accurately reflects the survey design helps ensure accurate understanding and interpretation of the information contained in the dataset enabling potential data users to more readily assess the appropriateness of the data in their own analyses. 
 
 === Non-nested datasets
 
-*Non-nested datasets* are datasets reflecting a simple or flat survey design structure (<<fig1, Figure 1>>). These are typically simple datasets consisting of:
+<<nonNestedDataset, *Non-nested datasets*>> reflect a simple or flat survey design structure (<<fig1, Figure 1>>). These are typically simple datasets consisting of:
 
 * a single sampling event occurring at a particular place and time and conducted using a single standardized sampling protocol that is not repeated and is not necessarily part of a spatially larger sampling schema (Figure 1a), or +
 * a series of single sampling events that are not joined by a larger parent Event (Figure 1b). A compilation dataset (combination of unrelated surveys, compiled data sources and/or literature searches, see Biological survey data section) could be a special case of non-nested dataset where there is a unique Event level that describes the compilation itself (e.g., the broad area where multiple surveys are aggregated), which results in several occurrences.
@@ -82,7 +82,7 @@ image::img/Fig1.png[]
 
 === Nested datasets
 
-More complex survey designs will require implemntation of a nested dataset structure. *Nested datasets* use parent-child relationships to capture information collected through more complex survey design, such as datasets resulting from repeated sampling events and/or multiple sampling protocols. Creating nested Event levels may be important or even essential to relating the full story a dataset has to tell, and to facilitating downstream analysis of the data by including the necessary information for connecting related records as part of the data.
+More complex survey designs will require implemntation of a nested dataset structure. <<nestedDataset, *Nested datasets*>> use parent-child relationships to capture information collected through more complex survey design, such as datasets resulting from repeated sampling events and/or multiple sampling protocols. Creating nested Event levels may be important or even essential to relating the full story a dataset has to tell, and to facilitating downstream analysis of the data by including the necessary information for connecting related records as part of the data.
 
 [NOTE] 
 .*In a nested dataset:*
