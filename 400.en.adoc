@@ -6,18 +6,10 @@ Resource metadata information should be saved to the DwC-A metafile.
 ====
 
 *Resource metadata* provides project- and/or dataset-level information
-for potential data users to understand the context of the dataset. GBIF
-uses https://eml.ecoinformatics.org/[Ecological Metadata Language]
-(EML), a metadata standard administered and maintained by
-https://knb.ecoinformatics.org/[The Knowledge Network for Biocomplexity]
-that records information about ecological datasets in a series of
-modular and extensible XML document types. Each Darwin Core Archive
-must include a resource metadata (EML file) written in XML format.
+for potential data users to understand the context of the dataset. GBIF's metadata schema is based https://eml.ecoinformatics.org/[Ecological Metadata Language]
+(EML), a metadata standard administered and maintained by https://knb.ecoinformatics.org/[The Knowledge Network for Biocomplexity] that records information about ecological datasets in a series of modular and extensible XML document types. Each Darwin Core Archive must include a resource metadata (EML file) written in XML format.
 
-GBIF currently requires 8 dataset-level
-metadata terms and strongly recommends an addition 1 term (see
-https://www.gbif.org/data-quality-requirements-sampling-events[Data
-Quality Requirements for Sampling Events] for more information):
+GBIF currently requires 8 dataset-level metadata terms and strongly recommends an addition 1 term (see https://www.gbif.org/data-quality-requirements-sampling-events[Data Quality Requirements for Sampling Events] for more information):
 
 * *_title:_* The title under which the dataset will be published at
 gbif.org. The title should be brief, but descriptive, characterizing the
@@ -27,35 +19,30 @@ datasets from other institutions. +
 This may include a longer version of title, a description of geographic,
 temporal and taxonomic scope of the dataset, methodology and purpose of
 the underlying data compilation (e.g. protected habitat surveillance,
-faunistic inventory, deep sea trawl data), relevant literature
+faunistic inventory, deep sea trawl data, survey steps or gear used), relevant literature
 references, and any other information you consider relevant to
 characterize the dataset. This is, in essence, a resource abstract. +
 * *_publishing organization:_* The name of the institution or
 organization that will be listed as the data publisher at gbif.org. The
 publishing organization is the institution which holds or owns the
 dataset and is in charge of its contents and maintenance. +
-* *_type:_* The type of dataset aligns with the DwC core implemented. This term uses a controlled vocabulary. 'Type' for survey and monitoring datasets will be 'samplingEvent'. +
-* *_license:_* A machine-readable statement of the rights attached to
+* *_type:_* Type refers to the dataset structure reflecting the level of detail captured in the dataset. In GBIF, four types of datasets are currently accepted: sampling event, occurrence, checklist, and metadata. 'Type' for survey and monitoring datasets will be 'samplingEvent'. +
+* *_license:_* A machine-readable statement of the rights and intended use attached to
 the published dataset. GBIF supports the following Creative Commons
-licenses: CC0, CC BY, and CC BY-NC (see https://www.gbif.org/terms[GBIF Terms of use]). +
+categories: CC0, CC BY, and CC BY-NC (see https://www.gbif.org/terms[GBIF Terms of use]). +
 * *_contact(s):_* Contact information for the person or institution to
-contact with questions about the use and/or interpretation of the
+contact with questions about the curation, use, and/or interpretation of the
 dataset. This information is required to ensure the possibility of
 communication about the dataset. Minimum required information is contact
 name and email address. +
-* *_creator(s):_* Contact information for the creator(s) of the dataset. +
+* *_creator(s):_* Contact information for the creator(s) originator(s) of the dataset. +
 * *_metadata provider(s):_* Contact information for the author(s) of the
 dataset metadata. Minimum required information is contact name and email
 address. +
-* *_citation:_* Text specifying how your dataset should be cited in
-publications that make use of your data. If no suggested citation is
-specified, GBIF will automatically supply a standard format citation
-that includes the dataset name, the name of the publishing institution,
-the date of the download, and a reference to gbif.org.
+* *_citation:_* Text, automatically constructed from other metadata fields, specifying how your dataset should be cited in publications that make use of your data. If no suggested citation is specified, GBIF will automatically supply a standard format citation that includes the dataset name, the name of the publishing institution, the date of the download, and a reference to gbif.org.
 
-See the
-https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile[GBIF
-Metadata Profile – How-to Guide] for comprehensive guidelines and list
-of available terms for resource metadata <<GBIF2011>>.
+These terms must be populated in order to successfully publish a dataset to GBIF.
+
+See the https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile[GBIF Metadata Profile – How-to Guide] for comprehensive guidelines and a list of all available terms for resource metadata <<GBIF2011>>.
 
 <<<
