@@ -12,14 +12,11 @@ An R package, https://camtrap-dp.tdwg.org/[camtrapDP] <<Bubnicki2024>>, is avail
 
 The https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2022-02-23.xml[DNA derived data extension^] includes terms that will be of use. For more specific guidance in standardizing and publishing DNA sequence and metabarcoding data, refer to https://doi.org/10.35035/doc-vf1a-nr22[Publishing DNA-derived data through biodiversity data platform^] <<Abarenkov2023>>. The guide is available in https://docs.gbif.org/publishing-dna-derived-data/fr/[French^], https://docs.gbif.org/publishing-dna-derived-data/es/[Spanish^], and https://docs.gbif.org/publishing-dna-derived-data/zh-TW/[Chinese^] in addition to English. 
 
-The GBIF Metabarcoding Data Toolkit (MDT) may be a useful resource. Learn more about the MDT at the https://www.gbif.org/metabarcoding[GBIF website^].
+The GBIF Metabarcoding Data Toolkit (MDT) is a useful resource. Learn more about GBIF's https://www.gbif.org/metabarcoding[Metabarcoding Progromme^] (MDP).
 
 === Environmental impact assessments
 
 Refer to https://doi.org/10.35035/doc-5xdm-8762[Best Practices for Publishing Biodiversity Data from Environmental Impact Assessments^] <<GBIFIAIA2020>> for help with sharing primary biodiversity data resulting from environmental impact assessments. The guide is also available in https://docs.gbif.org/eia-best-practices/1.0/fr/[French^] and https://docs.gbif.org/eia-best-practices/1.0/es/[Spanish^].
-
-*Private companies* +
-A https://doi.org/10.35035/doc-b8hq-me03[guide^] is available to help private companies navigate the process of becoming GBIF data publishers <<Figueira2020>>. The guide is also available in https://docs.gbif.org/private-sector-data-publishing/2.0/fr/[French^], https://docs.gbif.org/private-sector-data-publishing/2.0/pt/[Portuguese^], and https://docs.gbif.org/private-sector-data-publishing/2.0/es/[Spanish^].
 
 === Freshwater biodiversity data
 
@@ -28,5 +25,10 @@ The https://docs.gbif.org/freshwater-data-publishing-guide/en/[Freshwater Data P
 === Vector-pathogen data
 
 A https://www.gbif.org/news/373fXAjxexu648VyZXeEDB/new-disease-vector-hosts-and-pathogen-data-publishing-guide-opens-for-community-review[guide and data template^] for disease vector data is currently open for community review. 
+
+
+*Private companies*
+A https://doi.org/10.35035/doc-b8hq-me03[guide^] is available to help private companies navigate the process of becoming GBIF data publishers <<Figueira2020>>. The guide is also available in https://docs.gbif.org/private-sector-data-publishing/2.0/fr/[French^], https://docs.gbif.org/private-sector-data-publishing/2.0/pt/[Portuguese^], and https://docs.gbif.org/private-sector-data-publishing/2.0/es/[Spanish^].
+
 
 <<<
