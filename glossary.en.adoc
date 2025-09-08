@@ -9,9 +9,9 @@ biological or biodiversity [[biosurvey]]survey:: A systematic effort to collect 
 
 [[bycatch]]bycatch:: Organisms detected during a survey that were not explicitly targeted in the survey scope.
 
-[[childEvent]]child Event: A child dwc:Event is any dwc:Event whose dwc:parentEventID is populated with the dwc:eventID of another dwc:Event
+[[childEvent]]child Event:: A child dwc:Event is any dwc:Event whose dwc:parentEventID is populated with the dwc:eventID of another dwc:Event.
 
-[[compilation]]compilation:: summary inventory resulting from the combination of information from multiple existing sources (as described in Guralnick et al. 2018), which may be compiled from other data sources and literature searches. Compilations are aggregations of multiple studies, and may combine surveys employing different protocols, processes, and observers, often with variable reporting of the methods employed.
+[[compilation]]compilation:: summary inventory resulting from the combination of information from multiple existing sources (as described by Guralnick et al. 2018), which may be compiled from other data sources and literature searches. Compilations are aggregations of multiple studies, and may combine surveys employing different protocols, processes, and observers, often with variable reporting of the methods employed.
 
 [[completeness]]completeness:: An indication of the thoroughness of a survey relative to the stated scope.
 
@@ -29,9 +29,9 @@ ecological [[ecomonitoring]]monitoring:: The collection of information about the
 
 [[event]]event:: An action that occurs at some location during some time (see  term:dwc[dwc:Event]).
 
-[[FAIRdata]]FAIR data:: Data that meet the FAIR principles of *F*indability, *A*ccessibility, *I*nteroperability, and *R*eusability.
+[[FAIRdata]]FAIR data:: Data that meet the FAIR principles of *F*indability, *A*ccessibility, *I*nteroperability, and *R*eusability. Refer to https://www.go-fair.org/fair-principles/.
 
-[[HumboldtExt]]Humboldt extension for ecological inventories:: A vocabulary extension to the Darwin Core Event class aimed at describing sampling context information (e.g., survey protocols, scopes, and effort) in a structured manner. See https://eco.tdwg.org/[Humboldt Extension for Ecological Inventories].
+[[HumboldtExt]]Humboldt extension for ecological inventories:: An extension to the Darwin Core Event class aimed at capturing detailed data on sampling context (e.g., survey protocols, scopes, and effort) in a structured manner. See https://eco.tdwg.org/[Humboldt Extension for Ecological Inventories].
 
 [[materialSample]]material sample:: An entity ‘... that represents an entity of interest in whole or in part’ (term:dwc[dwc:MaterialSample]). Essentially all material samples are physical specimens collected during a survey Event.
 
@@ -45,7 +45,7 @@ ecological [[ecomonitoring]]monitoring:: The collection of information about the
 
 [[pairedTerms]]paired terms:: Mutually interdependent sets of terms that must be populated together for complete information to be present, for example with term:eco[eco:eventDurationValue] and term:eco[eco:eventDurationUnit].
 
-[[parentEvent]]parent Event: Any dwc:Event whose dwc:eventID is a dwc:parentEventID for at least one other dwc:Event.
+[[parentEvent]]parent Event:: Any dwc:Event whose dwc:eventID is a dwc:parentEventID for at least one other dwc:Event.
 
 [[samplingEffort]]sampling effort:: Aspects of observer behaviour that can vary from one sampling event to another, and which influence the probability that an organism will be detected given that the organism is present.
 
@@ -53,13 +53,13 @@ ecological [[ecomonitoring]]monitoring:: The collection of information about the
 
 [[samplingEventHierarchy]]sampling Event hierarchy:: The description of a survey’s sampling design as a series of Events using Darwin Core terms.
 
-[[samplingProtocol]]sampling protocol:: Details of how a survey was conducted.
+[[samplingProtocol]]sampling protocol:: Details of how a survey was conducted, capturing the sequence of steps and aim to supply a user with information about how the data were acquired and are applicable elsewhere.
 
 [[scope]]scope:: A description of the restrictions placed on the range of types of organisms being targeted (or not targeted) during a survey, such as the range of species or ages.
 
-[[site]]site:: The location at which observations are made or samples and/or measurements are taken. The configuration of an event site can vary in configuration from a point in space to an area.
+[[site]]site:: The location at which observations are made or samples and/or measurements are taken. The configuration of an event site can vary in configuration from a point in space to a line to an area to a volume.
 
-[[surveyDesign]]survey design:: A description of the pre-determined constraints of sampling strategy, including how the survey event sites (e.g., stations, plots, transects) are laid out. 
+[[surveyDesign]]survey design:: The pre-determined constraints of sampling strategy, including how the survey Event sites (e.g., stations, plots, transects) are laid out, temporal, methodological, etc.. 
 
 [[voucher]]voucher:: A physical specimen or other material sample collected and accessioned into a museum collection in support of a specific project or survey effort.
 
