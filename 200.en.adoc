@@ -35,7 +35,7 @@ a|
 a|
   * Open licensing: Apply open licenses such as https://creativecommons.org/[Creative Commons^] (CC0, CC-BY) to allow others to freely access and use the data. 
   * Public repositories: Ensure that chosen data repositories are publicly accessible andt do not require subscriptions or memberships. 
-  * Data availability statement: Include data availability statements in publications with links to the repositories where data are stored. Be aware of firewalls and other forms of access restrictions unless justified (see <<Chapman2020>>).
+  * Data availability statement: Include data availability statements in publications with links to the repositories where data are stored. Be aware of firewalls and other forms of access restrictions unless justified (see [Chapman 2020]).
 | Interoperable
 a|
   * Standard formats: Use standard, non-proprietary data formats (e.g., CSV, JSON, XML) to ensure broad compatibility with software tools.
