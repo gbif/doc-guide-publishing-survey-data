@@ -1,4 +1,4 @@
-== Mapping occurrence information
+== Mapping Occurrence information
 
 [IMPORTANT]
 ====
@@ -13,8 +13,8 @@ Each organism Occurrence must include the following information:
 
 * *Event ID (term:dwc[dwc:eventID]):* Links the Occurrence to the correct Event. +
 * *Occurrence ID (term:dwc[dwc:occurrenceID]):* A unique identifier for each Occurrence. +
-* *Scientific name (term:dwc[dwc:scientificName]):* The most specific taxonomic identification of the reported organism. +
-* *Basis of record (term:dwc[dwc:basisOfRecord]):* The nature of the occurrence (e.g. human observation, material specimen).
+* *Scientific name (term:dwc[dwc:scientificName]):* The most precise (lowest rank) taxonomic identification of the reported organism. +
+* *Basis of record (term:dwc[dwc:basisOfRecord]):* The nature of the Occurrence (e.g. human observation, material specimen).
 
 === Reporting multiple individuals as a single Occurrence
 
@@ -213,15 +213,15 @@ Absences should only be reported for taxa within the stated taxonomic and/or org
 |
 |===
 
-=== Reporting abundance information
+=== Reporting abundances
 
-To capture abundance information in a dataset or at a specific Event level:
+To capture abundance in a dataset or at a specific Event level:
 
 * In the `occurrence` table, use the paired terms term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] to report the observed abundance for each reported Occurrence. For example, if 3 individuals of a species were observed:
 ** term:dwc[dwc:organismQuantity] = `3` +
 ** term:dwc[dwc:organismQuantityType] = `Individuals` +
 * In the `event` table:
-** The inclusion of abundance information in the datasett, even if this information is not reported for all taxa, should be indicated by populating term:eco[eco:isAbundanceReported] as `true`. +
+** The inclusion of abundance information in the dataset, even if this information is not reported for all taxa, should be indicated by populating term:eco[eco:isAbundanceReported] as `true`. +
 ** The existence of an abundance cap should be captured using the Boolean term term:eco[eco:isAbundanceCapReported] and the value of that cap reported in term:eco[eco:abundanceCap].
 
 If the dataset or relevant Event does not include abundance information, then it is recommended that the following terms be populated as follows in the `event` table at the appropriate level(s) within the Event hierarchy:
