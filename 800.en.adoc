@@ -24,7 +24,7 @@ The https://docs.gbif.org/freshwater-data-publishing-guide/en/[Freshwater Data P
 
 === Vector-pathogen data
 
-A https://www.gbif.org/news/373fXAjxexu648VyZXeEDB/new-disease-vector-hosts-and-pathogen-data-publishing-guide-opens-for-community-review[guide and data template^] for disease vector data is currently open for community review. 
+A https://doi.org/10.35035/doc-mjj8-ng28[guide and data template^] for disease vector data is available. 
 
 
 *Private companies*
