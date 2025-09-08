@@ -13,7 +13,7 @@ For any remaining questions, reach out for assistance from:
 * The GBIF Node for your country or organization
 ** If your country or organization is a member of GBIF and has an established Node, you can reach out directly to your Node.
 *** If you’re uncertain if your country or organization is part of the GBIF network you can https://www.gbif.org/the-gbif-network[search here^]. +
-** If your country or organization is not a member of GBIF, reach out to the mailto:helpdesk@gbif.org[GBIF helpdesk]. +
+** If your country or organization is not a member of GBIF, reach out to the mailto:helpdesk@gbif.org[GBIF helpdesk^]. +
 * GBIF help desk
 ** In case technical documentation needs improvements, create an issue on the https://techdocs.gbif.org/en/[GitHub tech-docs project^]. +
 ** Send an email to the mailto:helpdesk@gbif.org[GBIF helpdesk]. 
@@ -21,17 +21,11 @@ For any remaining questions, reach out for assistance from:
 
 == Feedback
 
-The authors appreciate every opportunity to improve the guide. Plrease refer to specific sections or lines and send your recommendations following the instructions below: 
+The authors appreciate every opportunity to improve the guide. Feedback should be submitted as a GitHub issue. If you are unfamiliar of the with this process, refer to the instructions below: 
 
-How do I participate in the community peer review?
-Community members interested in contributing to this peer-review process can read the overview of the digital documentation programme to place their efforts in context, then review the specific instructions and expectations on how to offer suggestions and improvements.
+* Create a GitHub account (see https://www.vimeo.com/430640810[video how-to^]).
+* If you see something, say something, by creating or commenting on issues on GitHub (see https://vimeo.com/430632177[video how-to^]). Please refer to specific sections or lines in your recommendations.
 
-To lend your voice and participate as a reviewer, we ask community members to:
-
-Create a GitHub account (see video how-to).
-Read the document, Freshwater Data Publishing Guide
-If you see something, say something, by creating or commenting on issues on GitHub (see video how-to)
-Start, follow and support discussions on the GBIF Community Forum
 Please remember that all interactions within this process must adhere to the GBIF Code of Conduct, which aims to encourage a "safe, hospitable, and productive environment" that is "professional, respectful and harassment-free for all participating."
 
 <<<
