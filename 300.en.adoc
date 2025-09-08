@@ -1,76 +1,41 @@
 [[mapping-survey-data-to-dwc]]
-== Mapping survey data to Darwin Core
+== Mapping survey and monitoring data to Darwin Core
 
-The following sections will guide you through the
-process of mapping your the Event-level (sampling context) information of your biodiversity survey data to the Darwin Core data standard.
+Data standardization is often wrongly percieved an invasion of an established or bespoke data collection system. In reality, data standardization is simply a transformation of the data export while the source data system remain in tact. The following sections will guide you through the process of mapping your the Event-level (sampling context) information of your biodiversity survey and monitoring data to the Darwin Core data standard.
 
-In practice, the process of mapping survey and monitoring data to the
-DwC standard for publication in GBIF would roughly follow these steps:
+In practice, the process of mapping survey and monitoring data to DwC for publication in GBIF would roughly follow these steps:
 
-* *Identification of the structure, or hierarchy, of the data:* In essence, this
-is the process of translating the sampling design of a biological survey
-(or series of surveys) to Darwin Core event format. Does the dataset
-consist of a single survey at a single location? Multiple surveys at
-different times at the same location? Or a series of surveys at
-different locations? See 'Translating survey design to DwC event data
-structure' below. +
-* *Identification of the data composition and DwC vocabulary needs:* Before actually mapping data to terms, it's useful to take some time to identify the
-vocabulary extensions that will be necessary to report all data (or as
-much data as possible) from the dataset. Available extensions can be explored via the https://rs.gbif.org/extensions.html[GBIF registered
-extensions^] and https://www.tdwg.org/standards/[TDWG biodiversity
-information standards^]. +
-* *Mapping of survey (Event) information to DwC event terms:* Information about
-each biological survey (simply referred to as an 'Event' or 'sampling
-Event') will be mapped to https://dwc.tdwg.org/terms/#event[DwC Event
-class] and https://eco.tdwg.org/terms/[Humboldt extension^] terms and
-saved in an `event` table or tables. Event-level data include the contextual
-information that applies to all occurrence and ancillary data collected
-or recorded during an event. Examples include information about the survey design,
-site (e.g., location, date), protocol(s), scope(s), and sampling effort.
-Resource: see the data/event_template_wHE_event-table.csv['event' table in the data mapping template^]. +
-* *Mapping of occurrence data to the DwC occurrence extension:* Organism
-occurrence information collected during biological surveys (e.g.,
-scientific name, additional organismal information) will be shared in an
-independent 'occurrence' table using the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[occurrence
-extension^]. See the
-data/event_template_wHE_occurrence-table.csv['occurrence'
-table in the data mapping template^]. +
-* *Mapping of ancillary data to appropriate extensions:* Additional information
-collected during the survey that require use of one or more extensions
-should be mapped so as to link the information to the appropriate events
-or organisms via the relevant event identifiers.
+* *Identification of the structure, or hierarchy, of the data:* In essence, this is the process of translating the sampling design of a biological survey
+(or series of surveys) to Darwin Core Event format. Does the dataset consist of a single survey at a single location? Multiple surveys conducted at different times at the same location? Or a series of surveys at different locations? See 'Translating survey design to DwC Event data structure' below. +
+* *Identification of the data composition and DwC vocabulary needs:* Before actually mapping data to terms, it is useful to identify the vocabulary extensions that will be necessary to report all data (or as much data as possible) from the dataset. Available extensions can be explored via the https://rs.gbif.org/extensions.html[GBIF registered extensions^] and https://www.tdwg.org/standards/[TDWG biodiversity information standards^]. +
+* *Mapping of survey (Event) information to DwC Event terms:* Information about each biological survey (simply referred to as an 'Event' or 'sampling
+Event') will be mapped to https://dwc.tdwg.org/terms/#event[DwC Event class] and https://eco.tdwg.org/terms/[Humboldt extension^] terms and saved in an `event` table or tables. Event-level data include the contextual information that applies to all Occurrence and ancillary data collected or recorded during an Event. Examples include information about the survey design, site (e.g., location, date), protocol(s), scope(s), and sampling effort. Resource: see the data/event_template_wHE_event-table.csv['event' table in the data mapping template^]. +
+* *Mapping of Occurrence data to the DwC Occurrence extension:* Organism Occurrence information collected during biological surveys (e.g., scientific name, additional organismal information) will be shared in an independent 'occurrence' table using the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[Occurrence
+extension^]. See the data/event_template_wHE_occurrence-table.csv['occurrence' table in the data mapping template^]. +
+* *Mapping of ancillary data to appropriate extensions:* Additional information collected during a survey that require use of one or more extensions should be mapped so as to link the information to the appropriate Event(s) or organisms via the relevant Event identifiers.
 
-The landscape of biodiversity data in GBIF is always evolving. While some data cannot yet be published to GBIF with a DwC Event dataset, the GBIF infrastructure is also not static and maintains stepwise efforts to improve the underlying data model and expand the breadth of data types and complexity that can be accommodated. Data that cannot be published currently will likely be publishable in the future. As such, mapping as much data
-as possible now reduces the amount of time and energy spent overall, removing the need to revisit the process at a later date. Data standardization is often wrongly percieved an invasion of an established or bespoke data collection system. In reality, data standardization is simply a transformation of the data export while the source data system remain in tact.
+The landscape of biodiversity data in GBIF is always evolving. While some data cannot yet be published to GBIF with a DwC Event dataset, GBIF maintains stepwise efforts to improve the underlying data model and expand the breadth of data types and complexity that can be accommodated. Data that cannot be published now will likely be publishable in the future. As such, mapping as much data in a dataset as possible now reduces the amount of time and energy spent overall, removing the need to revisit the process at a later date. 
 
-*The recommended best practice is to map as much of your data as
-possible using all existing vocabulary standards and extensions
-necessary for your data*.
+*The recommended best practice is to map as much of your data as possible using all existing vocabulary standards and extensions necessary for your data*.
 
 
-=== Translating survey design into Darwin Core event structure
+=== Translating survey design into Darwin Core Event structure
 
-<<surveyDesign, *Biological survey design*>>, the sampling structure of a biological
-survey, varies widely and identifying how surveys relate to a DwC event
-is the most difficult part of mapping a dataset. DwC defines an <<event, Event>> as
-'_an action that occurs at some location during some time_’, such as a
-specimen collection process, a camera trap image capture, or a marine
-trawl. This broad definition of Event means biological surveys can be
-framed as a single Event or as a series of Events nested within Events using a
-<<parentEvent, Parent>>-<<childEvent, Child>> relationship as necessary. The <<samplingEventHierarchy, *sampling Event hierarchy*>> is the translation of the survey sampling 
-design into an Event-based perspective using Darwin Core.
+<<surveyDesign, *Biological survey design*>>, the sampling structure of a biological survey, varies widely and identifying how surveys relate to a DwC Event
+is the most difficult part of mapping a dataset. DwC defines an <<event, Event>> as '_an action that occurs at some location during some time_’, such as a
+specimen collection process, a camera trap image capture, or a marine trawl. This broad definition of Event means biological surveys can be framed as a single Event or as a series of Events nested within Events using a <<parentEvent, Parent>>-<<childEvent, Child>> relationship as necessary. The <<samplingEventHierarchy, *sampling Event hierarchy*>> is the translation of the survey sampling design into an Event-based perspective using Darwin Core.
 
-Sharing biodiversity data in a way that clearly and accurately reflects the survey design helps ensure accurate understanding and interpretation of the information contained in the dataset enabling potential data users to more readily assess the appropriateness of the data in their own analyses. 
+Sharing biodiversity data in a way that clearly and accurately reflects the survey design helps ensure accurate understanding and interpretation of the information contained in the dataset enabling potential data users to more readily assess the appropriateness of the data for inclusion in their own analyses. 
 
 === Non-nested datasets
 
 <<nonNestedDataset, *Non-nested datasets*>> reflect a simple or flat survey design structure (<<fig1, Figure 1>>). These are typically simple datasets consisting of:
 
-* a single sampling event occurring at a particular place and time and conducted using a single standardized sampling protocol that is not repeated and is not necessarily part of a spatially larger sampling schema (Figure 1a), or +
-* a series of single sampling Events that are not joined by a larger parent Event (Figure 1b). A compilation (e.g., a combination of unrelated surveys, compiled data sources and/or literature searches, see Biological survey data section) could be a special case of non-nested dataset where there is a unique Event level that describes the compilation itself (e.g., the broad area where multiple surveys are aggregated), which results in several occurrences.
+* a single sampling Event occurring at a particular place and time and conducted using a single standardized sampling protocol that is not repeated and is not necessarily part of a spatially larger sampling schema (Figure 1a), or +
+* a series of single sampling Events that are not joined by a larger parent Event (Figure 1b). A compilation (e.g., a combination of unrelated surveys, compiled data sources and/or literature searches, see Biological survey data section) could be a special case of non-nested dataset where there is a unique Event level that describes the compilation itself (e.g., the broad area where multiple surveys are aggregated), which results in one or more Occurrences.
 
 [[fig1]]
-.A simple schematic of a non-nested Event dataset (a) consisting of a single Event (purple box) with associated Occurrences related to the Event via the Occurrence extension (blue box) and (b) a series of individual Events (purple boxes) with associated Occurrences related to the appropriate Event via the Occurrence extension (blue boxes). 
+.A simple schematic of a non-nested Event dataset (A) consisting of a single Event (purple box) with associated Occurrences related to the Event via the Occurrence extension (blue box) and (B) a series of individual Events (purple boxes) with associated Occurrences related to the appropriate Event via the Occurrence extension (blue boxes). 
 image::img/Fig1.png[]
 
 === Nested datasets
