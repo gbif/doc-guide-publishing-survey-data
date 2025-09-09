@@ -4,7 +4,7 @@
 This section will guide you through the process of mapping Event-level data specifically related to survey structure, location, protocols, scopes, and effort. 
 
 [NOTE] 
-.NOTE
+.
 ==== 
 Each term in this document is linked with its respective term internationalized resource identifier (IRI) alias (ex., term:eco[eco:protocolNames]). Always use these links to refer to the definition, comments, and examples provided when populating a term. The terms to be used to describe event-level information are a combination of Darwin Core and Humboldt Extension terms:
 
