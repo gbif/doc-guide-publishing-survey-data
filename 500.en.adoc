@@ -4,9 +4,9 @@
 This section will guide you through the process of mapping Event-level data specifically related to survey structure, location, protocols, scopes, and effort. 
 
 [NOTE] 
-.
+.About DwC terms in this document
 ==== 
-Each term in this document is linked with its respective term internationalized resource identifier (IRI) alias (ex., term:eco[eco:protocolNames]). Always use these links to refer to the definition, comments, and examples provided when populating a term. The terms to be used to describe event-level information are a combination of Darwin Core and Humboldt Extension terms:
+Each term in this document is linked with its respective term https://www.w3.org/International/O-URL-and-ident.html[internationalized resource identifier (IRI)] alias (ex., term:eco[eco:protocolNames]). Always use these links to refer to the definition, comments, and examples provided when populating a term. The terms to be used to describe event-level information are a combination of Darwin Core and Humboldt Extension terms:
 
 - A comprehensive list of Darwin Core terms that can be used at the event level can be found on the https://rs.gbif.org/core/dwc_event_2024-02-19.xml[Darwin Core Event page in the GBIF Registry of
 Schemas]. 
