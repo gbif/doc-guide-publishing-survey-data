@@ -32,7 +32,7 @@ https://doi.org/10.35035/doc-7t3p-ve38[+++Survey and monitoring data quick start
 Throughout the guide, Darwin Core terms will be written in fixed width font and preceded by their namespace abbreviation and a colon (‘dwc:’ or ‘eco:’) to
 denote the DwC core or extension to which the term belongs. For example, the Darwin Core event ID term will appear as term:dwc[dwc:eventID] and the Humboldt Extension verbatim target scope term will be written as term:eco[eco:verbatimTargetScope].
 
-Terms are linked with their respective term internationalized resource identifier (IRI, e.g., term:eco[eco:protocolNames]).
+Terms are linked with their respective term <<IRI, internationalized resource identifier>> (IRI, e.g., term:eco[eco:protocolNames]).
 
 [caption=""]
 .Namespace abbreviations and usage examples for DwC terms
