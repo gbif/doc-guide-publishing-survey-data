@@ -9,7 +9,7 @@ biological or biodiversity [[biosurvey]]survey:: a systematic effort to collect 
 
 [[bycatch]]bycatch:: organisms detected during a survey that were not explicitly targeted in the survey scope.
 
-[[childEvent]]child Event:: a child dwc:Event is any dwc:Event whose dwc:parentEventID is populated with the dwc:eventID of another dwc:Event.
+[[childEvent]]child Event:: a child Event is any dwc:Event that is contained entirely within a single parent Event.
 
 [[compilation]]compilation:: summary inventory resulting from the combination of information from multiple existing sources (as described by Guralnick et al. 2018), which may be compiled from other data sources and literature searches. Compilations are aggregations of multiple studies, and may combine surveys employing different protocols, processes, and observers, often with variable reporting of the methods employed.
 
