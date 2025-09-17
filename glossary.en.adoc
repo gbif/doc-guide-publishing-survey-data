@@ -37,6 +37,8 @@ ecological [[ecomonitoring]]monitoring:: the collection of information about the
 
 [[HumboldtExt]]Humboldt extension for ecological inventories:: a vocabulary extension to the Darwin Core Event class aimed at capturing detailed data on sampling context (e.g., survey protocols, scopes, and effort) in a structured manner. See https://eco.tdwg.org/[Humboldt Extension for Ecological Inventories].
 
+[[IRI]]Internationalized resource identifier (IRI):: an internet protocol standard that facilitates the identification of online resources. It builds on the Uniform Resource Identifier (URI) protocol by expanding the set of permitted characters beyond ASCII. See more at https://www.w3.org/International/O-URL-and-ident.html.
+
 [[lifeStage]]life stage:: refers to a distint phase in an organism's life cycle. This may represent a spcific developmental, growth, and/or reproductive changes in an organism's life.
 
 [[materialSample]]material sample:: an entity ‘... that represents an entity of interest in whole or in part’ (term:dwc[dwc:MaterialSample]). Essentially all material samples are physical specimens collected during a survey Event.
