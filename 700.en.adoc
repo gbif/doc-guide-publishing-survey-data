@@ -7,7 +7,7 @@ Occurrence information should be saved to a DWC-A `occurrence` file.
 See the data/event_template_wHE_occurrence-table.csv[occurrence^] table in the data mapping template.
 ====
 
-Each DwC Event can be associated with one or more Occurrence records of individual organisms or taxa. Occurrence information is mapped and linked to a survey Event using the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[DwC Occurrence extension^]. Each Occurrence record can be mapped to only a single survey Event; however, Occurrence records can be link to any event level. In the case of a nested hierarchy, the recommended best practice is to link each Occurrence to the lowest possible event level to maintain specificity. Occurrence information should be contained in the `occurrence` table of the DwC-A.
+Each DwC Event can be associated with one or more Occurrence records of individual organisms or taxa. Occurrence information is mapped and linked to a survey Event using the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[DwC occurrence extension^]. Each Occurrence record can be mapped to only a single survey Event; however, Occurrence records can be link to any event level. In the case of a nested hierarchy, the recommended best practice is to link each Occurrence to the lowest possible event level to maintain specificity. Occurrence information should be contained in the `occurrence` table of the DwC-A.
 
 Each organism Occurrence must include the following information:
 
@@ -143,18 +143,18 @@ The table below outlines the minimum required and recommended terms for each Occ
 
 === Reporting absences
 
-*Absences* are defined here as the lack of detection of organisms that are explicitly stated to be part of the target taxonomic scope. Information regarding the absence of detection of a type of taxon can be reported explicitly or implicitly within a DwC-A. When the taxonomic scope is highly constrained, for example being restricted to only one or a few taxa, it is feasible to include occurrence records for each of the non-detected taxa within the data, with each absence being denoted by reporting dwc:OccurrenceStatus as `absent`. However, when taxonomic scopes are broader, and include hundreds or thousands of species (e.g., a taxonomic scope of a dataset that includes all species of birds in the world), then is not feasible to add occurrence records of zero individuals for all of the species not detected.
+*Absences* are defined here as the lack of detection of organisms that are explicitly stated to be part of the target taxonomic scope. Information regarding the absence of detection of a type of taxon can be reported explicitly or implicitly within a DwC-A. 
 
 The reporting of absences only provides useful information when term:eco[eco:isTaxonomicScopeFullyReported] is `true`. 
 
 If term:eco[eco:isTaxonomicScopeFullyReported] = `false`, Occurrence records of zero individuals are uninterpretable because the user of these data cannot know whether there are any taxa that were not detected but were not reported with Occurrence records of zero individuals. Implicit reporting of absences is impossible if term:eco[eco:isTaxonomicScopeFullyReported] = `false`.
 
-If absences are implicitly reported, each end user of data will need to reconstruct explicit absences for themselves for each taxon of interest to them because any unreported taxon (i.e. any taxon without an occurrence record) is known to be absent. Again, this will only be possible if a taxonomic scope is reported and term:eco[eco:isTaxonomicScopeFullyReported] = `true`.
+If absences are implicitly reported, each end user of data will need to reconstruct explicit absences for themselves for each taxon of interest to them because any unreported taxon (i.e. any taxon without an Occurrence record) is known to be absent. Again, this will only be possible if a taxonomic scope is reported and term:eco[eco:isTaxonomicScopeFullyReported] = `true`.
 
 
 *Explicit documentation of absences*
 
-To document absences with a DwC-A by including zero-count Occurrence records:
+Explicit reporting of absence or non-detection means that the dataset reports, at the Occurrence level (in the `occurrence` table), the lack of detection for each relevant dwc:Taxon. When the taxonomic scope is highly constrained, for example being restricted to only one or a few taxa, it is feasible to include Occurrence records for each of the non-detected taxa within the data, with each absence being denoted by reporting dwc:OccurrenceStatus as `absent`. To document absences with a DwC-A by including zero-count Occurrence records:
 
 * In the `occurrence` table:
 ** For each occurrence to be reported absent, term:dwc[dwc:occurrenceStatus] = `absent`. +
@@ -168,7 +168,7 @@ Absences should only be reported for taxa within the stated taxonomic and/or org
 
 *Implicit documentation of absences*
 
-To implicitly document absences in a DwC-A, term:eco[eco:isTaxonomicScopeFullyReported] must be `true` for the Event and either term:eco[eco:targetTaxonomicScope] or term:eco[eco:excludedTaxonomicScope] must be specified. Then:
+Implicit reporting of absence or non-detection, on the otherhand, means that the lack of detection of a dwc:Taxon is indirectly suggested through the lack of Occurrence record in the `occurrence` table. When taxonomic scopes are broader, and include hundreds or thousands of species (e.g., a taxonomic scope of a dataset that includes all species of birds in the world), then is not feasible to add occurrence records of zero individuals for all of the species not detected. To implicitly document absences in a DwC-A, term:eco[eco:isTaxonomicScopeFullyReported] must be `true` for the Event and either term:eco[eco:targetTaxonomicScope] or term:eco[eco:excludedTaxonomicScope] must be specified. Then:
 
 * In the `occurrence` table, for each taxon to be implicitly reported absent, there will not be any occurrence record created.
 * In the `event` table, term:eco[eco:isAbsenceReported] = `false` for parent Events at all relevant levels because no absences are explicitly reported.
