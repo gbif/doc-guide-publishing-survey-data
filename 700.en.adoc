@@ -143,9 +143,9 @@ The table below outlines the minimum required and recommended terms for each Occ
 
 === Reporting absences
 
-*Absences* are defined here as the lack of detection of organisms that are explicitly stated to be part of the target taxonomic scope. Information regarding the absence of detection of a type of taxon can be reported explicitly or implicitly within a DwC-A. 
+<<absence, *Absences*>> are defined here as the lack of detection of organisms that are explicitly stated to be part of the target taxonomic scope. Information regarding the absence of detection of a type of taxon can be reported explicitly or implicitly within a DwC-A. 
 
-The reporting of absences only provides useful information when term:eco[eco:isTaxonomicScopeFullyReported] is `true`. 
+The reporting of absences only provides meaningful information when term:eco[eco:isTaxonomicScopeFullyReported] is `true`. 
 
 If term:eco[eco:isTaxonomicScopeFullyReported] = `false`, Occurrence records of zero individuals are uninterpretable because the user of these data cannot know whether there are any taxa that were not detected but were not reported with Occurrence records of zero individuals. Implicit reporting of absences is impossible if term:eco[eco:isTaxonomicScopeFullyReported] = `false`.
 
@@ -162,7 +162,7 @@ Explicit reporting of absence or non-detection means that the dataset reports, a
 * In the `event` table:
 ** If one or more absences are reported at any taxonomic level (term:dwc[dwc:occurrenceStatus] = `absent`), then term:eco[eco:isAbsenceReported] = `true` at each relevant Event level.
 
-* A list of absent taxa can be provided using term:eco[eco:absentTaxa] at all relevant Event levels.
+* A list of absent taxa can be provided using term:eco[eco:absentTaxa] at all relevant Event levels. See the section 'link:#absences[Absence]' for details on reporting absence information at the Event level.
 
 Absences should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey. Absence cannot be asserted for bycatch.
 
@@ -171,7 +171,7 @@ Absences should only be reported for taxa within the stated taxonomic and/or org
 Implicit reporting of absence or non-detection, on the otherhand, means that the lack of detection of a dwc:Taxon is indirectly suggested through the lack of Occurrence record in the `occurrence` table. When taxonomic scopes are broader, and include hundreds or thousands of species (e.g., a taxonomic scope of a dataset that includes all species of birds in the world), then is not feasible to add occurrence records of zero individuals for all of the species not detected. To implicitly document absences in a DwC-A, term:eco[eco:isTaxonomicScopeFullyReported] must be `true` for the Event and either term:eco[eco:targetTaxonomicScope] or term:eco[eco:excludedTaxonomicScope] must be specified. Then:
 
 * In the `occurrence` table, for each taxon to be implicitly reported absent, there will not be any occurrence record created.
-* In the `event` table, term:eco[eco:isAbsenceReported] = `false` for parent Events at all relevant levels because no absences are explicitly reported.
+* In the `event` table, term:eco[eco:isAbsenceReported] = `false` for parent Events at all relevant levels because no absences are explicitly reported. See the section 'link:#absences[Absence]' for details on reporting absence information at the Event level.
 
 Absences should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey. Absence cannot be asserted for bycatch.
 
@@ -215,7 +215,7 @@ Absences should only be reported for taxa within the stated taxonomic and/or org
 
 === Reporting abundances
 
-To capture abundance in a dataset or at a specific Event level:
+To capture <<abundance, abundance>> in a dataset or at a specific Event level:
 
 * In the `occurrence` table, use the paired terms term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] to report the observed abundance for each reported Occurrence. For example, if 3 individuals of a species were observed:
 ** term:dwc[dwc:organismQuantity] = `3` +
@@ -228,6 +228,8 @@ If the dataset or relevant Event does not include abundance information, then it
 
 * term:eco[eco:isAbundanceReported] = `false` +
 * term:eco[eco:isAbundanceCapReported] = `false`
+
+See the section 'link:#abundance[Abundance]' for details on reporting abundance information at the Event level.
 
 [caption=""]
 .Terms to indicate abundance, the table on which they should be provided, and their recommendation usage.
