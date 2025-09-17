@@ -239,8 +239,8 @@ If vegetation cover data are available for a site (for example, if a relevé was
 
 * *Verbatim vegetation cover:* a verbatim description of vegetation cover can be captured in term:eco[eco:verbatimSiteDescriptions]. +
 * *Percent vegetation cover:* simple percent vegetation cover can be recorded as structured data using the https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[extended
-measurement or fact extension^]. Data reported using emof should be linked to the appropriate Event using term:dwc:[dwc:eventID].+
-* *Vegetation plot survey:* vegetation plot survey information can be reported using the https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[relevé extension^]. Data from individual relevé's should be linked to the appropriate Event using term:dwc:[dwc:eventID].
+measurement or fact extension^]. Data reported using emof should be linked to the appropriate Event using term:dwc:[dwc:eventID]. See the 'link:#extended-measurement-or-fact-emof-extension[Extended measurement or fact (eMoF) extension]' section for details on using the extension. +
+* *Vegetation plot survey:* vegetation plot survey information can be reported using the https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[relevé extension^]. Data from individual relevé's should be linked to the appropriate Event using term:dwc:[dwc:eventID]. See the 'link:#relevé-extension[Relevé extension]' section for details on using the extension.
 
 There is no single best method of reporting vegetation cover information for a site, although it is recommended to choose the most explicit method possible based on the type of information avilable. 
 
