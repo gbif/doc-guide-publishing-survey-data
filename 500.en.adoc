@@ -10,56 +10,59 @@ This section will guide you through the process of mapping Event-level data spec
 
 [NOTE] 
 .About DwC terms in this document
+
 ==== 
 
-Each term in this document is linked with its respective term https://www.w3.org/International/O-URL-and-ident.html[internationalized resource identifier (IRI)] alias (ex., term:eco[eco:protocolNames]). Always use these links to refer to the definition, comments, and examples provided when populating a term. The terms to be used to describe event-level information are a combination of Darwin Core and Humboldt Extension terms:
+Each term in this document is linked with its respective term https://www.w3.org/International/O-URL-and-ident.html[internationalized resource identifier (IRI)] alias (ex., term:eco[eco:protocolNames]). Always use these links to refer to the definition, comments, and examples provided when populating a term. 
 
-- A comprehensive list of Darwin Core terms that can be used at the event level can be found on the https://rs.gbif.org/core/dwc_event_2024-02-19.xml[Darwin Core Event page in the GBIF Registry of
-Schemas]. 
-- The full suite of Humboldt Extension terms is available on the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt Ecological Inventories page in the GBIF Registry of Schemas^] and in the https://eco.tdwg.org/terms/[Humboldt Extension Quick Reference Guide].
+The terms to be used to describe Event-level information are a combination of Darwin Core Event class and Humboldt Extension terms:
+
+* A comprehensive list of Darwin Core Event class terms is available on the https://rs.gbif.org/core/dwc_event_2024-02-19.xml[Darwin Core Event] page in the GBIF Registry of Schemas. +
+* The full suite of Humboldt extension terms is available on the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt Ecological Inventories^] page in the GBIF Registry of Schemas and the https://eco.tdwg.org/terms/[Humboldt Extension Quick Reference Guide].
 ====
 
 
 ****
 [discrete]
 ==== Data mapping tips
+
 Survey Event data should be saved to the DwC-A `event` table. This includes DwC Event terms (any term preceded by `dwc`, e.g., term:dwc[dwc:eventID]) and Humboldt extension terms (any term preceded by `eco`, e.g., term:eco[eco:protocolNames]).
 
 Populate all terms for which information is available. 
 
-<<pairedTerms, *Paired terms*>>> must be populated together. Often these terms are designed to offer the data publisher some level of flexibility in reporting data. Paired terms are most common in terms available for reporting a variable value and associated unit of measure (for example, term:dwc[dwc:sampleSizeValue] and term:dwc[dwc:sampleSizeUnit]). 
+<<pairedTerms, *Paired terms*>> must be populated together. These terms are designed to offer data publishers some level of flexibility in reporting data. Paired terms are most common in terms available for reporting a variable value and associated unit of measure (for example, term:dwc[dwc:sampleSizeValue] and term:dwc[dwc:sampleSizeUnit]). 
 
 *No data, missing data, and data values of `0`*
 
-  * Cells with a value of `0` (zero) should be populated as `0`.
+  * Cells with a value of `0` (zero) should be explicitly populated as `0`.
   * Cells with missing data or `NULL` values should be left empty. 
   * Terms for which there is `no data` to share at any hierarchical level can be excluded from the data table.
 
 *Populating terms across Event levels (e.g., from parent Event to child Event)* 
 
-* Each Event level can have its own set of attributes and measurements which can be captured using the Humboldt and/or other Extension(s) and be unambiguously linked to the corresponding Event through the appropriate term:dwc[dwc:eventID]s. +
-* *_Terms should contain data clearly (explicitly) reported at every Event level in the hierarchy to which they directly apply._* +
-** When publishing a data export, a child Event must *not* be assumed to be inherit the value of any property of any of its parent Event(s). If a value is in common between an Event and its parent, the value should be reported explicitly in both Event records (see Section 3.2.2 Principle of applicability in https://eco.tdwg.org/hierarchy/#322-principle-of-applicability[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^]). +
-** Similarly, a parent Event should *not* be populated by deriving or summarizing information from child Events; rather, fields should be explicitly populated with information directly appropriate to the nature and level of the Event itself (see Section 3.2.3 Principle of non-derivation in https://eco.tdwg.org/hierarchy/#323-principle-of-non-derivation[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^]). 
+* Each Event can have its own set of attributes and measurements which can be captured using the Humboldt and/or other extension(s) and be unambiguously linked to the corresponding Event through the appropriate term:dwc[dwc:eventID]s. +
+* *_Terms should contain data clearly (explicitly) reported at every Event level in the hierarchy to which they directly apply._* This means that when publishing a data export, +
+** a child Event must *not* be assumed to be inherit the value of any property of any of its parent Event(s). If a value is in common between a child Event and its parent Event, the value should be reported explicitly in both Event records (see Section 3.2.2 Principle of applicability in https://eco.tdwg.org/hierarchy/#322-principle-of-applicability[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^]). +
+** a parent Event should *not* be populated by deriving or summarizing information from child Events; rather, fields should be explicitly populated with information directly appropriate to the nature and level of the Event itself (see Section 3.2.3 Principle of non-derivation in https://eco.tdwg.org/hierarchy/#323-principle-of-non-derivation[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^]). 
 
 Refer to https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^] for more guidance in populating Humboldt extension terms across Event levels.
 ****
 
 === Survey design
 
-<<surveyDesign, Survey design>> relates the survey strategy and how any stations, plots, traps, sensors, and/or transects are positioned. Historically, only 2 terms were available to explicitly structure and relate different levels of survey design in a dataset: term:dwc[dwc:eventID] and term:dwc[dwc:parentEventID]. One additional Darwin Core Event term, term:dwc[dwc:fieldNumber], provided a means by which to relate a sampling Event with a dataset- or project- specific field number. The Humboldt extension provides an additional 2 terms (term:eco[eco:siteCount] and term:eco[eco:siteNestingDescription]) to better support complex or nested dataset. 
+<<surveyDesign, Survey design>> is the strategy underpinning a biological survey. It details the sampling method implemented in a particular survey including how any stations, plots, traps, sensors, and/or transects are positioned. Historically, only 2 terms were available to structure and relate different levels of survey design in a dataset: term:dwc[dwc:eventID] and term:dwc[dwc:parentEventID]. One additional Darwin Core Event term, term:dwc[dwc:fieldNumber], provided a means by which to relate a sampling Event with a dataset- or project-specific field number. The Humboldt extension provides an additional 2 terms (term:eco[eco:siteCount] and term:eco[eco:siteNestingDescription]) to better support complex or nested survey designs. 
 
 [NOTE]
 .*Event data in GBIF*
 ====
 * Any dataset to be published using the DwC Event core must have at least one Event record. +
-* Each term:dwc[dwc:eventID] in a dataset must be unique within the dataset. Use of a persistent globally unique identifier (GUID) is recommended. A GUID should be globally unique across all datasets, but at the bare minimum, must be unique within a dataset. A unique term:dwc[dwc:eventID] should be reused between datasets where appropriate (for example, where data collected during the same sampling event are published as multiple datasets). See
+* Each term:dwc[dwc:eventID] in a dataset must be unique within the dataset. Use of a persistent globally unique identifier (GUID) is recommended to ensure that the GUID is unique across all datasets. A unique term:dwc[dwc:eventID] should be reused between datasets where appropriate (for example, where data collected during the same sampling event are published as multiple datasets). See
 https://assets.ctfassets.net/uo17ejk9rkwj/8aIUAbLo0oycyMiM2IKUS/363edf7ab4558460cfe1ef140567450f/persistent_identifiers_guide_en_v1.pdf[A
-Beginner’s Guide to Persistent Identifiers^] for guidance in creating persistent identifiers. Note that your field numbers can be reported using term:dwc[dwc:fieldNumber]. +
-* An Event is not required to have associated organism Occurrence data. If organism Occurrence or non-detection data are available, they are connected via the term:dwc[dwc:eventID] in the Event to the 
-https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[Occurrence extension^]. +
+Beginner’s Guide to Persistent Identifiers^] for guidance in creating persistent identifiers. Note that your field numbers should be reported using term:dwc[dwc:fieldNumber]. +
+* An Event is not required to have associated organism Occurrence data. If organism Occurrence or non-detection data are available, they will be linked via the term:dwc[dwc:eventID] in the `occurrence` table using the 
+https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[occurrence extension^]. +
 * Other DwC Event extensions, including https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[occurrence], https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[extended
-measurement or fact^], and https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[relevé^] extensions, can be connected to any appropriate Event via the term:dwc[dwc:eventID].
+measurement or fact^], and https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[relevé^] extensions, can be linked to any appropriate Event via the term:dwc[dwc:eventID].
 ====
 
 *Non-nested datasets*
@@ -75,11 +78,24 @@ Nested hierarchies are established by relating a child Event to a parent Event t
 * Each Event in a nested dataset must have a unique term:dwc[dwc:eventID]. +
 * Each child Event should include the term:dwc[dwc:parentEventID] of its parent in term:dwc[dwc:parentEventID].
 
+In practice, this means that the parent and the child will each have a unique term:dwc[dwc:eventID]. To create the parent-child relationship, the parent Event's term:dwc[dwc:eventID] will be also be reported as the child Event's term:dwc[dwc:parentEventID].
+
+[caption=]
+.Simple example illustrating how a parent-child relationship between two nested Events would look using Event identifiers.
+|===
+| term:dwc[dwc:parentEventID] | term:dwc[dwc:eventID]
+|
+| event:site-1
+
+| event:site-1
+| event:site-1:t1
+
+|===
 
 In addition to Event and parent Event identifiers:
 
-* *Site count and site nesting description:* Nested datasets should, at the parent Event level, include the total number of sites sampled in term:eco[eco:siteCount] and provide a textual description of the survey design or site sampling structure using term:eco[eco:siteNestingDescription]. +
-* *Field number:* If the survey data include a field number for each specific Event, this should be shared using term:dwc[dwc:fieldNumber].
+* *Site count and site nesting description:* Nested datasets should include the total number of sites sampled in term:eco[eco:siteCount] and provide a textual description of the survey design or site sampling structure using term:eco[eco:siteNestingDescription] for each parent Event for which the information is available. +
+* *Field number:* If the survey data include a field number for a specific Event, this should be shared using term:dwc[dwc:fieldNumber].
 
 [caption=]
 .Event hierarchy terms, their recommended usage (status), and example data entries.
