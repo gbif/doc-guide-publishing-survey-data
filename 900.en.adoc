@@ -21,7 +21,7 @@ For any remaining questions, reach out for assistance from:
 
 == Feedback
 
-The authors appreciate every opportunity to improve the guide. Feedback should be submitted as a GitHub issue. If you are unfamiliar of the with this process, refer to the instructions below: 
+The authors appreciate every opportunity to improve this guide. If you would like to provide feedback, please do so by submitting a GitHub issue. If you are unfamiliar with this process, refer to the instructions below: 
 
 * Create a GitHub account (see https://www.vimeo.com/430640810[video how-to^]).
 * If you see something, say something, by creating or commenting on issues on GitHub (see https://vimeo.com/430632177[video how-to^]). Please refer to specific sections or lines in your recommendations.
