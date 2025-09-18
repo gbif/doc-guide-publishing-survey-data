@@ -3,17 +3,15 @@
 [IMPORTANT]
 ====
 Occurrence information should be saved to a DWC-A `occurrence` file. 
-
-See the data/event_template_wHE_occurrence-table.csv[occurrence^] table in the data mapping template.
 ====
 
-Each DwC Event can be associated with one or more Occurrence records of individual organisms or taxa. Occurrence information is mapped and linked to a survey Event using the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[DwC occurrence extension^]. Each Occurrence record can be mapped to only a single survey Event; however, Occurrence records can be link to any event level. In the case of a nested hierarchy, the recommended best practice is to link each Occurrence to the lowest possible event level to maintain specificity. Occurrence information should be contained in the `occurrence` table of the DwC-A.
+Any DwC Event can be associated with one or more Occurrence records. Occurrence information is mapped using the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[DwC occurrence extension^] and linked to an Event via the appropriate term:dwc[dwc:eventID]. Each Occurrence record can be mapped to only a single survey Event; however, Occurrence records can be link to any Event level. In the case of a nested hierarchy, the recommended best practice is to link each Occurrence to the lowest possible Event level to maintain specificity. Occurrence information should be contained in the `occurrence` table of the DwC-A.
 
 Each organism Occurrence must include the following information:
 
 * *Event ID (term:dwc[dwc:eventID]):* Links the Occurrence to the correct Event. +
 * *Occurrence ID (term:dwc[dwc:occurrenceID]):* A unique identifier for each Occurrence. +
-* *Scientific name (term:dwc[dwc:scientificName]):* The most precise (lowest rank) taxonomic identification of the reported organism. +
+* *Scientific name (term:dwc[dwc:scientificName]):* The most precise (lowest rank) taxonomic identification of the reported organism(s). +
 * *Basis of record (term:dwc[dwc:basisOfRecord]):* The nature of the Occurrence (e.g. human observation, material specimen).
 
 === Reporting multiple individuals as a single Occurrence
@@ -25,7 +23,7 @@ If multiple individuals of the same taxonomic classification are observed and no
 * the taxonomic classification of the organisms reported in term:dwc[dwc:scientificName], and +
 * the quantity and unit of organisms observed reported in the paired terms term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType].
 
-For example, if four hooded crows (_Corvus cornix_) were observed, a single occurrence with one term:dwc[dwc:occurrenceID] should be reported.
+For example, if four hooded crows (_Corvus cornix_) were observed, a single occurrence with one term:dwc[dwc:occurrenceID] should be reported. See the table below.
 
 [width="99%",cols="<20%,<16%,<16%,<16%,16%,16%",options="header",]
 |===
@@ -45,9 +43,9 @@ For example, if four hooded crows (_Corvus cornix_) were observed, a single occu
 
 === Reporting multiple individuals as multiple occurrences
 
-If multiple individuals of the same taxonomic classification are observed and additional information about the organisms (e.g., life stage, sex) is collected, then a unique occurrence record (row in the table) should be created for each unique combination of taxonomic identification-organism traits.
+If multiple individuals of the same taxonomic classification are observed and additional information about the organisms (e.g., life stage, sex) is collected, then a unique Occurrence record (row in the `occurrence` table) should be created for each unique combination of taxonomic identification-organism traits.
 
-For example, if 1 adult male and 3 adult females Indian gharials (_Gavialis gangeticus_) were observed alive, two occurrences, each with a unique term:dwc[dwc:occurrenceID] would be reported.
+For example, if 1 adult male and 3 adult females Indian gharials (_Gavialis gangeticus_) were observed alive, two Occurrence records, each with a unique term:dwc[dwc:occurrenceID] would be reported. See the table below.
 
 [width="99%",cols="<12%,<11%,<11%,<11%,11%,11%,11%,11%,11%",options="header",]
 |===
@@ -138,31 +136,31 @@ The table below outlines the minimum required and recommended terms for each Occ
 |`native`
 
 |term:dwc[dwc:vitality]
-|`dead`
+|`alive`
 |===
 
 === Reporting absences
 
 <<absence, *Absences*>> are defined here as the lack of detection of organisms that are explicitly stated to be part of the target taxonomic scope. Information regarding the absence of detection of a type of taxon can be reported explicitly or implicitly within a DwC-A. 
 
-The reporting of absences only provides meaningful information when term:eco[eco:isTaxonomicScopeFullyReported] is `true`. 
+The reporting of absences only provides meaningful information when taxonomic scope is fully reported (term:eco[eco:isTaxonomicScopeFullyReported] = `true`). 
 
-If term:eco[eco:isTaxonomicScopeFullyReported] = `false`, Occurrence records of zero individuals are uninterpretable because the user of these data cannot know whether there are any taxa that were not detected but were not reported with Occurrence records of zero individuals. Implicit reporting of absences is impossible if term:eco[eco:isTaxonomicScopeFullyReported] = `false`.
+If taxaonomic scope is not fully reported (term:eco[eco:isTaxonomicScopeFullyReported] = `false`), Occurrence records of zero individuals are uninterpretable because the user of these data cannot know whether there are any taxa that were not detected but were not reported with Occurrence records of zero individuals. Implicit reporting of absences is impossible if taxaonomic scope is not fully reported (term:eco[eco:isTaxonomicScopeFullyReported] = `false`).
 
-If absences are implicitly reported, each end user of data will need to reconstruct explicit absences for themselves for each taxon of interest to them because any unreported taxon (i.e. any taxon without an Occurrence record) is known to be absent. Again, this will only be possible if a taxonomic scope is reported and term:eco[eco:isTaxonomicScopeFullyReported] = `true`.
+*If absences are implicitly reported*, each end user of data will need to reconstruct explicit absences for themselves for each taxon of interest to them because any unreported taxon (i.e. any taxon without an Occurrence record) is known to be absent. Again, this will only be possible if a taxonomic scope is fully reported (term:eco[eco:isTaxonomicScopeFullyReported] = `true`).
 
 
 *Explicit documentation of absences*
 
-Explicit reporting of absence or non-detection means that the dataset reports, at the Occurrence level (in the `occurrence` table), the lack of detection for each relevant dwc:Taxon. When the taxonomic scope is highly constrained, for example being restricted to only one or a few taxa, it is feasible to include Occurrence records for each of the non-detected taxa within the data, with each absence being denoted by reporting dwc:OccurrenceStatus as `absent`. To document absences with a DwC-A by including zero-count Occurrence records:
+Explicit reporting of absence or non-detection means that the dataset reports, at the Occurrence level (in the `occurrence` table), the lack of detection for each relevant dwc:Taxon. When the taxonomic scope is highly constrained, for example being restricted to only one or a few taxa, it is feasible to include Occurrence records for each of the non-detected taxa within the data, with each absence being denoted by reporting dwc:OccurrenceStatus as `absent`. To explicitly document taxonomic absences in a DwC-A by including zero-count Occurrence records:
 
-* In the `occurrence` table:
-** For each occurrence to be reported absent, term:dwc[dwc:occurrenceStatus] = `absent`. +
+* In the `occurrence` table, for each Occurrence to be reported absent:
+** Populate required fields, e.g., term:dwc[dwc:eventID] (refer to the link:#mapping-occurrence-information[list of required Occurrence terms]) +
+** term:dwc[dwc:occurrenceStatus] = `absent`. +
 ** Recommended best practice is to also populate term:dwc[dwc:individualCount] and term:dwc[dwc:organismQuantity] as `0` and term:dwc[dwc:organismQuantityType] as `Individuals`. +
 * In the `event` table:
-** If one or more absences are reported at any taxonomic level (term:dwc[dwc:occurrenceStatus] = `absent`), then term:eco[eco:isAbsenceReported] = `true` at each relevant Event level.
-
-* A list of absent taxa can be provided using term:eco[eco:absentTaxa] at all relevant Event levels. See the section 'link:#absences[Absence]' for details on reporting absence information at the Event level.
+** If one or more absences are reported at any taxonomic level (term:dwc[dwc:occurrenceStatus] = `absent`), then term:eco[eco:isAbsenceReported] = `true` for each relevant Event.
+** A list of absent taxa can be provided using term:eco[eco:absentTaxa] at all relevant Events. See the section 'link:#absences[Absence]' for details on reporting absence information at the Event level.
 
 Absences should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey. Absence cannot be asserted for bycatch.
 
@@ -170,11 +168,10 @@ Absences should only be reported for taxa within the stated taxonomic and/or org
 
 Implicit reporting of absence or non-detection, on the otherhand, means that the lack of detection of a dwc:Taxon is indirectly suggested through the lack of Occurrence record in the `occurrence` table. When taxonomic scopes are broader, and include hundreds or thousands of species (e.g., a taxonomic scope of a dataset that includes all species of birds in the world), then is not feasible to add occurrence records of zero individuals for all of the species not detected. To implicitly document absences in a DwC-A, term:eco[eco:isTaxonomicScopeFullyReported] must be `true` for the Event and either term:eco[eco:targetTaxonomicScope] or term:eco[eco:excludedTaxonomicScope] must be specified. Then:
 
-* In the `occurrence` table, for each taxon to be implicitly reported absent, there will not be any occurrence record created.
-* In the `event` table, term:eco[eco:isAbsenceReported] = `false` for parent Events at all relevant levels because no absences are explicitly reported. See the section 'link:#absences[Absence]' for details on reporting absence information at the Event level.
+* In the `occurrence` table, for each taxon to be implicitly reported absent, there will not be any Occurrence record created.
+* In the `event` table, term:eco[eco:isAbsenceReported] = `false` for all relevant Events because no absences are explicitly reported. See the section 'link:#absences[Absence]' for details on reporting absence information at the Event level.
 
 Absences should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey. Absence cannot be asserted for bycatch.
-
 
 [caption=""]
 .Terms to indicate absence, or non-detection, and their recommendation usage.
@@ -217,9 +214,9 @@ Absences should only be reported for taxa within the stated taxonomic and/or org
 
 To capture <<abundance, abundance>> in a dataset or at a specific Event level:
 
-* In the `occurrence` table, use the paired terms term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] to report the observed abundance for each reported Occurrence. For example, if 3 individuals of a species were observed:
-** term:dwc[dwc:organismQuantity] = `3` +
-** term:dwc[dwc:organismQuantityType] = `Individuals` +
+* In the `occurrence` table, 
+** Populate required fields, e.g., term:dwc[dwc:eventID] (refer to the link:#mapping-occurrence-information[list of required Occurrence terms]) +
+** use the paired terms term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] to report the observed abundance for each reported Occurrence. For example, if 3 individuals of a species were observed, term:dwc[dwc:organismQuantity] = `3` and term:dwc[dwc:organismQuantityType] = `Individuals`.
 * In the `event` table:
 ** The inclusion of abundance information in the dataset, even if this information is not reported for all taxa, should be indicated by populating term:eco[eco:isAbundanceReported] as `true`. +
 ** The existence of an abundance cap should be captured using the Boolean term term:eco[eco:isAbundanceCapReported] and the value of that cap reported in term:eco[eco:abundanceCap].
@@ -265,7 +262,7 @@ See the section 'link:#abundance[Abundance]' for details on reporting abundance 
 
 === Capturing species co-occurrence and species interactions
 
-The https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[resource relationship extension^] can be used to link information related across multiple Occurrences (may be from the same or from different events), such as:
+The https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[resource relationship extension^] can be used to link information related across multiple Occurrences (may be from the same or from different Events), such as:
 
 *An Occurrence with another Occurrence*
 
