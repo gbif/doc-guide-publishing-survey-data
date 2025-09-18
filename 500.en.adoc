@@ -81,14 +81,14 @@ Nested hierarchies are established by relating a child Event to a parent Event t
 In practice, this means that the parent and the child will each have a unique term:dwc[dwc:eventID]. To create the parent-child relationship, the parent Event's term:dwc[dwc:eventID] will be also be reported as the child Event's term:dwc[dwc:parentEventID].
 
 [caption=]
-.Simple example illustrating how a parent-child relationship between two nested Events would look using Event identifiers.
+.Simple example illustrating how a parent-child relationship between two Events would look using Event identifiers.
 |===
 | term:dwc[dwc:parentEventID] | term:dwc[dwc:eventID]
 |
-| event:site-1
+| survey2022
 
-| event:site-1
-| event:site-1:t1
+| survey2022
+| survey2022_a-2
 
 |===
 
@@ -124,21 +124,21 @@ In addition to Event and parent Event identifiers:
 
 === Survey site
 
-An Event <<site, *site*>> is the location at which observations are made or samples and/or measurements are taken. Sharing thorough information about a sampling Event site, including description, locality, and vegetative cover provides critical context to potential data users about conditions in which a survey was conducted. Information about the location of each survey site includes best-practice georeferences, site description (locality name, habitat type, microhabitat), and environmental data (e.g., physical parameters, vegetarian, water quality) should be populated at every Event level. 
+An Event <<site, *site*>> is the location at which observations are made or samples and/or measurements are taken. Sharing thorough information about a sampling Event site, including description, locality, and vegetative cover provides critical context to potential data users about conditions in which a survey was conducted. Information about the location of each survey site such best-practice georeferences, site description (locality name, habitat type, microhabitat), and environmental data (e.g., physical parameters, vegetarian, water quality) should be populated at for each Event for which the information is available. 
 
 NOTE: The Darwin Core site terms listed in this section are not comprehensive. Explore all http://purl.org/dc/terms/Location[Darwin Core Location class terms^] and the https://eco.tdwg.org/terms/#site[Humboldt Extension site terms^].
 
 ==== Site description
 
-Additional context about a survey Event site can be provided through myriad terms for every Event level that the information is available, including:
+Additional context about a survey site can be reported through myriad terms for every Event that the information is available, including:
 
-* *Site names:* individual sampling Event site names can be reported using term:eco[eco:verbatimSiteNames]. A concatenated list of site names can be provided at higher Event levels with values separated using a pipe separator, `|`.  +
-* *Habitat:* feported habitat at a sampling Event site should be recorded in term:dwc[dwc:habitat]. A concatenated list of habitats can be provided at higher Event levels with values separated using a pipe separator, `|`. Use of a controlled vocabulary is recommended. Note that a single controlled vocabulary does not exist for this term yet but attempts to classify have been and continue to be made (for example, see <<Keith2020>> or <<Campbell2021>>).  +
-* *Weather:* reported weather during a sampling Event should be reported using term:eco[eco:reportedWeather]. If you have detailed weather data (e.g., weather station or data logger produced data) archived elsewhere, you may provide a link here. +
-* *Extreme conditions:* reported extreme conditions at a survey site at the time of the sampling Event should be recorded using term:eco[eco:reportedExtremeConditions]. +
+* *Site names:* survey site names can be reported using term:eco[eco:verbatimSiteNames]. A concatenated list of site names can be provided at higher Event levels with values separated using a pipe separator, `|`.  +
+* *Habitat:* reported habitat at a survey site should be recorded in term:dwc[dwc:habitat]. A concatenated list of habitats can be provided at higher Event levels with values separated using a pipe separator, `|`. Use of a controlled vocabulary is recommended. Note that a single controlled vocabulary does not exist for this term yet but attempts to classify habitat have been and continue to be made (for example, see <<Keith2020>> or <<Campbell2021>>).  +
+* *Weather:* reported weather during a survey Event should be reported using term:eco[eco:reportedWeather]. If you have detailed weather data (e.g., weather station or data logger produced data) archived elsewhere, you may provide a link here. +
+* *Extreme conditions:* reported extreme conditions at a site at the time of the survey should be recorded in term:eco[eco:reportedExtremeConditions]. +
 * *Verbatim site description:* verbatim comments (e.g., the original textual description) about a site or sites should be recorded in term:eco[eco:verbatimSiteDescriptions].
 
-These terms should be populated at every Event level for which the information is accurate. 
+These terms should be populated for each individual Event for which the information is accurate. 
 
 [caption=]
 .General event site terms, their recommended usage (status), and example data entries
@@ -164,29 +164,30 @@ These terms should be populated at every Event level for which the information i
 
 ==== Site locality
 
-The geographic location and extent of each survey Event site should be provided. Historically, five terms are strongly recommended for Event datasets in GBIF:
+The geographic location and extent of each survey site should be reported. Five terms are currently recommended for Event datasets:
 
-* *Location ID:* a unique identifier for each sampling Event site should be shared in term:dwc[dwc:locationID]. If a site is visited repeated (as in long-term monitoring and other repeated survey efforts), term:dwc[dwc:locationID] should be consistent across Events within a dataset and across datasets in situations where the same survey sites are surveyed in other datasets. +
-* *Country code:* the ISO two letter code for the country, region, or economy in which the survey takes place should be provided in term:dwc[dwc:countryCode]. +
-* *Latitude-Longitude:* The decimal latitude and longitude and geodetic datum location of each Event site should be reported in term:dwc[dwc:decimalLatitude], term:dwc[dwc:decimalLongitude], and term:dwc[dwc:geodeticDatum]. All three terms should be populated together.
-** If geographic coordinates are not in decimal latitude and decimal longitude format, use the terms term:dwc[dwc:verbatimLatitude], term:dwc[dwc:verbatimLongitude], and term:dwc[dwc:verbatimCoordinateSystem] to report geographic locality instead. +
+* *Location ID:* a unique identifier for each survey site should be shared in term:dwc[dwc:locationID]. If a site is visited repeated (as in long-term monitoring and other repeated survey efforts), term:dwc[dwc:locationID] should be consistent across Events within a dataset and across datasets in situations where the same survey sites are visited in other datasets. +
+* *Country code:* the ISO two letter code for the country, region, or economy in which a survey takes place should be provided in term:dwc[dwc:countryCode]. +
+* *Latitude-longitude:* The decimal latitude and longitude and geodetic datum location of each survey site should be reported in term:dwc[dwc:decimalLatitude], term:dwc[dwc:decimalLongitude], and term:dwc[dwc:geodeticDatum]. All three terms should be populated together.
+** If the geographic coordinates of your dataset are not in decimal latitude and decimal longitude format, use the terms term:dwc[dwc:verbatimLatitude], term:dwc[dwc:verbatimLongitude], and term:dwc[dwc:verbatimCoordinateSystem] to report geographic location instead. +
 ** Note that this is a minimum recommendation and does not make data fit for the maximum number of purposes. It is highly recommended to provide georeference information that follow best practices.
 
 ==== Survey site area
 
-Reporting additional information about the targeted area and the area(s) actually sampled during a survey is recommended to provide greater context about the geospatial scope of a survey. The Humboldt extension includes two sets of paired terms to report survey area of an Event: _geospatial scope_ terms and _total area sampled_ terms. 
+Reporting additional information about the areas targeted for sampling and the area(s) actually sampled during a survey is recommended to provide greater context about the geospatial scope of a survey. The Humboldt extension includes two sets of paired terms to report the survey area of an Event: _geospatial scope_ terms and _total area sampled_ terms. 
 
 * *_Geospatial scope_* terms (term:eco[eco:geospatialScopeAreaValue] and term:eco[eco:geospatialScopeAreaUnit]) define the geospatial scope or extent of a survey or sampling Event. Geospatial scope terms can be applied at any Event level and should report the entire area considered for the survey.
 
-* *_Total area sampled_* terms (term:eco[eco:totalAreaSampledValue] and term:eco[eco:totalAreaSampledUnit]) report the area sampled during an Event. Total area sampled terms can be populated at any Event level but are most commonly applied at lower Event levels to, for example, capture the survey extent of a single plot or the cummulative area surveyed in a series of plots within a site. 
+* *_Total area sampled_* terms (term:eco[eco:totalAreaSampledValue] and term:eco[eco:totalAreaSampledUnit]) report the area actually sampled during an Event. Total area sampled terms can be populated at any Event level but are most commonly applied at lower Event levels to, for example, capture the survey extent of a single plot or (at higher Event levels) the cummulative area surveyed in a series of plots within a site. 
 
 In *non-nested event datasets*, geospatial scope terms and total area sampled terms may contain the same values. 
 
 In *nested datasets*, geospatial scope terms will be equal to or greater than the area values shared in total area sampled terms. See Box 2 for an example.
 
 *_If the surveyed unit is not an area_* (e.g., `km²` or `m²`), term:dwc[dwc:sampleSizeValue] and term:dwc[dwc:sampleSizeUnit] should be used instead. Examples include:
-* point locations (such as a sensor or trap),
-* distances (such as transect lengths), and
+
+* point locations (such as a sensor or trap), +
+* distances (such as transect lengths), and +
 * volumetric measures (such as a filtered volume of water in a zooplankton haul).
 
 ****
@@ -257,12 +258,12 @@ For each of the 130 associated child Events representing the individual plots, t
 
 ==== Vegetation cover
 
-If vegetation cover data are available for a site (for example, if a relevé was conducted or if a verbatim site description was recorded), it can be reported in three ways:
+If vegetation cover data are available for a site (for example, if a relevé was conducted or if a textual site description was provided), it can be reported in three ways:
 
-* *Verbatim vegetation cover:* a verbatim description of vegetation cover can be captured in term:eco[eco:verbatimSiteDescriptions]. +
+* *Verbatim vegetation cover:* a verbatim or textual description of vegetation cover can be captured using term:eco[eco:verbatimSiteDescriptions]. +
 * *Percent vegetation cover:* simple percent vegetation cover can be recorded as structured data using the https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[extended
 measurement or fact extension^]. Data reported using emof should be linked to the appropriate Event using term:dwc:[dwc:eventID]. See the 'link:#extended-measurement-or-fact-emof-extension[Extended measurement or fact (eMoF) extension]' section for details on using the extension. +
-* *Vegetation plot survey:* vegetation plot survey information can be reported using the https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[relevé extension^]. Data from individual relevé's should be linked to the appropriate Event using term:dwc:[dwc:eventID]. See the 'link:#relevé-extension[Relevé extension]' section for details on using the extension.
+* *Vegetation plot survey:* vegetation plot survey information (that is, data collected during a relevé) can be reported using the https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[relevé extension^]. Data from individual relevé's should be linked to the appropriate Event using term:dwc:[dwc:eventID]. See the 'link:#relevé-extension[Relevé extension]' section for details on using the extension.
 
 There is no single best method of reporting vegetation cover information for a site, although it is recommended to choose the most explicit method possible based on the type of information avilable. 
 
@@ -272,13 +273,11 @@ If vegetation cover is reported using one of the three methods described above, 
 
 Complete and accurate reporting of the temporal scope of a survey is crucial to asserting Event structure and providing key contextual information about sampling conditions.
 
-*Event date, time, and duration*
-
-Each Event should report a date or date range in term:dwc[dwc:eventDate] regardless of its hierarchical level. *Nested datasets* should, at the parent Event level, report a date range encompassing all survey dates.
+Each Event should include a date or date range in term:dwc[dwc:eventDate]. *Nested datasets* should, at the parent Event level, report a date range encompassing the dates of all relevant child Events.
 
 The time and duration of each Event should be reported using term:dwc[dwc:eventTime] and the paired terms term:eco[eco:eventDurationValue] and term:eco[eco:eventDurationUnit] respectively.
 
-Refer to GBIF’s technical documentation on https://techdocs.gbif.org/en/data-processing/temporal-interpretation[date and time interpretation^] for more guidance on reporting event dates and times.
+Refer to GBIF’s technical documentation on https://techdocs.gbif.org/en/data-processing/temporal-interpretation[date and time interpretation^] for more guidance on reporting Event dates and times.
 
 [caption=""]
 .Event date and temporal scope terms, their recommended usage (status), and example data entries.
@@ -307,7 +306,7 @@ Refer to GBIF’s technical documentation on https://techdocs.gbif.org/en/data-p
 
 [IMPORTANT]
 ====
-Sampling protocol terms should be populated at every Event level possible as inheritance in either direction should not be assumed or inferred between Event levels.
+Sampling protocol terms should be populated for every Event regardless of hierarchical level as inheritance in either direction should not be assumed or inferred between Event levels.
 ====
 
 ==== Event type
@@ -318,9 +317,9 @@ Biological survey Event data can result from a wide variety of effort types (e.g
 [discrete]
 ==== Identifying Event type
 
-term:dwc[dwc:eventType] should provide a high level overview or name of the type of survey but should not be so specific as to overlap with sampling protocol. There is no single, standardized vocabulary for term:dwc[dwc:eventType]. If your organization or community has a controlled vocabulary, it is recommended to apply terms from that. Otherwise, you can refer to the common event types below for guidance. More than one term may apply to an Event; choose the term that fits most closely.
+term:dwc[dwc:eventType] should provide a high level overview or broadly cateorize the type of survey without being so specific as to overlap with sampling protocol. There is no single, standardized vocabulary for term:dwc[dwc:eventType]. If your organization or community has a controlled vocabulary, it is recommended to apply terms from that. Otherwise, you can refer to the common Event types below for guidance. More than one term may apply to an Event; choose the term that fits most closely.
 
-* *Project*: Projects are structured initiatives with an explicitly stated objective or suite of objectives and with clear targets, timelines, and deliverables. Projects typically are linked to non-biological information identifying participating organizations and people (agents), funding agencies, and other high-level administrative information. Biological sampling may only be one facet of a project’s scope. `Project` as an term:dwc[dwc:eventType] is typically most appropriate only at the highest Event level in a nested dataset. +
+* *Project*: Projects are structured initiatives with an explicitly stated objective or suite of objectives and with clear targets, timelines, and deliverables. Projects typically are linked to non-biological information identifying participating organizations and people (agents), funding agencies, and other high-level administrative information. Biological sampling may be only one facet of a project’s scope. `Project` as an term:dwc[dwc:eventType] is typically most appropriate only at the highest Event level in a nested dataset. +
 * *Expedition*: An expedition is an organized information gathering venture that inherently includes multiple sampling Events and event types. Expeditions may include multiple taxonomic and/organismal scopes, any number of documented sampling protocols, and varying degrees of complexity in survey design. `Expedition` as an term:dwc[dwc:eventType] is typically most appropriate at higher Event levels in nested hierarchies. +
 * *Survey*: A survey is a broad but systematic effort to collect information about the biological organisms in a specific area at a given time. Surveys typically included at least one documented protocol and may or may not have an explicitly defined taxonomic and/or organismal scope. `Survey` is the most general Event type term and can be applied as an term:dwc[dwc:eventType] at any Event level. +
 * *Inventory*: An inventory is a comprehensive, focused survey of the taxa present in a specific area over an explicit period of time. Inventories typically have an explicit taxonomic and/or organismal scope and a well-defined protocol. `Inventory` is typically most appropriate as an term:dwc[dwc:eventType] at lower Event levels in nested hierarchies. +
@@ -333,9 +332,11 @@ formal biologists as well as the broader, general public. `Bioblitz` as an term:
 
 *`Inventory` Event types*
 
-* If term:dwc[dwc:eventType] = `inventory`, the type(s) of search implemented (e.g., restricted search, open search, opportunistic search, trap or sample, compilation) must be reported in term:eco[eco:inventoryTypes]. +
-* If term:eco[eco:inventoryTypes] = `compilation`, the compilation type should be reported using term:eco[eco:compilationTypes] and data sources listed in term:eco[eco:compilationSourceTypes].
-** A *[[compilation]]* is a summary inventory resulting from the combination of multiple existing inventories (as described in <<Guralnick2018>>). Compilations are aggregates of multiple studies, and may combine surveys employing different protocols, processes, and observers, often with variable reporting of the methods employed or other compiled data sources and literature searches.
+If term:dwc[dwc:eventType] = `inventory`, the type(s) of search implemented (e.g., restricted search, open search, opportunistic search, trap or sample, compilation) must be reported in term:eco[eco:inventoryTypes]. 
+
+If term:eco[eco:inventoryTypes] = `compilation`, the compilation type should be reported using term:eco[eco:compilationTypes] and data sources listed in term:eco[eco:compilationSourceTypes].
+
+* A *[[compilation]]* is a summary inventory resulting from the combination of multiple existing inventories (as described in <<Guralnick2018>>). Compilations are aggregates of multiple studies and may combine surveys employing different protocols, processes, and observers, often with variable reporting of the methods employed or other compiled data sources and literature searches.
 
 [caption=""]
 .Event type terms, their recommended usage (status), and example data entries
@@ -359,7 +360,7 @@ formal biologists as well as the broader, general public. `Bioblitz` as an term:
 
 ==== Sampling protocol
 
-Four protocol terms exist, however, only 1 term is currently required to publish a sampling Event dataset in GBIF: term:dwc[dwc:samplingProtocol]. This requirement is because the initial Darwin Core Event classification only included the one term. The Humboldt extension introduced an additional three terms to capture information about sampling protocol in a more structured manner:
+Four protocol terms exist; however, only 1 term is currently required to publish an Event dataset in GBIF: term:dwc[dwc:samplingProtocol]. This requirement is because the initial Darwin Core Event classification only included the one term. The Humboldt extension introduced an additional three terms to capture information about sampling protocol in a more explicit manner:
 
 * term:eco[eco:protocolNames] +
 * term:eco[eco:protocolDescriptions] +
@@ -368,9 +369,9 @@ Four protocol terms exist, however, only 1 term is currently required to publish
 ****
 [discrete]
 ==== *Updated recommended best practice for reporting sampling protocol*
-* Report the name(s) of the sampling protocol with term:eco[eco:protocolNames]. +
-* Capture details of the methods or protocols implemented using term:eco[eco:protocolDescriptions]. +
-* Provide citation information for the protocol via term:eco[eco:protocolReferences]. +
+* Report the name(s) of the sampling protocol in term:eco[eco:protocolNames]. +
+* Capture details of the methods or protocols implemented in term:eco[eco:protocolDescriptions]. +
+* Provide citation information for the protocol in term:eco[eco:protocolReferences]. +
 * Retain term:dwc[dwc:samplingProtocol] as a verbatim field of term:eco[eco:protocolNames].
 ****
 
@@ -396,18 +397,20 @@ Four protocol terms exist, however, only 1 term is currently required to publish
 
 ==== Absences
 
-*Organismal <<absence, absences>>* are defined here as the lack of detection of organisms that are members of an explicitly stated as part of the target taxonomic scope. Absence information is critical to understanding species´ biogeography, modeling species' responses to climate- and human-induced environmental change, conservation planning and resource management, monitoring, restorations, eradications or reintroductions, or other aspects of biodiversity dynamics.
+*Organismal <<absence, absences>>* are defined here as the lack of detection of organisms that are members of an explicitly stated target taxonomic scope. Absence information is critical to understanding species´ biogeography, modeling species' responses to climate- and human-induced environmental change, conservation planning and resource management, monitoring and restoration efforts, eradications or reintroductions, and other aspects of biodiversity dynamics.
 
-* If the dataset includes absence information for one or more occurrences (to be reported in the `occurrence` table as term:dwc[dwc:occurrenceStatus] = `absent`), then term:eco[eco:isAbsenceReported] = `true`. +
-* A list of absent taxa can be provided using term:eco[eco:absentTaxa] at all relevant Event levels. Absences should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey and should use scientific nomenclature. Absence cannot be asserted for bycatch.
+* If the dataset includes absence information for one or more organisms (to be reported in the `occurrence` table as term:dwc[dwc:occurrenceStatus] = `absent`), then term:eco[eco:isAbsenceReported] = `true`. +
+* A list of absent taxa can be provided using term:eco[eco:absentTaxa] for all relevant Events.  Best practice is to use scientific names to report absent taxa. 
+** Absences should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey and should use scientific nomenclature. 
+** Absence cannot be asserted for bycatch.
 
 See the section 'link:#reporting-absences[Reporting absences]' for details on reporting absence information at the Occurrence level.
 
 ==== Abundance
 
-<<abundance, *Abundance*>> is quantitative measure of the same taxonomic designation in a particular area at a specific time. Abundance data are a key indicator of ecological health. They are necessary for evaluating ecological patterns and dynamics, managing invasive species, informing effective habitat and ecosystem management, and for practical tasks such as quantifying existing resource.
+<<abundance, *Abundance*>> is a quantitative measure of the same taxonomic designation in a particular area at a specific time. Abundance data are a key indicator of ecological health. They are necessary for evaluating ecological patterns and dynamics, managing invasive species, informing effective habitat and ecosystem management, and for practical tasks such as quantifying existing resource.
 
-* If the dataset includes any abundance information, term:eco[eco:isAbundanceReported] = `true` for all appropriate Event levels. If there is an abundance cap, then term:eco[eco:isAbundanceCapReported] = `true` and the value of the cap should be reported in term:eco[eco:abundanceCap]. +
+* If the dataset includes any abundance information, term:eco[eco:isAbundanceReported] = `true` for all appropriate Events. If there is an abundance cap (that is, if there was a designated maximum value at which abundance was no longer counted), then term:eco[eco:isAbundanceCapReported] = `true` and the value of the cap should be reported in term:eco[eco:abundanceCap]. +
 * If there is no abundance cap, then term:eco[eco:isAbundanceCapReported] = `false`.
 
 See the section 'link:#abundance-information[Abundance information]' for details on reporting absence information at the Occurrence level.
@@ -435,55 +438,51 @@ See the section 'link:#abundance-information[Abundance information]' for details
 
 ==== Material samples
 
-A <<materialSample, *material sample*>> (term:dwc[dwc:MaterialSample]) is a physical entity ´... that represents an entity of interest in whole or in part.´ Essentially, material samples are specimens collected during a survey Event. A material sample may consist of an entire organism, part of an organism, or a genetic sample, or even multiple organisms not necessarily of the same taxonomic designation.
+A <<materialSample, *material sample*>> is a physical entity ´_... that represents an entity of interest in whole or in part_´ (see term:dwc[dwc:MaterialSample]). Essentially, material samples are specimens collected during a survey. A material sample may consist of an entire organism, part of an organism, or a genetic sample, or even multiple organisms not necessarily of the same taxonomic designation.
 
-If the dataset includes at least one specimen from which a material sample was taken:
+If the dataset includes at least one specimen from which a material sample was taken, for each relevant Event:
 
-* term:eco[eco:hasMaterialSamples] = `true` at the appropriate child Event level and at any relevant parent Event level, and +
-* the type(s) of materials collected should be listed under term:eco[eco:materialSampleTypes] for each relevant Event level.
+* term:eco[eco:hasMaterialSamples] = `true` and +
+* the type(s) of materials collected should be listed in term:eco[eco:materialSampleTypes].
 
-If the dataset or sampling Event does _not_ include material samples:
-
-* term:eco[eco:hasMaterialSamples] = `false` at all appropriate sampling Event levels.
+If the dataset or Event does _not_ include material samples, term:eco[eco:hasMaterialSamples] = `false`.
 
 ==== Vouchers
 
 A <<voucher, *voucher*>> is a physical specimen or material sample collected and accessioned into a museum collection in support of a specific project or survey.
 
-If the dataset has vouchers:
+If the dataset has vouchers, for each relevant Event:
 
-* term:eco[eco:hasVouchers] = `true` at the appropriate child Event level and at any relevant parent Event level, and +
-* a list of institutions housing them should be shared in term:eco[eco:voucherInstitutions] for each relevant Event level.
+* term:eco[eco:hasVouchers] = `true`, and +
+* a list of institutions housing them should be shared in term:eco[eco:voucherInstitutions].
 
-If the dataset or sampling event does _not_ include vouchers:
-
-* term:eco[eco:hasVouchers] = `false` at all appropriate sampling Event levels.
+If the dataset or sampling event does _not_ include vouchers, term:eco[eco:hasVouchers] = `false`.
 
 ==== Sensitive data: data generalization & information withheld
 
-Although the general recommendation is to share all biodiversity data available at its highest spatio-temporal resolution, situations exist where it is necessary to generalize data prior to sharing a dataset publicly or even withhold information completely. Two terms are available to communicate if data are generalized or withheld from the data: term:dwc[dwc:dataGeneralizations] and term:dwc[dwc:informationWithheld]. While it is the responsibility of the publisher to protect sensitive species occurrence data, it is also the data publisher´s responsibility to clearly communicate any relevant actions taken and to indicate if the full data are available upon request.
+Although the general recommendation is to share all biodiversity data available at its highest spatio-temporal resolution, situations exist where it is necessary to generalize data prior to sharing a dataset publicly or even withhold information completely. Two terms are available to communicate if data are generalized or withheld in a dataset: term:dwc[dwc:dataGeneralizations] and term:dwc[dwc:informationWithheld]. 
 
-How you generalize sensitive data (e.g. restrict the resolution of the data) depends on the species´ category of sensitivity. Where there is low risk of adverse outcomes, unrestricted publication of sensitive species data remains appropriate. See the published guide https://doi.org/10.15468/doc-5jp4-5g10[Current Best Practices for Generalizing Sensitive Species Occurrence Data^] or guidance on when and how to generalize or withhold information sensitive biodiversity data <<Chapman2020>>. The guide is also available in https://docs.gbif.org/sensitive-species-best-practices/master/fr/[French^] and https://docs.gbif.org/sensitive-species-best-practices/master/es/[Spanish^].
+While it is the responsibility of the publisher to protect sensitive species occurrence data, it is also the data publisher´s responsibility to clearly communicate any action(s) taken and to indicate if the full data are available upon request. How you generalize sensitive data (for example, restricting the resolution of the data) depends on the species´ category of sensitivity. Where there is low risk of adverse outcomes, unrestricted publication of sensitive species data may remain appropriate. See the published guide https://doi.org/10.15468/doc-5jp4-5g10[Current Best Practices for Generalizing Sensitive Species Occurrence Data^] or guidance on when and how to generalize or withhold information sensitive biodiversity data <<Chapman2020>>. The guide is also available in https://docs.gbif.org/sensitive-species-best-practices/master/fr/[French^] and https://docs.gbif.org/sensitive-species-best-practices/master/es/[Spanish^].
 
 *Reporting data generalizations*
 
-When generalizing data you should try not to reduce the value of the data for analysis, and a clear summary of the data generalization process should be reported at the appropriate Event level(s) using term:dwc[dwc:dataGeneralizations].
+When generalizing data you should try not to reduce the value of the data for analysis. A clear summary of the data generalization process should be reported for each relevant Event using term:dwc[dwc:dataGeneralizations].
 
-For example, if the spatial resolution of locality data for an event is reduced to the nearest half degree, then term:dwc[dwc:dataGeneralizations] = `Coordinates generalized from original GPS coordinates to the nearest half degree grid cell`  for each event to which this treatment was applied. If the location information was generalized for every sampling event site in a nested hierarchy, then at the parent Event level term:dwc[dwc:dataGeneralizations] = `Coordinates for each event site generalized from original GPS coordinates to the nearest half degree grid cell`.
+For example, if the spatial resolution of locality data for an Event is reduced to the nearest half degree, then term:dwc[dwc:dataGeneralizations] = `Coordinates generalized from original GPS coordinates to the nearest half degree grid cell` for each Event to which this treatment was applied. If the location information was generalized for every survey site in a nested hierarchy, then at the parent Event level term:dwc[dwc:dataGeneralizations] = `Coordinates for each event site generalized from original GPS coordinates to the nearest half degree grid cell`.
 
 *Reporting information withheld*
 
-If specific data are not reported with the dataset, a clarifying statement should be provided at the appropriate Event level using term:dwc[dwc:informationWithheld].
+If specific data are not reported with the dataset, a clarifying statement should be provided with each affected Event using term:dwc[dwc:informationWithheld].
 
 For example, if sensitive species data are purposefully excluded from the published data, term:dwc[dwc:informationWithheld] should include a statement along the lines of `Sensitive species occurrence information not reported`.
 
 ==== Least specific target category quantity inclusive
 
-The term term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive] indicates if the total number of organisms detected for a term:dwc[dwc:Taxon] (including all its subgroups) is shown in one record using the dwc:organismQuantity value. This true/false (Boolean) term helps data users know if the numbers given with term:dwc and term:dwc include all organisms of that dwc:Taxon.
+The term term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive] indicates if the total number of organisms detected for a term:dwc[dwc:Taxon] (including all its subgroups) is shown in one record in term:dwc[dwc:individualCount] or the paried terms term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] in the `occurrence` table. This true/false (Boolean) term helps data users know if the numbers given in these terms include all organisms of that dwc:Taxon.
 
-* For term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive] to be `true`, the values shared in term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] reported in a single Occurrence record are inclusive of all organisms of the dwc:Taxon detected during the survey Event.
+* For term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive] to be `true`, the values shared in term:dwc[dwc:individualCount] or term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] for a single Occurrence record are inclusive of all organisms of that dwc:Taxon detected during the Event.
 
-* For term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive] to be `false`, the values shared in term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] reported in a single occurrence record are NOT inclusive of all organisms of the dwc:Taxon detected during the survey Event. This means that to find the total number of organisms detected for a given dwc:Taxon, you need to add up the dwc:organismQuantity values from several occurrence records within the Event.
+* For term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive] to be `false`, the values shared in term:dwc[dwc:individualCount] or term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] for a single Occurrence record are *not* inclusive of all organisms of the dwc:Taxon detected during the survey Event. This means that to find the total number of organisms detected for a given dwc:Taxon, you need to add up the dwc:organismQuantity values from multiple occurrence records within the Event.
 
 See https://eco.tdwg.org/inclusive/[Guidelines for eco:isLeastSpecificTargetCategoryQuantityInclusive] <<tdwg2024a>> for more information.
 
@@ -533,24 +532,24 @@ Both fields can be applied to any Event at any level.
 
 === Scope and completeness
 
-*Survey <<scope, scope>>* relates the organisms targeted (or not targeted) during a survey. Structured reporting of explicitly stated survey scopes is necessary for evaluating and reporting completeness and is critical to understanding if the data can be used to assert absences (non-detections) of taxa. 
+*Survey <<scope, scope>>* identifies the organisms targeted (or not targeted) during a survey. Structured reporting of explicitly stated survey scopes is necessary for evaluating and reporting completeness and is critical to understanding if the data can be used to assert absences (non-detections) of taxa. 
 
-*Completeness* indicates the thoroughness of a survey relative to the stated scope. Structured reporting of explicitly stated survey scopes and completeness is necessary for evaluating and reporting completeness and is critical to understanding if the data can be used to assert absences (non-detections) of taxa. Reported scope and completeness information facilitates the ability of downstream data users to interpret species populations, areas of occupancy, infer species absences, etc. 
+*<<completeness, Completeness>>* indicates the thoroughness of a survey relative to the stated scope. Structured reporting of explicitly stated survey scopes and completeness is necessary for evaluating and reporting completeness and is critical to understanding if the data can be used to assert absences (non-detections) of taxa. Reported scope and completeness information facilitates the ability of downstream data users to interpret species populations, areas of occupancy, infer species absences, etc. 
 
-The 'target' and 'excluded' scope terms (e.g., term:eco[eco:targetTaxonomicScope]) presented in this section are the only survey event terms designed to capture _intent_. That is, these terms capture the breadth of the information the biological survey _intended_ to capture. All other terms should be used to report the actuality of the survey (e.g., what protocol was in practice implemented, and what information was actually collected).
+The 'target' and 'excluded' scope terms (e.g., term:eco[eco:targetTaxonomicScope]) presented in this section are the only Event terms designed to capture _intent_. That is, these terms capture the breadth of the information the biological survey _intended_ to capture. All other terms should be used to report the actuality of the survey (e.g., what protocol was in practice implemented, what information was actually collected).
 
 ****
 [discrete]
 ==== Implementing scope terms
 * Scope terms can be applied at any Event level. +
-* Recommended best practice is to populate scope terms for the highest level Event to which they apply, and all of its child Events. This information should be reported ONLY at the Event levels for which the information is explicitly stated (information should not be inferred up or down an event hierarchy). +
-* Scope terms of an Event MUST be populated whenever the scope was in effect to be able to infer absence of detection within that Event whenever the Occurrences linked to that Event do not explicitly state zero counts or when there are no Occurrence records for a given taxon that fell within the taxonomic scope (see Section 3.2.4 Principle of inference in https://eco.tdwg.org/hierarchy/#324-principle-of-inference[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^]). +
-* Do NOT retrospectively infer scope terms.
+* Recommended best practice is to populate scope terms every Event to which they apply. This information should be reported _only_ at the Event levels for which the information is explicitly stated; information should not be inferred up or down an Event hierarchy. +
+* Scope terms of an Event must be populated whenever the scope was in effect to be able to infer absence of detection within that Event whenever the Occurrences linked to that Event do not explicitly state zero counts or when there are no Occurrence records for a given taxon that fell within the taxonomic scope (see Section 3.2.4 Principle of inference in https://eco.tdwg.org/hierarchy/#324-principle-of-inference[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^]). +
+* Do _not_ retrospectively infer scope terms.
 ****
 
 ==== Verbatim scope
 
-The full verbatim scope explicitly identifying the full suite of stated parameters defining the breadth of a sampling Event should be reported using term:eco[eco:verbatimTargetScope]. term:eco[eco:verbatimTargetScope] is particularly useful for capturing scope conditions not covered by existing https://eco.tdwg.org/terms/#taxonomic-scope[taxonomic^] or https://eco.tdwg.org/terms/#organismal-scope[organismal^] scope terms.
+The complete scope explicitly identifying the full suite of stated parameters defining the breadth of a sampling Event should be reported using term:eco[eco:verbatimTargetScope]. term:eco[eco:verbatimTargetScope] is particularly useful for capturing scope conditions not covered by existing https://eco.tdwg.org/terms/#taxonomic-scope[taxonomic^] or https://eco.tdwg.org/terms/#organismal-scope[organismal^] scope terms.
 
 [caption=""]
 .General scope terms, their recommended usage (status), and example data entries.
@@ -564,16 +563,18 @@ The full verbatim scope explicitly identifying the full suite of stated paramete
 
 ==== Taxonomic scope
 
-Reporting taxonomic scope enables reliable, quantitative, including statistical interpretation of survey and monitoring data. Knowledge of taxonomic scope is essential to interpret local non-detection as local absences. The *taxonomic scope*, stated either as targeted or intentionally excluded taxa, should be reported using term:eco[eco:targetTaxonomicScope] and term:eco[eco:excludedTaxonomicScope].
+Reporting taxonomic scope enables reliable, quantitative, and statistical interpretation of survey and monitoring data. Knowledge of taxonomic scope is essential to interpret local non-detection of taxa as local absences. The *taxonomic scope*, stated either as targeted or intentionally excluded taxa, should be reported using term:eco[eco:targetTaxonomicScope] and term:eco[eco:excludedTaxonomicScope].
 
 If every organism in the stated terms:eco[eco:targetTaxonomicScope] that was observed during an Event was reported, then term:eco[eco:isTaxonomicScopeFullyReported] = `true`; if not, term:eco[eco:isTaxonomicScopeFullyReported] = `false`.
 
 *Knowledge about taxonomic completeness* allows data users to determine how comprehensively an area was sampled. 
 
-* If taxonomic completeness is reported, then term:eco[eco:taxonCompletenessReported] = `reportedComplete` or `reportedIncomplete` as appropriate and the method used to assess completeness reported in term:eco[eco:taxonCompletenessProtocols]. +
+* If taxonomic completeness is reported, 
+** term:eco[eco:taxonCompletenessReported] = `reportedComplete` or `reportedIncomplete` as appropriate and 
+**the method used to assess completeness reported in term:eco[eco:taxonCompletenessProtocols]. +
 * If taxonomic completeness is not reported: term:eco[eco:taxonCompletenessReported] = `notReported`.
 
-If a specific person(s) or organization(s) are recorded as making the taxonomic identifications relevant to the stated survey scope(s), they should be acknowledged using the term:dwc[dwc:identifiedBy]. A list of names can be be shared with values separated by a `|`. Note that it is not currently possible to share a list of unique identifiers such as ORCID´s at the Event level.
+If a specific person(s) or organization(s) are reported as making the taxonomic identifications relevant to the stated survey scope(s), they should be acknowledged in term:dwc[dwc:identifiedBy]. A list of names can be be shared with values separated by a `|`. It is not possible to share a list of unique identifiers such as ORCID´s at the Event level.
 
 
 [caption=""]
@@ -611,7 +612,7 @@ As with taxonomic scope, providing information about other organismal scopes whe
 <<lifeStage, Life stage>> refers to a distint phase in an organism's life cycle targeted for or excluded from a survey (see term:dwc[dwc:lifeStage]). Life stage may represent a spcific developmental, growth, and/or reproductive changes in an organism's life.
 
 * If the survey targeted or excluded specific organismal life stages, the information should be reported in term:eco[eco:targetLifeStageScope] and term:eco[eco:excludedLifeStageScope]. +
-* If every organism that was included within the life stage scope and was detected during the survey was reported, then term:eco[eco:isLifeStageScopeFullyReported] = `true`. Otherwise, term:eco[eco:isLifeStageScopeFullyReported] = `false`.
+* If every organism that falling within the life stage scope that was detected during the survey was reported, then term:eco[eco:isLifeStageScopeFullyReported] = `true`. Otherwise, term:eco[eco:isLifeStageScopeFullyReported] = `false`.
 
 A corresponding term:dwc[dwc:lifeStage] term is available in the Occurrence extension. This term should be used to report life stage information for organism Occurrences in the `occurrence` table.
 
@@ -621,11 +622,11 @@ A corresponding term:dwc[dwc:lifeStage] term is available in the Occurrence exte
 <<growthForm, Growth form>> refers to the physical characters or habits of an organism, or group of organisms, in a given environment. It describes their specific shape, structure, and/or pattern of construction.
 
 * If the survey targeted or excluded specific organismal growth forms, the information should be reported in term:eco[eco:targetGrowthFormScope] and term:eco[eco:excludedGrowthFormScope] .  
-* If every organism in the stated growthform scope that was observed during the survey was reported, then term:eco[eco:isGrowthFormScopeFullyReported] = `true`; if not, term:eco[eco:isGrowthFormScopeFullyReported] = `false`. +
+* If every organism falling within the stated growth form scope that was observed during the survey was reported, then term:eco[eco:isGrowthFormScopeFullyReported] = `true`; if not, term:eco[eco:isGrowthFormScopeFullyReported] = `false`. +
 
 *Degree of establishment*
 
-<<degreeOfEstablishment, Degree of establishment>> refers to ´the degree to which an organism survives, reproduces, and expands its range at the given place and time´ (see term:dwc[dwc:degreeOfEstablishment]).
+<<degreeOfEstablishment, Degree of establishment>> refers to '_the degree to which an organism survives, reproduces, and expands its range at the given place and time_' (see term:dwc[dwc:degreeOfEstablishment]).
 
 * If the survey targeted or excluded specific organismal degree of establishment, the information should be reported in term:eco[eco:targetDegreeOfEstablishmentScope] and term:eco[eco:excludedDegreeOfEstablishmentScope]. +
 * If every organism that was included within the degree of establishment, and was detected during the survey, was reported, then term:eco[eco:isDegreeOfEstablishmentScopeFullyReported] = `true`; otherwise, term:eco[eco:isDegreeOfEstablishmentScopeFullyReported] = `false`.
@@ -672,10 +673,10 @@ A corresponding term:dwc[dwc:degreeOfEstablishment] term is available in the Occ
 
 If *_taxonomic_* bycatch are reported: 
 
-* Populate term:eco[eco:hasNonTargetTaxa] as `true` at all relevant Event levels. +
-* If ALL *_taxonomic_* bycatch (term:eco[eco:hasNonTargetTaxa] = `true`) captured/observed during an Event are reported in the dataset: 
-** term:eco[eco:areNonTargetTaxaFullyReported] = `true` +
-** and a list of taxonomic bycatch should be shared in term:eco[eco:nonTargetTaxa] using scientific nomenclature. Entries in a list should be separated by a `\|`.
+* term:eco[eco:hasNonTargetTaxa] = `true` for all relevant Events. +
+* If all *_taxonomic_* bycatch (term:eco[eco:hasNonTargetTaxa] = `true`) captured/observed during an Event are reported in the dataset: 
+** term:eco[eco:areNonTargetTaxaFullyReported] = `true`, and +
+** a list of taxonomic bycatch should be shared in term:eco[eco:nonTargetTaxa] using scientific nomenclature. Entries in a list should be separated by a `|`.
 
 If *_organismal_* bycatch are reported:
 
@@ -708,7 +709,7 @@ If the dataset does NOT include taxonomic or organismal bycatch:
 
 ==== Habitat scope
 
-If the survey includes an explicitly stated targeted or excluded *habitat scope* these can be reported in term:eco[eco:targetHabitatScope] and term:eco[eco:excludedHabitatScope].
+If the survey includes an explicitly stated targeted or excluded *habitat scope* these can be reported in term:eco[eco:targetHabitatScope] and term:eco[eco:excludedHabitatScope]. 
 
 The actual habitat observed at a survey site during an Event should be reported in term:dwc[dwc:habitat].
 
@@ -727,27 +728,29 @@ The actual habitat observed at a survey site during an Event should be reported 
 
 === Sampling Effort
 
-<<samplingEffort, *Sampling effort*>> communicates information about the likelihood that a type of organism will be detected: greater effort generally leads to equal higher probability of detection. Clear reporting of sampling effort is necessary for interpretation of measures of completeness and calculation of abundance (relative or absolute) or biomass, and is critical in assessing the ability to compare information and aggregate data across studies. 
+<<samplingEffort, *Sampling effort*>> communicates information about the likelihood that a type of organism were be detected: greater effort generally equals a higher probability of detection. Clear reporting of sampling effort is necessary for interpretation of measures of completeness and calculation of abundance (relative or absolute) or biomass, and is critical in assessing the ability to compare information and aggregate data across studies. 
 
-The DwC Event term term:dwc[dwc:samplingEffort] is currently a recommended field when publishing Event datasets to GBIF; however, this term captures sampling effort in an unstructured way. The Humboldt extension includes 5 terms to more explicitly describe information about aspects of sampling effort. The updated **_recommended best practice_**  is to report sampling effort information as structured data using the Humboldt Extension terms. Through these terms, data providers may explicitly provide the following information: 
-
-* *Is sampling effort reported?:* Indicate if sampling effort is reported (`true` or `false`) in term:eco[eco:isSamplingEffortReported]. +
-* *Sampling effort protocol:* term:eco[eco:samplingEffortProtocol] should contain a textual description of the sampling effort protocol (e.g., number and arrangement of people or sensors deployed, whether or not sensors were mobile or stationary, how frequently observation, measurements, or samples were taken) and/or provide a link to the protocol used. +
-* *Sampling effort:*  report sampling effort (the total amount of time of the sampling Event) value and units (e.g., 4 trap nights) using the paired terms term:eco[eco:samplingEffortValue] and term:eco[eco:samplingEffortUnit]. +
-* *Sampling performed by:* term:eco[eco:samplingPerformedBy] should be used to credit the people involved in the sampling eventSampling effort terms, their recommendation usage, and example data entries. Best practice is to use a unique identifier (e.g., ORCID) if available.
-** NOTE: Because term:eco[eco:samplingPerformedBy] has an <<IRI, IRI>> (internationalized resource identifier) equivalent only a single ORCID can be provided (the term cannot support a list). If more than one ORCID needs to be shared, a list of ORCID´s (using the pipe separator between values) can be supplied using the term term:dwc[dwc:recordedByID] used BUT it must be applied to each relevant Occurrence and located on the `occurrence` table.
-
-
-[NOTE]
-.*Updated recommended best practice*
-====
+****
+[discrete]
+==== *Updated recommended best practice*
 Capture sampling effort information as structured data using the following Humboldt extension terms:
 
 * term:eco[eco:isSamplingEffortReported]
 * term:eco[eco:samplingEffortValue] and term:eco[eco:samplingEffortUnit]
 * term:eco[eco:samplingEffortProtocol]
 * term:eco[eco:samplingPerformedBy]
-====
+****
+
+The DwC Event term term:dwc[dwc:samplingEffort] is currently a recommended field when publishing Event datasets to GBIF; however, this term captures sampling effort in an unstructured way. The Humboldt extension includes 5 terms to more explicitly capture different aspects of sampling effort. The updated *_recommended best practice_*  is to report sampling effort information as structured data using the Humboldt Extension terms. Through these terms, data providers may explicitly provide the following information: 
+
+* *Is sampling effort reported?:* Indicate if sampling effort is reported (`true` or `false`) in term:eco[eco:isSamplingEffortReported]. +
+* *Sampling effort protocol:* term:eco[eco:samplingEffortProtocol] should contain a textual description of the sampling effort protocol (e.g., number and arrangement of people or sensors deployed, whether or not sensors were mobile or stationary, how frequently observation, measurements, or samples were taken) and/or provide a link to the protocol used. +
+* *Sampling effort:*  report sampling effort (e.g., the total amount of time of the sampling Event, the total numer of people involved) value and units (e.g., trap nights, people) using the paired terms term:eco[eco:samplingEffortValue] and term:eco[eco:samplingEffortUnit]. +
+* *Sampling performed by:* term:eco[eco:samplingPerformedBy] should be used to credit the people involved in the sampling eventSampling effort. The names or one or more people can be reported, with individual names in a list separated with `|`. Best practice is to use a unique identifier (e.g., ORCID) if available.
+** NOTE: Because term:eco[eco:samplingPerformedBy] has an <<IRI, IRI>> (internationalized resource identifier) equivalent, only a single ORCID can be provided (the term cannot support a list). If more than one ORCID needs to be shared, a list of ORCID´s (using the pipe separator between values) can be supplied using the term term:dwc[dwc:recordedByID] used BUT it must be applied to each relevant Occurrence and located on the `occurrence` table.
+
+
+
 
 [caption=""]
 .Sampling effort terms, their recommended usage (status), and example data entries.
@@ -762,13 +765,13 @@ Capture sampling effort information as structured data using the following Humbo
 |`40 box traps deployed in the afternoon even spacings along 4 parallel 100m transects placed 50m apart and visited after sunrise the next day`
 
 |term:eco[eco:samplingEffortValue]
-|`40`
+|`40`,  `5`
 
 |term:eco[eco:samplingEffortValue]
-|`trap nights`
+|`trap nights`, `person hours`
 
 |term:dwc[dwc:samplingEffort]
-|`40 trap nights`
+|`40 trap nights`, `5 person hours`
 
 |term:eco[eco:samplingPerformedBy]
 |`A. Townsend Peterson`
