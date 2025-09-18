@@ -1,6 +1,11 @@
 [[survey-event-data:-capturing-the-context-of-biological-surveys]]
 == Survey Event data: capturing the context of biological surveys and monitoring data
 
+[IMPORTANT] 
+====
+The contextual information about survey Events should be saved to the DwC-A `event` table.
+====
+
 This section will guide you through the process of mapping Event-level data specifically related to survey structure, location, protocols, scopes, and effort. 
 
 [NOTE] 
