@@ -6,22 +6,26 @@ Need more information? Check out the following documentation:
 * https://techdocs.gbif.org/en/[GBIF Technical Documents] +
 * https://manual.obis.org/[The OBIS Manual]
 
-Or, reach out for assistance from:
+For any remaining questions, reach out for assistance from:
 
-* https://github.com/tdwg/hc[Humboldt Extension GitHub repository]:
-questions about usage, issues with the vocabulary, and recommendations
-for new terms should be reported as an Issue. +
-* The https://discourse.gbif.org/[GBIF community forum] +
-* The GBIF Node for your country or organization
-** If your country or organization is a member of GBIF and has an
-established node, you can read out directly to your node.
-*** If you’re uncertain if your country or organization is part of the
-GBIF network you can https://www.gbif.org/the-gbif-network[search
-here]. +
-** If your country or organization is not a member of GBIF, reach out to
-the GBIF help desk (helpdesk@gbif.org) +
+* The https://github.com/tdwg/hc[Humboldt Extension GitHub repository^]: questions about usage, issues with the vocabulary, and recommendations for new terms should be reported as an issue. +
+* The https://discourse.gbif.org/[GBIF community forum^]. +
+* The GBIF Node for your country or organization.
+** If your country or organization is a member of GBIF and has an established Node, you can reach out directly to them.
+*** If you’re uncertain if your country or organization is part of the GBIF network you can https://www.gbif.org/the-gbif-network[search here^]. +
+** If your country or organization is not a member of GBIF, reach out to the mailto:helpdesk@gbif.org[GBIF helpdesk^] for assistance. +
 * GBIF help desk
-** create an issue on the https://techdocs.gbif.org/en/[GitHub tech-docs project] +
-** or, send an email to the mailto:helpdesk@gbif.org[GBIF helpdesk] 
+** In case technical documentation needs improvements, create an issue on the https://techdocs.gbif.org/en/[GitHub tech-docs project^]. +
+** Send an email to the mailto:helpdesk@gbif.org[GBIF helpdesk]. 
+
+
+== Feedback
+
+The authors appreciate every opportunity to improve this guide. If you would like to provide feedback, please do so by submitting a GitHub issue. If you are unfamiliar with this process, refer to the instructions below: 
+
+* Create a GitHub account (see https://www.vimeo.com/430640810[video how-to^]).
+* If you see something, say something, by creating or commenting on issues on GitHub (see https://vimeo.com/430632177[video how-to^]). Please refer to specific sections or lines in your recommendations.
+
+Please remember that all interactions within this process must adhere to the GBIF Code of Conduct, which aims to encourage a "safe, hospitable, and productive environment" that is "professional, respectful and harassment-free for all participating."
 
 <<<

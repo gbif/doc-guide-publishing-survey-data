@@ -1,166 +1,131 @@
 [[mapping-survey-data-to-dwc]]
-== Mapping survey data to Darwin Core
+== Mapping survey and monitoring data to Darwin Core
 
-*Data mapping* is the process of matching fields from one database to
-another with the intention of facilitating integration of data from
-heterogeneous sources. The following sections will guide you through the
-process of mapping your the Event-level (sampling context) information of your biodiversity survey data to the Darwin Core data standard.
+Data standardization is often wrongly percieved an invasion of an established or bespoke data collection system. In reality, data standardization is simply a transformation of the data export while the source data system remain in tact. The following sections will guide you through the process of mapping the Event-level (sampling context) information of your biodiversity survey and/or monitoring data to the Darwin Core data standard.
 
-In practice, the process of mapping survey and monitoring data to the
-DwC standard for publication in GBIF would roughly follow these steps:
+In practice, the process of mapping survey data to DwC for publication in GBIF will roughly follow these steps:
 
-* *Identification of the structure, or hierarchy, of the data:* In essence, this
-is the process of translating the sampling design of a biological survey
-(or series of surveys) to Darwin Core event format. Does the dataset
-consist of a single survey at a single location? Multiple surveys at
-different times at the same location? Or a series of surveys at
-different locations? See 'Translating survey design to DwC event data
-structure' below. +
-* *Identification of the data composition and DwC vocabulary needs:* Before actually mapping data to terms, it's useful to take some time to identify the
-vocabulary extensions that will be necessary to report all data (or as
-much data as possible) from the dataset. Available extensions can be explored via the https://rs.gbif.org/extensions.html[GBIF registered
-extensions] and https://www.tdwg.org/standards/[TDWG biodiversity
-information standards]. +
-* *Mapping of survey (Event) information to DwC event terms:* Information about
-each biological survey (simply referred to as an 'Event' or 'sampling
-Event') will be mapped to https://dwc.tdwg.org/terms/#event[DwC Event
-class] and https://eco.tdwg.org/terms/[Humboldt extension] terms and
-saved in an independent 'event' table. Event-level data include the contextual
-information that applies to all occurrence and ancillary data collected
-or recorded during an event. Examples include information about the survey design,
-site (e.g., location, date), protocol(s), scope(s), and sampling effort.
-Resource: see the
-https://github.com/gbif/doc-guide-publishing-survey-data/tree/1.0/data['event'
-table in the data mapping template]. +
-* *Mapping of occurrence data to the DwC occurrence extension:* Organism
-occurrence information collected during biological surveys (e.g.,
-scientific name, additional organismal information) will be shared in an
-independent 'occurrence' table using the
-https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[occurrence
-extension]. See the
-https://github.com/gbif/doc-guide-publishing-survey-data/tree/1.0/data['occurrence'
-table in the data mapping template]. +
-* *Mapping of ancillary data to appropriate extensions:* Additional information
-collected during the survey that require use of one or more extensions
-should be mapped so as to link the information to the appropriate events
-or organisms via the relevant event identifiers.
+* *Identification of the structure, or hierarchy, of the data:* In essence, this is the process of translating the sampling design of a biological survey (or series of surveys) to Darwin Core Event format. Does the dataset consist of a single survey at a single location? Multiple surveys conducted at different times at the same location? Or a series of surveys at different locations? See link:#constructing-a-dataset-schematic[Translating survey design to DwC Event data structure]. +
+* *Identification of the data composition and DwC vocabulary needs:* Before actually mapping data to terms, it is useful to identify the vocabulary extensions that will be necessary to report all data (or as much data as possible) from the dataset. Available extensions can be explored via the https://rs.gbif.org/extensions.html[GBIF registered extensions^] and https://www.tdwg.org/standards/[TDWG biodiversity information standards^]. See link:#translating-survey-design-into-darwin-core-event-structure[Constructing a dataset schematic]. +
+* *Mapping of survey (Event) information to DwC Event terms:* Information about each biological survey (simply referred to as an 'Event' or 'sampling
+Event') will be mapped to https://dwc.tdwg.org/terms/#event[DwC Event class] and https://eco.tdwg.org/terms/[Humboldt extension^] terms and saved in an `event` table or tables. Event-level data include the contextual information that applies to all Occurrence and ancillary data collected or recorded during an Event. Examples include information about the survey design, site (e.g., location, date), protocol(s), scope(s), and sampling effort. Resource: see the data/event_template_wHE_event-table.csv['event' table in the data mapping template^]. See link:#survey-event-data-capturing-the-context-of-biological-survey-and-monitoring-data[Survey Event data: capturing the context of biological survey and monitoring data]. +
+* *Mapping of Occurrence data to the DwC Occurrence extension:* Organism Occurrence information collected during biological surveys (e.g., scientific name, additional organismal information) will be shared in an independent 'occurrence' table using the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[Occurrence extension^]. See the data/event_template_wHE_occurrence-table.csv[`occurrence` table^] in the data mapping template and link:#mapping-occurrence-information[Mapping Occurrence information]. +
+* *Mapping of ancillary data to appropriate extensions:* Additional information collected during a survey that require use of one or more extensions should be mapped so as to link the information to the appropriate Event(s) or organisms via the relevant Event identifiers.
 
-As previously mentioned, some data cannot yet be published to GBIF with
-a DwC event dataset. But, the landscape of biodiversity data in GBIF is
-always evolving. That is to say, the GBIF infrastructure is not static
-and maintains a consistent focus on stepwise efforts to improve the
-flexibility of the underlying data model and expand the breadth of data
-types and complexity that can be accommodated. Data that cannot be
-published currently may be accepted later. As such, mapping as much data
-as possible now reduces the amount of time and energy spent overall,
-removing the need to revisit the process at a later date.
+*The recommended best practice is to map as much of your data as possible using all existing vocabulary standards and extensions necessary for your data*.
 
-*The recommended best practice is to map as much of your data as
-possible using all existing vocabulary standards and extensions
-necessary for your data*.
+The landscape of biodiversity data in GBIF is always evolving. While some data cannot yet be published to GBIF with a DwC Event dataset, GBIF maintains stepwise efforts to improve the underlying data model and expand the breadth of data types and complexity that can be accommodated. Data that cannot be published now will likely be publishable in the future. As such, mapping as much data in a dataset as possible now reduces the amount of time and energy spent overall, removing the need to revisit the process at a later date. 
 
+=== Translating survey design into Darwin Core Event structure
 
-=== Translating survey design into Darwin Core event structure
+<<surveyDesign, *Biological survey design*>>, the sampling structure of a biological survey, varies widely. Identifying how to best translate survey design to DwC Event core is the most difficult part of mapping a survey dataset. DwC defines an <<event, Event>> as '_an action that occurs at some location during some time_’, such as a specimen collection expedition, a camera trap image capture, or a marine trawl. This broad definition of Event means biological surveys can be framed as a single Event or as a series of Events nested within Events using a <<parentEvent, parent>>-<<childEvent, child>> relationship as necessary. The <<samplingEventHierarchy, *sampling Event hierarchy*>> is the translation of survey design into an Event-based perspective using Darwin Core.
 
-*Biological survey design*, or the sampling structure of a biological
-survey, varies widely and identifying how surveys relate to a DwC event
-is the most difficult part of mapping a dataset. DwC defines an event as
-’_an action that occurs at some location during some time’_, such as a
-specimen collection process, a camera trap image capture, or a marine
-trawl. This broad definition of event means biological surveys can be
-framed as a single event or as a series of Events within Events using a
-Parent-Child relationship as necessary. 
-
-The *sampling event hierarchy* is the translation of the survey sampling 
-design into an event-based perspective using Darwin Core terms capturing 
-each spatiotemporally unique sampling event as a DwC event.
+Sharing biodiversity data in a way that clearly and accurately reflects survey design helps ensure accurate understanding and interpretation of the information contained in a dataset enabling potential data users to more readily assess the appropriateness of the data for inclusion in their own analyses. 
 
 === Non-nested datasets
 
-*Non-nested datasets* are datasets reflecting a simple survey design
-structure (<<fig1, Figure 1>>). These datasets typically consist of:
+<<nonNestedDataset, *Non-nested datasets*>> reflect a simple or flat survey design structure (<<fig1, Figure 1>>). These are typically simple datasets consisting of:
 
-* a single sampling event occurring at a particular place and time and
-conducted using a single standardized sampling protocol that is not
-repeated and is not part of a spatially larger sampling schema (<<fig2a,Figure 2A>>), or +
-* a series of single sampling events that are not joined by a larger
-parent event (<<fig2b,Figure 2B>>). A *compilation dataset*, which combines multiple surveys from
-different data sources and/or literature searches) could be a special case 
-of non-nested dataset where there is a unique event level that describes 
-the compilation itself (e.g the broad area where multiple surveys are aggregated) 
-which results in several occurrences.
+* a single sampling Event occurring at a particular place and time and conducted using a single standardized sampling protocol that is not repeated and is not necessarily part of a larger sampling schema (Figure 1a), or +
+* a series of single sampling Events that are not joined by a larger parent Event (Figure 1b). A compilation (e.g., a combination of unrelated surveys, compiled data sources and/or literature searches, see the link:#biological-survey-data[Biological survey data] section) could be a special case of non-nested dataset where there is a unique Event level that describes the compilation itself (e.g., the broad area where multiple surveys are aggregated), which results in one or more Occurrences.
 
 [[fig1]]
-.A simple schematic of a non-nested event dataset structure (a) consisting of a single event with associated occurrences related to the event via the occurrence extension and (b) a series of individual events with associated occurrences related to the appropriate event via the occurrence extension. 
-image::img/fig1.png[]
+.A simple schematic of a non-nested Event dataset (a) consisting of a single Event (purple box) with associated Occurrences related to the Event via the Occurrence extension (blue box) and (b) a series of individual Events (purple boxes) with associated Occurrences related to the appropriate Event via the Occurrence extension (blue boxes). 
+image::img/Fig1.png[]
 
 === Nested datasets
 
-*Nested datasets* capture more complex survey designs, for example,
-those consisting of repeated sampling events and/or multiple sampling
-protocols. The top-most event level is the '**parent Event.**' A parent
-event encompasses all other Events in the dataset. Subsequent Events
-(*child Events*) represent either multiple sampling sites, protocols, or
-repeated sampling at the same locality using the same protocol. For any
-given term, a parent event should encompass the full scope of values
-contained in all of its child Events (see details in
-http://rs.tdwg.org/dwc/doc/hierarchy/2024-02-28[Hierarchical Events in
-Humboldt Extension for Ecological Inventories] document).
+More complex survey designs will require a nested structure. <<nestedDataset, *Nested datasets*>> use parent-child relationships to capture information about more complex survey designs, such as datasets resulting from repeated sampling Events and/or multiple sampling protocols. Creating nested Event levels may be important or even essential to relating the full story a dataset has to tell and to facilitating downstream analysis of the data by including the information necessary for connecting related records as part of the data.
 
-NOTE: Creating nested event levels may be important to relating the full story a dataset has to tell and to facilitating downstream analysis of the data. The parent-most event levels may  include more general information that applies to all subsequent and lower events. Lower or child-most event levels will include more detailed or explicit information. The lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time. However, it is important keep the structure as simple as possible. Do not create unnecessary sub-events.
+****
+[discrete]
+====  *In a nested dataset:*
 
-The structure of nested datasets can take various forms and there is no single correct structure. However, structure is most commonly defined as a function of sampling location, protocol, and date. For example:
+* The top-most Event level does not have a parent Event but is parent to all Events beneath it. +
+* An Event may be parent to multiple child Events. +
+* All Events *_except those at the lowest Event level_* are considered the *parent Event* to any Event(s) beneath it. +
+** *_A parent Event must fully encompass its child Events spatially and temporally._* Specifically, the spatial extent and temporal interval of a parent Event must contain the spatial extents and temporal intervals of all of its children (see Section 3.2.1 Principle of spatiotemporal coverage  in https://eco.tdwg.org/hierarchy/#321-principle-of-spatiotemporal-coverage[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^]). +
+** A *child Event* (an Event that is contained entirely within a single parent Event) may represent either multiple sampling sites, protocols, or repeated sampling at the same locality using the same protocol. +
+* Events *_at the lowest hierarchical level_* are never a parent Event.
 
-* *Locality–protocol-date:* This structure establishes location, or survey site, at the highest event levels. Subsequent events center around sampling protocol such that the lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time (<<fig2a, Figure 2A>>). +
-* *Protocol–locality-date:* This structure establishes sampling protocol at the highest event levels. Subsequent events thsu center location, or survey site, and date. The lowest or child-most event level would consist of visits to a specific site, implementing a specific protocol, at a unique date/time (<<fig2b, Figure 2B>>). +
-* *Time-series:* Many survey datasets include multiple visits to a site or series of sites on different dates. These time-series datasets may take either approach and will include, at the child-most event level, an event for each unique site visit (<<fig2c, Figure 2C>>).
+*_Each Event level should reflect a meaningful ecological or operational unit (e.g., spatial, temporal, or ecological) in the survey design._* An Event level should only be added if the addition of that Event level is necessary to facilitate data interpretation, downstream analysis, and/or linkage of information across data sources. *Do not create Event levels that are not necessary.*
 
-[[fig2a]]
-[caption="Figure 2A. "]
-.Simplified example schematic of a nested event dataset structure representing a survey (parent Event, dark purple rectangles) with two distinct survey sites (child-Events, medium purple rectangles). At each survey site, two sampling protocols are implemented (child-child-Events, light purple rectangles) and occurrence information is collected and related to each sampling event using the occurrence extension (blue rectangles). 
-image::img/fig2a.png[]
+Refer to https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^] (TDWG Humboldt Extension Task Group, 2024) for more information about creating nested data structures for Darwin Core datasets.
+****
 
-[[fig2b]]
-[caption="Figure 2B. "]
-.Simplified example schematic of a nested event dataset structure representing a survey (parent Event, dark purple rectangles) with two distinct sampling protocols (child-Events, medium purple rectangles) implemented at two sites (child-child-Events, light purple rectangles) wherein organismal occurrence information is collected and related to each sampling event using the occurrence extension (blue rectangles).
-image::img/fig2b.png[]
-
-[[fig2c]]
-[caption="Figure 2C. "]
-.Simplified example schematic of a nested event dataset structure representing a survey (parent Event, dark purple rectangles) with two distinct survey sites (child-Events, medium purple rectangles). Each survey site is sampled twice using the same protocol (child-child-Events, light purple rectangles). Organismal occurrence information is collected at each of the four site visits and related to appropriate sampling event using the occurrence extension (blue rectangles).
-image::img/fig2c.png[]
+The goal in establishing a dataset structure is to keep it as simple as possible while still accurately representing the survey design. There may be multiple ways to structure a dataset and *there is no single correct dataset structure*. Further, identifying the data structure most appropriate for a dataset may not be a straightforward process. As a general guideline, dataset structure is most commonly defined as a function of sampling location, protocol, and date.  
 
 
-Note that the above examples include a unique parent Event level. *This is not necessary or useful for all datasets.* Creating a parent Event level above protocol, location, and sampling date information may only be relevant for a dataset that is part of a larger project or network producing many datasets. Generally, if the additional event level will be useful in facilitating data discovery and relating multiple datasets, then consider including it. If it's just another level of information that can easily be included in lower event levels, then do not create the additional level.
+==== Simple nested data structures
 
+Consider a hypothetical survey where two sampling protocols (Protocol a and Protocol b) are implemented at two different sites (Site 1 and Site 2). Both sites are sampled (site visits) twice (t1 and t2) using each of the protocols. 
+
+This survey dataset could be structured with two Event levels as shown in <<fig2, Figure 2>>. Here, the highest Event level would consist of four Events representing each unique site-protocol combination: Site 1–Protocol a, Site 1–Protocol b, Site 2–Protocol a, Site 2–Protocol b. Events at the lowest Event level will represent site visits that occur on a particular date for each site-protocol combination. Organismal Occurrence information collected during each site visit is linked to the relevant site visit Event. This two Event level structure represents the simplest possible nested dataset structure with only a single level of nesting.
+
+It is ideal to structure a dataset such that each implemented protocol and unique site location is represented as a specific Event so that information from the same pool of species (i.e. location) and likelihood of detecting these species (i.e. protocol) is joined together by being part of the same Event. However, it is not always possible to disentangle information collected using multiple protocols.
+
+[[fig2]]
+[caption="Figure 2. "]
+.Simplified example schematic of a nested Event dataset consisting of a series of surveys conducted at two sites (Site 1 and Site 2) with two distinct sampling protocols (Protocol a, Protocol b) represented by the pink boxes. Surveys implementing each protocol are conducted at Sites 1 and 2 on two different dates (Site visit t1, Site visit t2; orange boxes). Associated Occurrences are related to the appropriate Event via the Occurrence extension (blue boxes). 
+image::img/Fig2.png[]
+
+==== Simple nested datasets with Project-level information
+
+Surveys conducted as part of a larger or established network or project should report as much contextual information as possible to capture information about the project or network. Project-level information will always be shared at the highest Event level. This can be achieved in one of two ways:
+
+* *By embedding project-level information within the highest existing survey Event level.* With the dataset presented in <<fig2, Figure 2>>, project-level information would be included with each of the four Site–Protocol Events. +
+* *By introducing a new parent Event level above all existing Events dedicated to capturing project-level information.* In the context of the example dataset presented in <<fig2, Figure 2>>, this would mean adding a third Event level to the dataset structure that is parent to all four Site–Protocol Events (see <<fig3, Figure 3>>). Creating a single parent Event is particularly useful option when a project will result in multiple, independent datasets. In this case, the Event identifier used for the project Event level can be used in all relevant datasets providing a means of identifying related datasets. 
+
+[[fig3]]
+[caption="Figure 3. "]
+.Simple nested hierarchy as presented in Figure 2 with the addition of a single Event that is parent to all other Events to consolidate all survey Events under the context of the broader project (purple box).
+image::img/Fig3.png[]
+
+==== Deeply nested datasets
+
+Although the recommendation is to keep dataset structure as simple as possible, more complex nesting may be necessary to accurately represent survey design and support data reuse. Added structural complexity can improve clarity when:
+
+* multiple protocols are implemented within the same survey design, +
+* survey outputs include a mix of data types (e.g., specimen collections, field observations, observed co-occurrences), +
+* collected material contributes to downstream products (e.g., trait data, lab measurements, voucher specimens, media representations), or +
+* relationships among datasets need to be preserved or exposed (e.g., datasets resulting from different types of surveys within the same Project and/or at the same established survey sites).
+
+For example, consider the dataset https://obis.org/dataset/96844ba5-08c1-4299-b778-0db31986b669[Krill along the 110°E meridian: Oceanographic influences on assemblages in the eastern Indian Ocean, RV Investigator voyage IN2019_V03 (2019)^], published by Ocean Biodiversity Information System (OBIS)-Australia. The dataset contains information about a zooplankton survey conducted by the https://ror.org/01mae9353[CSIRO Marine National Facility^] in the eastern Indian Ocean in 2019. The survey consisted of daytime and nighttime sampling at 20 locations (stations) along an established transect. As illustrated in <<fig4, Figure 4>>, this dataset could be structured as a non-nested dataset (Figure 4a) or as nested dataset (Figures 4b-d); and, as a nested dataset, the structure could be simple (Figures 4b and c) or more deeply nested with more than two Event levels (Figure 4d).  
+
+* **Non-nested dataset structure** (Figure 4a): As a non-nested dataset, each sampling at a given station at a particular date and time would be a unique Event  with no obvious link to other Events in the dataset beyond being part of the same dataset. Implementing this structure is the simplest approach to sharing data from the survey, however, without any nesting of Events, it may be difficult for data users to understand the relationships between survey Events. Associated Occurrences are related to the appropriate Event via the Occurrence extension. +
+* **Simple nested dataset structure** (Figure 4b): An alternative a simple nested dataset structure could consist of two Event levels. The highest Event level would capture information about the survey stations, where each of the 20 survey stations would be a unique, unrelated parent Event to the relevant daytime and nighttime sampling Events. Associated Occurrences would be related to the appropriate Event via the Occurrence extension. +
+* **Simple nested dataset structure** (Figure 4c): As a simple nested dataset, the data structure would consist of two Event levels with the highest Event level capturing information about the overall cruise or campaign and second Event level represents the daytime and nighttime sampling events at each station as a series of unique Events. Associated Occurrences are related to the appropriate Event via the Occurrence extension. +
+* **Deeply nested dataset structure** (Figure 4d):  As a more deeply nested dataset, the structure would consist of three Event levels: the highest Event level represents the Survey (that is, the overall cruise or campaign); the middle Event level represents each of the 20 survey stations; and, the lowest Event level represents the daytime and nighttime sampling Events at each station. Note that the child Events of each parent Event are used to report independent replicates of the same type within the same parent Event and/or to preserve individual sampling units. Associated Occurrences are related to the appropriate Event via the Occurrence extension. 
+
+If the survey itself was a unique Event, the simpler two Event level structure (e.g., Figures 4b and 4c) would likely suffice. However, the stations sampled during the survey are standard sampling locations used in other survey efforts not covered by this dataset. To make it easier to link information from this dataset to data from other surveys conducted at the same localities, a more complex nested structure was chosen by the data publisher.  
+
+[[fig4]]
+[caption="Figure 4. "]
+.Four potential dataset structures for a zooplankton survey conducted by CSIRO at 20 stations, each sampled once during the day and once at night: non-nested structure (a), simple nested structure (b and c), and complex or deeply nested structure (d). 
+image::img/Fig4.png[]
 
 ==== Constructing a dataset schematic
+As noted in the previous section, some datasets may be very simple and have no hierarchical structure (**non-nested datasets**) with singular observations of individual taxa at a single location. Others may be complex and hierarchically structured (**nested datasets**), with a series of nested survey Events (e.g., sampling designs with traps within plots within sites). Multiple structural scenarios may fit a dataset, particularly for more complex data resulting from ongoing monitoring or repeated sampling efforts. We recommend keeping the structure as simple as possible. Refer to https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories] for additional guidance on how to capture the details of nested observations (dwc:Event hierarchies).  
 
-Some datasets may be very simple and have no hierarchical structure
-(*non-nested datasets*) with singular observations of individual taxa at
-a single location. Others may be complex and hierarchically structured
-(*nested datasets*), with a series of nested survey events (e.g.,
-sampling designs with traps within plots within sites). Multiple
-structural scenarios may fit a dataset, particularly for more complex
-data resulting from ongoing monitoring or repeated sampling efforts. We
-recommend keeping the structure as simple as possible. Additional
-guidance on how to capture the details of nested observations (dwc:Event
-hierarchies) is available in https://eco.tdwg.org/hierarchy/[Properties
-of hierarchical events in the Humboldt Extension for Ecological
-Inventories].
+Creating a schematic of the dataset hierarchical structure such as in Figures 1-4 is particularly useful in exploring and effectively capturing the survey design that generated the data collected. Once the dataset structure is identified, the schematic can be expanded to identify which extensions (e.g., Humboldt, Occurrence, extended measurement or fact) are needed, if any, and where they will link (see Box 1 below and Figure 1 of <<DePooter2017>>). After, you can proceed with mapping your data to the https://rs.gbif.org/core/dwc_event_2024-02-19.xml[DwC Event Core^] and the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt extension^] as described in the following sections. 
 
-Creating a schematic of the dataset hierarchical structure such as in
-Figures <<fig1,1>> and <<fig2a,2A-C>> is particularly useful in exploring and effectively
-capturing survey design that generated the data collected (see also
-Figure 1 of <<DePooter2017>>). Once the event structure is
-identified, the schematic can be expanded to identify which extensions
-(e.g., Humboldt, occurrence, extended measurement or facts) are
-necessary and where they will link to. After, you can proceed with
-mapping your data to the
-https://docs.google.com/document/d/1v_CpHj4C8xHF3mFfmRbcIBZ5pRAjJ-hzTZcBWzsnQOs/edit#heading=h.xx2n2qywocd7[DwC
-event Core] and the
-https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt
-Extension for Ecological Inventories] as described in the following
-sections.
+
+****
+[discrete]
+==== Box 1. National Science Foundation's National Ecological Observatory Network (NEON) example
+The structure of an example nested dataset from the U.S. National Science Foundation's National Ecological Observatory Network (NEON), a long-term ecological data collection facility, is presented in <<fig5, Figure 5>>. This structure describes tick-pathogen data derived from two interconnected NEON datasets: https://data.neonscience.org/data-products/DP1.10093.001[Ticks sampled using drag cloths^] <<NEON2025b>> and https://data.neonscience.org/data-products/DP1.10092.001[Tick pathogen status^] <<NEON2025a>>. Adapting the survey design of these two datasets to a deeply nested structure allows preservation of the associations between pathogen detections and their corresponding host ticks across collection areas which would otherwise be separated across two non-nested datasets.
+
+The schematic in <<fig5, Figure 5>> is a general interpretation of the dataset structure and follows NEON’s standard survey design <<Thorpe2016>>. The NEON system is broadly divided into 20 ecoclimatic domains across the United States of America and Puerto Rico. Across these domains, NEON has established a total of 81 field sites (47 terrestrial and 34 aquatic), which serve as representative sampling locations within each domain. Within each field site, spatial sampling units, such as plots, segments, or reaches, are established based on the site type and the requirements of individual protocols. To simplify standardization of information across datasets, NEON's biological datasets are structured such that locality information (domain, site, sampling unit) is contained in the highest three event levels and information specific to individual site visits is reported at the lowest Event levels. At each sampling Event, information about the sampling context is reported using https://rs.gbif.org/core/dwc_event_2024-02-19.xml[DwC Event core^] and https://eco.tdwg.org/[Humboldt extension^] terms. Information that cannot be reported using those terms is reported using the https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[extended measurement or fact (emof) extension^]. This is the information that is least likely to change through time and would make it easier to aggregate information across their own datasets. Depending on data collected, other extensions can also be added, such as the https://rs.gbif.org/extension/gbif/1.0/multimedia.xml[simple multimedia^] or https://rs.gbif.org/extension/gbif/1.0/dna_derived_data_2024-07-11.xml[DNA-derived data^] extensions. Associated Occurrences are related to the appropriate Event via the Occurrence extension.
+
+Note here that reporting of Occurrence information is illustrated using two instances of the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[Occurrence extension^], one for ticks and another for pathogens. While Occurrence information is most commonly shared using a single table, it can be shared using multiple tables. For the purposes of preparing this dataset as a case study for the guide, tick and pathogen Occurrence data were kept separate to more clearly illustrate that pathogen records are derived from samples collected from the ticks. This relationship is communicated using the https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[resource relationship extension^].
+
+[[fig5]]
+[caption="Figure 5. "]
+.Generalized dataset structure for NEON biological datasets. The structure is a deeply nested dataset to more precisely capture details about NEON´s standardized survey design. The locality component encompasses 3 hierarchical levels to highlight the shifts in spatial scope from ecoclimatic domains to sites to individual sampling units (gray boxes) with individual sampling Events or surveys conducted at a sampling unit (orange boxes) representing the lowest Event level. Additional information about each location or survey Event is shared using the Humboldt extension (light blue boxes) and the extended measurement or fact extension ('emof ext.', light purple boxes). Occurrence information associated with a sampling Event is reported using two separate tables, one each for tick occurrence information and the second for pathogens identified in tick samples (dark blue boxes), to simplify data reporting and to illustrate implementation of the resource relationship extension (purple box) used to link pathogens with the tick samples from which they were identified. 
+image::img/Fig5.png[]
+
+****
+
+ 
 
 <<<

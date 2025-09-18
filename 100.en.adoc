@@ -1,107 +1,35 @@
 == Introduction
 
-*Biological surveys*, systematic efforts to collect information about
-the biological organisms of a specific area at a given time, are
-critical to helping us understand and monitor changes in our
-environment. Also referred to as biodiversity surveys, these efforts
-employ a wide variety of methods or protocols to contribute to our
-knowledge about species distributions and abundances, community
-composition, and ecological relationships. Different communities also
-refer to ecological inventories, biodiversity monitoring, biological
-sampling or recording, among other terminology; we will use these terms
-interchangeably in this guide. Biodiversity surveys support larger
-*ecological monitoring* efforts aimed at evaluating ecosystem health and
-ecological response to climate change, supporting conservation efforts,
-informing policy and management, and improving public awareness and
-education about the values of biodiversity. These monitoring efforts can
-be question-driven, with protocols designed to answer a particular
-question or series of questions; emphasize general monitoring, focused
-on establishing a baseline and building a record; or take more of a
-‘naturalist’ approach, with repeated data collection occurring out of
-curiosity.
+<<biosurvey, *Biological surveys*>>, systematic efforts to collect information about the biological organisms of a specific area at a given time, are critical to helping us understand and monitor changes in our environment. Also referred to as biodiversity surveys, these efforts employ a wide variety of methods or protocols to contribute to our knowledge about species distributions and abundances, community composition, and ecological relationships. Different communities also
+refer to biological surveys as ecological inventories, biodiversity monitoring, biological sampling or recording, among other terminology; we will use these terms interchangeably in this guide, and will often simply refer to them as 'surveys.' Biodiversity surveys support larger <<ecomonitoring, *ecological monitoring*>> efforts aimed at evaluating ecosystem health and ecological response to climate change, supporting conservation efforts, informing policy and management, and improving public awareness and education about the values of biodiversity. These monitoring efforts can be question-driven, with protocols designed to answer a particular
+question or series of questions; to emphasize general monitoring, focused on establishing a baseline and building a record; or take more of a ‘naturalist’ approach, with repeated data collection occurring out of curiosity. Most commonly, at the moment of writing, monitoring langague appears in the context of environmental monitoring or science policy at the province, city, state, or state level.  
 
-Governing body and international organizational reports consistently
-emphasize that data availability is scarce for a proper assessment of
-nearly all facets of biodiversity in response to the current global
-biodiversity crisis <<IPBES2019>>. The only way to address these needs
-are to aggregate existing data from prior and disparate biological
-surveys and monitoring efforts. International organizations (e.g.,
-https://www.cbd.int/gbf/targets/21[+++Convention on Biological
-Diversity+++], https://www.ipbes.net/node/38260[+++Intergovernmental
-Science-Policy Platform on Biodiversity and Ecosystem Services+++],
-governmental policies (such as the Australian National Data Service and
-the EU’s Open Data Directive), funding agencies (e.g., EU Horizon
-Europe,
-https://new.nsf.gov/policies/pappg/24-1/ch-11-other-post-award-requirements#ch11D4[+++US
-National Science Foundation+++]), and scientific journals (e.g.,
-https://journals.plos.org/plosone/[PLOS ONE],
-https://www.nature.com/sdata/policies/data-policies[+++Nature Research
-Journals+++]) are increasingly adopting the requirement that
-biodiversity data should be shared as FAIR (findable, accessible,
-interoperable, reusable) and open <<Wilkinson2016>>. These mandates
-are designed to enhance transparency, reproducibility, and the
-collective impact of biodiversity research and conservation efforts.
-Although biodiversity data are increasingly findable and accessible
-thanks to recent initiatives and mandates requiring research data and
-outputs to be made FAIR, it is often still difficult to assess the
-usability of data for aggregation or application in larger analyses due
-to lack of standardization.
+Governing body and international organizational reports consistently emphasize that available data area scarce for a proper assessment of nearly all facets of biodiversity in response to the current global biodiversity crisis <<IPBES2019>>. One way to address the need for extensive biodiversity data is to aggregate existing datasets from prior and disparate biological surveys, monitoring efforts, and data catalogues. International organizations (e.g., https://www.cbd.int/gbf/targets/21[+++Convention on Biological Diversity+++^], https://www.ipbes.net/node/38260[+++Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services+++^]), governmental or regional organizations (such as the Australian National Data Service and the EU’s Open Data Directive), funding agencies (e.g., EU Horizon Europe, https://new.nsf.gov/policies/pappg/24-1/ch-11-other-post-award-requirements#ch11D4[+++US National Science Foundation+++^]), and scientific journals (e.g.,
+https://journals.plos.org/plosone/[PLOS ONE^], https://pensoft.net/[Pensoft^], https://www.nature.com/sdata/policies/data-policies[+++Nature Research
+Journals+++^]) are increasingly adopting the requirement that biodiversity data be made FAIR (findable, accessible, interoperable, reusable) and open <<Wilkinson2016>>. These mandates are designed to enhance transparency, reproducibility, and the collective impact of biodiversity research and conservation efforts. Although biodiversity data are increasingly findable and accessible thanks to initiatives and mandates requiring research data and outputs to be made FAIR, it is often still difficult to assess the usability of data for aggregation or application in larger analyses due to lack of standardization. 
 
-GBIF, the https://www.gbif.org/what-is-gbif[+++Global Biodiversity
-Information Facility+++], is among the leading open access FAIR
-biodiversity data infrastructures. Users can access more than 3 billion
-species occurrence records from approximately 2,300 publishing
-institutions globally, but it is difficult to assess fitness for use of
-these data in analyses requiring integration of biodiversity survey
-data. GBIF uses the https://dwc.tdwg.org/[+++Darwin Core (DwC)+++] data
-standard for sharing biodiversity data (managed by the
-https://www.tdwg.org/[+++Biodiversity Information Standards (TDWG)+++]
-community) to facilitate data discovery and support easier aggregation
-of datasets. Recent improvements in DwC provide a means by which to
-capture the structural and methodological complexities of biodiversity
-surveys (see the https://eco.tdwg.org/[+++Humboldt extension for
-ecological inventories+++]), which facilitates efforts to identify
-appropriate datasets and aggregate data. This guide serves as a tool to
-help biological survey data holders capture key facets of survey design
-using the Darwin Core standard to facilitate FAIR and open sharing of
-these data through GBIF.
+GBIF, the https://www.gbif.org/what-is-gbif[+++Global Biodiversity Information Facility+++^], is among the leading open access FAIR biodiversity data infrastructures. In 2025, users can access more than 3 billion species occurrence records from approximately 2,300 publishing institutions globally; but, it is difficult to assess fitness for use of these data in analyses requiring integration of biodiversity survey data. Data shared through GBIF are standardized using the https://dwc.tdwg.org/[+++Darwin Core (DwC)+++^] data standard, managed by https://www.tdwg.org/[+++Biodiversity Information Standards (TDWG)+++^], to facilitate data discovery and support easier aggregation of datasets. Recent improvements in DwC provide a means by which to capture the structural and methodological complexities of biodiversity surveys (see the https://eco.tdwg.org/[+++Humboldt extension for ecological inventories+++^]), which facilitates efforts to identify appropriate datasets and aggregate data from heterogeneous sources. 
+
+This guide serves as a tool to help holders of biological survey and monitoring data capture key facets of survey design using the Darwin Core standard to facilitate FAIR and open sharing of their data through GBIF.
+
 
 === Scope
 
-This guide aims to help those with biodiversity survey data improve the
-interoperability of their data, thus facilitating increased data reuse,
-through the application of the https://dwc.tdwg.org/text/[Darwin Core Archive]. The
-guide provides an overview of the primary components of biodiversity
-survey data in the context of the Darwin Core standard, https://dwc.tdwg.org/terms/#event[DwC Events] and the https://eco.tdwg.org[Humboldt extension for ecological inventories] and, in particular
-assists the reader in structuring their data as a Darwin Core Archive
-and walks the reader through the process of mapping their data to DwC
-terms. Readers will be pointed to existing additional documentation
-where available.
+This guide aims to help those with biodiversity survey and/or monitoring data improve the interoperability of their data, thus facilitating increased data reuse, through  application of the https://dwc.tdwg.org/text/[Darwin Core Biodiversity Data Standard^]. This guide provides an overview of the primary components of biodiversity survey data in the context of the Darwin Core standard, https://dwc.tdwg.org/terms/#event[DwC Events^], and the https://eco.tdwg.org[Humboldt extension for ecological inventories^]. In particular, this guide assists the reader in structuring their data as a Darwin Core Archive and walks the reader through the process of mapping their data to DwC terms. Readers will be pointed to existing additional documentation where available.
 
 === Target audience
 
-This guide aims to help ecologists, researchers, and data managers from
-any organization or group (be they commercial, government agencies,
-non-governmental organizations, research groups, or other) wanting to
-standardize and share biodiversity survey data, specifically those
-aiming to format their data with the intent of publishing these data to
-https://www.gbif.org/[GBIF].
+This guide aims to help ecologists, researchers, and data managers from any organization or group (be they commercial, government agencies, non-governmental organizations, research groups, private sector, or other) wanting to standardize and share biodiversity survey and monitoring data, specifically those aiming to format their data with the intent of publishing these data to https://www.gbif.org/[GBIF^].
 
-If you are already comfortable with Darwin Core event datasets and are
-simply seeking guidance in applying the Humboldt extension, refer to the
-https://doi.org/10.35035/doc-7t3p-ve38[+++Survey and monitoring data
-quick start guide+++] <<Ingenloff2025>>.
+If you are already comfortable with Darwin Core Event datasets and are simply seeking guidance in applying the Humboldt extension, refer to the
+https://doi.org/10.35035/doc-7t3p-ve38[+++Survey and monitoring data quick start guide+++^] <<Ingenloff2025>>.
 
 === Using this guide
 
-Throughout the guide, Darwin Core terms will be written in fixed width font and
-preceded by their namespace abbreviation and a colon (‘dwc’ or ‘eco’) to
-denote the DwC core or extension to which the term belongs. For example,
-Darwin Core terms, such as the event ID term, will appear as
-term:dwc[dwc:eventID] and the Humboldt Extension term for verbatim target scope will be written as term:eco[eco:verbatimTargetScope].
+Throughout the guide, Darwin Core terms will be written in fixed width font and preceded by their namespace abbreviation and a colon (‘dwc:’ or ‘eco:’) to
+denote the DwC core or extension to which the term belongs. For example, the Darwin Core event ID term will appear as term:dwc[dwc:eventID] and the Humboldt Extension verbatim target scope term will be written as term:eco[eco:verbatimTargetScope].
 
-Terms are linked with their respective term internationalized resource
-identifier (IRI, ex., term:eco[eco:protocolNames]).
+Terms are linked with their respective term <<IRI, internationalized resource identifier>> (IRI, e.g., term:eco[eco:protocolNames]).
 
 [caption=""]
 .Namespace abbreviations and usage examples for DwC terms
@@ -111,8 +39,7 @@ identifier (IRI, ex., term:eco[eco:protocolNames]).
 |dwc a|
 Darwin Core
 
-(applies to event core, occurrence extension, measurements or facts
-extension, and related resource extension terms)
+(applies to Event core, occurrence extension, extended measurement or fact extension, and related resource extension terms)
 
 |term:dwc[dwc:eventID]
 
@@ -122,80 +49,50 @@ extension, and related resource extension terms)
 
 *+++Term usage recommendations+++*
 
-Each term mentioned in this guide is associated with one of 3 usage
-recommendations.
+Each term mentioned in this guide is associated with one of 3 usage recommendations.
 
-* *Required* terms must be populated and included with the dataset for publication to GBIF.
-* *Recommended* terms enhance the value and broader usefulness of a
-dataset with improved information about event localities, sampling
-context, methods, and scopes.
-* *Share if available* terms denoted as ‘share if available’ can enhance
-the potential usefulness of a dataset but to a less quantifiable extent
-than required and recommended terms.
+* `*Required*` terms must be populated and included with a dataset for publication to GBIF or for reusability.
+* `*Recommended*` terms enhance the value and broader usefulness of a dataset with improved information about event localities, sampling context, methods, and/or scopes.
+* `*Share if available*` terms can further enhance the potential usefulness of a dataset.
+
 
 ==== Data mapping template
 
-A basic biodiversity survey data template is available to facilitate mapping of survey data and preparation for formatting of a DwC-A. The template can be accessed as a single .xlsx file or as three separate .csv files.
+A basic data template is available to facilitate mapping and preparation of biodiversity survey and monitoring data for formatting as a Darwin Core Archive. The template can be accessed as a single .xlsx file or as three separate .csv files.
 
-* https://github.com/gbif/doc-guide-publishing-survey-data/blob/1.0/data/event_template_wHE.xlsx[+++Survey data template+++] (.xlsx)
-* https://github.com/gbif/doc-guide-publishing-survey-data/blob/1.0/data/event_template_wHE_event-table.csv[+++Survey event table template+++] (.csv)
-* https://github.com/gbif/doc-guide-publishing-survey-data/blob/1.0/data/event_template_wHE_occurrence-table.csv[+++Survey occurrence table template+++] (.csv)
-* https://github.com/gbif/doc-guide-publishing-survey-data/blob/1.0/data/event_template_wHE_README.csv[+++Survey template README+++] (.csv)
+* https://github.com/gbif/doc-guide-publishing-survey-data/tree/1.1_postCommReview/data/event_template_wHE.xlsx[+++Survey data template+++^] (.xlsx)
+* https://github.com/gbif/doc-guide-publishing-survey-data/tree/1.1_postCommReview/data/event_template_wHE_event-table.csv[+++Survey event table template+++^] (.csv)
+* https://github.com/gbif/doc-guide-publishing-survey-data/tree/1.1_postCommReview/data/event_template_wHE_occurrence-table.csv[+++Survey occurrence table template+++^] (.csv)
+* https://github.com/gbif/doc-guide-publishing-survey-data/tree/1.1_postCommReview/data/event_template_wHE_README.csv[+++Survey template README+++^] (.csv)
 
 
 [width="100%",cols="20%,80%",options="header",]
 |===
 |*Table* |*Description*
 |event a|
-Terms in the event tab should be used to capture survey event
-information including survey design, protocol(s), scopes, and effort. Terms from both the https://rs.gbif.org/core/dwc_event_2024-02-19.xml[Darwin Core Event class]
-and the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt extension] are included.
+Terms in the `event` table are used to capture survey Event information (i.e. information that applies to the observations of all taxa) including survey design, protocol(s), scopes, and effort. Terms from the https://rs.gbif.org/core/dwc_event_2024-02-19.xml[Darwin Core Event class] and the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt extension] are included.
 
-Column heads are populated with the DwC Event core and Humboldt
-extension terms referenced in this guide. In the rows beneath each term,
-the term definition, comments, recommended usage for publication in
-GBIF, and additional comments or usage guidance.
+Column heads are populated with the DwC Event core and Humboldt extension terms referenced in this guide. The rows beneath each term include term definitions, comments, recommended usage for publication in GBIF, and additional comments or usage guidance.
 
 |occurrence a|
-Terms in the occurrence tab should be used to capture occurrence
-information with terms from the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[Darwin Core Occurrence extension].
+Terms in the `occurrence` table should be used to capture information about the occurrence of a single taxon with terms from the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[Darwin Core Occurrence extension].
 
-Column heads are populated with the DwC occurrence extension terms
-referenced in this guide. In the rows beneath each term, the term
-definition, comments, and recommended usage for publication in GBIF.
-Additional terms from the extension should be added to your own data
-table as appropriate for your dataset.
+Column heads are populated with the DwC Occurrence extension terms referenced in this guide. The rows beneath each term include term definitions, comments, and recommended usage for publication in GBIF. Additional Occurrence extension terms should be added to your own data `occurrence` table as appropriate for your dataset.
 
-|README |The README table provides additional information about the
-structure and information included in each data tab.
+|README |The README table provides additional information about the structure and information included in each data table.
 |===
 
 ==== Example data
 
-The authors are currently collaborating with the National Ecological
-Observatory Network (NEON) to develop a comprehensive example dataset to
-accompany this guide. The guide will be updated as soon as the data are
-available.
+The authors are collaborating with the https://www.neonscience.org/[National Ecological Observatory Network^] (NEON) to develop a comprehensive example dataset to
+accompany this guide. The guide will be updated as soon as the dataset is available.
 
-The GBIF datasets listed below implement at least some Humboldt
-extension terms and may serve as useful references on event dataset
-structure and term usage.
+The GBIF datasets listed below implement some Humboldt extension terms and may serve as useful references on Event dataset structure and term usage.
 
-* Faveyts W, Cooleman S (2025). Bird census counts at the Zwin Nature
-Park. Version 1.5. Belgian Biodiversity Platform. Sampling event dataset
+* Faveyts W and Cooleman S (2025). Bird census counts at the Zwin Nature Park. Version 1.5. Belgian Biodiversity Platform. Sampling event dataset
 https://doi.org/10.15468/saesvn[+++https://doi.org/10.15468/saesvn+++].
-* Palpurina S (2025). Vegetation plots collected in dry grasslands
-throughout Bulgaria and Romanian Dobrudzha. Version 1.12. Masaryk
-University, Department of Botany and Zoology. Sampling event dataset
-https://doi.org/10.15468/pkx4tg[+++https://doi.org/10.15468/pkx4tg+++].
-* Piesschaert F, Vermeersch G, Brosens D, Westra T, Desmet P, Feys S, Van
-de Poel S, Pollet M, Cooleman S (2025). ABV - Common breeding birds in
-Flanders, Belgium (post 2016). Version 1.14. Research Institute for
-Nature and Forest (INBO). Sampling event dataset
-https://doi.org/10.15468/pj2v6h[+++https://doi.org/10.15468/pj2v6h+++].
-* van Klink R, Gerrits G (2025). Biological Station Wijster standard
-trapping program: Sampling event data for ground beetles (Coleoptera:
-Carabidae). Version 1.3. WBBS foundation. Sampling event dataset
-https://doi.org/10.15468/3mcqja[+++https://doi.org/10.15468/3mcqja+++].
+* Palpurina S (2025). Vegetation plots collected in dry grasslands throughout Bulgaria and Romanian Dobrudzha. Version 1.12. Masaryk University, Department of Botany and Zoology. Sampling event dataset https://doi.org/10.15468/pkx4tg[+++https://doi.org/10.15468/pkx4tg+++].
+* Piesschaert F, Vermeersch G, Brosens D, Westra T, Desmet P, Feys S, Van de Poel S, Pollet M, and Cooleman S (2025). ABV - Common breeding birds in Flanders, Belgium (post 2016). Version 1.14. Research Institute for Nature and Forest (INBO). Sampling event dataset https://doi.org/10.15468/pj2v6h[+++https://doi.org/10.15468/pj2v6h+++].
+* van Klink R and Gerrits G (2025). Biological Station Wijster standard trapping program: Sampling event data for ground beetles (Coleoptera: Carabidae). Version 1.3. WBBS foundation. Sampling event dataset https://doi.org/10.15468/3mcqja[+++https://doi.org/10.15468/3mcqja+++].
 
 <<<
