@@ -2,7 +2,7 @@
 
 [IMPORTANT] 
 ====
-Resource metadata information should be saved to the DwC-A `metafile`.
+Resource metadata information should be saved to the DwC-A dataset metadata file (eml.xml).
 ====
 
 *Resource metadata* provides project- and/or dataset-level information for potential data users to understand the context of a dataset. GBIF's metadata schema is based https://eml.ecoinformatics.org/[Ecological Metadata Language] (EML), a metadata standard administered and maintained by https://knb.ecoinformatics.org/[The Knowledge Network for Biocomplexity], which captures information about an ecological dataset in a series of modular and extensible XML documents. Each Darwin Core Archive must include a resource metadata written in XML format: `eml.xml`.
