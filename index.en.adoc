@@ -1,4 +1,4 @@
-= Guide for publishing biological survey data to GBIF
+= Guide for publishing biological survey and monitoring data to GBIF
 Kate Ingenloff; Cecilie Svenningsen; Chandra Earl; Paloma Helena Fernandes Shimabukuro; Yanina Sica; Yi-Ming Gan; Zachary Raphael Kachian; Peter Brenton; Wesley Hochachka; John Wieczorek; Robert Stevenson; Anahita Kazem; Steve Baskauf; Paula Florencia Zermoglio; David Bloom; Andrew Rodrigues; Javier Gamboa Martínez; Dmitry Schigel
 :toc: left
 :toclevels: 3
