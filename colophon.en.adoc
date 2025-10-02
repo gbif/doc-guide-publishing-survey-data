@@ -7,9 +7,7 @@ endif::backend-html5[]
 
 === Suggested citation
 
-Ingenloff K, Svenningsen C, Earl C, Shimabukuro PHF, Sica Y, Gan Y-M, Kachian ZR, Brenton P, Hochachka W, Wieczorek J, Stevenson R, Kazem A, Baskauf S, Zermoglio PF, Bloom D, Rodrigues A, Gamboa Martínez J & Schigel D. Guide for publishing biological survey and monitoring data to GBIF. GBIF Secretariat: Copenhagen. 
-// Uncomment once a DOI is assigned
-https://doi.org/10.35035/doc-ynvs-eh84
+Ingenloff K, Svenningsen C, Earl C, Shimabukuro PHF, Sica Y, Gan Y-M, Kachian ZR, Brenton P, Hochachka W, Wieczorek J, Stevenson R, Kazem A, Baskauf S, Zermoglio PF, Bloom D, Rodrigues A, Gamboa Martínez J, Schigel D. Guide for publishing biological survey data to GBIF ({revnumber}). Global Biodiversity Information Facility 2025. https://doi.org/10.35035/DOC-YNVS-EH84.
 
 === Authors
 
