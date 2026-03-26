@@ -122,6 +122,16 @@ In addition to Event and parent Event identifiers:
 |`RV Sol 87-03-08`
 |===
 
+
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-1.png
+****
+
+
 === Project information
 
 If the survey(s) being reported were part of a larger Project, four terms are available to capture the project name(s) and funding institution(s).
@@ -191,6 +201,17 @@ These terms should be populated for each individual Event for which the informat
 |`Coastal sand dunes at dry oak forest edge. Vegetation: Ammophila arenaria, Betula pendula, Leymus arenarius, Pinus sylvestris`
 |===
 
+
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+
+image::img/NEON-exData_screenshots/NEON-5-3-1.png
+****
+
+
 ==== Site locality
 
 The geographic location and extent of each survey site should be reported. Five terms are currently recommended for Event datasets:
@@ -200,6 +221,19 @@ The geographic location and extent of each survey site should be reported. Five 
 * *Latitude-longitude:* The decimal latitude and longitude and geodetic datum location of each survey site should be reported in term:dwc[dwc:decimalLatitude], term:dwc[dwc:decimalLongitude], and term:dwc[dwc:geodeticDatum]. All three terms should be populated together.
 ** If the geographic coordinates of your dataset are not in decimal latitude and decimal longitude format, use the terms term:dwc[dwc:verbatimLatitude], term:dwc[dwc:verbatimLongitude], and term:dwc[dwc:verbatimCoordinateSystem] to report geographic location instead. +
 ** Note that this is a minimum recommendation and does not make data fit for the maximum number of purposes. It is highly recommended to provide georeference information that follow best practices.
+
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+
+image::img/NEON-exData_screenshots/NEON-5-3-2a.png
+ +
+Additional terms for this dataset
+image::img/NEON-exData_screenshots/NEON-5-3-2b.png
+****
+
 
 ==== Survey site area
 
@@ -228,7 +262,15 @@ Here, the project-level parent Event would report the full geographic extent of 
 
 For each of the 130 associated child Events representing the individual plots, term:eco[eco:geospatialScopeAreaValue] and term:eco[eco:geospatialScopeAreaUnit] would be left empty because geospatialScope was a characteristic of the higher-level survey design not the individual survey site visits. For the plots, the area of the site would be term:eco[eco:totalAreaSampledValue] = `1600` and term:eco[eco:totalAreaSampledUnit] = `m²`.
 ****
+ +
+ +
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
 
+image::img/NEON-exData_screenshots/NEON-5-3-3.png
+****
 
 ==== Additional survey site information
 
@@ -285,6 +327,15 @@ For each of the 130 associated child Events representing the individual plots, t
 |`Agriculture site, Kongskilde Friluftsgård, Zealand`
 |===
 
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-3-4.png
+****
+
+
 ==== Vegetation cover
 
 If vegetation cover data are available for a site (for example, if a relevé was conducted or if a textual site description was provided), it can be reported in three ways:
@@ -297,6 +348,15 @@ measurement or fact extension^]. Data reported using emof should be linked to th
 There is no single best method of reporting vegetation cover information for a site, although it is recommended to choose the most explicit method possible based on the type of information avilable. 
 
 If vegetation cover is reported using one of the three methods described above, then term:eco[eco:isVegetationCoverReported] = `true`; otherwise, term:eco[eco:isVegetationCoverReported] = `false`.
+
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-3-5.png
+****
+
 
 === Survey date and time
 
@@ -327,6 +387,14 @@ Refer to GBIF’s technical documentation on https://techdocs.gbif.org/en/data-p
 |term:eco[eco:eventDurationUnit]
 |`hour`
 |===
+
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-4.png
+****
 
 === Methodology or sampling protocol
 
@@ -387,6 +455,15 @@ If term:eco[eco:inventoryTypes] = `compilation`, the compilation type should be 
 |`museumSpecimens \| literature`
 |===
 
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-5-1.png
+****
+
+
 ==== Sampling protocol
 
 Four protocol terms exist; however, only 1 term is currently required to publish an Event dataset in GBIF: term:dwc[dwc:samplingProtocol]. This requirement is because the initial Darwin Core Event classification only included the one term. The Humboldt extension introduced an additional three terms to capture information about sampling protocol in a more explicit manner:
@@ -424,6 +501,15 @@ Four protocol terms exist; however, only 1 term is currently required to publish
 |`See Appendix B of Brunbjerg, A.K., Bruun, H.H., Brøndum, L. et al. A systematic survey of regional multi-taxon biodiversity: evaluating strategies and coverage. BMC Ecol 19, 43 (2019). https://doi.org/10.1186/s12898-019-0260-x \| https://doi.org/10.17504/protocols.io.kxygx3jwkg8j/v1`
 |===
 
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-5-2.png
+****
+
+
 ==== Absences
 
 *Organismal <<absence, absences>>* are defined here as the lack of detection of organisms that are members of an explicitly stated target taxonomic scope. Absence information is critical to understanding species´ biogeography, modeling species' responses to climate- and human-induced environmental change, conservation planning and resource management, monitoring and restoration efforts, eradications or reintroductions, and other aspects of biodiversity dynamics.
@@ -434,6 +520,15 @@ Four protocol terms exist; however, only 1 term is currently required to publish
 ** Absence cannot be asserted for bycatch.
 
 See the section 'link:#reporting-absences[Reporting absences]' for details on reporting absence information at the Occurrence level.
+
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-5-3.png
+****
+
 
 ==== Abundance
 
@@ -465,6 +560,15 @@ See the section 'link:#abundance-information[Abundance information]' for details
 |term:eco[eco:abundanceCap] |`5`
 |===
 
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-5-4.png
+****
+
+
 ==== Material samples
 
 A <<materialSample, *material sample*>> is a physical entity ´_... that represents an entity of interest in whole or in part_´ (see term:dwc[dwc:MaterialSample]). Essentially, material samples are specimens collected during a survey. A material sample may consist of an entire organism, part of an organism, or a genetic sample, or even multiple organisms not necessarily of the same taxonomic designation.
@@ -476,6 +580,15 @@ If the dataset includes at least one specimen from which a material sample was t
 
 If the dataset or Event does _not_ include material samples, term:eco[eco:hasMaterialSamples] = `false`.
 
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-5-5.png
+****
+
+
 ==== Vouchers
 
 A <<voucher, *voucher*>> is a physical specimen or material sample collected and accessioned into a museum collection in support of a specific project or survey.
@@ -486,6 +599,15 @@ If the dataset has vouchers, for each relevant Event:
 * a list of institutions housing them should be shared in term:eco[eco:voucherInstitutions].
 
 If the dataset or sampling event does _not_ include vouchers, term:eco[eco:hasVouchers] = `false`.
+
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-5-6.png
+****
+
 
 ==== Sensitive data: data generalization & information withheld
 
@@ -514,6 +636,14 @@ The term term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive] indicates 
 * For term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive] to be `false`, the values shared in term:dwc[dwc:individualCount] or term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] for a single Occurrence record are *not* inclusive of all organisms of the dwc:Taxon detected during the survey Event. This means that to find the total number of organisms detected for a given dwc:Taxon, you need to add up the dwc:organismQuantity values from multiple occurrence records within the Event.
 
 See https://eco.tdwg.org/inclusive/[Guidelines for eco:isLeastSpecificTargetCategoryQuantityInclusive] <<tdwg2024a>> for more information.
+
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-5-8.png
+****
 
 ==== Verbatim fields
 
@@ -559,6 +689,15 @@ Both fields can be applied to any Event at any level.
 |
 |===
 
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-5-9.png
+****
+
+
 === Scope and completeness
 
 *Survey <<scope, scope>>* identifies the organisms targeted (or not targeted) during a survey. Structured reporting of explicitly stated survey scopes is necessary for evaluating and reporting completeness and is critical to understanding if the data can be used to assert absences (non-detections) of taxa. 
@@ -589,6 +728,15 @@ The complete scope explicitly identifying the full suite of stated parameters de
 |term:eco[eco:verbatimTargetScope]
 |`Adult flying insects`
 |===
+
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-6-1.png
+****
+
 
 ==== Taxonomic scope
 
@@ -631,6 +779,15 @@ If a specific person(s) or organization(s) are reported as making the taxonomic 
 |term:dwc[dwc:identifiedBy]
 |
 |===
+
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-6-2.png
+****
+
 
 ==== Organismal scopes
 
@@ -696,6 +853,16 @@ A corresponding term:dwc[dwc:degreeOfEstablishment] term is available in the Occ
 |`true` or `false`
 |===
 
+5.6.3. organismal scopes
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-6-3.png
+****
+
+
 ==== Bycatch
 
 <<bycatch, *Bycatch*>> are organisms detected during a survey that were not explicitly targeted in the scope of a study. Bycatch, or a lack thereof, in a dataset can be reported at the taxonomic and organismal levels.
@@ -735,6 +902,15 @@ If the dataset does NOT include taxonomic or organismal bycatch:
 |term:eco[eco:hasNonTargetOrganisms]
 |`true` or `false`
 |===
+
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-6-4.png
+****
+
 
 ==== Habitat scope
 
@@ -780,7 +956,6 @@ The DwC Event term term:dwc[dwc:samplingEffort] is currently a recommended field
 
 
 
-
 [caption=""]
 .Sampling effort terms, their recommended usage (status), and example data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
@@ -805,5 +980,13 @@ The DwC Event term term:dwc[dwc:samplingEffort] is currently a recommended field
 |term:eco[eco:samplingPerformedBy]
 |`A. Townsend Peterson`
 |===
+
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-5-7.png
+****
 
 <<<
