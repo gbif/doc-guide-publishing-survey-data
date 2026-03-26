@@ -46,7 +46,7 @@ For example, if four hooded crows (_Corvus cornix_) were observed, a single occu
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-section-additionalIDifNecessary.png[Description of the screenshot]
+image::img/NEON-exData_screenshots/NEON-7-1.png
 ****
 
 
@@ -94,7 +94,7 @@ For example, if 1 adult male and 3 adult females Indian gharials (_Gavialis gang
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-section-additionalIDifNecessary.png
+image::img/NEON-exData_screenshots/NEON-7-2.png
 ****
 
 
