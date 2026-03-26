@@ -84,8 +84,17 @@ Column heads are populated with the DwC Occurrence extension terms referenced in
 
 ==== Example data
 
-The authors are collaborating with the https://www.neonscience.org/[National Ecological Observatory Network^] (NEON) to develop a comprehensive example dataset to
-accompany this guide. The guide will be updated as soon as the dataset is available.
+The authors are collaborating with the https://www.neonscience.org/[National Ecological Observatory Network^] (NEON) to develop a comprehensive example dataset to accompany this guide. 
+.NEON tick-pathogen dataset
+****
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-section-additionalIDifNecessary.png[Description of the screenshot]
+
+Read more about the dataset and mapping NEON monitoring data the Darwin Core data standard here: https://sunray1.github.io/NEONTickstoHumboldt/[Mapping NEON Survey Monitoring Data to the Humboldt Extension for Ecological Inventories].
+****
+
+
 
 The GBIF datasets listed below implement some Humboldt extension terms and may serve as useful references on Event dataset structure and term usage.
 
