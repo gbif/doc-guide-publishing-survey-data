@@ -128,7 +128,7 @@ In addition to Event and parent Event identifiers:
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-1.png
+image::img/NEON-exData_screenshots/NEON-5-1.png[]
 ****
 
 
@@ -207,8 +207,7 @@ These terms should be populated for each individual Event for which the informat
 ==== Box title or headline here
 Text to fill in here.
 
-
-image::img/NEON-exData_screenshots/NEON-5-3-1.png
+image::img/NEON-exData_screenshots/NEON-5-3-1.png[]
 ****
 
 
@@ -227,13 +226,11 @@ The geographic location and extent of each survey site should be reported. Five 
 ==== Box title or headline here
 Text to fill in here.
 
-
-image::img/NEON-exData_screenshots/NEON-5-3-2a.png
+image::img/NEON-exData_screenshots/NEON-5-3-2a.png[]
  +
 Additional terms for this dataset
-image::img/NEON-exData_screenshots/NEON-5-3-2b.png
+image::img/NEON-exData_screenshots/NEON-5-3-2b.png[]
 ****
-
 
 ==== Survey site area
 
@@ -269,7 +266,7 @@ For each of the 130 associated child Events representing the individual plots, t
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-3-3.png
+image::img/NEON-exData_screenshots/NEON-5-3-3.png[]
 ****
 
 ==== Additional survey site information
@@ -332,7 +329,7 @@ image::img/NEON-exData_screenshots/NEON-5-3-3.png
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-3-4.png
+image::img/NEON-exData_screenshots/NEON-5-3-4.png[]
 ****
 
 
@@ -354,7 +351,7 @@ If vegetation cover is reported using one of the three methods described above, 
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-3-5.png
+image::img/NEON-exData_screenshots/NEON-5-3-5.png[]
 ****
 
 
@@ -460,7 +457,7 @@ If term:eco[eco:inventoryTypes] = `compilation`, the compilation type should be 
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-5-1.png
+image::img/NEON-exData_screenshots/NEON-5-5-1.png[]
 ****
 
 
@@ -506,7 +503,7 @@ Four protocol terms exist; however, only 1 term is currently required to publish
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-5-2.png
+image::img/NEON-exData_screenshots/NEON-5-5-2.png[]
 ****
 
 
@@ -526,7 +523,7 @@ See the section 'link:#reporting-absences[Reporting absences]' for details on re
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-5-3.png
+image::img/NEON-exData_screenshots/NEON-5-5-3.png[]
 ****
 
 
@@ -565,7 +562,7 @@ See the section 'link:#abundance-information[Abundance information]' for details
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-5-4.png
+image::img/NEON-exData_screenshots/NEON-5-5-4.png[]
 ****
 
 
@@ -585,7 +582,7 @@ If the dataset or Event does _not_ include material samples, term:eco[eco:hasMat
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-5-5.png
+image::img/NEON-exData_screenshots/NEON-5-5-5.png[]
 ****
 
 
@@ -605,7 +602,7 @@ If the dataset or sampling event does _not_ include vouchers, term:eco[eco:hasVo
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-5-6.png
+image::img/NEON-exData_screenshots/NEON-5-5-6.png[]
 ****
 
 
@@ -642,7 +639,7 @@ See https://eco.tdwg.org/inclusive/[Guidelines for eco:isLeastSpecificTargetCate
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-5-8.png
+image::img/NEON-exData_screenshots/NEON-5-5-8.png[]
 ****
 
 ==== Verbatim fields
@@ -694,7 +691,7 @@ Both fields can be applied to any Event at any level.
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-5-9.png
+image::img/NEON-exData_screenshots/NEON-5-5-9.png[]
 ****
 
 
@@ -734,7 +731,7 @@ The complete scope explicitly identifying the full suite of stated parameters de
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-6-1.png
+image::img/NEON-exData_screenshots/NEON-5-6-1.png[]
 ****
 
 
@@ -785,7 +782,7 @@ If a specific person(s) or organization(s) are reported as making the taxonomic 
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-6-2.png
+image::img/NEON-exData_screenshots/NEON-5-6-2.png[]
 ****
 
 
@@ -859,7 +856,7 @@ A corresponding term:dwc[dwc:degreeOfEstablishment] term is available in the Occ
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-6-3.png
+image::img/NEON-exData_screenshots/NEON-5-6-3.png[]
 ****
 
 
@@ -908,7 +905,7 @@ If the dataset does NOT include taxonomic or organismal bycatch:
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-6-4.png
+image::img/NEON-exData_screenshots/NEON-5-6-4.png[]
 ****
 
 
@@ -986,7 +983,7 @@ The DwC Event term term:dwc[dwc:samplingEffort] is currently a recommended field
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-5-7.png
+image::img/NEON-exData_screenshots/NEON-5-7.png[]
 ****
 
 <<<
