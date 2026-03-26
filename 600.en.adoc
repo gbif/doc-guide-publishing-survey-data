@@ -16,6 +16,15 @@ Specific information about the terms included in the emof extension (e.g., term 
 - Populate the relevant extension field(s) for each survey Event (term:dwc[dwc:eventID]) as necessary. 
 ====
 
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-6-1a.png
+****
+
+
 === Relevé extension
 
 The https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[Relevé extension^] is designed to capture vegetation plot survey measurements at a survey site. The extension facilitates explicit reporting of:
