@@ -21,10 +21,10 @@ Specific information about the terms included in the emof extension (e.g., term 
 ==== Box title or headline here
 Text to fill in here.
 
-image::img/NEON-exData_screenshots/NEON-6-1a.png
+image::img/NEON-exData_screenshots/NEON-6-1a.png[]
  +
  +
-image::img/NEON-exData_screenshots/NEON-6-1b.png
+image::img/NEON-exData_screenshots/NEON-6-1b.png[]
 ****
 
 
