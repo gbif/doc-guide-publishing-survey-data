@@ -41,6 +41,15 @@ For example, if four hooded crows (_Corvus cornix_) were observed, a single occu
 |`individuals`
 |===
 
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-section-additionalIDifNecessary.png[Description of the screenshot]
+****
+
+
 === Reporting multiple individuals as multiple occurrences
 
 If multiple individuals of the same taxonomic classification are observed and additional information about the organisms (e.g., life stage, sex) is collected, then a unique Occurrence record (row in the `occurrence` table) should be created for each unique combination of taxonomic identification-organism traits.
@@ -78,6 +87,16 @@ For example, if 1 adult male and 3 adult females Indian gharials (_Gavialis gang
 |`adult` 
 |`alive`
 |===
+
+
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-section-additionalIDifNecessary.png
+****
+
 
 The table below outlines the minimum required and recommended terms for each Occurrence, as well some of the more commonly used terms and their recommended usages. However, Darwin Core includes many more terms. It is advisable to take some time to review the https://dwc.tdwg.org/terms/[DwC quick reference guide^] to identify any additional terms that may be able to capture other data reported in the dataset. Sections that may be of particular interest:
 
@@ -210,6 +229,20 @@ Absences should only be reported for taxa within the stated taxonomic and/or org
 |
 |===
 
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+Pathogens: EXPLICIT
+image::img/NEON-exData_screenshots/NEON-section-additionalIDifNecessary.png
+ +
+ +
+Ticks: IMPLICIT
+Text to fill in here.
+image::img/NEON-exData_screenshots/NEON-section-additionalIDifNecessary.png
+****
+
+
 === Reporting abundances
 
 To capture <<abundance, abundance>> in a dataset or at a specific Event level:
@@ -259,6 +292,15 @@ See the section 'link:#abundance[Abundance]' for details on reporting abundance 
 |term:eco[ecoabundanceCap]
 |`5`
 |===
+
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-section-additionalIDifNecessary.png
+****
+
 
 === Capturing species co-occurrence and species interactions
 
@@ -323,5 +365,14 @@ The table below highlights an example from the dataset https://doi.org/10.15468/
 |term:dwc[dwc:relationshipAccordingTo]
 |`VertNet`
 |===
+
+
+****
+[discrete]
+==== Box title or headline here
+Text to fill in here.
+
+image::img/NEON-exData_screenshots/NEON-section-additionalIDifNecessary.png
+****
 
 <<<
