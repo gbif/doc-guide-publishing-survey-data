@@ -88,13 +88,13 @@ The authors are collaborating with the https://www.neonscience.org/[National Eco
 
 
 .NEON tick-pathogen dataset
-[
+====
 Text to fill in here.
 
 image::img/NEON-exData_screenshots/NEON-section-additionalIDifNecessary.png[Description of the screenshot]
 
 Read more about the dataset and mapping NEON monitoring data the Darwin Core data standard here: https://sunray1.github.io/NEONTickstoHumboldt/[Mapping NEON Survey Monitoring Data to the Humboldt Extension for Ecological Inventories].
-]
+====
 
 
 
