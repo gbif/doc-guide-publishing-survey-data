@@ -18,13 +18,15 @@ Specific information about the terms included in the emof extension (e.g., term 
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-6-1a.png[]
- +
- +
-image::img/NEON-exData_screenshots/NEON-6-1b.png[]
+The example dataset uses the emof extension to share a wide range of additional information about specific events including the NEON designated plot type where each site visit takes place (eventID = ‘SCBI_014’) and the number of individual adults, nymphs, and larvae associated with a specific sampling event (eventID = ‘SCBI_014.20140610’) or a sample barcode number associated with a sample collected during a site visit.
+
+image:img/NEON-exData_screenshots/NEON-6-1a.png[Implementing emof to report additional event-level information in the NEON tick-pathogen example dataset]
+
+The example dataset also uses the emof extension to share additional information related to specific occurrences. Numerous occurrences in the dataset have multiple additional information types to report in order to ensure that all relevant and necessary information are retained. For example, a single occurrence can be linked directly to a categorical description of the tick pathogen sample condition, CQ value, an identifier for the associated DNA sample, and a barcode for the DNA sample.
+
+image:img/NEON-exData_screenshots/NEON-6-1b.png[Implementing emof to report additional occurrence-level information in the NEON tick-pathogen example dataset]
 ****
 
 
