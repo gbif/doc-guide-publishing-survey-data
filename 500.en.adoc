@@ -184,7 +184,7 @@ Additional context about a survey site can be reported through myriad terms for 
 * *Site names:* survey site names can be reported using term:eco[eco:verbatimSiteNames]. A concatenated list of site names can be provided at higher Event levels with values separated using a pipe separator, `|`.  +
 * *Habitat:* reported habitat at a survey site should be recorded in term:dwc[dwc:habitat]. A concatenated list of habitats can be provided at higher Event levels with values separated using a pipe separator, `|`. Use of a controlled vocabulary is recommended. Note that a single controlled vocabulary does not exist for this term yet but attempts to classify habitat have been and continue to be made (for example, see <<Keith2020>> or <<Campbell2021>>).  +
 * *Weather:* reported weather during a survey Event should be reported using term:eco[eco:reportedWeather]. If you have detailed weather data (e.g., weather station or data logger produced data) archived elsewhere, you may provide a link here. +
-* *Extreme conditions:* reported extreme conditions at a site at the time of the survey should be recorded in term:eco[eco:reportedExtremeConditions]. +
+* *Extreme conditions:* reported extreme conditions at a site at the time of the survey should be recorded in term:eco[eco:reportedExtremeConditions]. Information in this field is relevant only to a specific site visit or survey event and should not be concatenated to higher or more parent event levels because of their spatial and temporally explicit nature. +
 * *Verbatim site description:* verbatim comments (e.g., the original textual description) about a site or sites should be recorded in term:eco[eco:verbatimSiteDescriptions].
 
 These terms should be populated for each individual Event for which the information is accurate. 
@@ -216,9 +216,11 @@ These terms should be populated for each individual Event for which the informat
 [discrete]
 ==== Box. NEON tick-pathogen example dataset
 
-Terms are only populated where the information was reported in survey data. In the case of habitat, reported habitat has been concatenated to the site level (eventID = ‘SCBI’).  
+Habitat information is captured for a plot during each survey; unique values are then concatenated to the site level (eventID = ‘SCBI’). 
 
-eco:reportedExtreme conditions should only contain values for the events of individual visits to survey a NEON plot and should not be concatenated to higher or more parent event levels because of their spatial and temporally explicit nature.
+NEON has explicit verbiage for describing or categorizing each site. In the example below, the site (eventID = ‘SCBI’) is a ‘core terrestrial’ site. This description is captured at the site level using verbatimSiteDescription.
+
+Cases of extreme weather conditions are noted at the site visit level using the term reportedExtremeConditions.  
 
 image::img/NEON-exData_screenshots/NEON-5-3-1.png[Verbatim site information reported with the NEON tick-pathogen example dataset]
 ****
@@ -238,12 +240,13 @@ The geographic location and extent of each survey site should be reported. Five 
 [discrete]
 ==== Box. NEON tick-pathogen example dataset
 
-In the NEON tick-pathogen dataset, all events except the project level event (eventID = ‘NEON’) have a persistent locationID and GPS coordinates with geodetic datum. Additional information reported with the data at NEON are shared using additional dwc:Location fields: coordinateUncertaintyInMeters, countryCode, stateProvince, county, minimumElevationInMeters, maximumElevationInMeters, and verbatimElevation. 
+In the NEON tick-pathogen dataset, all events except the project level event (eventID = ‘NEON’) have a persistent locationID and GPS coordinates with geodetic datum. Coordinate uncertainty is reported when available. 
 
-image::img/NEON-exData_screenshots/NEON-5-3-2a.png[Primary geospatial information reported with the NEON tick-pathogen example dataset]
- +
-Additional terms for this dataset
-image::img/NEON-exData_screenshots/NEON-5-3-2b.png[Additional geospatial information reported with the NEON tick-pathogen example dataset]
+image:img/NEON-exData_screenshots/NEON-5-3-2a.png[Primary geospatial information reported with the NEON tick-pathogen example dataset]
+
+The dataset includes additional site locality information. This is shared using additional term:dwc[dwc:Location] fields: countryCode, stateProvince, county, minimumElevationInMeters, maximumElevationInMeters, and verbatimElevation. 
+
+image:img/NEON-exData_screenshots/NEON-5-3-2b.png[Additional geospatial information reported with the NEON tick-pathogen example dataset]
 ****
 
 ==== Survey site area
@@ -578,7 +581,7 @@ See the section 'link:#abundance-information[Abundance information]' for details
 [discrete]
 ==== Box. NEON tick-pathogen example dataset
 
-Abundance information are reported for ticks but not pathogens sampled during each site visit.
+The NEON tick-pathogen example dataset reports abundance information for ticks but not pathogens sampled during each site visit. Because at least some of the occurrences associated with each event include abundance information, the term isAbundanceReported is ‘TRUE’. The sampling protocols do not include an abundance cap so isAbundanceCapReported is ‘FALSE’ for all events.
 
 image::img/NEON-exData_screenshots/NEON-5-5-4.png[Declaring abundance reporting in the NEON tick-pathogen example dataset]
 ****
@@ -599,7 +602,7 @@ If the dataset or Event does _not_ include material samples, term:eco[eco:hasMat
 [discrete]
 ==== Box. NEON tick-pathogen example dataset
 
-During each sampling of a NEON plot, any individuals of the target taxa (ticks) captured are collected as a material sample. This and the type of material sample collected (wholeOrganism) are reported with the dataset. 
+During each sampling of a NEON plot, any individuals of the target taxa (ticks) captured are collected as a material sample. This and the type of material sample collected (wholeOrganism) are reported using the terms hastMaterialSamples and materialSampleTypes. 
 
 image::img/NEON-exData_screenshots/NEON-5-5-5.png[Reporting the existence and type of material samples in the NEON tick-pathogen example dataset]
 ****
@@ -620,7 +623,7 @@ If the dataset or sampling event does _not_ include vouchers, term:eco[eco:hasVo
 [discrete]
 ==== Box. NEON tick-pathogen example dataset
 
-The existence of vouchers and the location of those vouchers in the example dataset are reported via hasVouchers and voucherInstitutions.
+The existence of vouchered specimens and the location of those vouchers in the example dataset are reported via hasVouchers and voucherInstitutions.
 
 image::img/NEON-exData_screenshots/NEON-5-5-6.png[Reporting the existence and location of vouchers in the NEON tick-pathogen example dataset]
 ****
@@ -752,7 +755,7 @@ The complete scope explicitly identifying the full suite of stated parameters de
 [discrete]
 ==== Box. NEON tick-pathogen example dataset
 
-The explicitly stated target scope of the NEON tick-pathogen example dataset included ticks and selected tick pathogens. This is reported in verbatimTargetScope.
+The NEON tick-pathogen example dataset has an explicitly stated target scope: ticks and selected tick pathogens. This is reported in verbatimTargetScope.
 
 image::img/NEON-exData_screenshots/NEON-5-6-1.png[Reported verbatim scope of the NEON tick-pathogen example dataset]
 ****
@@ -804,11 +807,13 @@ If a specific person(s) or organization(s) are reported as making the taxonomic 
 [discrete]
 ==== Box. NEON tick-pathogen example dataset
 
-The stated target taxonomic scope of the NEON tick-pathogen example dataset included Ixodidae ticks and list of tick pathogens. These are explicitly reported in targetTaxonomicScope.
+The stated target taxonomic scope of the NEON tick-pathogen example dataset includes Ixodidae ticks and an explicit list of tick pathogens. These are explicitly reported in targetTaxonomicScope.
 
-Survey protocol dictated that the taxonomic scope be fully reported.
+Survey protocol dictates that all ticks captured during a survey are reported and that all pathogens present in subsequent analysis are reported. As such, the term isTaxonomicScopeFully reported is denoted as ‘TRUE’. The methods used to assess taxonomic completeness are reported in taxonCompletenessProtocools, although taxon completeness is not reported. 
 
-The individuals (at the lowest event levels, e.g., SCBI_014_20190325) or labs (higher event levels, e.g., NEON, D02, SCBI, and SCBI_014) involved in identifying ticks and tick pathogens were reported in identifiedBy.
+Note that the information reported for the terms targetTaxnomicScope, isTaxonomicScopeFullyReported, taxonCompletenessReported, and taxonCompletenessProtocols is the same at all event levels because there is no deviation from the reported information at any event level. 
+
+Conversely, there is very explicit differentiation in acknowledging the entities involved in identifying the target taxa of the dataset. Here, the specific people identifying specimen are reported in identifiedBy for the event (plot visit) during which the sample was collected (e.g., SCBI_014_20190325) while the broader laboratory or museum responsible for managing the samples and identifications are reported in identifiedBy at the higher event levels (e.g., NEON, D02, SCBI, and SCBI_014). 
 
 image::img/NEON-exData_screenshots/NEON-5-6-2.png[Reported taxonomic scopes of the NEON tick-pathogen example dataset]
 ****
@@ -878,13 +883,14 @@ A corresponding term:dwc[dwc:degreeOfEstablishment] term is available in the Occ
 |`true` or `false`
 |===
 
-5.6.3. organismal scopes
+
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-6-3.png[]
+The survey protocols for sampling ticks in the example dataset clearly indicate that all tick life stages (adult, nymph, and larvae) except eggs are targeted for sampling. The life stages specifically targeted for sampling (adult, nymph, and larvae) are reported in targetLifeStageScope and the exceptional life stage (eggs) is reported in excludedLifeStageScope. As all ticks encountered are captured and reported, the term isLifeStageScopeFullyReported is marked as ‘TRUE’. 
+
+image::img/NEON-exData_screenshots/NEON-5-6-3.png[Reported organismal scopes of the NEON tick-pathogen example dataset]
 ****
 
 
@@ -930,10 +936,11 @@ If the dataset does NOT include taxonomic or organismal bycatch:
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-6-4.png[]
+The example dataset does not include any taxonomic information outside of the stated taxonomic and organismal scopes (ticks and tick pathogen). This is explicitly denoted by marking hasNonTargetTaxa as ‘FALSE’.
+
+image::img/NEON-exData_screenshots/NEON-5-6-4.png[Reporting the absence of bycatch in the NEON tick-pathogen example datase]
 ****
 
 
@@ -980,7 +987,6 @@ The DwC Event term term:dwc[dwc:samplingEffort] is currently a recommended field
 ** NOTE: Because term:eco[eco:samplingPerformedBy] has an <<IRI, IRI>> (internationalized resource identifier) equivalent, only a single ORCID can be provided (the term cannot support a list). If more than one ORCID needs to be shared, a list of ORCID´s (using the pipe separator between values) can be supplied using the term term:dwc[dwc:recordedByID] used BUT it must be applied to each relevant Occurrence and located on the `occurrence` table.
 
 
-
 [caption=""]
 .Sampling effort terms, their recommended usage (status), and example data entries.
 [width="100%",cols="34%,33%,33%",options="header",]
@@ -1008,10 +1014,13 @@ The DwC Event term term:dwc[dwc:samplingEffort] is currently a recommended field
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-7.png[]
+The example dataset provides explicit sampling effort information. The dataset indicates that sampling effort information is provided by populating isSamplingEffortReported as ‘TRUE’. A description of the sampling effort is provided in samplingEffortProtocol. A verbatim summary of the sampling effort is reported in dwc:samplingEffort while that same information is also reported more explicitly using the paired terms samplingEffortValue and samplingEffortUnit. 
+
+The name or identifier of the specific person(s) conducting the survey are reported in samplingPerformedBy for an event (plot visit, e.g., SCBI_014_20190325) while the broader organization (NEON field staff) is acknowledged in samplingPerformedBy at the higher event levels (e.g., NEON, D02, SCBI, and SCBI_014). 
+
+image::img/NEON-exData_screenshots/NEON-5-7.png[Reported sampling in the NEON tick-pathogen example dataset]
 ****
 
 <<<
