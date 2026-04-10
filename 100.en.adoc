@@ -84,22 +84,26 @@ Column heads are populated with the DwC Occurrence extension terms referenced in
 
 ==== Example data
 
-The authors are collaborating with the https://www.neonscience.org/[National Ecological Observatory Network^] (NEON) to develop a comprehensive example dataset to accompany this guide. 
 
-
-.NEON tick-pathogen dataset
 ****
-Text to fill in here.
+[discrete]
+==== Box. National Science Foundation's National Ecological Observatory Network (NEON) example dataset
 
-Read more about the dataset and mapping NEON monitoring data the Darwin Core data standard here: https://sunray1.github.io/NEONTickstoHumboldt/[Mapping NEON Survey Monitoring Data to the Humboldt Extension for Ecological Inventories].
+An example dataset was developed to accompany this guide. Throughout this document boxes such as this one will use a portion of the example dataset to illustrate implementation of the concepts relevant to the current section topic. Because this example dataset is derived from two real datasets, there will not be an example for every Darwin Core term presented. 
+
+The example dataset is derived from an ongoing monitoring program to survey ticks and associated pathogens across terrestrial sites in the United States run by the U.S. National Science Foundation’s https://www.neonscience.org/[National Ecological Observatory Network (NEON)], a long-term ecological data collection program. A subset of the ticks collected during each survey is then tested for  pathogens of public health and veterinary importance. See the original NEON datasets: https://data.neonscience.org/data-products/DP1.10093.001[Ticks sampled using drag cloths] and https://data.neonscience.org/data-products/DP1.10092.001[Tick pathogen status].
+
+The complete Darwin Core standardized dataset as published to GBIF can be be found here: https://www.gbif.org/dataset/12315bb8-8ab3-446a-b5a4-2be93aade242[NEON ticks sampled using drag cloths and tick pathogen status].
+
+The workflow for calling the original datasets from the NEON data repository and mapping the data to the Darwin Core data standard is available here: https://sunray1.github.io/NEONTickstoHumboldt/[Mapping NEON Survey Monitoring Data to the Humboldt Extension for Ecological Inventories].
 ****
-
 
 
 The GBIF datasets listed below implement some Humboldt extension terms and may serve as useful references on Event dataset structure and term usage.
 
 * Faveyts W and Cooleman S (2025). Bird census counts at the Zwin Nature Park. Version 1.5. Belgian Biodiversity Platform. Sampling event dataset
 https://doi.org/10.15468/saesvn[+++https://doi.org/10.15468/saesvn+++].
+* National Ecological Observatory Network (2026). NEON ticks sampled using drag cloths and tick pathogen status. Sampling event dataset https://doi.org/10.15468/b52b9z[+++https://doi.org/10.15468/b52b9z+++].
 * Palpurina S (2025). Vegetation plots collected in dry grasslands throughout Bulgaria and Romanian Dobrudzha. Version 1.12. Masaryk University, Department of Botany and Zoology. Sampling event dataset https://doi.org/10.15468/pkx4tg[+++https://doi.org/10.15468/pkx4tg+++].
 * Piesschaert F, Vermeersch G, Brosens D, Westra T, Desmet P, Feys S, Van de Poel S, Pollet M, and Cooleman S (2025). ABV - Common breeding birds in Flanders, Belgium (post 2016). Version 1.14. Research Institute for Nature and Forest (INBO). Sampling event dataset https://doi.org/10.15468/pj2v6h[+++https://doi.org/10.15468/pj2v6h+++].
 * van Klink R and Gerrits G (2025). Biological Station Wijster standard trapping program: Sampling event data for ground beetles (Coleoptera: Carabidae). Version 1.3. WBBS foundation. Sampling event dataset https://doi.org/10.15468/3mcqja[+++https://doi.org/10.15468/3mcqja+++].
