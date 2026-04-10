@@ -125,10 +125,20 @@ In addition to Event and parent Event identifiers:
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-1.png[]
+The structure of the NEON tick-pathogen example dataset is designed to reflect the sampling design adopted by the entire NEON project. This structure is captured in the way each eventID and parentEventID is assigned. Sampling design is further captured through the terms siteNestingDescription, siteCount, and verbatimSiteNames. The information provided for each term matches the granularity of the event level at which it is reported.
+
+The highest event level representing the NEON project as a whole has an eventID, ‘NEON’, but no parentEventID. The eventID, ‘NEON’, for the NEON project becomes the parentEventID for the next highest event level which represents the NEON domain. The eventID assigned to the NEON domain event, ‘D02’, is the parentEventID for the NEON site; the eventID for the NEON site, ‘SCBI’, is the parentEventID for NEON plot; and the eventID for the NEON plot, ‘SCBI_014’, is the parentEventID for each unique visit to the NEON plot to sample ticks. Each of these plot visits has a unique eventID. 
+
+* At NEON project level: This highest event level has an eventID (eventID = ‘NEON’) but no parentEventID. siteNestingDescriptions relates the survey design for the full NEON project, siteCount reports the total number of survey sites (NEON plots) in the dataset, and verbatimSiteNames contains a concatenated list of all NEON plot names or identifiers in the dataset. +
+* At NEON domain level: each NEON domain has a unique eventID (eventID = ‘D02’) and the parentEventID is the same as the NEON project eventID (‘NEON’). siteNestingDescriptions relates the survey design details within NEON domain ‘D02’, siteCount reports the total number of survey sites (NEON plots) in the dataset, and verbatimSiteNames contains a concatenated list of all NEON plot names or identifiers in the dataset. +
+* At NEON site level: each NEON site has a unique eventID (eventID = ‘SCBI’) and the parentEventID is the same as the eventID for the NEON domain that the site falls within. siteNestingDescriptions relates the survey design details within NEON site ‘SCBI’, siteCount reports the total number of survey sites (NEON plots) within site ‘SCBI’ in the dataset, and verbatimSiteNames contains a concatenated list of all NEON plot names or identifiers within site ’SCBI’ in the dataset. +
+* At NEON plot level: each NEON plot has a unique eventID (eventID = ‘SCBI_014’) and the parentEventID is the same value as the eventID for the NEON site that the plot falls within. siteNestingDescriptions relates the survey design details within NEON plot ‘SCBI_014’, siteCount is ‘1’ because the event is associated with a single site only (‘SCBI_014), and the name or identifier of the NEON plot (‘SCBI_014’) is reported in verbatimSiteNames. +
+* At NEON plot visit level: Each plot visit has a unique eventID that (eventID = ‘SCBI_014_date’) and the parentEventID is the same as the eventID for the relevant NEON plot. siteNestingDescriptions reflects that the event was a singular visit to survey the NEON plot, siteCount is ‘1' because it is associated with a single site only, and the name or identifier of the NEON plot (‘SCBI_014’) is reported in verbatimSiteNames. 
+
+
+image::img/NEON-exData_screenshots/NEON-5-1.png[Information communicating survey design reported with the NEON tick-pathogen example dataset]
 ****
 
 
@@ -204,10 +214,13 @@ These terms should be populated for each individual Event for which the informat
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-3-1.png[]
+Terms are only populated where the information was reported in survey data. In the case of habitat, reported habitat has been concatenated to the site level (eventID = ‘SCBI’).  
+
+eco:reportedExtreme conditions should only contain values for the events of individual visits to survey a NEON plot and should not be concatenated to higher or more parent event levels because of their spatial and temporally explicit nature.
+
+image::img/NEON-exData_screenshots/NEON-5-3-1.png[Verbatim site information reported with the NEON tick-pathogen example dataset]
 ****
 
 
@@ -223,13 +236,14 @@ The geographic location and extent of each survey site should be reported. Five 
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-3-2a.png[]
+In the NEON tick-pathogen dataset, all events except the project level event (eventID = ‘NEON’) have a persistent locationID and GPS coordinates with geodetic datum. Additional information reported with the data at NEON are shared using additional dwc:Location fields: coordinateUncertaintyInMeters, countryCode, stateProvince, county, minimumElevationInMeters, maximumElevationInMeters, and verbatimElevation. 
+
+image::img/NEON-exData_screenshots/NEON-5-3-2a.png[Primary geospatial information reported with the NEON tick-pathogen example dataset]
  +
 Additional terms for this dataset
-image::img/NEON-exData_screenshots/NEON-5-3-2b.png[]
+image::img/NEON-exData_screenshots/NEON-5-3-2b.png[Additional geospatial information reported with the NEON tick-pathogen example dataset]
 ****
 
 ==== Survey site area
@@ -252,21 +266,13 @@ In *nested datasets*, geospatial scope terms will be equal to or greater than th
 
 ****
 [discrete]
-==== Box 2. Biowide project example
-Consider the https://www.gbif.org/dataset/cd4eb3ec-0a18-42b4-bda4-155716ddd7b1[Biowide project^] which surveyed 130 40×40m plots across Denmark. 
+==== Box. NEON tick-pathogen example dataset
 
-Here, the project-level parent Event would report the full geographic extent of Denmark: term:eco[eco:geospatialScopeAreaValue] = `42934` and term:eco[eco:geospatialScopeAreaUnit] = `km²` and the sum of sampled areas: term:eco[eco:totalAreaSampledValue] = `208000` and term:eco[eco:totalAreaSampledUnit] = `m²`. 
+In the NEON tick-pathogen example dataset, the geospatial scope in square kilometers is reported at the project, domain, and site levels using geospatialScopeAreaValue and geospatialScopeAreaUnit. The value at the NEON project level (eventID = ‘NEON’) reflects the area covered by the entire NEON project; the value at the NEON domain level (eventID = ‘D02’) reflects the total area of that particular NEON domain; and the value at the NEON site level (eventID = ‘SCBI’) reflects the total area of that particular NEON site.
 
-For each of the 130 associated child Events representing the individual plots, term:eco[eco:geospatialScopeAreaValue] and term:eco[eco:geospatialScopeAreaUnit] would be left empty because geospatialScope was a characteristic of the higher-level survey design not the individual survey site visits. For the plots, the area of the site would be term:eco[eco:totalAreaSampledValue] = `1600` and term:eco[eco:totalAreaSampledUnit] = `m²`.
-****
- +
- +
-****
-[discrete]
-==== Box title or headline here
-Text to fill in here.
+The total area sampled during each visit to sample a plot is reported using sampleSizeValue and sampleSizeUnit because the reported unit is a distance (m).
 
-image::img/NEON-exData_screenshots/NEON-5-3-3.png[]
+image::img/NEON-exData_screenshots/NEON-5-3-3.png[Geospatial scope information reported with the NEON tick-pathogen example dataset]
 ****
 
 ==== Additional survey site information
@@ -348,10 +354,11 @@ If vegetation cover is reported using one of the three methods described above, 
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-3-5.png[]
+Vegetation cover information is not reported at all with the NEON tick-pathogen example dataset so isVegetationCover reported is ‘false’ for all events. 
+
+image::img/NEON-exData_screenshots/NEON-5-3-5.png[Indicating if vegetation cover is reported with the NEON tick-pathogen example dataset]
 ****
 
 
@@ -387,10 +394,11 @@ Refer to GBIF’s technical documentation on https://techdocs.gbif.org/en/data-p
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-4.png
+The NEON tick-pathogen dataset includes date and time information reported using eventDate.
+
+image::img/NEON-exData_screenshots/NEON-5-4.png[Temporal information reported with the NEON tick-pathogen example dataset]
 ****
 
 === Methodology or sampling protocol
@@ -454,10 +462,14 @@ If term:eco[eco:inventoryTypes] = `compilation`, the compilation type should be 
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-5-1.png[]
+The NEON tick-pathogen example dataset classifies events as follows:
+The NEON project event level (eventID = ‘NEON’) is a ‘project’. 
+Each event at the NEON domain (eventID = ‘D02’), NEON site (eventID = ‘SCBI’), and NEON plot (eventID = ‘SCBI_014’) level are each classified generally as a ‘survey’.
+Each unique visit to a NEON plot for sampling (eventID = ‘SCBI_014_date’) is a ‘site visit’. 
+
+image::img/NEON-exData_screenshots/NEON-5-5-1.png[NEON tick-pathogen example dataset event types]
 ****
 
 
@@ -500,10 +512,15 @@ Four protocol terms exist; however, only 1 term is currently required to publish
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-5-2.png[]
+All NEON sampling protocols are documented. The tick-pathogen dataset includes 2 documented protocols: drag sampling and flagging.
+
+The name of the protocol(s) implemented during each unique survey event is reported using both samplingProtocol and protocolNames. The official description of the protocol is reported in protocolDescriptions including any deviations from the prescribed protocol. Bibliographic information for the protocol is reported in protocolReferences.
+
+Concatenated protocol information is shared at higher event levels.
+
+image::img/NEON-exData_screenshots/NEON-5-5-2.png[Survey protocol information in the NEON tick-pathogen example dataset]
 ****
 
 
@@ -559,10 +576,11 @@ See the section 'link:#abundance-information[Abundance information]' for details
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-5-4.png[]
+Abundance information are reported for ticks but not pathogens sampled during each site visit.
+
+image::img/NEON-exData_screenshots/NEON-5-5-4.png[Declaring abundance reporting in the NEON tick-pathogen example dataset]
 ****
 
 
@@ -579,10 +597,11 @@ If the dataset or Event does _not_ include material samples, term:eco[eco:hasMat
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-5-5.png[]
+During each sampling of a NEON plot, any individuals of the target taxa (ticks) captured are collected as a material sample. This and the type of material sample collected (wholeOrganism) are reported with the dataset. 
+
+image::img/NEON-exData_screenshots/NEON-5-5-5.png[Reporting the existence and type of material samples in the NEON tick-pathogen example dataset]
 ****
 
 
@@ -599,10 +618,11 @@ If the dataset or sampling event does _not_ include vouchers, term:eco[eco:hasVo
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-5-6.png[]
+The existence of vouchers and the location of those vouchers in the example dataset are reported via hasVouchers and voucherInstitutions.
+
+image::img/NEON-exData_screenshots/NEON-5-5-6.png[Reporting the existence and location of vouchers in the NEON tick-pathogen example dataset]
 ****
 
 
@@ -636,10 +656,11 @@ See https://eco.tdwg.org/inclusive/[Guidelines for eco:isLeastSpecificTargetCate
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-5-8.png[]
+The NEON tick-pathogen example dataset uses isLeastSpecificTargetQuantityInclusive to indicate that data users will need to sum abundance values across multiple rows to get the true abundance for a species. Because ticks collected during each unique sampling event are reported as occurrences at a level more specific than scientific name alone (specifically, the unique combination of scientific name, sex, and lifestage) isLeastSpecificTargetQuantityInclusive is ‘false’.
+
+image::img/NEON-exData_screenshots/NEON-5-5-8.png[Application of isLeastSpecificTargetQuantityInclusive in the NEON tick-pathogen example dataset]
 ****
 
 ==== Verbatim fields
@@ -688,10 +709,11 @@ Both fields can be applied to any Event at any level.
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-5-9.png[]
+Field notes and additional information or comments about an event are shared in eventRemarks.
+
+image::img/NEON-exData_screenshots/NEON-5-5-9.png[Verbatim comments about individual events in the NEON tick-pathogen example dataset]
 ****
 
 
@@ -728,10 +750,11 @@ The complete scope explicitly identifying the full suite of stated parameters de
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-6-1.png[]
+The explicitly stated target scope of the NEON tick-pathogen example dataset included ticks and selected tick pathogens. This is reported in verbatimTargetScope.
+
+image::img/NEON-exData_screenshots/NEON-5-6-1.png[Reported verbatim scope of the NEON tick-pathogen example dataset]
 ****
 
 
@@ -779,10 +802,15 @@ If a specific person(s) or organization(s) are reported as making the taxonomic 
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== Box. NEON tick-pathogen example dataset
 
-image::img/NEON-exData_screenshots/NEON-5-6-2.png[]
+The stated target taxonomic scope of the NEON tick-pathogen example dataset included Ixodidae ticks and list of tick pathogens. These are explicitly reported in targetTaxonomicScope.
+
+Survey protocol dictated that the taxonomic scope be fully reported.
+
+The individuals (at the lowest event levels, e.g., SCBI_014_20190325) or labs (higher event levels, e.g., NEON, D02, SCBI, and SCBI_014) involved in identifying ticks and tick pathogens were reported in identifiedBy.
+
+image::img/NEON-exData_screenshots/NEON-5-6-2.png[Reported taxonomic scopes of the NEON tick-pathogen example dataset]
 ****
 
 
