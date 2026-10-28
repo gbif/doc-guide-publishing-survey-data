@@ -11,22 +11,44 @@ Specific information about the terms included in the emof extension (e.g., term 
 .*Using the https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[extended measurement or fact (emof) extension^]* 
 ====
 - Create a new `emof` table
-- Add term:dwc[dwc:eventID] as a column header. The dwc:eventID will link the record to the `event` table.
-- Add each emof extension field needed as a column header. 
-- Populate the relevant extension field(s) for each survey Event (term:dwc[dwc:eventID]) as necessary. 
+- Add term:dwc[dwc:eventID] as a column header. The dwc:eventID will link the record to the `survey` table.
+- If a measurement or fact relates to a specific Occurrence rather than to the Event as a whole, also add term:dwc[dwc:occurrenceID] as a column header. The dwc:occurrenceID will link the record to the `occurrence` table.
+- Add each emof extension field needed as a column header (e.g., measurementType, measurementValue, measurementUnit). 
+- Populate the relevant extension field(s) for each survey Event (term:dwc[dwc:eventID]) or Occurrence (term:dwc[dwc:occurrenceID]) as necessary. Each measurement or fact is a separate row.
 ====
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Extended measurement or fact
 
-The example dataset uses the emof extension to share a wide range of additional information about specific events including the NEON designated plot type where each site visit takes place (eventID = ‘SCBI_014’) and the number of individual adults, nymphs, and larvae associated with a specific sampling event (eventID = ‘SCBI_014.20140610’) or a sample barcode number associated with a sample collected during a site visit.
+The example dataset uses the emof extension to share a wide range of additional information about specific Events, including the NEON designated plot type for each plot (for eventID = `SCBI_014`, measurementType = `Plot Type` and measurementValue = `distributed`), the number of adults, nymphs, and larvae collected during a plot visit (for eventID = `SCBI_014.20140610`, `Adult Count` = `1`, `Nymph Count` = `43`, and `Larva Count` = `1`), and the barcode of the sample collected during a plot visit (`Sample Barcode`).
 
-image:img/NEON-exData_screenshots/NEON-6-1a.png[Implementing emof to report additional event-level information in the NEON tick-pathogen example dataset]
+[width="100%",cols="22%,20%,20%,38%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:measurementType]
+|term:dwc[dwc:measurementValue]
+|term:dwc[dwc:measurementRemarks]
+|+SCBI_014+ |+Plot Type+ |+distributed+ |
+|+SCBI_014.20140610+ |+Adult Count+ |+1+ |+Excludes records where adultCount is NA+
+|+SCBI_014.20140610+ |+Nymph Count+ |+43+ |+Excludes records where nymphCount is NA+
+|+SCBI_014.20140610+ |+Larva Count+ |+1+ |+Excludes records where larvaCount is NA+
+|+SCBI_014.20190325+ |+Sample Barcode+ |+A00000035225+ |
+|===
 
-The example dataset also uses the emof extension to share additional information related to specific occurrences. Numerous occurrences in the dataset have multiple additional information types to report in order to ensure that all relevant and necessary information are retained. For example, a single occurrence can be linked directly to a categorical description of the tick pathogen sample condition, CQ value, an identifier for the associated DNA sample, and a barcode for the DNA sample.
+The example dataset also uses the emof extension to share additional information related to specific Occurrences, linked through term:dwc[dwc:occurrenceID]. Many Occurrences in the dataset have several types of additional information to report. For example, a single pathogen test record can be linked directly to a categorical description of the tick pathogen sample condition, the number of ticks used for testing, a CQ value, an identifier for the associated DNA sample, and a barcode for the DNA sample. The table below shows these rows for one pathogen test record.
 
-image:img/NEON-exData_screenshots/NEON-6-1b.png[Implementing emof to report additional occurrence-level information in the NEON tick-pathogen example dataset]
+[width="100%",cols="35%,35%,30%",options="header",]
+|===
+|term:dwc[dwc:occurrenceID]
+|term:dwc[dwc:measurementType]
+|term:dwc[dwc:measurementValue]
+|+0066d2d4-17ba-43fe-b832-1c7192e123bc+ |+Tick Pathogen Sample Condition+ |+OK+
+|+0066d2d4-17ba-43fe-b832-1c7192e123bc+ |+CQ (Quantification Cycle or Threshold Number) Value+ |+0+
+|+0066d2d4-17ba-43fe-b832-1c7192e123bc+ |+Identifier for DNA sample+ |+SCBI_014.20210621.AMBAME.N.T.005.DNA+
+|+0066d2d4-17ba-43fe-b832-1c7192e123bc+ |+Barcode of a DNA sample+ |+QT00000004043+
+|+0066d2d4-17ba-43fe-b832-1c7192e123bc+ |+Number of Ticks Used for Testing+ |+1+
+|===
 ****
 
 
@@ -43,12 +65,26 @@ The https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[Relevé extensi
 [NOTE]
 .*Using the https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[Relevé extension^]* 
 ====
-- Create a new `Relevé` table
-- Add term:dwc[dwc:eventID] as a column header. The dwc:eventID will link the record to the `Event` table.
+- Create a new `releve` table
+- Add term:dwc[dwc:eventID] as a column header. The dwc:eventID will link the record to the `survey` table.
 - Add each Relevé extension field needed as a column header. 
 - Populate the relevant extension field(s) for each survey Event (term:dwc[dwc:eventID]) as necessary. Information for a unique term:dwc[dwc:eventID] should require only one row in the table.
 ====
 
 For an example implementation of the https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[Relevé extension^], see the example dataset https://doi.org/10.15468/pkx4tg[Vegetation plots collected in dry grasslands throughout Bulgaria and Romanian Dobrudzha^].
+
+****
+[discrete]
+==== NEON example: Relevé
+
+Vegetation plot surveys are not part of the NEON tick sampling protocol, so the example dataset does not use the Relevé extension, and the `survey` table reports that vegetation cover is not reported:
+
+[width="100%",cols="50%,50%",options="header",]
+|===
+|term:dwc[dwc:eventID] |http://rs.tdwg.org/eco/terms/isVegetationCoverReported[`eco:isVegetationCoverReported`^]
+|+SCBI_014+ |+false+
+|+SCBI_014.20190325+ |+false+
+|===
+****
 
 <<<
