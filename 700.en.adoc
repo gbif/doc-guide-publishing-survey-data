@@ -2,17 +2,17 @@
 
 [IMPORTANT]
 ====
-Occurrence information should be saved to a DWC-A `occurrence` file. 
+Occurrence information should be saved to the `occurrence` table. 
 ====
 
-Any DwC Event can be associated with one or more Occurrence records. Occurrence information is mapped using the https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[DwC occurrence extension^] and linked to an Event via the appropriate term:dwc[dwc:eventID]. Each Occurrence record can be mapped to only a single survey Event; however, Occurrence records can be link to any Event level. In the case of a nested hierarchy, the recommended best practice is to link each Occurrence to the lowest possible Event level to maintain specificity. Occurrence information should be contained in the `occurrence` table of the DwC-A.
+Any DwC Event can be associated with one or more Occurrence records. Occurrence information is mapped using the https://rs.gbif.org/core/dwc_occurrence_2025-07-10.xml[DwC Occurrence extension^] and linked to an Event via the appropriate term:dwc[dwc:eventID]. Each Occurrence record can be linked to only a single survey Event; however, Occurrence records can be linked to any Event level. In the case of a nested hierarchy, the recommended best practice is to link each Occurrence to the lowest possible Event level to maintain specificity. Occurrence information should be contained in the `occurrence` table of the DwC-A.
 
 Each organism Occurrence must include the following information:
 
 * *Event ID (term:dwc[dwc:eventID]):* Links the Occurrence to the correct Event. +
 * *Occurrence ID (term:dwc[dwc:occurrenceID]):* A unique identifier for each Occurrence. +
 * *Scientific name (term:dwc[dwc:scientificName]):* The most precise (lowest rank) taxonomic identification of the reported organism(s). +
-* *Basis of record (term:dwc[dwc:basisOfRecord]):* The nature of the Occurrence (e.g. human observation, material specimen).
+* *Basis of record (term:dwc[dwc:basisOfRecord]):* The nature of the Occurrence record (e.g., `HumanObservation`, `PreservedSpecimen`, `MaterialSample`). See link:#mapping-material-sample-information[Mapping material sample information] for records based on collected specimens and samples.
 
 === Reporting multiple individuals as a single Occurrence
 
@@ -43,10 +43,23 @@ For example, if four hooded crows (_Corvus cornix_) were observed, a single occu
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== NEON example: One Occurrence for many individuals
 
-image::img/NEON-exData_screenshots/NEON-7-1.png[]
+In the NEON tick-pathogen example dataset, all ticks of the same species and life stage (and, for adults, the same sex) collected during a plot visit are reported as a single Occurrence. For example, the 27 _Ixodes scapularis_ nymphs collected during plot visit `SCBI_014.20140610` are reported in one row. The example dataset reports the number of ticks using term:dwc[dwc:individualCount] rather than the paired terms term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType].
+
+[width="99%",cols="<22%,<26%,<18%,<20%,14%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:occurrenceID]
+|term:dwc[dwc:basisOfRecord]
+|term:dwc[dwc:scientificName]
+|term:dwc[dwc:individualCount]
+|+SCBI_014.20140610+
+|+SCBI_014.20140610.IXOSCA.N+
+|+PreservedSpecimen+
+|+Ixodes scapularis+
+|+27+
+|===
 ****
 
 
@@ -91,10 +104,23 @@ For example, if 1 adult male and 3 adult females Indian gharials (_Gavialis gang
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== NEON example: Several Occurrences per plot visit
 
-image::img/NEON-exData_screenshots/NEON-7-2.png[]
+Because the life stage (and, for adults, the sex) of each tick is recorded, the ticks collected during a single plot visit are split into one Occurrence for each unique combination of scientific name, life stage, and sex. The table below shows the tick Occurrences for plot visit `SCBI_014.20190715`, which has five Occurrences: one _Amblyomma americanum_ adult male, one _Dermacentor variabilis_ adult female, one _Haemaphysalis longicornis_ nymph, one _Ixodes scapularis_ nymph, and seven larvae that could only be identified to family and are reported as `Ixodidae sp.`. Each Occurrence reports the number of ticks in term:dwc[dwc:individualCount] and the life stage and sex in term:dwc[dwc:lifeStage] and term:dwc[dwc:sex].
+
+[width="100%",cols="30%,28%,14%,12%,16%",options="header",]
+|===
+|term:dwc[dwc:occurrenceID]
+|term:dwc[dwc:scientificName]
+|term:dwc[dwc:individualCount]
+|term:dwc[dwc:sex]
+|term:dwc[dwc:lifeStage]
+|+SCBI_014.20190715.IXOSP.L+ |+Ixodidae sp.+ |+7+ | |+Larva+
+|+SCBI_014.20190715.IXOSCA.N+ |+Ixodes scapularis+ |+1+ | |+Nymph+
+|+SCBI_014.20190715.DERVAR.F+ |+Dermacentor variabilis+ |+1+ |+Female+ |+Adult+
+|+SCBI_014.20190715.HAELON.N+ |+Haemaphysalis longicornis+ |+1+ | |+Nymph+
+|+SCBI_014.20190715.AMBAME.M+ |+Amblyomma americanum+ |+1+ |+Male+ |+Adult+
+|===
 ****
 
 
@@ -106,7 +132,7 @@ The table below outlines the minimum required and recommended terms for each Occ
 
 [caption=""]
 .Species occurrence terms, their recommended usage (status), and example data entries.
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
 .4+|Required
@@ -162,48 +188,47 @@ The table below outlines the minimum required and recommended terms for each Occ
 
 <<absence, *Absences*>> are defined here as the lack of detection of organisms that are explicitly stated to be part of the target taxonomic scope. Information regarding the absence of detection of a type of taxon can be reported explicitly or implicitly within a DwC-A. 
 
-The reporting of absences only provides meaningful information when taxonomic scope is fully reported (term:eco[eco:isTaxonomicScopeFullyReported] = `true`). 
+The reporting of absences only provides meaningful information when taxonomic scope is fully reported (http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] = `true`). 
 
-If taxaonomic scope is not fully reported (term:eco[eco:isTaxonomicScopeFullyReported] = `false`), Occurrence records of zero individuals are uninterpretable because the user of these data cannot know whether there are any taxa that were not detected but were not reported with Occurrence records of zero individuals. Implicit reporting of absences is impossible if taxaonomic scope is not fully reported (term:eco[eco:isTaxonomicScopeFullyReported] = `false`).
+If taxonomic scope is not fully reported (http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] = `false`), Occurrence records of zero individuals are uninterpretable because the user of these data cannot know whether there are any taxa that were not detected but were not reported with Occurrence records of zero individuals. Implicit reporting of absences is impossible if taxonomic scope is not fully reported (http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] = `false`).
 
-*If absences are implicitly reported*, each end user of data will need to reconstruct explicit absences for themselves for each taxon of interest to them because any unreported taxon (i.e. any taxon without an Occurrence record) is known to be absent. Again, this will only be possible if a taxonomic scope is fully reported (term:eco[eco:isTaxonomicScopeFullyReported] = `true`).
+*If absences are implicitly reported*, each end user of data will need to reconstruct explicit absences for themselves for each taxon of interest to them because any unreported taxon (i.e. any taxon without an Occurrence record) is known to be absent. Again, this will only be possible if a taxonomic scope is fully reported (http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] = `true`).
 
 
 *Explicit documentation of absences*
 
-Explicit reporting of absence or non-detection means that the dataset reports, at the Occurrence level (in the `occurrence` table), the lack of detection for each relevant dwc:Taxon. When the taxonomic scope is highly constrained, for example being restricted to only one or a few taxa, it is feasible to include Occurrence records for each of the non-detected taxa within the data, with each absence being denoted by reporting dwc:OccurrenceStatus as `absent`. To explicitly document taxonomic absences in a DwC-A by including zero-count Occurrence records:
+Explicit reporting of absence or non-detection means that the dataset reports, at the Occurrence level (in the `occurrence` table), the lack of detection for each relevant dwc:Taxon. When the taxonomic scope is highly constrained, for example being restricted to only one or a few taxa, it is feasible to include Occurrence records for each of the non-detected taxa within the data, with each absence being denoted by reporting term:dwc[dwc:occurrenceStatus] as `absent` or `notDetected`. To explicitly document taxonomic absences in a DwC-A by including zero-count Occurrence records:
 
 * In the `occurrence` table, for each Occurrence to be reported absent:
 ** Populate required fields, e.g., term:dwc[dwc:eventID] (refer to the link:#mapping-occurrence-information[list of required Occurrence terms]) +
-** term:dwc[dwc:occurrenceStatus] = `absent`. +
-** Recommended best practice is to also populate term:dwc[dwc:individualCount] and term:dwc[dwc:organismQuantity] as `0` and term:dwc[dwc:organismQuantityType] as `Individuals`. +
-* In the `event` table:
-** If one or more absences are reported at any taxonomic level (term:dwc[dwc:occurrenceStatus] = `absent`), then term:eco[eco:isAbsenceReported] = `true` for each relevant Event.
-** A list of absent taxa can be provided using term:eco[eco:absentTaxa] at all relevant Events. See the section 'link:#absences[Absence]' for details on reporting absence information at the Event level.
+** term:dwc[dwc:occurrenceStatus] = `absent` or `notDetected`. +
+** Recommended best practice is to also populate term:dwc[dwc:individualCount] and term:dwc[dwc:organismQuantity] as `0` and term:dwc[dwc:organismQuantityType] as `individuals`. +
+* In the `survey` table:
+** If one or more absences are reported at any taxonomic level (term:dwc[dwc:occurrenceStatus] = `absent` or `notDetected`), then http://rs.tdwg.org/eco/terms/isAbsenceReported[`eco:isAbsenceReported`^] = `true` for each relevant Event.
+** A list of absent taxa can be provided using http://rs.tdwg.org/eco/terms/absentTaxa[`eco:absentTaxa`^] at all relevant Events. See the section 'link:#absences[Absence]' for details on reporting absence information at the Event level.
 
 Absences should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey. Absence cannot be asserted for bycatch.
 
 *Implicit documentation of absences*
 
-Implicit reporting of absence or non-detection, on the otherhand, means that the lack of detection of a dwc:Taxon is indirectly suggested through the lack of Occurrence record in the `occurrence` table. When taxonomic scopes are broader, and include hundreds or thousands of species (e.g., a taxonomic scope of a dataset that includes all species of birds in the world), then is not feasible to add occurrence records of zero individuals for all of the species not detected. To implicitly document absences in a DwC-A, term:eco[eco:isTaxonomicScopeFullyReported] must be `true` for the Event and either term:eco[eco:targetTaxonomicScope] or term:eco[eco:excludedTaxonomicScope] must be specified. Then:
+Implicit reporting of absence or non-detection, on the other hand, means that the lack of detection of a dwc:Taxon is indirectly suggested through the lack of Occurrence record in the `occurrence` table. When taxonomic scopes are broader, and include hundreds or thousands of species (e.g., a taxonomic scope of a dataset that includes all species of birds in the world), then it is not feasible to add occurrence records of zero individuals for all of the species not detected. To implicitly document absences in a DwC-A, http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] must be `true` for the Event and either http://rs.tdwg.org/eco/terms/targetTaxonomicScope[`eco:targetTaxonomicScope`^] or http://rs.tdwg.org/eco/terms/excludedTaxonomicScope[`eco:excludedTaxonomicScope`^] must be specified. Then:
 
 * In the `occurrence` table, for each taxon to be implicitly reported absent, there will not be any Occurrence record created.
-* In the `event` table, term:eco[eco:isAbsenceReported] = `false` for all relevant Events because no absences are explicitly reported. See the section 'link:#absences[Absence]' for details on reporting absence information at the Event level.
+* In the `survey` table, http://rs.tdwg.org/eco/terms/isAbsenceReported[`eco:isAbsenceReported`^] = `false` for all relevant Events because no absences are explicitly reported. See the section 'link:#absences[Absence]' for details on reporting absence information at the Event level.
 
 Absences should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey. Absence cannot be asserted for bycatch.
 
 [caption=""]
 .Terms to indicate absence, or non-detection, and their recommendation usage.
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="17%,19%,38%,26%",options="header",]
 |===
 |Table |Recommended usage |Term |Example entry
 |Occurrence
-|Required
+.5+|Recommended
 |term:dwc[dwc:occurrenceStatus]
 |`present` or `absent`
 
 |Occurrence
-.5+|Recommended
 |term:dwc[dwc:individualCount]
 |`3`
 
@@ -215,31 +240,43 @@ Absences should only be reported for taxa within the stated taxonomic and/or org
 |term:dwc[dwc:organismQuantityType]
 |`individuals`
 
-|Event
-|term:eco[eco:isAbsenceReported]
+|Survey
+|http://rs.tdwg.org/eco/terms/isAbsenceReported[`eco:isAbsenceReported`^]
 |`true` or `false`
 
-|Event
-|term:eco[eco:isTaxonomicScopeFullyReported]
+|Survey
+.2+|Share if available
+|http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^]
 |`true` or `false`
 
-|Event
-|Share if available
-|term:eco[eco:absentTaxa]
+|Survey
+|http://rs.tdwg.org/eco/terms/absentTaxa[`eco:absentTaxa`^]
 |
 |===
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
-Pathogens: EXPLICIT
-image::img/NEON-exData_screenshots/NEON-section-additionalIDifNecessary.png[]
- +
- +
-Ticks: IMPLICIT
-Text to fill in here.
-image::img/NEON-exData_screenshots/NEON-section-additionalIDifNecessary.png[]
+==== NEON example: Absences in the occurrence table
+
+The example dataset uses both approaches to documenting absences.
+
+*Pathogens: explicit absences.* The target pathogens are listed in http://rs.tdwg.org/eco/terms/targetTaxonomicScope[`eco:targetTaxonomicScope`^] and every test result is reported. Each test of a tick sample for a target pathogen results in one Occurrence, with term:dwc[dwc:occurrenceStatus] = `present` when the pathogen was detected and `absent` when it was not. The table below shows some of the pathogen results for plot visit `SCBI_014.20140610`. For example, _Borrelia burgdorferi_ sensu lato was detected in one tested sample (`present`), while _Rickettsia rickettsii_ was not detected in another (`absent`).
+
+[width="100%",cols="30%,19%,16%,22%,13%",options="header",]
+|===
+|term:dwc[dwc:occurrenceID]
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:basisOfRecord]
+|term:dwc[dwc:scientificName]
+|term:dwc[dwc:occurrenceStatus]
+|+00354e35-eec8-4a62-8929-1818dcefd24b+ |+SCBI_014.20140610+ |+MaterialSample+ |+Rickettsia rickettsii+ |+absent+
+|+0527763f-2eb2-4ccc-9312-08b6002bc94c+ |+SCBI_014.20140610+ |+MaterialSample+ |+Borrelia burgdorferi sensu lato+ |+present+
+|+07ea18fa-7410-4924-8683-5eb9b7dbfc92+ |+SCBI_014.20140610+ |+MaterialSample+ |+Anaplasma phagocytophilum+ |+absent+
+|+078741de-d93e-4584-a001-018e8094c6e8+ |+SCBI_014.20140610+ |+MaterialSample+ |+Borrelia miyamotoi+ |+absent+
+|+084607eb-2358-49c3-9e87-95c4e2ce30ca+ |+SCBI_014.20140610+ |+MaterialSample+ |+Borrelia sp.+ |+absent+
+|===
+
+*Ticks: implicit absences.* Tick Occurrences are only created for ticks that were collected. Because http://rs.tdwg.org/eco/terms/targetTaxonomicScope[`eco:targetTaxonomicScope`^] includes `Ixodidae` and http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] is `true`, any tick taxon without an Occurrence record for a plot visit was not detected during that visit. For example, 11 of the 58 plot visits in the example data subset have no tick Occurrences.
 ****
 
 
@@ -249,21 +286,21 @@ To capture <<abundance, abundance>> in a dataset or at a specific Event level:
 
 * In the `occurrence` table, 
 ** Populate required fields, e.g., term:dwc[dwc:eventID] (refer to the link:#mapping-occurrence-information[list of required Occurrence terms]) +
-** use the paired terms term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] to report the observed abundance for each reported Occurrence. For example, if 3 individuals of a species were observed, term:dwc[dwc:organismQuantity] = `3` and term:dwc[dwc:organismQuantityType] = `Individuals`.
-* In the `event` table:
-** The inclusion of abundance information in the dataset, even if this information is not reported for all taxa, should be indicated by populating term:eco[eco:isAbundanceReported] as `true`. +
-** The existence of an abundance cap should be captured using the Boolean term term:eco[eco:isAbundanceCapReported] and the value of that cap reported in term:eco[eco:abundanceCap].
+** use the paired terms term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] to report the observed abundance for each reported Occurrence. For example, if 3 individuals of a species were observed, term:dwc[dwc:organismQuantity] = `3` and term:dwc[dwc:organismQuantityType] = `individuals`.
+* In the `survey` table:
+** The inclusion of abundance information in the dataset, even if this information is not reported for all taxa, should be indicated by populating http://rs.tdwg.org/eco/terms/isAbundanceReported[`eco:isAbundanceReported`^] as `true`. +
+** The existence of an abundance cap should be captured using the Boolean term http://rs.tdwg.org/eco/terms/isAbundanceCapReported[`eco:isAbundanceCapReported`^] and the value of that cap reported in http://rs.tdwg.org/eco/terms/abundanceCap[`eco:abundanceCap`^].
 
-If the dataset or relevant Event does not include abundance information, then it is recommended that the following terms be populated as follows in the `event` table at the appropriate level(s) within the Event hierarchy:
+If the dataset or relevant Event does not include abundance information, then it is recommended that the following terms be populated as follows in the `survey` table at the appropriate level(s) within the Event hierarchy:
 
-* term:eco[eco:isAbundanceReported] = `false` +
-* term:eco[eco:isAbundanceCapReported] = `false`
+* http://rs.tdwg.org/eco/terms/isAbundanceReported[`eco:isAbundanceReported`^] = `false` +
+* http://rs.tdwg.org/eco/terms/isAbundanceCapReported[`eco:isAbundanceCapReported`^] = `false`
 
-See the section 'link:#abundance[Abundance]' for details on reporting abundance information at the Event level.
+See the section 'link:#abundance-information[Abundance]' for details on reporting abundance information at the Event level.
 
 [caption=""]
 .Terms to indicate abundance, the table on which they should be provided, and their recommendation usage.
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="17%,19%,38%,26%",options="header",]
 |===
 |Table |Recommended usage |Term |Example entry
 |Occurrence
@@ -279,38 +316,49 @@ See the section 'link:#abundance[Abundance]' for details on reporting abundance 
 |term:dwc[dwc:organismQuantityType]
 |`individuals`
 
-|Event
-|term:eco[eco:isAbundanceReported]
+|Survey
+|http://rs.tdwg.org/eco/terms/isAbundanceReported[`eco:isAbundanceReported`^]
 |`true` or `false`
 
-|Event
-|term:eco[eco:isAbundanceCapReported]
+|Survey
+|http://rs.tdwg.org/eco/terms/isAbundanceCapReported[`eco:isAbundanceCapReported`^]
 |`true` or `false`
 
-|Event
+|Survey
 |Share if available
-|term:eco[ecoabundanceCap]
+|http://rs.tdwg.org/eco/terms/abundanceCap[`eco:abundanceCap`^]
 |`5`
 |===
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== NEON example: Abundance in the occurrence table
 
-image::img/NEON-exData_screenshots/NEON-7-2.png[]
+Tick abundance is reported for each tick Occurrence using term:dwc[dwc:individualCount] (see the NEON examples in link:#reporting-multiple-individuals-as-a-single-occurrence[Reporting multiple individuals as a single Occurrence] and link:#reporting-multiple-individuals-as-multiple-occurrences[Reporting multiple individuals as multiple occurrences]). Pathogen Occurrences record whether a pathogen was detected in a tested sample and do not include abundance. In the `survey` table, http://rs.tdwg.org/eco/terms/isAbundanceReported[`eco:isAbundanceReported`^] is `true` and http://rs.tdwg.org/eco/terms/isAbundanceCapReported[`eco:isAbundanceCapReported`^] is `false` for every Event. The rows below show tick abundances for plot visit `SCBI_014.20190819`:
+
+[width="99%",cols="<30%,<30%,<20%,20%",options="header",]
+|===
+|term:dwc[dwc:occurrenceID]
+|term:dwc[dwc:scientificName]
+|term:dwc[dwc:lifeStage]
+|term:dwc[dwc:individualCount]
+|+SCBI_014.20190819.AMBAME.N+ |+Amblyomma americanum+ |+Nymph+ |+1+
+|+SCBI_014.20190819.IXOSP.L+ |+Ixodidae sp.+ |+Larva+ |+218+
+|===
+
+The total number of adults, nymphs, and larvae collected during each plot visit is also reported at the Event level using the extended measurement or fact extension (see link:#extended-measurement-or-fact-emof-extension[Extended measurement or fact (eMoF) extension]).
 ****
 
 
 === Capturing species co-occurrence and species interactions
 
-The https://rs.gbif.org/extension/resource_relationship_2024-02-19.xml[resource relationship extension^] can be used to link information related across multiple Occurrences (may be from the same or from different Events), such as:
+The https://rs.gbif.org/extension/dwc/resource_relationship_2025-07-10.xml[resource relationship extension^] can be used to link information related across multiple Occurrences (may be from the same or from different Events), such as:
 
 *An Occurrence with another Occurrence*
 
 The table below highlights an example from the dataset https://doi.org/10.15468/xdzgbt[Potential host plant records recovered from ECOAB wild bee collection, Mexico^] published by _Comisión nacional para el conocimiento y uso de la biodiversidad_. In this example, a _Bombus ephippiatus_ bee visits a species of runner bean, _Phaseolus coccineus_.
 
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="17%,19%,38%,26%",options="header",]
 |===
 |Table |Recommended usage |Term |Example entry
 |Occurrence
@@ -340,7 +388,7 @@ The table below highlights an example from the dataset https://doi.org/10.15468/
 
 The table below highlights an example from the dataset https://doi.org/10.15468/g3bard[University of Michigan Museum of Zoology, Division of Reptiles & Amphibians^] published by University of Michigan Museum of Zoology. In this example, a skin sample from a female toad of _Bufo americanus_ is preserved at the University of Michigan Museum of Zoology along with other body parts.
 
-[width="100%",cols="25%,25%,25%,25%",options="header",]
+[width="100%",cols="17%,19%,38%,26%",options="header",]
 |===
 |Table |Recommended usage |Term |Example entry
 |Occurrence
@@ -358,7 +406,7 @@ The table below highlights an example from the dataset https://doi.org/10.15468/
 
 |ResourceRelationship
 .2+|Recommended
-|term:dwc[dwc:relationshipEsetablishedDate]
+|term:dwc[dwc:relationshipEstablishedDate]
 |`2019-01-14`
 
 |ResourceRelationship
@@ -369,10 +417,24 @@ The table below highlights an example from the dataset https://doi.org/10.15468/
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== NEON example: Resource relationships
 
-image::img/NEON-exData_screenshots/NEON-7-5.png[]
+The example dataset uses the resource relationship extension to link each pathogen test result to the tick Occurrence from which the tested sample was taken. The pathogen Occurrence is the subject of the relationship (term:dwc[dwc:resourceID]), the tick Occurrence is the object (term:dwc[dwc:relatedResourceID]), and the relationship is described as `pathogen of` in term:dwc[dwc:relationshipOfResource].
+
+The table below shows pathogen results linked to the Occurrence `SCBI_014.20140610.AMBAME.N`, the 20 _Amblyomma americanum_ nymphs collected during plot visit `SCBI_014.20140610`. For example, the _Rickettsia rickettsii_ result `00354e35-eec8-4a62-8929-1818dcefd24b` (shown in the NEON example in link:#reporting-absences[Reporting absences]) is a `pathogen of` that tick Occurrence.
+
+[width="100%",cols="40%,35%,25%",options="header",]
+|===
+|term:dwc[dwc:resourceID]
+|term:dwc[dwc:relatedResourceID]
+|term:dwc[dwc:relationshipOfResource]
+|+00354e35-eec8-4a62-8929-1818dcefd24b+ |+SCBI_014.20140610.AMBAME.N+ |+pathogen of+
+|+07ea18fa-7410-4924-8683-5eb9b7dbfc92+ |+SCBI_014.20140610.AMBAME.N+ |+pathogen of+
+|+084607eb-2358-49c3-9e87-95c4e2ce30ca+ |+SCBI_014.20140610.AMBAME.N+ |+pathogen of+
+|+0afb99ea-b9a7-42a6-9ca6-efe5b35018c2+ |+SCBI_014.20140610.AMBAME.N+ |+pathogen of+
+|===
+
+The example data do not populate term:dwc[dwc:relationshipOfResourceID] or term:dwc[dwc:resourceRelationshipID]. See link:#mapping-material-sample-information[Mapping material sample information] for how the tested sample itself is identified.
 ****
 
 <<<
