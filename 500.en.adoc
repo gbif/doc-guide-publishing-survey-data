@@ -1,24 +1,23 @@
-[[survey-event-data:-capturing-the-context-of-biological-surveys]]
-== Survey Event data: capturing the context of biological surveys and monitoring data
+[[survey-data-capturing-the-context-of-biological-surveys]]
+== Survey data: capturing the context of biological surveys and monitoring data
 
 [IMPORTANT] 
 ====
-The contextual information about survey Events should be saved to the DwC-A `event` table.
+The contextual information about survey Events should be saved to the `survey` table.
 ====
 
 This section will guide you through the process of mapping Event-level data specifically related to survey structure, location, protocols, scopes, and effort. 
 
-[NOTE] 
 .About DwC terms in this document
+[NOTE]
+====
 
-==== 
-
-Each term in this document is linked with its respective term https://www.w3.org/International/O-URL-and-ident.html[internationalized resource identifier (IRI)] alias (ex., term:eco[eco:protocolNames]). Always use these links to refer to the definition, comments, and examples provided when populating a term. 
+Each term in this document is linked with its respective term https://www.w3.org/International/O-URL-and-ident.html[internationalized resource identifier (IRI)] alias (ex., http://rs.tdwg.org/eco/terms/protocolNames[`eco:protocolNames`^]). Always use these links to refer to the definition, comments, and examples provided when populating a term. 
 
 The terms to be used to describe Event-level information are a combination of Darwin Core Event class and Humboldt Extension terms:
 
-* A comprehensive list of Darwin Core Event class terms is available on the https://rs.gbif.org/core/dwc_event_2024-02-19.xml[Darwin Core Event] page in the GBIF Registry of Schemas. +
-* The full suite of Humboldt extension terms is available on the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt Ecological Inventories^] page in the GBIF Registry of Schemas and the https://eco.tdwg.org/terms/[Humboldt Extension Quick Reference Guide].
+* A comprehensive list of Darwin Core Event class terms is available on the https://rs.gbif.org/core/dwc_event_2025-07-10.xml[Darwin Core Event^] page in the GBIF Registry of Schemas. +
+* The full suite of Humboldt extension terms is available in the https://eco.tdwg.org/terms/[Humboldt Extension Quick Reference Guide^]. See https://eco.tdwg.org/[Humboldt Extension for Ecological Inventories^] for all Humboldt extension documentation.
 ====
 
 
@@ -26,7 +25,7 @@ The terms to be used to describe Event-level information are a combination of Da
 [discrete]
 ==== Data mapping tips
 
-Survey Event data should be saved to the DwC-A `event` table. This includes DwC Event terms (any term preceded by `dwc`, e.g., term:dwc[dwc:eventID]) and Humboldt extension terms (any term preceded by `eco`, e.g., term:eco[eco:protocolNames]).
+Survey Event data should be saved to the `survey` table. This includes DwC Event terms (any term preceded by `dwc`, e.g., term:dwc[dwc:eventID]) and Humboldt extension terms (any term preceded by `eco`, e.g., http://rs.tdwg.org/eco/terms/protocolNames[`eco:protocolNames`^]).
 
 Populate all terms for which information is available. 
 
@@ -42,7 +41,7 @@ Populate all terms for which information is available.
 
 * Each Event can have its own set of attributes and measurements which can be captured using the Humboldt and/or other extension(s) and be unambiguously linked to the corresponding Event through the appropriate term:dwc[dwc:eventID]s. +
 * *_Terms should contain data clearly (explicitly) reported at every Event level in the hierarchy to which they directly apply._* This means that when publishing a data export, +
-** a child Event must *not* be assumed to be inherit the value of any property of any of its parent Event(s). If a value is in common between a child Event and its parent Event, the value should be reported explicitly in both Event records (see Section 3.2.2 Principle of applicability in https://eco.tdwg.org/hierarchy/#322-principle-of-applicability[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^]). +
+** a child Event must *not* be assumed to inherit the value of any property of any of its parent Event(s). If a value is in common between a child Event and its parent Event, the value should be reported explicitly in both Event records (see Section 3.2.2 Principle of applicability in https://eco.tdwg.org/hierarchy/#322-principle-of-applicability[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^]). +
 ** a parent Event should *not* be populated by deriving or summarizing information from child Events; rather, fields should be explicitly populated with information directly appropriate to the nature and level of the Event itself (see Section 3.2.3 Principle of non-derivation in https://eco.tdwg.org/hierarchy/#323-principle-of-non-derivation[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^]). 
 
 Refer to https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^] for more guidance in populating Humboldt extension terms across Event levels.
@@ -50,7 +49,7 @@ Refer to https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in th
 
 === Survey design
 
-<<surveyDesign, Survey design>> is the strategy underpinning a biological survey. It details the sampling method implemented in a particular survey including how any stations, plots, traps, sensors, and/or transects are positioned. Historically, only 2 terms were available to structure and relate different levels of survey design in a dataset: term:dwc[dwc:eventID] and term:dwc[dwc:parentEventID]. One additional Darwin Core Event term, term:dwc[dwc:fieldNumber], provided a means by which to relate a sampling Event with a dataset- or project-specific field number. The Humboldt extension provides an additional 2 terms (term:eco[eco:siteCount] and term:eco[eco:siteNestingDescription]) to better support complex or nested survey designs. 
+<<surveyDesign, Survey design>> is the strategy underpinning a biological survey. It details the sampling method implemented in a particular survey including how any stations, plots, traps, sensors, and/or transects are positioned. Historically, only 2 terms were available to structure and relate different levels of survey design in a dataset: term:dwc[dwc:eventID] and term:dwc[dwc:parentEventID]. One additional Darwin Core Event term, term:dwc[dwc:fieldNumber], provided a means by which to relate a sampling Event with a dataset- or project-specific field number. The Humboldt extension provides an additional 2 terms (http://rs.tdwg.org/eco/terms/siteCount[`eco:siteCount`^] and http://rs.tdwg.org/eco/terms/siteNestingDescription[`eco:siteNestingDescription`^]) to better support complex or nested survey designs. 
 
 [NOTE]
 .*Event data in GBIF*
@@ -60,8 +59,8 @@ Refer to https://eco.tdwg.org/hierarchy/[Properties of hierarchical events in th
 https://assets.ctfassets.net/uo17ejk9rkwj/8aIUAbLo0oycyMiM2IKUS/363edf7ab4558460cfe1ef140567450f/persistent_identifiers_guide_en_v1.pdf[A
 Beginner’s Guide to Persistent Identifiers^] for guidance in creating persistent identifiers. Note that your field numbers should be reported using term:dwc[dwc:fieldNumber]. +
 * An Event is not required to have associated organism Occurrence data. If organism Occurrence or non-detection data are available, they will be linked via the term:dwc[dwc:eventID] in the `occurrence` table using the 
-https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[occurrence extension^]. +
-* Other DwC Event extensions, including https://rs.gbif.org/core/dwc_occurrence_2024-02-23.xml[occurrence], https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[extended
+https://rs.gbif.org/core/dwc_occurrence_2025-07-10.xml[Occurrence extension^]. +
+* Other DwC Event extensions, including https://rs.gbif.org/core/dwc_occurrence_2025-07-10.xml[Occurrence^], https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[extended
 measurement or fact^], and https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[relevé^] extensions, can be linked to any appropriate Event via the term:dwc[dwc:eventID].
 ====
 
@@ -94,12 +93,12 @@ In practice, this means that the parent and the child will each have a unique te
 
 In addition to Event and parent Event identifiers:
 
-* *Site count and site nesting description:* Nested datasets should include the total number of sites sampled in term:eco[eco:siteCount] and provide a textual description of the survey design or site sampling structure using term:eco[eco:siteNestingDescription] for each parent Event for which the information is available. +
+* *Site count and site nesting description:* Nested datasets should include the total number of sites sampled in http://rs.tdwg.org/eco/terms/siteCount[`eco:siteCount`^] and provide a textual description of the survey design or site sampling structure using http://rs.tdwg.org/eco/terms/siteNestingDescription[`eco:siteNestingDescription`^] for each parent Event for which the information is available. +
 * *Field number:* If the survey data include a field number for a specific Event, this should be shared using term:dwc[dwc:fieldNumber].
 
 [caption=]
 .Event hierarchy terms, their recommended usage (status), and example data entries.
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
 |Required
@@ -111,10 +110,10 @@ In addition to Event and parent Event identifiers:
 |`survey2022`
 
 .2+|Recommended
-|term:eco[eco:siteCount]
+|http://rs.tdwg.org/eco/terms/siteCount[`eco:siteCount`^]
 |`75`
 
-|term:eco[eco:siteNestingDescription]
+|http://rs.tdwg.org/eco/terms/siteNestingDescription[`eco:siteNestingDescription`^]
 |`25 survey sites each with 3 1m2 quadrats`
 
 |Share if available
@@ -125,20 +124,31 @@ In addition to Event and parent Event identifiers:
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Survey design
 
-The structure of the NEON tick-pathogen example dataset is designed to reflect the sampling design adopted by the entire NEON project. This structure is captured in the way each eventID and parentEventID is assigned. Sampling design is further captured through the terms siteNestingDescription, siteCount, and verbatimSiteNames. The information provided for each term matches the granularity of the event level at which it is reported.
+The structure of the NEON tick-pathogen example dataset is designed to reflect the sampling design adopted by the entire NEON project. This structure is captured in the way each term:dwc[dwc:eventID] and term:dwc[dwc:parentEventID] is assigned. Sampling design is further captured through the terms http://rs.tdwg.org/eco/terms/siteNestingDescription[`eco:siteNestingDescription`^], http://rs.tdwg.org/eco/terms/siteCount[`eco:siteCount`^], and http://rs.tdwg.org/eco/terms/verbatimSiteNames[`eco:verbatimSiteNames`^]. The information provided for each term matches the granularity of the Event level at which it is reported.
 
-The highest event level representing the NEON project as a whole has an eventID, ‘NEON’, but no parentEventID. The eventID, ‘NEON’, for the NEON project becomes the parentEventID for the next highest event level which represents the NEON domain. The eventID assigned to the NEON domain event, ‘D02’, is the parentEventID for the NEON site; the eventID for the NEON site, ‘SCBI’, is the parentEventID for NEON plot; and the eventID for the NEON plot, ‘SCBI_014’, is the parentEventID for each unique visit to the NEON plot to sample ticks. Each of these plot visits has a unique eventID. 
+The highest Event level representing the NEON project as a whole has an eventID, `NEON`, but no parentEventID. The eventID for the NEON project (`NEON`) becomes the parentEventID for the next Event level, which represents the NEON domain. The eventID assigned to the NEON domain Event, `D02`, is the parentEventID for the NEON site; the eventID for the NEON site, `SCBI`, is the parentEventID for the NEON plot; and the eventID for the NEON plot, `SCBI_014`, is the parentEventID for each unique visit to the plot to sample ticks. Each plot visit has a unique eventID made up of the plot identifier and the visit date (e.g., `SCBI_014.20190325`).
 
-* At NEON project level: This highest event level has an eventID (eventID = ‘NEON’) but no parentEventID. siteNestingDescriptions relates the survey design for the full NEON project, siteCount reports the total number of survey sites (NEON plots) in the dataset, and verbatimSiteNames contains a concatenated list of all NEON plot names or identifiers in the dataset. +
-* At NEON domain level: each NEON domain has a unique eventID (eventID = ‘D02’) and the parentEventID is the same as the NEON project eventID (‘NEON’). siteNestingDescriptions relates the survey design details within NEON domain ‘D02’, siteCount reports the total number of survey sites (NEON plots) in the dataset, and verbatimSiteNames contains a concatenated list of all NEON plot names or identifiers in the dataset. +
-* At NEON site level: each NEON site has a unique eventID (eventID = ‘SCBI’) and the parentEventID is the same as the eventID for the NEON domain that the site falls within. siteNestingDescriptions relates the survey design details within NEON site ‘SCBI’, siteCount reports the total number of survey sites (NEON plots) within site ‘SCBI’ in the dataset, and verbatimSiteNames contains a concatenated list of all NEON plot names or identifiers within site ’SCBI’ in the dataset. +
-* At NEON plot level: each NEON plot has a unique eventID (eventID = ‘SCBI_014’) and the parentEventID is the same value as the eventID for the NEON site that the plot falls within. siteNestingDescriptions relates the survey design details within NEON plot ‘SCBI_014’, siteCount is ‘1’ because the event is associated with a single site only (‘SCBI_014), and the name or identifier of the NEON plot (‘SCBI_014’) is reported in verbatimSiteNames. +
-* At NEON plot visit level: Each plot visit has a unique eventID that (eventID = ‘SCBI_014_date’) and the parentEventID is the same as the eventID for the relevant NEON plot. siteNestingDescriptions reflects that the event was a singular visit to survey the NEON plot, siteCount is ‘1' because it is associated with a single site only, and the name or identifier of the NEON plot (‘SCBI_014’) is reported in verbatimSiteNames. 
+* *NEON project level:* This highest Event level has an eventID (`NEON`) but no parentEventID. siteNestingDescription relates the survey design for the full NEON project, siteCount reports the total number of survey sites (NEON plots) in the dataset, and verbatimSiteNames contains a concatenated list of all NEON plot names or identifiers in the dataset. +
+* *NEON domain level:* each NEON domain has a unique eventID (`D02`) and the parentEventID is the NEON project eventID (`NEON`). siteNestingDescription relates the survey design details within NEON domain `D02`, siteCount reports the number of survey sites (NEON plots) within the domain, and verbatimSiteNames contains a concatenated list of the NEON plot names or identifiers within the domain. +
+* *NEON site level:* each NEON site has a unique eventID (`SCBI`) and the parentEventID is the eventID for the NEON domain that the site falls within. siteNestingDescription relates the survey design details within NEON site `SCBI`, siteCount reports the number of survey sites (NEON plots) within site `SCBI`, and verbatimSiteNames contains a concatenated list of the NEON plot names or identifiers within site `SCBI`. +
+* *NEON plot level:* each NEON plot has a unique eventID (`SCBI_014`) and the parentEventID is the eventID for the NEON site that the plot falls within. siteNestingDescription relates the survey design details within NEON plot `SCBI_014`, siteCount is `1` because the Event is associated with a single site only, and the name or identifier of the NEON plot (`SCBI_014`) is reported in verbatimSiteNames. +
+* *NEON plot visit level:* each plot visit has a unique eventID (e.g., `SCBI_014.20190325`) and the parentEventID is the eventID for the relevant NEON plot. siteNestingDescription reflects that the Event was a single visit to survey the NEON plot, siteCount is `1` because it is associated with a single site only, and the name or identifier of the NEON plot (`SCBI_014`) is reported in verbatimSiteNames. 
 
-
-image::img/NEON-exData_screenshots/NEON-5-1.png[Information communicating survey design reported with the NEON tick-pathogen example dataset]
+[width="100%",cols="21%,12%,35%,8%,24%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:parentEventID]
+|http://rs.tdwg.org/eco/terms/siteNestingDescription[`eco:siteNestingDescription`^]
+|http://rs.tdwg.org/eco/terms/siteCount[`eco:siteCount`^]
+|http://rs.tdwg.org/eco/terms/verbatimSiteNames[`eco:verbatimSiteNames`^]
+|+NEON+ | |+46 terrestrial sites each with at least six 40x40 m plots designated for (...)+ |+311+ |+ABBY_001 \| ABBY_002 \| (...)+
+|+D02+ |+NEON+ |+Each domain contains 1-3 terrestrial field sites, each with at least six (...)+ |+23+ |+BLAN_002 \| BLAN_004 \| (...)+
+|+SCBI+ |+D02+ |+Each site contains at least six 40x40 m plots designated for tick sampling (...)+ |+9+ |+SCBI_002 \| SCBI_005 \| (...)+
+|+SCBI_014+ |+SCBI+ |+One 40x40 m plot designated for tick sampling+ |+1+ |+SCBI_014+
+|+SCBI_014.20190325+ |+SCBI_014+ |+One visit to a 40x40 m plot designated for tick sampling+ |+1+ |+SCBI_014+
+|===
 ****
 
 
@@ -153,7 +163,7 @@ If the survey(s) being reported were part of a larger Project, four terms are av
 
 [caption=]
 .Project terms, their recommended usage (status), and example data entries
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
 .4+|Share if available
@@ -170,10 +180,27 @@ If the survey(s) being reported were part of a larger Project, four terms are av
 |`https://ror.org/00epmv149 \| https://ror.org/04jnzhb65`
 |===
 
+****
+[discrete]
+==== NEON example: Project information
+
+The example dataset does not populate the project terms. Instead, the NEON project is represented by its own Event at the top of the hierarchy (eventID = `NEON`, term:dwc[dwc:eventType] = `project`), as described in link:#simple-nested-datasets-with-project-level-information[Simple nested datasets with Project-level information]. Information about the project and its funding is provided in the resource metadata. A dataset in this situation could also report the project name in term:dwc[dwc:projectTitle] for the `NEON` Event.
+
+[width="100%",cols="34%,33%,33%",options="header",]
+|===
+|term:dwc[dwc:eventID] |term:dwc[dwc:parentEventID] |term:dwc[dwc:eventType]
+|+NEON+ | |+project+
+|+D02+ |+NEON+ |+survey+
+|+SCBI+ |+D02+ |+survey+
+|+SCBI_014+ |+SCBI+ |+survey+
+|+SCBI_014.20190325+ |+SCBI_014+ |+site visit+
+|===
+****
+
 
 === Survey site
 
-An Event <<site, *site*>> is the location at which observations are made or samples and/or measurements are taken. Sharing thorough information about a sampling Event site, including description, locality, and vegetative cover provides critical context to potential data users about conditions in which a survey was conducted. Information about the location of each survey site such best-practice georeferences, site description (locality name, habitat type, microhabitat), and environmental data (e.g., physical parameters, vegetarian, water quality) should be populated at for each Event for which the information is available. 
+An Event <<site, *site*>> is the location at which observations are made or samples and/or measurements are taken. Sharing thorough information about a sampling Event site, including description, locality, and vegetative cover provides critical context to potential data users about conditions in which a survey was conducted. Information about the location of each survey site, such as best-practice georeferences, site description (locality name, habitat type, microhabitat), and environmental data (e.g., physical parameters, vegetation, water quality), should be populated for each Event for which the information is available. 
 
 NOTE: The Darwin Core site terms listed in this section are not comprehensive. Explore all http://purl.org/dc/terms/Location[Darwin Core Location class terms^] and the https://eco.tdwg.org/terms/#site[Humboldt Extension site terms^].
 
@@ -181,48 +208,58 @@ NOTE: The Darwin Core site terms listed in this section are not comprehensive. E
 
 Additional context about a survey site can be reported through myriad terms for every Event that the information is available, including:
 
-* *Site names:* survey site names can be reported using term:eco[eco:verbatimSiteNames]. A concatenated list of site names can be provided at higher Event levels with values separated using a pipe separator, `|`.  +
+* *Site names:* survey site names can be reported using http://rs.tdwg.org/eco/terms/verbatimSiteNames[`eco:verbatimSiteNames`^]. A concatenated list of site names can be provided at higher Event levels with values separated using a pipe separator, `|`.  +
 * *Habitat:* reported habitat at a survey site should be recorded in term:dwc[dwc:habitat]. A concatenated list of habitats can be provided at higher Event levels with values separated using a pipe separator, `|`. Use of a controlled vocabulary is recommended. Note that a single controlled vocabulary does not exist for this term yet but attempts to classify habitat have been and continue to be made (for example, see <<Keith2020>> or <<Campbell2021>>).  +
-* *Weather:* reported weather during a survey Event should be reported using term:eco[eco:reportedWeather]. If you have detailed weather data (e.g., weather station or data logger produced data) archived elsewhere, you may provide a link here. +
-* *Extreme conditions:* reported extreme conditions at a site at the time of the survey should be recorded in term:eco[eco:reportedExtremeConditions]. Information in this field is relevant only to a specific site visit or survey event and should not be concatenated to higher or more parent event levels because of their spatial and temporally explicit nature. +
-* *Verbatim site description:* verbatim comments (e.g., the original textual description) about a site or sites should be recorded in term:eco[eco:verbatimSiteDescriptions].
+* *Weather:* reported weather during a survey Event should be reported using http://rs.tdwg.org/eco/terms/reportedWeather[`eco:reportedWeather`^]. If you have detailed weather data (e.g., weather station or data logger produced data) archived elsewhere, you may provide a link here. +
+* *Extreme conditions:* reported extreme conditions at a site at the time of the survey should be recorded in http://rs.tdwg.org/eco/terms/reportedExtremeConditions[`eco:reportedExtremeConditions`^]. Information in this field is relevant only to a specific site visit or survey event and should not be concatenated to higher or more parent event levels because of their spatial and temporally explicit nature. +
+* *Verbatim site description:* verbatim comments (e.g., the original textual description) about a site or sites should be recorded in http://rs.tdwg.org/eco/terms/verbatimSiteDescriptions[`eco:verbatimSiteDescriptions`^].
 
 These terms should be populated for each individual Event for which the information is accurate. 
 
 [caption=]
 .General event site terms, their recommended usage (status), and example data entries
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
 .5+|Share if available
-|term:eco[eco:verbatimSiteNames]
+|http://rs.tdwg.org/eco/terms/verbatimSiteNames[`eco:verbatimSiteNames`^]
 |`Trap_18\|Trap_27\|Trap_54\|Trap_96`, `Annala \| Kumpula`
 
 |term:dwc[dwc:habitat]
 |`Ephemeral wetland`
 
-|term:eco[eco:reportedWeather]
+|http://rs.tdwg.org/eco/terms/reportedWeather[`eco:reportedWeather`^]
 |`{"minimumTemperatureInDegreesFahrenheit": 18, "maximumTemperatureInDegreesFahrenheit": 32}`
 
-|term:eco[eco:reportedExtremeConditions]
+|http://rs.tdwg.org/eco/terms/reportedExtremeConditions[`eco:reportedExtremeConditions`^]
 |`Site flooded`
 
-|term:eco[eco:verbatimSiteDescriptions]
+|http://rs.tdwg.org/eco/terms/verbatimSiteDescriptions[`eco:verbatimSiteDescriptions`^]
 |`Coastal sand dunes at dry oak forest edge. Vegetation: Ammophila arenaria, Betula pendula, Leymus arenarius, Pinus sylvestris`
 |===
 
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Site description
 
-Habitat information is captured for a plot during each survey; unique values are then concatenated to the site level (eventID = ‘SCBI’). 
+Habitat is reported in term:dwc[dwc:habitat] for each plot and each plot visit (e.g., `deciduousForest` for plot `SCBI_014`). At the site level (eventID = `SCBI`), a list of the habitats present at the site is reported (`Deciduous Forest | Evergreen Forest | Pasture/Hay`).
 
-NEON has explicit verbiage for describing or categorizing each site. In the example below, the site (eventID = ‘SCBI’) is a ‘core terrestrial’ site. This description is captured at the site level using verbatimSiteDescription.
+NEON has explicit verbiage for describing or categorizing each site. In the example below, the site (eventID = `SCBI`) is a `Core Terrestrial` site. This description is captured at the site level using http://rs.tdwg.org/eco/terms/verbatimSiteDescriptions[`eco:verbatimSiteDescriptions`^].
 
-Cases of extreme weather conditions are noted at the site visit level using the term reportedExtremeConditions.  
+Conditions that affected a survey are noted at the plot visit level using the term http://rs.tdwg.org/eco/terms/reportedExtremeConditions[`eco:reportedExtremeConditions`^]. For example, four plot visits in spring 2020 report `logistical, sampling impractical` because no survey was conducted during the COVID-19 pandemic.
 
-image::img/NEON-exData_screenshots/NEON-5-3-1.png[Verbatim site information reported with the NEON tick-pathogen example dataset]
+[width="100%",cols="24%,30%,20%,26%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:habitat]
+|http://rs.tdwg.org/eco/terms/verbatimSiteDescriptions[`eco:verbatimSiteDescriptions`^]
+|http://rs.tdwg.org/eco/terms/reportedExtremeConditions[`eco:reportedExtremeConditions`^]
+|+SCBI+ |+Deciduous Forest \| Evergreen Forest \| Pasture/Hay+ |+Core Terrestrial+ |
+|+SCBI_014+ |+deciduousForest+ | |
+|+SCBI_014.20190325+ |+deciduousForest+ | |
+|+SCBI_014.20200330+ |+deciduousForest+ | |+logistical, sampling impractical+
+|===
 ****
 
 
@@ -230,7 +267,7 @@ image::img/NEON-exData_screenshots/NEON-5-3-1.png[Verbatim site information repo
 
 The geographic location and extent of each survey site should be reported. Five terms are currently recommended for Event datasets:
 
-* *Location ID:* a unique identifier for each survey site should be shared in term:dwc[dwc:locationID]. If a site is visited repeated (as in long-term monitoring and other repeated survey efforts), term:dwc[dwc:locationID] should be consistent across Events within a dataset and across datasets in situations where the same survey sites are visited in other datasets. +
+* *Location ID:* a unique identifier for each survey site should be shared in term:dwc[dwc:locationID]. If a site is visited repeatedly (as in long-term monitoring and other repeated survey efforts), term:dwc[dwc:locationID] should be consistent across Events within a dataset and across datasets in situations where the same survey sites are visited in other datasets. +
 * *Country code:* the ISO two letter code for the country, region, or economy in which a survey takes place should be provided in term:dwc[dwc:countryCode]. +
 * *Latitude-longitude:* The decimal latitude and longitude and geodetic datum location of each survey site should be reported in term:dwc[dwc:decimalLatitude], term:dwc[dwc:decimalLongitude], and term:dwc[dwc:geodeticDatum]. All three terms should be populated together.
 ** If the geographic coordinates of your dataset are not in decimal latitude and decimal longitude format, use the terms term:dwc[dwc:verbatimLatitude], term:dwc[dwc:verbatimLongitude], and term:dwc[dwc:verbatimCoordinateSystem] to report geographic location instead. +
@@ -238,28 +275,53 @@ The geographic location and extent of each survey site should be reported. Five 
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Site locality
 
-In the NEON tick-pathogen dataset, all events except the project level event (eventID = ‘NEON’) have a persistent locationID and GPS coordinates with geodetic datum. Coordinate uncertainty is reported when available. 
+In the NEON tick-pathogen dataset, all Events except the project level Event (eventID = `NEON`) have a persistent term:dwc[dwc:locationID] and coordinates with geodetic datum (`WGS84`). Coordinate uncertainty is reported in term:dwc[dwc:coordinateUncertaintyInMeters] when available. 
 
-image:img/NEON-exData_screenshots/NEON-5-3-2a.png[Primary geospatial information reported with the NEON tick-pathogen example dataset]
+[width="100%",cols="18%,18%,10%,13%,13%,16%,12%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:locationID]
+|term:dwc[dwc:countryCode]
+|term:dwc[dwc:decimalLatitude]
+|term:dwc[dwc:decimalLongitude]
+|term:dwc[dwc:coordinateUncertaintyInMeters]
+|term:dwc[dwc:geodeticDatum]
+|+NEON+ | |+US+ | | | |
+|+D02+ |+D02+ |+US+ |+35.95+ |+-79.65+ |+886557.43+ |+WGS84+
+|+SCBI+ |+SCBI+ |+US+ |+38.892925+ |+-78.139494+ | |+WGS84+
+|+SCBI_014+ |+SCBI_014+ |+US+ |+38.86574+ |+-78.16312+ |+20.4+ |+WGS84+
+|+SCBI_014.20190325+ |+SCBI_014.tickPlot.tck+ |+US+ |+38.86574+ |+-78.16312+ |+20.4+ |+WGS84+
+|===
 
-The dataset includes additional site locality information. This is shared using additional term:dwc[dwc:Location] fields: countryCode, stateProvince, county, minimumElevationInMeters, maximumElevationInMeters, and verbatimElevation. 
+The dataset includes additional site locality information. This is shared using additional term:dwc[dwc:Location] terms: countryCode, stateProvince, county, minimumElevationInMeters, maximumElevationInMeters, and verbatimElevation. In the example data subset, stateProvince and county are reported only at the site level, and the plot elevations are in columns misspelled `minimumElevationinMeters` and `maximumElevationinMeters`; the table shows them under the correct term names.
 
-image:img/NEON-exData_screenshots/NEON-5-3-2b.png[Additional geospatial information reported with the NEON tick-pathogen example dataset]
+[width="100%",cols="20%,12%,10%,20%,20%,18%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:stateProvince]
+|term:dwc[dwc:county]
+|term:dwc[dwc:minimumElevationInMeters]
+|term:dwc[dwc:maximumElevationInMeters]
+|term:dwc[dwc:verbatimElevation]
+|+SCBI+ |+VA+ |+Warren+ |+251+ |+571+ |+352m+
+|+SCBI_014+ | | |+361.4+ |+362.4+ |+361.9m+
+|+SCBI_014.20190325+ | | |+361.4+ |+362.4+ |+361.9m+
+|===
 ****
 
 ==== Survey site area
 
 Reporting additional information about the areas targeted for sampling and the area(s) actually sampled during a survey is recommended to provide greater context about the geospatial scope of a survey. The Humboldt extension includes two sets of paired terms to report the survey area of an Event: _geospatial scope_ terms and _total area sampled_ terms. 
 
-* *_Geospatial scope_* terms (term:eco[eco:geospatialScopeAreaValue] and term:eco[eco:geospatialScopeAreaUnit]) define the geospatial scope or extent of a survey or sampling Event. Geospatial scope terms can be applied at any Event level and should report the entire area considered for the survey.
+* *_Geospatial scope_* terms (http://rs.tdwg.org/eco/terms/geospatialScopeAreaValue[`eco:geospatialScopeAreaValue`^] and http://rs.tdwg.org/eco/terms/geospatialScopeAreaUnit[`eco:geospatialScopeAreaUnit`^]) define the geospatial scope or extent of a survey or sampling Event. Geospatial scope terms can be applied at any Event level and should report the entire area considered for the survey.
 
-* *_Total area sampled_* terms (term:eco[eco:totalAreaSampledValue] and term:eco[eco:totalAreaSampledUnit]) report the area actually sampled during an Event. Total area sampled terms can be populated at any Event level but are most commonly applied at lower Event levels to, for example, capture the survey extent of a single plot or (at higher Event levels) the cummulative area surveyed in a series of plots within a site. 
+* *_Total area sampled_* terms (http://rs.tdwg.org/eco/terms/totalAreaSampledValue[`eco:totalAreaSampledValue`^] and http://rs.tdwg.org/eco/terms/totalAreaSampledUnit[`eco:totalAreaSampledUnit`^]) report the area actually sampled during an Event. Total area sampled terms can be populated at any Event level but are most commonly applied at lower Event levels to, for example, capture the survey extent of a single plot or (at higher Event levels) the cumulative area surveyed in a series of plots within a site. 
 
 In *non-nested event datasets*, geospatial scope terms and total area sampled terms may contain the same values. 
 
-In *nested datasets*, geospatial scope terms will be equal to or greater than the area values shared in total area sampled terms. See Box 2 for an example.
+In *nested datasets*, geospatial scope terms will be equal to or greater than the area values shared in total area sampled terms. See the NEON example below.
 
 *_If the surveyed unit is not an area_* (e.g., `km²` or `m²`), term:dwc[dwc:sampleSizeValue] and term:dwc[dwc:sampleSizeUnit] should be used instead. Examples include:
 
@@ -269,13 +331,26 @@ In *nested datasets*, geospatial scope terms will be equal to or greater than th
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Survey site area
 
-In the NEON tick-pathogen example dataset, the geospatial scope in square kilometers is reported at the project, domain, and site levels using geospatialScopeAreaValue and geospatialScopeAreaUnit. The value at the NEON project level (eventID = ‘NEON’) reflects the area covered by the entire NEON project; the value at the NEON domain level (eventID = ‘D02’) reflects the total area of that particular NEON domain; and the value at the NEON site level (eventID = ‘SCBI’) reflects the total area of that particular NEON site.
+In the NEON tick-pathogen example dataset, the geospatial scope in square kilometers is reported at the project, domain, and site levels using http://rs.tdwg.org/eco/terms/geospatialScopeAreaValue[`eco:geospatialScopeAreaValue`^] and http://rs.tdwg.org/eco/terms/geospatialScopeAreaUnit[`eco:geospatialScopeAreaUnit`^]. The value at the NEON project level (eventID = `NEON`, `9428288` km²) reflects the area covered by the entire NEON project; the value at the NEON domain level (eventID = `D02`, `351647.28` km²) reflects the total area of that particular NEON domain; and the value at the NEON site level (eventID = `SCBI`, `9.86` km²) reflects the total area of that particular NEON site.
 
-The total area sampled during each visit to sample a plot is reported using sampleSizeValue and sampleSizeUnit because the reported unit is a distance (m).
+The amount sampled at the plot and plot visit levels is reported using term:dwc[dwc:sampleSizeValue] and term:dwc[dwc:sampleSizeUnit] because ticks are sampled along the plot perimeter and the reported unit is a distance (`m`). The plot Event reports the planned 160 m perimeter, while each plot visit reports the distance actually sampled during that visit (e.g., `167` m on `SCBI_014.20140610`).
 
-image::img/NEON-exData_screenshots/NEON-5-3-3.png[Geospatial scope information reported with the NEON tick-pathogen example dataset]
+[width="100%",cols="24%,22%,20%,18%,16%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|http://rs.tdwg.org/eco/terms/geospatialScopeAreaValue[`eco:geospatialScopeAreaValue`^]
+|http://rs.tdwg.org/eco/terms/geospatialScopeAreaUnit[`eco:geospatialScopeAreaUnit`^]
+|term:dwc[dwc:sampleSizeValue]
+|term:dwc[dwc:sampleSizeUnit]
+|+NEON+ |+9428288+ |+km²+ | |
+|+D02+ |+351647.28+ |+km²+ | |
+|+SCBI+ |+9.86+ |+km²+ | |
+|+SCBI_014+ | | |+160+ |+m+
+|+SCBI_014.20140610+ | | |+167+ |+m+
+|+SCBI_014.20190325+ | | |+167+ |+m+
+|===
 ****
 
 ==== Additional survey site information
@@ -285,11 +360,11 @@ image::img/NEON-exData_screenshots/NEON-5-3-3.png[Geospatial scope information r
 
 [caption=""]
 .Event site geographic locality and scope terms and their recommended usage (status), namespace abbreviation, and example data entries.
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
 .11+|Recommended
-|*term:dwc[dwc:locationID*]
+|term:dwc[dwc:locationID]
 |`Trap_138`
 
 |term:dwc[dwc:countryCode]
@@ -304,16 +379,16 @@ image::img/NEON-exData_screenshots/NEON-5-3-3.png[Geospatial scope information r
 |term:dwc[dwc:geodeticDatum]
 |`epsg:4326`
 
-|term:eco[eco:geospatialScopeAreaValue]
+|http://rs.tdwg.org/eco/terms/geospatialScopeAreaValue[`eco:geospatialScopeAreaValue`^]
 |`580000`
 
-|term:eco[eco:geospatialScopeAreaUnit]
+|http://rs.tdwg.org/eco/terms/geospatialScopeAreaUnit[`eco:geospatialScopeAreaUnit`^]
 |`km²`
 
-|term:eco[eco:totalAreaSampledValue]
+|http://rs.tdwg.org/eco/terms/totalAreaSampledValue[`eco:totalAreaSampledValue`^]
 |`1600`
 
-|term:eco[eco:totalAreaSampledUnit]
+|http://rs.tdwg.org/eco/terms/totalAreaSampledUnit[`eco:totalAreaSampledUnit`^]
 |`m²`
 
 |term:dwc[dwc:sampleSizeValue]
@@ -335,10 +410,21 @@ image::img/NEON-exData_screenshots/NEON-5-3-3.png[Geospatial scope information r
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== NEON example: Additional survey site information
 
-image::img/NEON-exData_screenshots/NEON-5-3-4.png[]
+The example dataset uses term:dwc[dwc:locality] to give a readable name for the location of each Event below the project level. Survey site geometry (term:dwc[dwc:footprintWKT] and term:dwc[dwc:footprintSRS]) is not reported.
+
+[width="100%",cols="25%,20%,55%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:parentEventID]
+|term:dwc[dwc:locality]
+|+NEON+ | |
+|+D02+ |+NEON+ |+Mid-Atlantic (D02)+
+|+SCBI+ |+D02+ |+Smithsonian Conservation Biology Institute NEON (SCBI)+
+|+SCBI_014+ |+SCBI+ |+SCBI_014+
+|+SCBI_014.20190325+ |+SCBI_014+ |+SCBI_014+
+|===
 ****
 
 
@@ -346,22 +432,33 @@ image::img/NEON-exData_screenshots/NEON-5-3-4.png[]
 
 If vegetation cover data are available for a site (for example, if a relevé was conducted or if a textual site description was provided), it can be reported in three ways:
 
-* *Verbatim vegetation cover:* a verbatim or textual description of vegetation cover can be captured using term:eco[eco:verbatimSiteDescriptions]. +
+* *Verbatim vegetation cover:* a verbatim or textual description of vegetation cover can be captured using http://rs.tdwg.org/eco/terms/verbatimSiteDescriptions[`eco:verbatimSiteDescriptions`^]. +
 * *Percent vegetation cover:* simple percent vegetation cover can be recorded as structured data using the https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[extended
-measurement or fact extension^]. Data reported using emof should be linked to the appropriate Event using term:dwc:[dwc:eventID]. See the 'link:#extended-measurement-or-fact-emof-extension[Extended measurement or fact (eMoF) extension]' section for details on using the extension. +
-* *Vegetation plot survey:* vegetation plot survey information (that is, data collected during a relevé) can be reported using the https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[relevé extension^]. Data from individual relevé's should be linked to the appropriate Event using term:dwc:[dwc:eventID]. See the 'link:#relevé-extension[Relevé extension]' section for details on using the extension.
+measurement or fact extension^]. Data reported using emof should be linked to the appropriate Event using term:dwc[dwc:eventID]. See the 'link:#extended-measurement-or-fact-emof-extension[Extended measurement or fact (eMoF) extension]' section for details on using the extension. +
+* *Vegetation plot survey:* vegetation plot survey information (that is, data collected during a relevé) can be reported using the https://rs.gbif.org/extension/gbif/1.0/releve_2016-05-10.xml[relevé extension^]. Data from individual relevés should be linked to the appropriate Event using term:dwc[dwc:eventID]. See the 'link:#relevé-extension[Relevé extension]' section for details on using the extension.
 
-There is no single best method of reporting vegetation cover information for a site, although it is recommended to choose the most explicit method possible based on the type of information avilable. 
+There is no single best method of reporting vegetation cover information for a site, although it is recommended to choose the most explicit method possible based on the information available. 
 
-If vegetation cover is reported using one of the three methods described above, then term:eco[eco:isVegetationCoverReported] = `true`; otherwise, term:eco[eco:isVegetationCoverReported] = `false`.
+If vegetation cover is reported using one of the three methods described above, then http://rs.tdwg.org/eco/terms/isVegetationCoverReported[`eco:isVegetationCoverReported`^] = `true`; otherwise, http://rs.tdwg.org/eco/terms/isVegetationCoverReported[`eco:isVegetationCoverReported`^] = `false`.
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Vegetation cover
 
-Vegetation cover information is not reported at all with the NEON tick-pathogen example dataset so isVegetationCover reported is ‘false’ for all events. 
+Vegetation cover information is not reported in the NEON tick-pathogen example dataset, so http://rs.tdwg.org/eco/terms/isVegetationCoverReported[`eco:isVegetationCoverReported`^] is `false` for all Events. 
 
-image::img/NEON-exData_screenshots/NEON-5-3-5.png[Indicating if vegetation cover is reported with the NEON tick-pathogen example dataset]
+[width="100%",cols="30%,30%,40%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:parentEventID]
+|http://rs.tdwg.org/eco/terms/isVegetationCoverReported[`eco:isVegetationCoverReported`^]
+|+NEON+ | |+false+
+|+D02+ |+NEON+ |+false+
+|+SCBI+ |+D02+ |+false+
+|+SCBI_014+ |+SCBI+ |+false+
+|+SCBI_014.20140610+ |+SCBI_014+ |+false+
+|+SCBI_014.20190325+ |+SCBI_014+ |+false+
+|===
 ****
 
 
@@ -371,13 +468,13 @@ Complete and accurate reporting of the temporal scope of a survey is crucial to 
 
 Each Event should include a date or date range in term:dwc[dwc:eventDate]. *Nested datasets* should, at the parent Event level, report a date range encompassing the dates of all relevant child Events.
 
-The time and duration of each Event should be reported using term:dwc[dwc:eventTime] and the paired terms term:eco[eco:eventDurationValue] and term:eco[eco:eventDurationUnit] respectively.
+The time and duration of each Event should be reported using term:dwc[dwc:eventTime] and the paired terms http://rs.tdwg.org/eco/terms/eventDurationValue[`eco:eventDurationValue`^] and http://rs.tdwg.org/eco/terms/eventDurationUnit[`eco:eventDurationUnit`^] respectively.
 
 Refer to GBIF’s technical documentation on https://techdocs.gbif.org/en/data-processing/temporal-interpretation[date and time interpretation^] for more guidance on reporting Event dates and times.
 
 [caption=""]
 .Event date and temporal scope terms, their recommended usage (status), and example data entries.
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
 |Required
@@ -388,20 +485,33 @@ Refer to GBIF’s technical documentation on https://techdocs.gbif.org/en/data-p
 |term:dwc[dwc:eventTime]
 |`08:00Z`
 
-|term:eco[eco:eventDurationValue]
+|http://rs.tdwg.org/eco/terms/eventDurationValue[`eco:eventDurationValue`^]
 |`1`
 
-|term:eco[eco:eventDurationUnit]
+|http://rs.tdwg.org/eco/terms/eventDurationUnit[`eco:eventDurationUnit`^]
 |`hour`
 |===
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Survey date and time
 
-The NEON tick-pathogen dataset includes date and time information reported using eventDate.
+The NEON tick-pathogen dataset reports date and time together in term:dwc[dwc:eventDate]. Each plot visit has a single date and time (e.g., `2019-03-25 12:47:00` for `SCBI_014.20190325`), and each parent Event reports a date range that encompasses all of its child Events (e.g., `2014-06-10 16:02:00/2024-10-09 19:19:00` for plot `SCBI_014`). term:dwc[dwc:eventTime] and the event duration terms are not used.
 
-image::img/NEON-exData_screenshots/NEON-5-4.png[Temporal information reported with the NEON tick-pathogen example dataset]
+Note that ISO 8601, the date format recommended for term:dwc[dwc:eventDate], separates the date and time with a `T` (e.g., `2019-03-25T12:47:00`).
+
+[width="100%",cols="25%,20%,55%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:parentEventID]
+|term:dwc[dwc:eventDate]
+|+NEON+ | |+2014-04-02 18:51:00/2024-11-14 17:46:00+
+|+D02+ |+NEON+ |+2014-06-09 16:30:00/2024-10-09 19:42:00+
+|+SCBI+ |+D02+ |+2014-06-09 16:30:00/2024-10-09 19:42:00+
+|+SCBI_014+ |+SCBI+ |+2014-06-10 16:02:00/2024-10-09 19:19:00+
+|+SCBI_014.20140610+ |+SCBI_014+ |+2014-06-10 16:02:00+
+|+SCBI_014.20190325+ |+SCBI_014+ |+2019-03-25 12:47:00+
+|===
 ****
 
 === Methodology or sampling protocol
@@ -422,7 +532,7 @@ Biological survey Event data can result from a wide variety of effort types (e.g
 [discrete]
 ==== Identifying Event type
 
-term:dwc[dwc:eventType] should provide a high level overview or broadly cateorize the type of survey without being so specific as to overlap with sampling protocol. There is no single, standardized vocabulary for term:dwc[dwc:eventType]. If your organization or community has a controlled vocabulary, it is recommended to apply terms from that. Otherwise, you can refer to the common Event types below for guidance. More than one term may apply to an Event; choose the term that fits most closely.
+term:dwc[dwc:eventType] should provide a high level overview or broadly categorize the type of survey without being so specific as to overlap with sampling protocol. There is no single, standardized vocabulary for term:dwc[dwc:eventType]. If your organization or community has a controlled vocabulary, it is recommended to apply terms from that. Otherwise, you can refer to the common Event types below for guidance. More than one term may apply to an Event; choose the term that fits most closely.
 
 * *Project*: Projects are structured initiatives with an explicitly stated objective or suite of objectives and with clear targets, timelines, and deliverables. Projects typically are linked to non-biological information identifying participating organizations and people (agents), funding agencies, and other high-level administrative information. Biological sampling may be only one facet of a project’s scope. `Project` as an term:dwc[dwc:eventType] is typically most appropriate only at the highest Event level in a nested dataset. +
 * *Expedition*: An expedition is an organized information gathering venture that inherently includes multiple sampling Events and event types. Expeditions may include multiple taxonomic and/organismal scopes, any number of documented sampling protocols, and varying degrees of complexity in survey design. `Expedition` as an term:dwc[dwc:eventType] is typically most appropriate at higher Event levels in nested hierarchies. +
@@ -437,42 +547,56 @@ formal biologists as well as the broader, general public. `Bioblitz` as an term:
 
 *`Inventory` Event types*
 
-If term:dwc[dwc:eventType] = `inventory`, the type(s) of search implemented (e.g., restricted search, open search, opportunistic search, trap or sample, compilation) must be reported in term:eco[eco:inventoryTypes]. 
+If term:dwc[dwc:eventType] = `inventory`, the type(s) of search implemented (e.g., restricted search, open search, opportunistic search, trap or sample, compilation) must be reported in http://rs.tdwg.org/eco/terms/inventoryTypes[`eco:inventoryTypes`^]. 
 
-If term:eco[eco:inventoryTypes] = `compilation`, the compilation type should be reported using term:eco[eco:compilationTypes] and data sources listed in term:eco[eco:compilationSourceTypes].
+If http://rs.tdwg.org/eco/terms/inventoryTypes[`eco:inventoryTypes`^] = `compilation`, the compilation type should be reported using http://rs.tdwg.org/eco/terms/compilationTypes[`eco:compilationTypes`^] and data sources listed in http://rs.tdwg.org/eco/terms/compilationSourceTypes[`eco:compilationSourceTypes`^].
 
-* A *[[compilation]]* is a summary inventory resulting from the combination of multiple existing inventories (as described in <<Guralnick2018>>). Compilations are aggregates of multiple studies and may combine surveys employing different protocols, processes, and observers, often with variable reporting of the methods employed or other compiled data sources and literature searches.
+* A [[compilation]]*compilation* is a summary inventory resulting from the combination of multiple existing inventories (as described in <<Guralnick2018>>). Compilations are aggregates of multiple studies and may combine surveys employing different protocols, processes, and observers, often with variable reporting of the methods employed or other compiled data sources and literature searches.
 
 [caption=""]
 .Event type terms, their recommended usage (status), and example data entries
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
 |Recommended |term:dwc[dwc:eventType]
 |`Inventory`
 
 .3+|Recommended if applicable
-|term:eco[eco:inventoryTypes]
+|http://rs.tdwg.org/eco/terms/inventoryTypes[`eco:inventoryTypes`^]
 |`Open search`
 
-|term:eco[eco:compilationTypes]
+|http://rs.tdwg.org/eco/terms/compilationTypes[`eco:compilationTypes`^]
 |`compilationOfExistingSourcesAndSamplingEvents`
 
 
-|term:eco[eco:compilationSourceTypes]
+|http://rs.tdwg.org/eco/terms/compilationSourceTypes[`eco:compilationSourceTypes`^]
 |`museumSpecimens \| literature`
 |===
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Event type
 
-The NEON tick-pathogen example dataset classifies events as follows:
-The NEON project event level (eventID = ‘NEON’) is a ‘project’. 
-Each event at the NEON domain (eventID = ‘D02’), NEON site (eventID = ‘SCBI’), and NEON plot (eventID = ‘SCBI_014’) level are each classified generally as a ‘survey’.
-Each unique visit to a NEON plot for sampling (eventID = ‘SCBI_014_date’) is a ‘site visit’. 
+The NEON tick-pathogen example dataset classifies Events using term:dwc[dwc:eventType] as follows:
 
-image::img/NEON-exData_screenshots/NEON-5-5-1.png[NEON tick-pathogen example dataset event types]
+* The NEON project Event level (eventID = `NEON`) is a `project`. +
+* Each Event at the NEON domain (eventID = `D02`), NEON site (eventID = `SCBI`), and NEON plot (eventID = `SCBI_014`) level is classified generally as a `survey`. +
+* Each unique visit to a NEON plot for sampling (e.g., eventID = `SCBI_014.20190325`) is a `site visit`.
+
+None of the Events is an `inventory`, so http://rs.tdwg.org/eco/terms/inventoryTypes[`eco:inventoryTypes`^] is not used.
+
+[width="100%",cols="35%,35%,30%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:parentEventID]
+|term:dwc[dwc:eventType]
+|+NEON+ | |+project+
+|+D02+ |+NEON+ |+survey+
+|+SCBI+ |+D02+ |+survey+
+|+SCBI_014+ |+SCBI+ |+survey+
+|+SCBI_014.20140610+ |+SCBI_014+ |+site visit+
+|+SCBI_014.20190325+ |+SCBI_014+ |+site visit+
+|===
 ****
 
 
@@ -480,22 +604,22 @@ image::img/NEON-exData_screenshots/NEON-5-5-1.png[NEON tick-pathogen example dat
 
 Four protocol terms exist; however, only 1 term is currently required to publish an Event dataset in GBIF: term:dwc[dwc:samplingProtocol]. This requirement is because the initial Darwin Core Event classification only included the one term. The Humboldt extension introduced an additional three terms to capture information about sampling protocol in a more explicit manner:
 
-* term:eco[eco:protocolNames] +
-* term:eco[eco:protocolDescriptions] +
-* term:eco[eco:protocolReferences]
+* http://rs.tdwg.org/eco/terms/protocolNames[`eco:protocolNames`^] +
+* http://rs.tdwg.org/eco/terms/protocolDescriptions[`eco:protocolDescriptions`^] +
+* http://rs.tdwg.org/eco/terms/protocolReferences[`eco:protocolReferences`^]
 
 ****
 [discrete]
 ==== *Updated recommended best practice for reporting sampling protocol*
-* Report the name(s) of the sampling protocol in term:eco[eco:protocolNames]. +
-* Capture details of the methods or protocols implemented in term:eco[eco:protocolDescriptions]. +
-* Provide citation information for the protocol in term:eco[eco:protocolReferences]. +
-* Retain term:dwc[dwc:samplingProtocol] as a verbatim field of term:eco[eco:protocolNames].
+* Report the name(s) of the sampling protocol in http://rs.tdwg.org/eco/terms/protocolNames[`eco:protocolNames`^]. +
+* Capture details of the methods or protocols implemented in http://rs.tdwg.org/eco/terms/protocolDescriptions[`eco:protocolDescriptions`^]. +
+* Provide citation information for the protocol in http://rs.tdwg.org/eco/terms/protocolReferences[`eco:protocolReferences`^]. +
+* Retain term:dwc[dwc:samplingProtocol] as a verbatim field of http://rs.tdwg.org/eco/terms/protocolNames[`eco:protocolNames`^].
 ****
 
 [caption=""]
 .Survey Event protocol terms, their recommended usage (status), and example data entries.
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
 |Required
@@ -503,27 +627,37 @@ Four protocol terms exist; however, only 1 term is currently required to publish
 |`Visual survey`
 
 .3+|Recommended
-|term:eco[eco:protocolNames]
+|http://rs.tdwg.org/eco/terms/protocolNames[`eco:protocolNames`^]
 |`Visual survey`
 
-|term:eco[eco:protocolDescriptions]
+|http://rs.tdwg.org/eco/terms/protocolDescriptions[`eco:protocolDescriptions`^]
 |`For each site a total list of lichen species (lichenized fungi) was produced based on a careful examination of soil, wood, stone surfaces and bark of trees up to 2m at three time periods: October-November 2014, February-December 2015 and March and May 2016. Specimens that were not possible to identify with certainty in the field were sampled and subsequently identified in the laboratory. For each species the substrate, e.g. phorophyte (host) species was recorded. All records were registered in www.svampeatlas.dk, and the nomenclature used is in accordance with this database.`
 
-|term:eco[eco:protocolReferences]
+|http://rs.tdwg.org/eco/terms/protocolReferences[`eco:protocolReferences`^]
 |`See Appendix B of Brunbjerg, A.K., Bruun, H.H., Brøndum, L. et al. A systematic survey of regional multi-taxon biodiversity: evaluating strategies and coverage. BMC Ecol 19, 43 (2019). https://doi.org/10.1186/s12898-019-0260-x \| https://doi.org/10.17504/protocols.io.kxygx3jwkg8j/v1`
 |===
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Sampling protocol
 
 All NEON sampling protocols are documented. The tick-pathogen dataset includes 2 documented protocols: drag sampling and flagging.
 
-The name of the protocol(s) implemented during each unique survey event is reported using both samplingProtocol and protocolNames. The official description of the protocol is reported in protocolDescriptions including any deviations from the prescribed protocol. Bibliographic information for the protocol is reported in protocolReferences.
+The name of the protocol(s) implemented during each unique survey Event is reported using both term:dwc[dwc:samplingProtocol] and http://rs.tdwg.org/eco/terms/protocolNames[`eco:protocolNames`^] (e.g., `drag` or `drag and flag` for individual plot visits). The official description of the protocol is reported in http://rs.tdwg.org/eco/terms/protocolDescriptions[`eco:protocolDescriptions`^]. Bibliographic information for the protocol is reported in http://rs.tdwg.org/eco/terms/protocolReferences[`eco:protocolReferences`^], with the specific protocol document version listed first at the plot visit level (e.g., `NEON.DOC.014045vK`).
 
-Concatenated protocol information is shared at higher event levels.
+Concatenated protocol information (`Drag sampling | Flagging`) is shared at higher Event levels.
 
-image::img/NEON-exData_screenshots/NEON-5-5-2.png[Survey protocol information in the NEON tick-pathogen example dataset]
+[width="100%",cols="18%,13%,13%,28%,28%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:samplingProtocol]
+|http://rs.tdwg.org/eco/terms/protocolNames[`eco:protocolNames`^]
+|http://rs.tdwg.org/eco/terms/protocolDescriptions[`eco:protocolDescriptions`^]
+|http://rs.tdwg.org/eco/terms/protocolReferences[`eco:protocolReferences`^]
+|+NEON+ |+Drag sampling \| Flagging+ |+Drag sampling \| Flagging+ |+Ticks are sampled at six plots per site every three to six weeks, depending on prior detections. Sampling (...)+ |+Paull, S. 2022. TOS Protocol and Procedure: TCK - Tick and Tick-Borne Pathogen Sampling. NEON.DOC.014045. (...)+
+|+SCBI_014.20140610+ |+drag and flag+ |+drag and flag+ |+Ticks are sampled at six plots per site every three to six weeks, depending on prior detections. Sampling (...)+ |+NEON.DOC.014045vD \| Paull, S. 2022. TOS Protocol and Procedure: TCK - Tick and Tick-Borne Pathogen Sampling. (...)+
+|+SCBI_014.20190325+ |+drag+ |+drag+ |+Ticks are sampled at six plots per site every three to six weeks, depending on prior detections. Sampling (...)+ |+NEON.DOC.014045vK \| Paull, S. 2022. TOS Protocol and Procedure: TCK - Tick and Tick-Borne Pathogen Sampling. (...)+
+|===
 ****
 
 
@@ -531,8 +665,8 @@ image::img/NEON-exData_screenshots/NEON-5-5-2.png[Survey protocol information in
 
 *Organismal <<absence, absences>>* are defined here as the lack of detection of organisms that are members of an explicitly stated target taxonomic scope. Absence information is critical to understanding species´ biogeography, modeling species' responses to climate- and human-induced environmental change, conservation planning and resource management, monitoring and restoration efforts, eradications or reintroductions, and other aspects of biodiversity dynamics.
 
-* If the dataset includes absence information for one or more organisms (to be reported in the `occurrence` table as term:dwc[dwc:occurrenceStatus] = `absent`), then term:eco[eco:isAbsenceReported] = `true`. +
-* A list of absent taxa can be provided using term:eco[eco:absentTaxa] for all relevant Events.  Best practice is to use scientific names to report absent taxa. 
+* If the dataset includes absence information for one or more organisms (to be reported in the `occurrence` table as term:dwc[dwc:occurrenceStatus] = `notDetected` or `notDetected`), then http://rs.tdwg.org/eco/terms/isAbsenceReported[`eco:isAbsenceReported`^] = `true`. +
+* A list of absent taxa can be provided using http://rs.tdwg.org/eco/terms/absentTaxa[`eco:absentTaxa`^] for all relevant Events.  Best practice is to use scientific names to report absent taxa. 
 ** Absences should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey and should use scientific nomenclature. 
 ** Absence cannot be asserted for bycatch.
 
@@ -540,71 +674,113 @@ See the section 'link:#reporting-absences[Reporting absences]' for details on re
 
 ****
 [discrete]
-==== Box title or headline here
-Text to fill in here.
+==== NEON example: Absences
 
-image::img/NEON-exData_screenshots/NEON-5-5-3.png[]
+The example dataset reports absences explicitly for tick pathogens. Each pathogen test result is an Occurrence with term:dwc[dwc:occurrenceStatus] = `notDetected` or `notDetected` when the pathogen was not detected (see link:#reporting-absences[Reporting absences]). Absences are not reported for ticks.
+
+The `survey` table of the example data subset does not include http://rs.tdwg.org/eco/terms/isAbsenceReported[`eco:isAbsenceReported`^] or http://rs.tdwg.org/eco/terms/absentTaxa[`eco:absentTaxa`^]. Following this guide, http://rs.tdwg.org/eco/terms/isAbsenceReported[`eco:isAbsenceReported`^] would be `true` for each plot visit Event with at least one pathogen record of `notDetected` or `notDetected`, and http://rs.tdwg.org/eco/terms/absentTaxa[`eco:absentTaxa`^] could list the pathogens not detected during that visit.
+
+The rows below are pathogen results with term:dwc[dwc:occurrenceStatus] = `notDetected` or `notDetected` from plot visit `SCBI_014.20140610`, as they appear in the `occurrence` table.
+
+[width="99%",cols="<20%,<32%,<16%,<20%,12%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:occurrenceID]
+|term:dwc[dwc:basisOfRecord]
+|term:dwc[dwc:scientificName]
+|term:dwc[dwc:occurrenceStatus]
+|+SCBI_014.20140610+ |+10c59c74-f080-4745-bca1-caa4c3b12c28+ |+MaterialSample+ |+Borrelia lonestari+ |+absent+
+|+SCBI_014.20140610+ |+4f7d9c87-35bc-4591-8268-f92ddb38cfd5+ |+MaterialSample+ |+Ehrlichia chaffeensis+ |+absent+
+|+SCBI_014.20140610+ |+9011a3d4-c6b8-4807-815e-6e660ff3f14e+ |+MaterialSample+ |+Ehrlichia muris-like+ |+absent+
+|===
 ****
 
 
+[[abundance-information]]
 ==== Abundance
 
 <<abundance, *Abundance*>> is a quantitative measure of the same taxonomic designation in a particular area at a specific time. Abundance data are a key indicator of ecological health. They are necessary for evaluating ecological patterns and dynamics, managing invasive species, informing effective habitat and ecosystem management, and for practical tasks such as quantifying existing resource.
 
-* If the dataset includes any abundance information, term:eco[eco:isAbundanceReported] = `true` for all appropriate Events. If there is an abundance cap (that is, if there was a designated maximum value at which abundance was no longer counted), then term:eco[eco:isAbundanceCapReported] = `true` and the value of the cap should be reported in term:eco[eco:abundanceCap]. +
-* If there is no abundance cap, then term:eco[eco:isAbundanceCapReported] = `false`.
+* If the dataset includes any abundance information, http://rs.tdwg.org/eco/terms/isAbundanceReported[`eco:isAbundanceReported`^] = `true` for all appropriate Events. If there is an abundance cap (that is, if there was a designated maximum value at which abundance was no longer counted), then http://rs.tdwg.org/eco/terms/isAbundanceCapReported[`eco:isAbundanceCapReported`^] = `true` and the value of the cap should be reported in http://rs.tdwg.org/eco/terms/abundanceCap[`eco:abundanceCap`^]. +
+* If there is no abundance cap, then http://rs.tdwg.org/eco/terms/isAbundanceCapReported[`eco:isAbundanceCapReported`^] = `false`.
 
-See the section 'link:#abundance-information[Abundance information]' for details on reporting absence information at the Occurrence level.
+See the section 'link:#reporting-abundances[Reporting abundances]' for details on reporting abundance information at the Occurrence level.
 
 [caption=""]
 .Absence and abundance terms, their recommended usage (status), and example data entries.
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
 .3+|Recommended
-|term:eco[eco:isAbsenceReported]
+|http://rs.tdwg.org/eco/terms/isAbsenceReported[`eco:isAbsenceReported`^]
 |`true` or `false`
 
-|term:eco[eco:isAbundanceReported]
+|http://rs.tdwg.org/eco/terms/isAbundanceReported[`eco:isAbundanceReported`^]
 |`true` or `false`
 
-|term:eco[eco:isAbundanceCapReported]
+|http://rs.tdwg.org/eco/terms/isAbundanceCapReported[`eco:isAbundanceCapReported`^]
 |`true` or `false`
 
 .2+|Share if available
-|term:eco[eco:absentTaxa] |
+|http://rs.tdwg.org/eco/terms/absentTaxa[`eco:absentTaxa`^] |
 
-|term:eco[eco:abundanceCap] |`5`
+|http://rs.tdwg.org/eco/terms/abundanceCap[`eco:abundanceCap`^] |`5`
 |===
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Abundance
 
-The NEON tick-pathogen example dataset reports abundance information for ticks but not pathogens sampled during each site visit. Because at least some of the occurrences associated with each event include abundance information, the term isAbundanceReported is ‘TRUE’. The sampling protocols do not include an abundance cap so isAbundanceCapReported is ‘FALSE’ for all events.
+The NEON tick-pathogen example dataset reports abundance information for ticks but not for pathogens. Because at least some of the Occurrences associated with each Event include abundance information, the term http://rs.tdwg.org/eco/terms/isAbundanceReported[`eco:isAbundanceReported`^] is `true`. The sampling protocols do not include an abundance cap, so http://rs.tdwg.org/eco/terms/isAbundanceCapReported[`eco:isAbundanceCapReported`^] is `false` for all Events.
 
-image::img/NEON-exData_screenshots/NEON-5-5-4.png[Declaring abundance reporting in the NEON tick-pathogen example dataset]
+[width="100%",cols="25%,21%,27%,27%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:parentEventID]
+|http://rs.tdwg.org/eco/terms/isAbundanceReported[`eco:isAbundanceReported`^]
+|http://rs.tdwg.org/eco/terms/isAbundanceCapReported[`eco:isAbundanceCapReported`^]
+|+NEON+ | |+true+ |+false+
+|+D02+ |+NEON+ |+true+ |+false+
+|+SCBI+ |+D02+ |+true+ |+false+
+|+SCBI_014+ |+SCBI+ |+true+ |+false+
+|+SCBI_014.20140610+ |+SCBI_014+ |+true+ |+false+
+|+SCBI_014.20190325+ |+SCBI_014+ |+true+ |+false+
+|===
 ****
 
 
 ==== Material samples
 
-A <<materialSample, *material sample*>> is a physical entity ´_... that represents an entity of interest in whole or in part_´ (see term:dwc[dwc:MaterialSample]). Essentially, material samples are specimens collected during a survey. A material sample may consist of an entire organism, part of an organism, or a genetic sample, or even multiple organisms not necessarily of the same taxonomic designation.
+A <<materialSample, *material sample*>> is a physical entity '_... that represents an entity of interest in whole or in part_' (see term:dwc[dwc:MaterialSample]). Essentially, material samples are specimens collected during a survey. A material sample may consist of an entire organism, part of an organism, or a genetic sample, or even multiple organisms not necessarily of the same taxonomic designation.
 
 If the dataset includes at least one specimen from which a material sample was taken, for each relevant Event:
 
-* term:eco[eco:hasMaterialSamples] = `true` and +
-* the type(s) of materials collected should be listed in term:eco[eco:materialSampleTypes].
+* http://rs.tdwg.org/eco/terms/hasMaterialSamples[`eco:hasMaterialSamples`^] = `true` and +
+* the type(s) of materials collected should be listed in http://rs.tdwg.org/eco/terms/materialSampleTypes[`eco:materialSampleTypes`^].
 
-If the dataset or Event does _not_ include material samples, term:eco[eco:hasMaterialSamples] = `false`.
+If the dataset or Event does _not_ include material samples, http://rs.tdwg.org/eco/terms/hasMaterialSamples[`eco:hasMaterialSamples`^] = `false`.
+
+These two terms only signal, at the Event level, that material samples exist. Information about each individual material sample is shared in the `occurrence` table; see link:#mapping-material-sample-information[Mapping material sample information].
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Material samples
 
-During each sampling of a NEON plot, any individuals of the target taxa (ticks) captured are collected as a material sample. This and the type of material sample collected (wholeOrganism) are reported using the terms hastMaterialSamples and materialSampleTypes. 
+During each sampling of a NEON plot, any individuals of the target taxa (ticks) captured are collected as material samples. This and the type of material sample collected (`wholeOrganism`) are reported using the terms http://rs.tdwg.org/eco/terms/hasMaterialSamples[`eco:hasMaterialSamples`^] and http://rs.tdwg.org/eco/terms/materialSampleTypes[`eco:materialSampleTypes`^]. For plot visits where no ticks were collected, http://rs.tdwg.org/eco/terms/hasMaterialSamples[`eco:hasMaterialSamples`^] is `false`.
 
-image::img/NEON-exData_screenshots/NEON-5-5-5.png[Reporting the existence and type of material samples in the NEON tick-pathogen example dataset]
+Note that in the example data subset, http://rs.tdwg.org/eco/terms/materialSampleTypes[`eco:materialSampleTypes`^] is `wholeOrganism` even for those plot visits where http://rs.tdwg.org/eco/terms/hasMaterialSamples[`eco:hasMaterialSamples`^] is `false`. When no material samples were collected, http://rs.tdwg.org/eco/terms/materialSampleTypes[`eco:materialSampleTypes`^] should be left empty.
+
+[width="100%",cols="25%,21%,27%,27%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:parentEventID]
+|http://rs.tdwg.org/eco/terms/hasMaterialSamples[`eco:hasMaterialSamples`^]
+|http://rs.tdwg.org/eco/terms/materialSampleTypes[`eco:materialSampleTypes`^]
+|+NEON+ | |+true+ |+wholeOrganism+
+|+SCBI_014+ |+SCBI+ |+true+ |+wholeOrganism+
+|+SCBI_014.20190325+ |+SCBI_014+ |+true+ |+wholeOrganism+
+|+SCBI_014.20200330+ |+SCBI_014+ |+false+ |+wholeOrganism+
+|===
 ****
 
 
@@ -614,18 +790,26 @@ A <<voucher, *voucher*>> is a physical specimen or material sample collected and
 
 If the dataset has vouchers, for each relevant Event:
 
-* term:eco[eco:hasVouchers] = `true`, and +
-* a list of institutions housing them should be shared in term:eco[eco:voucherInstitutions].
+* http://rs.tdwg.org/eco/terms/hasVouchers[`eco:hasVouchers`^] = `true`, and +
+* a list of institutions housing them should be shared in http://rs.tdwg.org/eco/terms/voucherInstitutions[`eco:voucherInstitutions`^].
 
-If the dataset or sampling event does _not_ include vouchers, term:eco[eco:hasVouchers] = `false`.
+If the dataset or sampling event does _not_ include vouchers, http://rs.tdwg.org/eco/terms/hasVouchers[`eco:hasVouchers`^] = `false`.
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Vouchers
 
-The existence of vouchered specimens and the location of those vouchers in the example dataset are reported via hasVouchers and voucherInstitutions.
+The existence of vouchered specimens and the location of those vouchers in the example dataset are reported via http://rs.tdwg.org/eco/terms/hasVouchers[`eco:hasVouchers`^] and http://rs.tdwg.org/eco/terms/voucherInstitutions[`eco:voucherInstitutions`^]. Higher Event levels list both institutions that house vouchers (`US National Tick Collection, Georgia Southern University | NEON Biorepository, Arizona State University`), while each plot visit lists only the institution that houses the vouchers from that visit. For plot visits where no ticks were collected, http://rs.tdwg.org/eco/terms/hasVouchers[`eco:hasVouchers`^] is `false`.
 
-image::img/NEON-exData_screenshots/NEON-5-5-6.png[Reporting the existence and location of vouchers in the NEON tick-pathogen example dataset]
+[width="100%",cols="25%,15%,60%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|http://rs.tdwg.org/eco/terms/hasVouchers[`eco:hasVouchers`^]
+|http://rs.tdwg.org/eco/terms/voucherInstitutions[`eco:voucherInstitutions`^]
+|+NEON+ |+true+ |+US National Tick Collection, Georgia Southern University \| NEON Biorepository, Arizona State University+
+|+SCBI_014.20190325+ |+true+ |+US National Tick Collection, Georgia Southern University+
+|+SCBI_014.20200330+ |+false+ |
+|===
 ****
 
 
@@ -633,7 +817,7 @@ image::img/NEON-exData_screenshots/NEON-5-5-6.png[Reporting the existence and lo
 
 Although the general recommendation is to share all biodiversity data available at its highest spatio-temporal resolution, situations exist where it is necessary to generalize data prior to sharing a dataset publicly or even withhold information completely. Two terms are available to communicate if data are generalized or withheld in a dataset: term:dwc[dwc:dataGeneralizations] and term:dwc[dwc:informationWithheld]. 
 
-While it is the responsibility of the publisher to protect sensitive species occurrence data, it is also the data publisher´s responsibility to clearly communicate any action(s) taken and to indicate if the full data are available upon request. How you generalize sensitive data (for example, restricting the resolution of the data) depends on the species´ category of sensitivity. Where there is low risk of adverse outcomes, unrestricted publication of sensitive species data may remain appropriate. See the published guide https://doi.org/10.15468/doc-5jp4-5g10[Current Best Practices for Generalizing Sensitive Species Occurrence Data^] or guidance on when and how to generalize or withhold information sensitive biodiversity data <<Chapman2020>>. The guide is also available in https://docs.gbif.org/sensitive-species-best-practices/master/fr/[French^] and https://docs.gbif.org/sensitive-species-best-practices/master/es/[Spanish^].
+While it is the responsibility of the publisher to protect sensitive species occurrence data, it is also the data publisher´s responsibility to clearly communicate any action(s) taken and to indicate if the full data are available upon request. How you generalize sensitive data (for example, restricting the resolution of the data) depends on the species´ category of sensitivity. Where there is low risk of adverse outcomes, unrestricted publication of sensitive species data may remain appropriate. See the published guide https://doi.org/10.15468/doc-5jp4-5g10[Current Best Practices for Generalizing Sensitive Species Occurrence Data^] for guidance on when and how to generalize or withhold information sensitive biodiversity data <<Chapman2020>>. The guide is also available in https://docs.gbif.org/sensitive-species-best-practices/master/fr/[French^] and https://docs.gbif.org/sensitive-species-best-practices/master/es/[Spanish^].
 
 *Reporting data generalizations*
 
@@ -647,23 +831,47 @@ If specific data are not reported with the dataset, a clarifying statement shoul
 
 For example, if sensitive species data are purposefully excluded from the published data, term:dwc[dwc:informationWithheld] should include a statement along the lines of `Sensitive species occurrence information not reported`.
 
+****
+[discrete]
+==== NEON example: Sensitive data
+
+The example data subset does not generalize or withhold any information, so neither term:dwc[dwc:dataGeneralizations] nor term:dwc[dwc:informationWithheld] is used. For example, plot `SCBI_014` is shared with its full coordinates:
+
+[width="100%",cols="20%,16%,17%,22%,25%",options="header",]
+|===
+|term:dwc[dwc:eventID] |term:dwc[dwc:decimalLatitude] |term:dwc[dwc:decimalLongitude] |term:dwc[dwc:coordinateUncertaintyInMeters] 
+|+SCBI_014+ |+38.86574+ |+-78.16312+ |+20.4+ 
+|===
+****
+
 ==== Least specific target category quantity inclusive
 
-The term term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive] indicates if the total number of organisms detected for a term:dwc[dwc:Taxon] (including all its subgroups) is shown in one record in term:dwc[dwc:individualCount] or the paried terms term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] in the `occurrence` table. This true/false (Boolean) term helps data users know if the numbers given in these terms include all organisms of that dwc:Taxon.
+The term http://rs.tdwg.org/eco/terms/isLeastSpecificTargetCategoryQuantityInclusive[`eco:isLeastSpecificTargetCategoryQuantityInclusive`^] indicates if the total number of organisms detected for a term:dwc[dwc:Taxon] (including all its subgroups) is shown in one record in term:dwc[dwc:individualCount] or the paired terms term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] in the `occurrence` table. This true/false (Boolean) term helps data users know if the numbers given in these terms include all organisms of that dwc:Taxon.
 
-* For term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive] to be `true`, the values shared in term:dwc[dwc:individualCount] or term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] for a single Occurrence record are inclusive of all organisms of that dwc:Taxon detected during the Event.
+* For http://rs.tdwg.org/eco/terms/isLeastSpecificTargetCategoryQuantityInclusive[`eco:isLeastSpecificTargetCategoryQuantityInclusive`^] to be `true`, the values shared in term:dwc[dwc:individualCount] or term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] for a single Occurrence record are inclusive of all organisms of that dwc:Taxon detected during the Event.
 
-* For term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive] to be `false`, the values shared in term:dwc[dwc:individualCount] or term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] for a single Occurrence record are *not* inclusive of all organisms of the dwc:Taxon detected during the survey Event. This means that to find the total number of organisms detected for a given dwc:Taxon, you need to add up the dwc:organismQuantity values from multiple occurrence records within the Event.
+* For http://rs.tdwg.org/eco/terms/isLeastSpecificTargetCategoryQuantityInclusive[`eco:isLeastSpecificTargetCategoryQuantityInclusive`^] to be `false`, the values shared in term:dwc[dwc:individualCount] or term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] for a single Occurrence record are *not* inclusive of all organisms of the dwc:Taxon detected during the survey Event. This means that to find the total number of organisms detected for a given dwc:Taxon, you need to add up the dwc:organismQuantity values from multiple occurrence records within the Event.
 
 See https://eco.tdwg.org/inclusive/[Guidelines for eco:isLeastSpecificTargetCategoryQuantityInclusive] <<tdwg2024a>> for more information.
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Least specific target category
 
-The NEON tick-pathogen example dataset uses isLeastSpecificTargetQuantityInclusive to indicate that data users will need to sum abundance values across multiple rows to get the true abundance for a species. Because ticks collected during each unique sampling event are reported as occurrences at a level more specific than scientific name alone (specifically, the unique combination of scientific name, sex, and lifestage) isLeastSpecificTargetQuantityInclusive is ‘false’.
+The NEON tick-pathogen example dataset uses http://rs.tdwg.org/eco/terms/isLeastSpecificTargetCategoryQuantityInclusive[`eco:isLeastSpecificTargetCategoryQuantityInclusive`^] to indicate that data users will need to sum abundance values across multiple rows to get the total abundance for a species. Because ticks collected during each unique sampling Event are reported as Occurrences at a level more specific than scientific name alone (specifically, the unique combination of scientific name, sex, and life stage), http://rs.tdwg.org/eco/terms/isLeastSpecificTargetCategoryQuantityInclusive[`eco:isLeastSpecificTargetCategoryQuantityInclusive`^] is `false`.
 
-image::img/NEON-exData_screenshots/NEON-5-5-8.png[Application of isLeastSpecificTargetQuantityInclusive in the NEON tick-pathogen example dataset]
+[width="100%",cols="25%,25%,50%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:parentEventID]
+|http://rs.tdwg.org/eco/terms/isLeastSpecificTargetCategoryQuantityInclusive[`eco:isLeastSpecificTargetCategoryQuantityInclusive`^]
+|+NEON+ | |+false+
+|+D02+ |+NEON+ |+false+
+|+SCBI+ |+D02+ |+false+
+|+SCBI_014+ |+SCBI+ |+false+
+|+SCBI_014.20140610+ |+SCBI_014+ |+false+
+|+SCBI_014.20190325+ |+SCBI_014+ |+false+
+|===
 ****
 
 ==== Verbatim fields
@@ -677,24 +885,24 @@ Both fields can be applied to any Event at any level.
 
 [caption=""]
 .Other survey protocol information and verbatim protocol terms, their recommended usage (status), and example data entries.
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
 .3+|Recommended
-|term:eco[eco:hasMaterialSamples]
+|http://rs.tdwg.org/eco/terms/hasMaterialSamples[`eco:hasMaterialSamples`^]
 |`true` or `false`
 
-|term:eco[eco:hasVouchers]
+|http://rs.tdwg.org/eco/terms/hasVouchers[`eco:hasVouchers`^]
 |`true` or `false`
 
-|term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive]
+|http://rs.tdwg.org/eco/terms/isLeastSpecificTargetCategoryQuantityInclusive[`eco:isLeastSpecificTargetCategoryQuantityInclusive`^]
 |`true` or `false`
 
 .6+|Share if available
-|term:eco[eco:materialSampleTypes]
+|http://rs.tdwg.org/eco/terms/materialSampleTypes[`eco:materialSampleTypes`^]
 |`wholeOrganism`, `blood`
 
-|term:eco[eco:voucherInstitutions]
+|http://rs.tdwg.org/eco/terms/voucherInstitutions[`eco:voucherInstitutions`^]
 |`AMNH \| KUNHM`
 
 |term:dwc[dwc:dataGeneralizations]
@@ -712,11 +920,20 @@ Both fields can be applied to any Event at any level.
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Verbatim fields
 
-Field notes and additional information or comments about an event are shared in eventRemarks.
+The example dataset does not use term:dwc[dwc:fieldNotes]. Additional information or comments about an Event are shared in term:dwc[dwc:eventRemarks], for example `COVID19; No survey conducted` or `Small patch of wavy leaf. Not seeding.`
 
-image::img/NEON-exData_screenshots/NEON-5-5-9.png[Verbatim comments about individual events in the NEON tick-pathogen example dataset]
+[width="100%",cols="30%,70%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:eventRemarks]
+|+SCBI_014.20140610+ |+1 adult; 43 nymphs; 1 larvae+
+|+SCBI_014.20190325+ |
+|+SCBI_014.20190819+ |+Small patch of wavy leaf. Not seeding.+
+|+SCBI_014.20200330+ |+COVID19; No survey conducted; identifiedBy is NA because there are no occurrence records for this event+
+|+SCBI_014.20200622+ |+identifiedBy is NA because there are no occurrence records for this event+
+|===
 ****
 
 
@@ -726,77 +943,88 @@ image::img/NEON-exData_screenshots/NEON-5-5-9.png[Verbatim comments about indivi
 
 *<<completeness, Completeness>>* indicates the thoroughness of a survey relative to the stated scope. Structured reporting of explicitly stated survey scopes and completeness is necessary for evaluating and reporting completeness and is critical to understanding if the data can be used to assert absences (non-detections) of taxa. Reported scope and completeness information facilitates the ability of downstream data users to interpret species populations, areas of occupancy, infer species absences, etc. 
 
-The 'target' and 'excluded' scope terms (e.g., term:eco[eco:targetTaxonomicScope]) presented in this section are the only Event terms designed to capture _intent_. That is, these terms capture the breadth of the information the biological survey _intended_ to capture. All other terms should be used to report the actuality of the survey (e.g., what protocol was in practice implemented, what information was actually collected).
+The 'target' and 'excluded' scope terms (e.g., http://rs.tdwg.org/eco/terms/targetTaxonomicScope[`eco:targetTaxonomicScope`^]) presented in this section are the only Event terms designed to capture _intent_. That is, these terms capture the breadth of the information the biological survey _intended_ to capture. All other terms should be used to report the actuality of the survey (e.g., what protocol was in practice implemented, what information was actually collected).
 
 ****
 [discrete]
 ==== Implementing scope terms
 * Scope terms can be applied at any Event level. +
-* Recommended best practice is to populate scope terms every Event to which they apply. This information should be reported _only_ at the Event levels for which the information is explicitly stated; information should not be inferred up or down an Event hierarchy. +
+* Recommended best practice is to populate scope terms for every Event to which they apply. This information should be reported _only_ at the Event levels for which the information is explicitly stated; information should not be inferred up or down an Event hierarchy. +
 * Scope terms of an Event must be populated whenever the scope was in effect to be able to infer absence of detection within that Event whenever the Occurrences linked to that Event do not explicitly state zero counts or when there are no Occurrence records for a given taxon that fell within the taxonomic scope (see Section 3.2.4 Principle of inference in https://eco.tdwg.org/hierarchy/#324-principle-of-inference[Properties of hierarchical events in the Humboldt Extension for Ecological Inventories^]). +
 * Do _not_ retrospectively infer scope terms.
 ****
 
 ==== Verbatim scope
 
-The complete scope explicitly identifying the full suite of stated parameters defining the breadth of a sampling Event should be reported using term:eco[eco:verbatimTargetScope]. term:eco[eco:verbatimTargetScope] is particularly useful for capturing scope conditions not covered by existing https://eco.tdwg.org/terms/#taxonomic-scope[taxonomic^] or https://eco.tdwg.org/terms/#organismal-scope[organismal^] scope terms.
+The complete scope explicitly identifying the full suite of stated parameters defining the breadth of a sampling Event should be reported using http://rs.tdwg.org/eco/terms/verbatimTargetScope[`eco:verbatimTargetScope`^]. http://rs.tdwg.org/eco/terms/verbatimTargetScope[`eco:verbatimTargetScope`^] is particularly useful for capturing scope conditions not covered by existing https://eco.tdwg.org/terms/#taxonomic-scope[taxonomic^] or https://eco.tdwg.org/terms/#organismal-scope[organismal^] scope terms.
 
 [caption=""]
 .General scope terms, their recommended usage (status), and example data entries.
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
 |Recommended
-|term:eco[eco:verbatimTargetScope]
+|http://rs.tdwg.org/eco/terms/verbatimTargetScope[`eco:verbatimTargetScope`^]
 |`Adult flying insects`
 |===
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Verbatim scope
 
 The NEON tick-pathogen example dataset has an explicitly stated target scope: ticks and selected tick pathogens. This is reported in verbatimTargetScope.
 
-image::img/NEON-exData_screenshots/NEON-5-6-1.png[Reported verbatim scope of the NEON tick-pathogen example dataset]
+[width="100%",cols="30%,30%,40%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:parentEventID]
+|http://rs.tdwg.org/eco/terms/verbatimTargetScope[`eco:verbatimTargetScope`^]
+|+NEON+ | |+ticks \| selected tick pathogens+
+|+D02+ |+NEON+ |+ticks \| selected tick pathogens+
+|+SCBI+ |+D02+ |+ticks \| selected tick pathogens+
+|+SCBI_014+ |+SCBI+ |+ticks \| selected tick pathogens+
+|+SCBI_014.20140610+ |+SCBI_014+ |+ticks \| selected tick pathogens+
+|+SCBI_014.20190325+ |+SCBI_014+ |+ticks \| selected tick pathogens+
+|===
 ****
 
 
 ==== Taxonomic scope
 
-Reporting taxonomic scope enables reliable, quantitative, and statistical interpretation of survey and monitoring data. Knowledge of taxonomic scope is essential to interpret local non-detection of taxa as local absences. The *taxonomic scope*, stated either as targeted or intentionally excluded taxa, should be reported using term:eco[eco:targetTaxonomicScope] and term:eco[eco:excludedTaxonomicScope].
+Reporting taxonomic scope enables reliable, quantitative, and statistical interpretation of survey and monitoring data. Knowledge of taxonomic scope is essential to interpret local non-detection of taxa as local absences. The *taxonomic scope*, stated either as targeted or intentionally excluded taxa, should be reported using http://rs.tdwg.org/eco/terms/targetTaxonomicScope[`eco:targetTaxonomicScope`^] and http://rs.tdwg.org/eco/terms/excludedTaxonomicScope[`eco:excludedTaxonomicScope`^].
 
-If every organism in the stated terms:eco[eco:targetTaxonomicScope] that was observed during an Event was reported, then term:eco[eco:isTaxonomicScopeFullyReported] = `true`; if not, term:eco[eco:isTaxonomicScopeFullyReported] = `false`.
+If every organism in the stated http://rs.tdwg.org/eco/terms/targetTaxonomicScope[`eco:targetTaxonomicScope`^] that was observed during an Event was reported, then http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] = `true`; if not, http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] = `false`.
 
 *Knowledge about taxonomic completeness* allows data users to determine how comprehensively an area was sampled. 
 
 * If taxonomic completeness is reported, 
-** term:eco[eco:taxonCompletenessReported] = `reportedComplete` or `reportedIncomplete` as appropriate and 
-**the method used to assess completeness reported in term:eco[eco:taxonCompletenessProtocols]. +
-* If taxonomic completeness is not reported: term:eco[eco:taxonCompletenessReported] = `notReported`.
+** http://rs.tdwg.org/eco/terms/taxonCompletenessReported[`eco:taxonCompletenessReported`^] = `reportedComplete` or `reportedIncomplete` as appropriate and 
+** the method used to assess completeness reported in http://rs.tdwg.org/eco/terms/taxonCompletenessProtocols[`eco:taxonCompletenessProtocols`^]. +
+* If taxonomic completeness is not reported: http://rs.tdwg.org/eco/terms/taxonCompletenessReported[`eco:taxonCompletenessReported`^] = `notReported`.
 
-If a specific person(s) or organization(s) are reported as making the taxonomic identifications relevant to the stated survey scope(s), they should be acknowledged in term:dwc[dwc:identifiedBy]. A list of names can be be shared with values separated by a `|`. It is not possible to share a list of unique identifiers such as ORCID´s at the Event level.
+If a specific person(s) or organization(s) are reported as making the taxonomic identifications relevant to the stated survey scope(s), they should be acknowledged in term:dwc[dwc:identifiedBy]. A list of names can be shared with values separated by a `|`. It is not possible to share a list of unique identifiers such as ORCID´s at the Event level.
 
 
 [caption=""]
 .Taxonomic scope terms, their recommended usage (status), and example data entries.
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
 .2+|Recommended
-|term:eco[eco:targetTaxonomicScope]
+|http://rs.tdwg.org/eco/terms/targetTaxonomicScope[`eco:targetTaxonomicScope`^]
 |`Arthropods`
 
-|term:eco[eco:excludedTaxonomicScope]
+|http://rs.tdwg.org/eco/terms/excludedTaxonomicScope[`eco:excludedTaxonomicScope`^]
 |`Aves`
 
 .4+|Share if available
-|term:eco[eco:isTaxonomicScopeFullyReported]
+|http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^]
 |`true` or `false`
 
-|term:eco[eco:taxonCompletenessReported]
+|http://rs.tdwg.org/eco/terms/taxonCompletenessReported[`eco:taxonCompletenessReported`^]
 |`reportedComplete`, `reportedIncomplete`, or `notReported`
 
-|term:eco[eco:taxonCompletenessProtocols]
+|http://rs.tdwg.org/eco/terms/taxonCompletenessProtocols[`eco:taxonCompletenessProtocols`^]
 |`Based on sampling effort`
 
 |term:dwc[dwc:identifiedBy]
@@ -805,30 +1033,48 @@ If a specific person(s) or organization(s) are reported as making the taxonomic 
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Taxonomic scope
 
 The stated target taxonomic scope of the NEON tick-pathogen example dataset includes Ixodidae ticks and an explicit list of tick pathogens. These are explicitly reported in targetTaxonomicScope.
 
-Survey protocol dictates that all ticks captured during a survey are reported and that all pathogens present in subsequent analysis are reported. As such, the term isTaxonomicScopeFully reported is denoted as ‘TRUE’. The methods used to assess taxonomic completeness are reported in taxonCompletenessProtocools, although taxon completeness is not reported. 
+Survey protocol dictates that all ticks captured during a survey are reported and that the results for all target pathogens tested are reported. As such, http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] is `true`. The methods used to assess taxonomic completeness are reported in http://rs.tdwg.org/eco/terms/taxonCompletenessProtocols[`eco:taxonCompletenessProtocols`^], although taxon completeness itself is not reported (http://rs.tdwg.org/eco/terms/taxonCompletenessReported[`eco:taxonCompletenessReported`^] = `notReported`).
 
-Note that the information reported for the terms targetTaxnomicScope, isTaxonomicScopeFullyReported, taxonCompletenessReported, and taxonCompletenessProtocols is the same at all event levels because there is no deviation from the reported information at any event level. 
+Note that the information reported for the terms targetTaxonomicScope, isTaxonomicScopeFullyReported, taxonCompletenessReported, and taxonCompletenessProtocols is the same at all Event levels because there is no deviation from the reported information at any Event level. 
 
-Conversely, there is very explicit differentiation in acknowledging the entities involved in identifying the target taxa of the dataset. Here, the specific people identifying specimen are reported in identifiedBy for the event (plot visit) during which the sample was collected (e.g., SCBI_014_20190325) while the broader laboratory or museum responsible for managing the samples and identifications are reported in identifiedBy at the higher event levels (e.g., NEON, D02, SCBI, and SCBI_014). 
+Conversely, there is very explicit differentiation in acknowledging the entities involved in identifying the target taxa of the dataset. Here, the specific people identifying specimens are reported in term:dwc[dwc:identifiedBy] for the Event (plot visit) during which the sample was collected (e.g., `L. Beati` for `SCBI_014.20190325`), while the laboratories responsible for the identifications (`Georgia Southern University | University of Massachusetts Laboratory of Medical Zoology`) are reported in term:dwc[dwc:identifiedBy] at the higher Event levels (`NEON`, `D02`, `SCBI`, and `SCBI_014`). 
 
-image::img/NEON-exData_screenshots/NEON-5-6-2.png[Reported taxonomic scopes of the NEON tick-pathogen example dataset]
+[width="100%",cols="22%,48%,30%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|http://rs.tdwg.org/eco/terms/targetTaxonomicScope[`eco:targetTaxonomicScope`^]
+|term:dwc[dwc:identifiedBy]
+|+NEON+ |+Ixodidae \| Borrelia burgdorferi \| Borrelia miyamotoi \| Anaplasma phagocytophilum \| Rickettsia rickettsii \| Ehrlichia (...)+ |+Georgia Southern University \| University of Massachusetts Laboratory of Medical Zoology+
+|+SCBI_014.20140610+ |+Ixodidae \| Borrelia burgdorferi \| Borrelia miyamotoi \| Anaplasma phagocytophilum \| Rickettsia rickettsii \| Ehrlichia (...)+ |+Lorenza Beati \| Michael Bischof+
+|+SCBI_014.20190325+ |+Ixodidae \| Borrelia burgdorferi \| Borrelia miyamotoi \| Anaplasma phagocytophilum \| Rickettsia rickettsii \| Ehrlichia (...)+ |+L. Beati+
+|===
+
+[width="100%",cols="22%,20%,20%,38%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^]
+|http://rs.tdwg.org/eco/terms/taxonCompletenessReported[`eco:taxonCompletenessReported`^]
+|http://rs.tdwg.org/eco/terms/taxonCompletenessProtocols[`eco:taxonCompletenessProtocols`^]
+|+NEON+ |+true+ |+notReported+ |+Tick drag/flag methods are standardized to maximize detection of all life stages of Ixodidae during the active season.+
+|+SCBI_014.20190325+ |+true+ |+notReported+ |+Tick drag/flag methods are standardized to maximize detection of all life stages of Ixodidae during the active season.+
+|===
 ****
 
 
 ==== Organismal scopes
 
-As with taxonomic scope, providing information about other organismal scopes when relevant enables reliable, quantitative interpretation of survey and monitoring data and can be essential to interpreting local non-detection as local absences. Three categories of terms are available with which to report an explicitly stated target or excluded *organismal scope*, and state whether or not all target organisms observed were reported. Any additional organismal scopes should be reported using term:eco[eco:verbatimTargetScope].
+As with taxonomic scope, providing information about other organismal scopes when relevant enables reliable, quantitative interpretation of survey and monitoring data and can be essential to interpreting local non-detection as local absences. Three categories of terms are available with which to report an explicitly stated target or excluded *organismal scope*, and state whether or not all target organisms observed were reported. Any additional organismal scopes should be reported using http://rs.tdwg.org/eco/terms/verbatimTargetScope[`eco:verbatimTargetScope`^].
 
 *Life stage*
 
-<<lifeStage, Life stage>> refers to a distint phase in an organism's life cycle targeted for or excluded from a survey (see term:dwc[dwc:lifeStage]). Life stage may represent a spcific developmental, growth, and/or reproductive changes in an organism's life.
+<<lifeStage, Life stage>> refers to a distinct phase in an organism's life cycle targeted for or excluded from a survey (see term:dwc[dwc:lifeStage]). Life stage may represent specific developmental, growth, and/or reproductive changes in an organism's life.
 
-* If the survey targeted or excluded specific organismal life stages, the information should be reported in term:eco[eco:targetLifeStageScope] and term:eco[eco:excludedLifeStageScope]. +
-* If every organism that falling within the life stage scope that was detected during the survey was reported, then term:eco[eco:isLifeStageScopeFullyReported] = `true`. Otherwise, term:eco[eco:isLifeStageScopeFullyReported] = `false`.
+* If the survey targeted or excluded specific organismal life stages, the information should be reported in http://rs.tdwg.org/eco/terms/targetLifeStageScope[`eco:targetLifeStageScope`^] and http://rs.tdwg.org/eco/terms/excludedLifeStageScope[`eco:excludedLifeStageScope`^]. +
+* If every organism falling within the life stage scope that was detected during the survey was reported, then http://rs.tdwg.org/eco/terms/isLifeStageScopeFullyReported[`eco:isLifeStageScopeFullyReported`^] = `true`. Otherwise, http://rs.tdwg.org/eco/terms/isLifeStageScopeFullyReported[`eco:isLifeStageScopeFullyReported`^] = `false`.
 
 A corresponding term:dwc[dwc:lifeStage] term is available in the Occurrence extension. This term should be used to report life stage information for organism Occurrences in the `occurrence` table.
 
@@ -837,190 +1083,239 @@ A corresponding term:dwc[dwc:lifeStage] term is available in the Occurrence exte
 
 <<growthForm, Growth form>> refers to the physical characters or habits of an organism, or group of organisms, in a given environment. It describes their specific shape, structure, and/or pattern of construction.
 
-* If the survey targeted or excluded specific organismal growth forms, the information should be reported in term:eco[eco:targetGrowthFormScope] and term:eco[eco:excludedGrowthFormScope] .  
-* If every organism falling within the stated growth form scope that was observed during the survey was reported, then term:eco[eco:isGrowthFormScopeFullyReported] = `true`; if not, term:eco[eco:isGrowthFormScopeFullyReported] = `false`. +
+* If the survey targeted or excluded specific organismal growth forms, the information should be reported in http://rs.tdwg.org/eco/terms/targetGrowthFormScope[`eco:targetGrowthFormScope`^] and http://rs.tdwg.org/eco/terms/excludedGrowthFormScope[`eco:excludedGrowthFormScope`^] .  
+* If every organism falling within the stated growth form scope that was observed during the survey was reported, then http://rs.tdwg.org/eco/terms/isGrowthFormScopeFullyReported[`eco:isGrowthFormScopeFullyReported`^] = `true`; if not, http://rs.tdwg.org/eco/terms/isGrowthFormScopeFullyReported[`eco:isGrowthFormScopeFullyReported`^] = `false`. +
 
 *Degree of establishment*
 
 <<degreeOfEstablishment, Degree of establishment>> refers to '_the degree to which an organism survives, reproduces, and expands its range at the given place and time_' (see term:dwc[dwc:degreeOfEstablishment]).
 
-* If the survey targeted or excluded specific organismal degree of establishment, the information should be reported in term:eco[eco:targetDegreeOfEstablishmentScope] and term:eco[eco:excludedDegreeOfEstablishmentScope]. +
-* If every organism that was included within the degree of establishment, and was detected during the survey, was reported, then term:eco[eco:isDegreeOfEstablishmentScopeFullyReported] = `true`; otherwise, term:eco[eco:isDegreeOfEstablishmentScopeFullyReported] = `false`.
+* If the survey targeted or excluded specific organismal degree of establishment, the information should be reported in http://rs.tdwg.org/eco/terms/targetDegreeOfEstablishmentScope[`eco:targetDegreeOfEstablishmentScope`^] and http://rs.tdwg.org/eco/terms/excludedDegreeOfEstablishmentScope[`eco:excludedDegreeOfEstablishmentScope`^]. +
+* If every organism that was included within the degree of establishment, and was detected during the survey, was reported, then http://rs.tdwg.org/eco/terms/isDegreeOfEstablishmentScopeFullyReported[`eco:isDegreeOfEstablishmentScopeFullyReported`^] = `true`; otherwise, http://rs.tdwg.org/eco/terms/isDegreeOfEstablishmentScopeFullyReported[`eco:isDegreeOfEstablishmentScopeFullyReported`^] = `false`.
 
 A corresponding term:dwc[dwc:degreeOfEstablishment] term is available in the Occurrence extension. This term can be used to report the degree to which information about establishment is available for organism Occurrences in the `occurrence` table.
 
 [caption=""]
 .Organismal scope terms, their recommended usage (status), and example data entries.
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
-.8+|Share if available
-|term:eco[eco:targetLifeStageScope]
+.9+|Share if available
+|http://rs.tdwg.org/eco/terms/targetLifeStageScope[`eco:targetLifeStageScope`^]
 |`larva`
 
-|term:eco[eco:excludedLifeStageScope]
+|http://rs.tdwg.org/eco/terms/excludedLifeStageScope[`eco:excludedLifeStageScope`^]
 |`adult \| juvenile`
 
-|term:eco[eco:isLifeStageScopeFullyReported]
+|http://rs.tdwg.org/eco/terms/isLifeStageScopeFullyReported[`eco:isLifeStageScopeFullyReported`^]
 |`true` or `false`
 
-|term:eco[eco:targetDegreeOfEstablishmentScope]
+|http://rs.tdwg.org/eco/terms/targetDegreeOfEstablishmentScope[`eco:targetDegreeOfEstablishmentScope`^]
 |`native`
 
-|term:eco[eco:excludedDegreeOfEstablishmentScope]
+|http://rs.tdwg.org/eco/terms/excludedDegreeOfEstablishmentScope[`eco:excludedDegreeOfEstablishmentScope`^]
 |`invasive`
 
-|term:eco[eco:isDegreeOfEstablishmentScopeFullyReported]
+|http://rs.tdwg.org/eco/terms/isDegreeOfEstablishmentScopeFullyReported[`eco:isDegreeOfEstablishmentScopeFullyReported`^]
 |`true` or `false`
 
-|term:eco[eco:targetGrowthFormScope]
+|http://rs.tdwg.org/eco/terms/targetGrowthFormScope[`eco:targetGrowthFormScope`^]
 |`tree`
 
-|term:eco[eco:excludedGrowthFormScope]
+|http://rs.tdwg.org/eco/terms/excludedGrowthFormScope[`eco:excludedGrowthFormScope`^]
 |`shrub`
 
-|term:eco[eco:isGrowthFormScopeFullyReported]
+|http://rs.tdwg.org/eco/terms/isGrowthFormScopeFullyReported[`eco:isGrowthFormScopeFullyReported`^]
 |`true` or `false`
 |===
 
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Organismal scopes
 
-The survey protocols for sampling ticks in the example dataset clearly indicate that all tick life stages (adult, nymph, and larvae) except eggs are targeted for sampling. The life stages specifically targeted for sampling (adult, nymph, and larvae) are reported in targetLifeStageScope and the exceptional life stage (eggs) is reported in excludedLifeStageScope. As all ticks encountered are captured and reported, the term isLifeStageScopeFullyReported is marked as ‘TRUE’. 
+The survey protocols for sampling ticks in the example dataset clearly indicate that all tick life stages (adult, nymph, and larva) except eggs are targeted for sampling. The life stages specifically targeted for sampling are reported in http://rs.tdwg.org/eco/terms/targetLifeStageScope[`eco:targetLifeStageScope`^] (`adult | nymph | larvae`) and the excluded life stage is reported in http://rs.tdwg.org/eco/terms/excludedLifeStageScope[`eco:excludedLifeStageScope`^] (`egg`). As all ticks encountered are captured and reported, http://rs.tdwg.org/eco/terms/isLifeStageScopeFullyReported[`eco:isLifeStageScopeFullyReported`^] is `true`. 
 
-image::img/NEON-exData_screenshots/NEON-5-6-3.png[Reported organismal scopes of the NEON tick-pathogen example dataset]
+[width="100%",cols="25%,25%,22%,28%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|http://rs.tdwg.org/eco/terms/targetLifeStageScope[`eco:targetLifeStageScope`^]
+|http://rs.tdwg.org/eco/terms/excludedLifeStageScope[`eco:excludedLifeStageScope`^]
+|http://rs.tdwg.org/eco/terms/isLifeStageScopeFullyReported[`eco:isLifeStageScopeFullyReported`^]
+|+NEON+ |+adult \| nymph \| larvae+ |+egg+ |+true+
+|+D02+ |+adult \| nymph \| larvae+ |+egg+ |+true+
+|+SCBI+ |+adult \| nymph \| larvae+ |+egg+ |+true+
+|+SCBI_014+ |+adult \| nymph \| larvae+ |+egg+ |+true+
+|+SCBI_014.20140610+ |+adult \| nymph \| larvae+ |+egg+ |+true+
+|+SCBI_014.20190325+ |+adult \| nymph \| larvae+ |+egg+ |+true+
+|===
 ****
 
 
+[[bycatch-information]]
 ==== Bycatch
 
 <<bycatch, *Bycatch*>> are organisms detected during a survey that were not explicitly targeted in the scope of a study. Bycatch, or a lack thereof, in a dataset can be reported at the taxonomic and organismal levels.
 
 If *_taxonomic_* bycatch are reported: 
 
-* term:eco[eco:hasNonTargetTaxa] = `true` for all relevant Events. +
-* If all *_taxonomic_* bycatch (term:eco[eco:hasNonTargetTaxa] = `true`) captured/observed during an Event are reported in the dataset: 
-** term:eco[eco:areNonTargetTaxaFullyReported] = `true`, and +
-** a list of taxonomic bycatch should be shared in term:eco[eco:nonTargetTaxa] using scientific nomenclature. Entries in a list should be separated by a `|`.
+* http://rs.tdwg.org/eco/terms/hasNonTargetTaxa[`eco:hasNonTargetTaxa`^] = `true` for all relevant Events. +
+* If all *_taxonomic_* bycatch (http://rs.tdwg.org/eco/terms/hasNonTargetTaxa[`eco:hasNonTargetTaxa`^] = `true`) captured/observed during an Event are reported in the dataset: 
+** http://rs.tdwg.org/eco/terms/areNonTargetTaxaFullyReported[`eco:areNonTargetTaxaFullyReported`^] = `true`, and +
+** a list of taxonomic bycatch should be shared in http://rs.tdwg.org/eco/terms/nonTargetTaxa[`eco:nonTargetTaxa`^] using scientific nomenclature. Entries in a list should be separated by a `|`.
 
 If *_organismal_* bycatch are reported:
 
-* term:eco[eco:hasNonTargetOrganisms] = `true` at all relevant Event levels.
+* http://rs.tdwg.org/eco/terms/hasNonTargetOrganisms[`eco:hasNonTargetOrganisms`^] = `true` at all relevant Event levels.
 
 If the dataset does NOT include taxonomic or organismal bycatch:
 
-* term:eco[eco:hasNonTargetTaxa] = `false` for all relevant Events and
-* term:eco[eco:hasNonTargetOrganisms] = `false` for all relevant Events.
+* http://rs.tdwg.org/eco/terms/hasNonTargetTaxa[`eco:hasNonTargetTaxa`^] = `false` for all relevant Events and
+* http://rs.tdwg.org/eco/terms/hasNonTargetOrganisms[`eco:hasNonTargetOrganisms`^] = `false` for all relevant Events.
 
 [caption=""]
 .Bycatch terms, their recommended usage (status), and example data entries.
-
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
 .4+|Share if available
-|term:eco[eco:hasNonTargetTaxa]
+|http://rs.tdwg.org/eco/terms/hasNonTargetTaxa[`eco:hasNonTargetTaxa`^]
 |`true` or `false`
 
-|term:eco[eco:areNonTargetTaxaFullyReported]
+|http://rs.tdwg.org/eco/terms/areNonTargetTaxaFullyReported[`eco:areNonTargetTaxaFullyReported`^]
 |`true` or `false`
 
-|term:eco[eco:nonTargetTaxa]
+|http://rs.tdwg.org/eco/terms/nonTargetTaxa[`eco:nonTargetTaxa`^]
 |`Parabuteo unicinctus \| Geranoaetus melanoleucus; Cetoniinae \| Aclopinae \| Cyclocephala modesta`
 
-|term:eco[eco:hasNonTargetOrganisms]
+|http://rs.tdwg.org/eco/terms/hasNonTargetOrganisms[`eco:hasNonTargetOrganisms`^]
 |`true` or `false`
 |===
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Bycatch
 
-The example dataset does not include any taxonomic information outside of the stated taxonomic and organismal scopes (ticks and tick pathogen). This is explicitly denoted by marking hasNonTargetTaxa as ‘FALSE’.
+The example dataset does not include any taxa outside of the stated taxonomic and organismal scopes (ticks and tick pathogens). This is explicitly denoted by populating http://rs.tdwg.org/eco/terms/hasNonTargetTaxa[`eco:hasNonTargetTaxa`^] as `false`. The example data subset does not include http://rs.tdwg.org/eco/terms/hasNonTargetOrganisms[`eco:hasNonTargetOrganisms`^].
 
-image::img/NEON-exData_screenshots/NEON-5-6-4.png[Reporting the absence of bycatch in the NEON tick-pathogen example datase]
+[width="100%",cols="35%,35%,30%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:parentEventID]
+|http://rs.tdwg.org/eco/terms/hasNonTargetTaxa[`eco:hasNonTargetTaxa`^]
+|+NEON+ | |+false+
+|+D02+ |+NEON+ |+false+
+|+SCBI+ |+D02+ |+false+
+|+SCBI_014+ |+SCBI+ |+false+
+|+SCBI_014.20140610+ |+SCBI_014+ |+false+
+|+SCBI_014.20190325+ |+SCBI_014+ |+false+
+|===
 ****
 
 
 ==== Habitat scope
 
-If the survey includes an explicitly stated targeted or excluded *habitat scope* these can be reported in term:eco[eco:targetHabitatScope] and term:eco[eco:excludedHabitatScope]. 
+If the survey includes an explicitly stated targeted or excluded *habitat scope* these can be reported in http://rs.tdwg.org/eco/terms/targetHabitatScope[`eco:targetHabitatScope`^] and http://rs.tdwg.org/eco/terms/excludedHabitatScope[`eco:excludedHabitatScope`^]. 
 
 The actual habitat observed at a survey site during an Event should be reported in term:dwc[dwc:habitat].
 
 [caption=""]
 .Habitat scope terms, their recommended usage (status), and example data entries.
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
 .2+|Share if available
-|term:eco[eco:targetHabitatScope]
+|http://rs.tdwg.org/eco/terms/targetHabitatScope[`eco:targetHabitatScope`^]
 |`deciduous forest`
 
-|term:eco[eco:excludedHabitatScope]
+|http://rs.tdwg.org/eco/terms/excludedHabitatScope[`eco:excludedHabitatScope`^]
 |`urban`
 |===
 
+****
+[discrete]
+==== NEON example: Habitat scope
+
+The NEON tick sampling protocol does not state a target or excluded habitat, so http://rs.tdwg.org/eco/terms/targetHabitatScope[`eco:targetHabitatScope`^] and http://rs.tdwg.org/eco/terms/excludedHabitatScope[`eco:excludedHabitatScope`^] are not used. The habitat actually observed at each plot is reported in term:dwc[dwc:habitat] (see link:#site-description[Site description]):
+
+[width="100%",cols="35%,65%",options="header",]
+|===
+|term:dwc[dwc:eventID] |term:dwc[dwc:habitat]
+|+SCBI+ |+Deciduous Forest \| Evergreen Forest \| Pasture/Hay+
+|+SCBI_014+ |+deciduousForest+
+|+SCBI_014.20190325+ |+deciduousForest+
+|===
+****
+
 === Sampling Effort
 
-<<samplingEffort, *Sampling effort*>> communicates information about the likelihood that a type of organism were be detected: greater effort generally equals a higher probability of detection. Clear reporting of sampling effort is necessary for interpretation of measures of completeness and calculation of abundance (relative or absolute) or biomass, and is critical in assessing the ability to compare information and aggregate data across studies. 
+<<samplingEffort, *Sampling effort*>> communicates information about the likelihood that a type of organism will be detected: greater effort generally equals a higher probability of detection. Clear reporting of sampling effort is necessary for interpretation of measures of completeness and calculation of abundance (relative or absolute) or biomass, and is critical in assessing the ability to compare information and aggregate data across studies. 
 
 ****
 [discrete]
 ==== *Updated recommended best practice*
 Capture sampling effort information as structured data using the following Humboldt extension terms:
 
-* term:eco[eco:isSamplingEffortReported]
-* term:eco[eco:samplingEffortValue] and term:eco[eco:samplingEffortUnit]
-* term:eco[eco:samplingEffortProtocol]
-* term:eco[eco:samplingPerformedBy]
+* http://rs.tdwg.org/eco/terms/isSamplingEffortReported[`eco:isSamplingEffortReported`^]
+* http://rs.tdwg.org/eco/terms/samplingEffortValue[`eco:samplingEffortValue`^] and http://rs.tdwg.org/eco/terms/samplingEffortUnit[`eco:samplingEffortUnit`^]
+* http://rs.tdwg.org/eco/terms/samplingEffortProtocol[`eco:samplingEffortProtocol`^]
+* http://rs.tdwg.org/eco/terms/samplingPerformedBy[`eco:samplingPerformedBy`^]
 ****
 
 The DwC Event term term:dwc[dwc:samplingEffort] is currently a recommended field when publishing Event datasets to GBIF; however, this term captures sampling effort in an unstructured way. The Humboldt extension includes 5 terms to more explicitly capture different aspects of sampling effort. The updated *_recommended best practice_*  is to report sampling effort information as structured data using the Humboldt Extension terms. Through these terms, data providers may explicitly provide the following information: 
 
-* *Is sampling effort reported?:* Indicate if sampling effort is reported (`true` or `false`) in term:eco[eco:isSamplingEffortReported]. +
-* *Sampling effort protocol:* term:eco[eco:samplingEffortProtocol] should contain a textual description of the sampling effort protocol (e.g., number and arrangement of people or sensors deployed, whether or not sensors were mobile or stationary, how frequently observation, measurements, or samples were taken) and/or provide a link to the protocol used. +
-* *Sampling effort:*  report sampling effort (e.g., the total amount of time of the sampling Event, the total numer of people involved) value and units (e.g., trap nights, people) using the paired terms term:eco[eco:samplingEffortValue] and term:eco[eco:samplingEffortUnit]. +
-* *Sampling performed by:* term:eco[eco:samplingPerformedBy] should be used to credit the people involved in the sampling eventSampling effort. The names or one or more people can be reported, with individual names in a list separated with `|`. Best practice is to use a unique identifier (e.g., ORCID) if available.
-** NOTE: Because term:eco[eco:samplingPerformedBy] has an <<IRI, IRI>> (internationalized resource identifier) equivalent, only a single ORCID can be provided (the term cannot support a list). If more than one ORCID needs to be shared, a list of ORCID´s (using the pipe separator between values) can be supplied using the term term:dwc[dwc:recordedByID] used BUT it must be applied to each relevant Occurrence and located on the `occurrence` table.
+* *Is sampling effort reported?:* Indicate if sampling effort is reported (`true` or `false`) in http://rs.tdwg.org/eco/terms/isSamplingEffortReported[`eco:isSamplingEffortReported`^]. +
+* *Sampling effort protocol:* http://rs.tdwg.org/eco/terms/samplingEffortProtocol[`eco:samplingEffortProtocol`^] should contain a textual description of the sampling effort protocol (e.g., number and arrangement of people or sensors deployed, whether or not sensors were mobile or stationary, how frequently observation, measurements, or samples were taken) and/or provide a link to the protocol used. +
+* *Sampling effort:*  report sampling effort (e.g., the total amount of time of the sampling Event, the total number of people involved) value and units (e.g., trap nights, people) using the paired terms http://rs.tdwg.org/eco/terms/samplingEffortValue[`eco:samplingEffortValue`^] and http://rs.tdwg.org/eco/terms/samplingEffortUnit[`eco:samplingEffortUnit`^]. +
+* *Sampling performed by:* http://rs.tdwg.org/eco/terms/samplingPerformedBy[`eco:samplingPerformedBy`^] should be used to credit the people involved in the sampling Event. The names of one or more people can be reported, with individual names in a list separated with `|`. Best practice is to use a unique identifier (e.g., ORCID) if available.
+** NOTE: Because http://rs.tdwg.org/eco/terms/samplingPerformedBy[`eco:samplingPerformedBy`^] has an <<IRI, IRI>> (internationalized resource identifier) equivalent, only a single ORCID can be provided (the term cannot support a list). If more than one ORCID needs to be shared, a list of ORCID´s (using the pipe separator between values) can be supplied using the term term:dwc[dwc:recordedByID], but it must be applied to each relevant Occurrence in the `occurrence` table.
 
 
 [caption=""]
 .Sampling effort terms, their recommended usage (status), and example data entries.
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="24%,42%,34%",options="header",]
 |===
 |Status |Term |Example entry
 .6+|Recommended
-|term:eco[eco:isSamplingEffortReported]
+|http://rs.tdwg.org/eco/terms/isSamplingEffortReported[`eco:isSamplingEffortReported`^]
 |`true` or `false`
 
-|term:eco[eco:samplingEffortProtocol]
+|http://rs.tdwg.org/eco/terms/samplingEffortProtocol[`eco:samplingEffortProtocol`^]
 |`40 box traps deployed in the afternoon even spacings along 4 parallel 100m transects placed 50m apart and visited after sunrise the next day`
 
-|term:eco[eco:samplingEffortValue]
+|http://rs.tdwg.org/eco/terms/samplingEffortValue[`eco:samplingEffortValue`^]
 |`40`,  `5`
 
-|term:eco[eco:samplingEffortUnit]
+|http://rs.tdwg.org/eco/terms/samplingEffortUnit[`eco:samplingEffortUnit`^]
 |`trap nights`, `person hours`
 
 |term:dwc[dwc:samplingEffort]
 |`40 trap nights`, `5 person hours`
 
-|term:eco[eco:samplingPerformedBy]
+|http://rs.tdwg.org/eco/terms/samplingPerformedBy[`eco:samplingPerformedBy`^]
 |`A. Townsend Peterson`
 |===
 
 ****
 [discrete]
-==== Box. NEON tick-pathogen example dataset
+==== NEON example: Sampling effort
 
-The example dataset provides explicit sampling effort information. The dataset indicates that sampling effort information is provided by populating isSamplingEffortReported as ‘TRUE’. A description of the sampling effort is provided in samplingEffortProtocol. A verbatim summary of the sampling effort is reported in dwc:samplingEffort while that same information is also reported more explicitly using the paired terms samplingEffortValue and samplingEffortUnit. 
+The example dataset provides explicit sampling effort information, indicated by populating http://rs.tdwg.org/eco/terms/isSamplingEffortReported[`eco:isSamplingEffortReported`^] as `true`. A description of the sampling effort is provided in http://rs.tdwg.org/eco/terms/samplingEffortProtocol[`eco:samplingEffortProtocol`^]. A verbatim summary of the sampling effort is reported in term:dwc[dwc:samplingEffort] (e.g., `160 m perimeter sampled per bout` at the plot and plot visit levels), while the same information is also reported using the paired terms http://rs.tdwg.org/eco/terms/samplingEffortValue[`eco:samplingEffortValue`^] (`6, 160`) and http://rs.tdwg.org/eco/terms/samplingEffortUnit[`eco:samplingEffortUnit`^] (`plots per bout, meters per plot circuit`).
 
-The name or identifier of the specific person(s) conducting the survey are reported in samplingPerformedBy for an event (plot visit, e.g., SCBI_014_20190325) while the broader organization (NEON field staff) is acknowledged in samplingPerformedBy at the higher event levels (e.g., NEON, D02, SCBI, and SCBI_014). 
+The identifier of the specific person conducting the survey is reported in http://rs.tdwg.org/eco/terms/samplingPerformedBy[`eco:samplingPerformedBy`^] for each plot visit (e.g., `0000-0001-5349-9843` for `SCBI_014.20190325`), while the broader organization (`NEON Field Staff`) is acknowledged in http://rs.tdwg.org/eco/terms/samplingPerformedBy[`eco:samplingPerformedBy`^] at the higher Event levels (`NEON`, `D02`, `SCBI`, and `SCBI_014`). Note that best practice is to provide an ORCID as its full IRI (e.g., `https://orcid.org/0000-0001-5349-9843`).
 
-image::img/NEON-exData_screenshots/NEON-5-7.png[Reported sampling in the NEON tick-pathogen example dataset]
+[width="100%",cols="19%,22%,13%,12%,17%,17%",options="header",]
+|===
+|term:dwc[dwc:eventID]
+|term:dwc[dwc:samplingEffort]
+|http://rs.tdwg.org/eco/terms/isSamplingEffortReported[`eco:isSamplingEffortReported`^]
+|http://rs.tdwg.org/eco/terms/samplingEffortValue[`eco:samplingEffortValue`^]
+|http://rs.tdwg.org/eco/terms/samplingEffortUnit[`eco:samplingEffortUnit`^]
+|http://rs.tdwg.org/eco/terms/samplingPerformedBy[`eco:samplingPerformedBy`^]
+|+NEON+ |+6 plots per bout, 160 m perimeter sampled per plot+ |+true+ |+6 | 160+ |+plots per bout, meters per plot circuit+ |+NEON Field Staff+
+|+SCBI_014+ |+160 m perimeter sampled per bout+ |+true+ |+6 | 160+ |+plots per bout, meters per plot circuit+ |+NEON Field Staff+
+|+SCBI_014.20190325+ |+160 m perimeter sampled per bout+ |+true+ |+6 | 160+ |+plots per bout, meters per plot circuit+ |+0000-0001-5349-9843+
+|===
 ****
 
 <<<
