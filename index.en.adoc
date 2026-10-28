@@ -43,6 +43,8 @@ include::600.en.adoc[]
 
 include::700.en.adoc[]
 
+include::750.en.adoc[]
+
 include::800.en.adoc[]
 
 include::900.en.adoc[]
@@ -53,6 +55,9 @@ include::900.en.adoc[]
 
 //include::appa.en.adoc[]
 
+include::appendix-terms.en.adoc[]
+
 include::glossary.en.adoc[]
 
 include::bibliography.en.adoc[]
+
