@@ -16,7 +16,7 @@ For any remaining questions, reach out for assistance from:
 ** If your country or organization is not a member of GBIF, reach out to the mailto:helpdesk@gbif.org[GBIF helpdesk^] for assistance. +
 * GBIF help desk
 ** In case technical documentation needs improvements, create an issue on the https://techdocs.gbif.org/en/[GitHub tech-docs project^]. +
-** Send an email to the mailto:helpdesk@gbif.org[GBIF helpdesk]. 
+** Send an email to the mailto:sam@gbif.org[GBIF biological survey & monitoring data helpdesk]. 
 
 
 == Feedback
