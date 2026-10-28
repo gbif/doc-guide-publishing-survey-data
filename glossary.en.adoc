@@ -39,9 +39,9 @@ ecological [[ecomonitoring]]monitoring:: the collection of information about the
 
 [[IRI]]Internationalized resource identifier (IRI):: an internet protocol standard that facilitates the identification of online resources. It builds on the Uniform Resource Identifier (URI) protocol by expanding the set of permitted characters beyond ASCII. See more at https://www.w3.org/International/O-URL-and-ident.html.
 
-[[lifeStage]]life stage:: refers to a distint phase in an organism's life cycle. This may represent a spcific developmental, growth, and/or reproductive changes in an organism's life.
+[[lifeStage]]life stage:: refers to a distinct phase in an organism's life cycle. This may represent specific developmental, growth, and/or reproductive changes in an organism's life.
 
-[[materialSample]]material sample:: an entity ‘... that represents an entity of interest in whole or in part’ (term:dwc[dwc:MaterialSample]). Essentially all material samples are physical specimens collected during a survey Event.
+[[materialSample]]material sample:: an entity ‘... that represents an entity of interest in whole or in part’ (term:dwc[dwc:MaterialSample]). In a survey context, material samples are physical specimens or samples collected during a survey Event (e.g., whole organisms, tissue samples, environmental samples) and material derived from them (e.g., DNA extracts).
 
 [[nestedDataset]]nested dataset:: a complex survey dataset consisting of multiple related Event levels represented explicitly in a hierarchical (i.e. nested) structure by creating higher-level parent Events.
 
@@ -51,13 +51,13 @@ ecological [[ecomonitoring]]monitoring:: the collection of information about the
 
 [[openData]]open data:: data that can be freely used, re-used, and redistributed by anyone.
 
-[[pairedTerms]]paired terms:: mutually interdependent sets of terms that must be populated together for complete information to be present, for example with term:eco[eco:eventDurationValue] and term:eco[eco:eventDurationUnit].
+[[pairedTerms]]paired terms:: mutually interdependent sets of terms that must be populated together for complete information to be present, for example with http://rs.tdwg.org/eco/terms/eventDurationValue[`eco:eventDurationValue`^] and http://rs.tdwg.org/eco/terms/eventDurationUnit[`eco:eventDurationUnit`^].
 
 [[parentEvent]]parent Event:: any dwc:Event whose dwc:eventID is a dwc:parentEventID for at least one other dwc:Event.
 
 [[samplingEffort]]sampling effort:: aspects of observer behaviour that can vary from one sampling event to another, and which influence the probability that an organism will be detected given that the organism is present.
 
-[[samplingEventData]]sampling Event data:: structured information that describes the broader context surrounding the detection (or non-detection) of an organism in a specific time and place, including documentation of sampling protocol and sampling effort (see definitions for these terms in this Glossary. Sampling Event data encompasses species occurrences, material samples (such as whole or partial specimens), genetic sequences, multimedia, etc. Sampling Event data are typically quantitative and follow documented protocols resulting from sampling Events such as biological inventories, systematic monitoring surveys, and collecting expeditions, as well as structured citizen science efforts. These data can range in complexity from very simple—a single event with a single occurrence or no occurrences—to hierarchically complex, with multiple layers of parent-ehild Events and any combination of accompanying data types (occurrences, material samples, etc.).
+[[samplingEventData]]sampling Event data:: structured information that describes the broader context surrounding the detection (or non-detection) of an organism in a specific time and place, including documentation of sampling protocol and sampling effort (see definitions for these terms in this Glossary). Sampling Event data encompasses species occurrences, material samples (such as whole or partial specimens), genetic sequences, multimedia, etc. Sampling Event data are typically quantitative and follow documented protocols resulting from sampling Events such as biological inventories, systematic monitoring surveys, and collecting expeditions, as well as structured citizen science efforts. These data can range in complexity from very simple—a single event with a single occurrence or no occurrences—to hierarchically complex, with multiple layers of parent-child Events and any combination of accompanying data types (occurrences, material samples, etc.).
 
 [[samplingEventHierarchy]]sampling Event hierarchy:: the description of a survey’s sampling design as a series of Events using Darwin Core terms.
 
@@ -67,7 +67,9 @@ ecological [[ecomonitoring]]monitoring:: the collection of information about the
 
 [[site]]site:: the location at which observations are made or samples and/or measurements are taken. The configuration of an event site can vary in configuration from a point in space to a line to an area to a volume.
 
-[[surveyDesign]]survey design:: the pre-determined constraints of a sampling strategy, including how the survey Event sites (e.g., stations, plots, transects) are laid out, temporal, methodological, etc.. 
+[[surveyTable]]survey table:: the data table in which survey Event information is prepared. It combines Darwin Core Event terms and Humboldt extension terms describing each survey Event, and is mapped to both the Event core and the Humboldt extension when publishing a Darwin Core Archive.
+
+[[surveyDesign]]survey design:: the pre-determined constraints of a sampling strategy, including how the survey Event sites (e.g., stations, plots, transects) are laid out in space and time and the methods used. 
 
 [[voucher]]voucher:: a physical specimen or other material sample collected and accessioned into a museum collection in support of a specific project or survey effort.
 
