@@ -145,12 +145,4 @@ The checklist below summarizes the steps in this guide. Each step links to the s
 . *Prepare your dataset.* Prepare the 8 required resource metadata elements. See link:#resource-metadata[Resource metadata].
 . *Publish.* Map the `survey` table to both the Event core and the Humboldt extension, and each other table to its extension, when you create your Darwin Core Archive. See link:#dwc-a-in-gbif[Darwin Core Archives] and, if you need help, link:#additional-guidance-and-reaching-out-for-assistance[Additional guidance and reaching out for assistance].
 
-test
-
-term:dwc[dwc:eventID] 
-term:eco[eco:verbatimTargetScope]
-
-term:dwc[dwc:eventID]
-http://rs.tdwg.org/eco/terms/verbatimTargetScope[`eco:verbatimTargetScope`^]
-
 <<<
