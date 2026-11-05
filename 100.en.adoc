@@ -29,9 +29,9 @@ If you would like a gentler introduction to mapping biological survey and monito
 === Using this guide
 
 Throughout the guide, Darwin Core terms will be written in fixed width font and preceded by their namespace abbreviation and a colon (‘dwc:’ or ‘eco:’) to
-denote the DwC core or extension to which the term belongs. For example, the Darwin Core event ID term will appear as term:dwc[dwc:eventID] and the Humboldt Extension verbatim target scope term will be written as http://rs.tdwg.org/eco/terms/verbatimTargetScope[`eco:verbatimTargetScope`^].
+denote the DwC core or extension to which the term belongs. For example, the Darwin Core event ID term will appear as term:dwc[dwc:eventID] and the Humboldt Extension verbatim target scope term will be written as term:eco[eco:verbatimTargetScope].
 
-Terms are linked with their respective term <<IRI, internationalized resource identifier>> (IRI, e.g., http://rs.tdwg.org/eco/terms/protocolNames[`eco:protocolNames`^]).
+Terms are linked with their respective term <<IRI, internationalized resource identifier>> (IRI, e.g., term:eco[eco:protocolNames]).
 
 When capitalized, the words _Event_ and _Occurrence_ refer to the Darwin Core concepts (term:dwc[dwc:Event] and term:dwc[dwc:Occurrence]) rather than to their everyday meanings.
 
@@ -50,7 +50,7 @@ Darwin Core
 |term:dwc[dwc:eventID]
 
 |eco |Humboldt extension for ecological inventories
-|http://rs.tdwg.org/eco/terms/verbatimTargetScope[`eco:verbatimTargetScope`^]
+|term:eco[eco:verbatimTargetScope]
 |===
 
 *+++Term usage recommendations+++*
