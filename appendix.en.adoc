@@ -13,84 +13,84 @@ This appendix lists every term that appears in the term tables of this guide, gr
 |term:dwc[dwc:eventDate] |Required |<<survey-date-and-time,Survey date and time>>
 |term:dwc[dwc:samplingProtocol] |Required |<<sampling-protocol,Sampling protocol>>
 |term:dwc[dwc:parentEventID] |Required for nested datasets |<<survey-design,Survey design>>
-|http://rs.tdwg.org/eco/terms/siteCount[`eco:siteCount`^] |Recommended |<<survey-design,Survey design>>
-|http://rs.tdwg.org/eco/terms/siteNestingDescription[`eco:siteNestingDescription`^] |Recommended |<<survey-design,Survey design>>
+|term:eco[eco:siteCount] |Recommended |<<survey-design,Survey design>>
+|term:eco[eco:siteNestingDescription] |Recommended |<<survey-design,Survey design>>
 |term:dwc[dwc:locationID] |Recommended |<<site-locality,Site locality>>
 |term:dwc[dwc:countryCode] |Recommended |<<site-locality,Site locality>>
 |term:dwc[dwc:decimalLatitude] |Recommended |<<site-locality,Site locality>>
 |term:dwc[dwc:decimalLongitude] |Recommended |<<site-locality,Site locality>>
 |term:dwc[dwc:geodeticDatum] |Recommended |<<site-locality,Site locality>>
-|http://rs.tdwg.org/eco/terms/geospatialScopeAreaValue[`eco:geospatialScopeAreaValue`^] |Recommended |<<survey-site-area,Survey site area>>
-|http://rs.tdwg.org/eco/terms/geospatialScopeAreaUnit[`eco:geospatialScopeAreaUnit`^] |Recommended |<<survey-site-area,Survey site area>>
-|http://rs.tdwg.org/eco/terms/totalAreaSampledValue[`eco:totalAreaSampledValue`^] |Recommended |<<survey-site-area,Survey site area>>
-|http://rs.tdwg.org/eco/terms/totalAreaSampledUnit[`eco:totalAreaSampledUnit`^] |Recommended |<<survey-site-area,Survey site area>>
+|term:eco[eco:geospatialScopeAreaValue] |Recommended |<<survey-site-area,Survey site area>>
+|term:eco[eco:geospatialScopeAreaUnit] |Recommended |<<survey-site-area,Survey site area>>
+|term:eco[eco:totalAreaSampledValue] |Recommended |<<survey-site-area,Survey site area>>
+|term:eco[eco:totalAreaSampledUnit] |Recommended |<<survey-site-area,Survey site area>>
 |term:dwc[dwc:sampleSizeValue] |Recommended |<<survey-site-area,Survey site area>>
 |term:dwc[dwc:sampleSizeUnit] |Recommended |<<survey-site-area,Survey site area>>
 |term:dwc[dwc:eventTime] |Recommended |<<survey-date-and-time,Survey date and time>>
-|http://rs.tdwg.org/eco/terms/eventDurationValue[`eco:eventDurationValue`^] |Recommended |<<survey-date-and-time,Survey date and time>>
-|http://rs.tdwg.org/eco/terms/eventDurationUnit[`eco:eventDurationUnit`^] |Recommended |<<survey-date-and-time,Survey date and time>>
+|term:eco[eco:eventDurationValue] |Recommended |<<survey-date-and-time,Survey date and time>>
+|term:eco[eco:eventDurationUnit] |Recommended |<<survey-date-and-time,Survey date and time>>
 |term:dwc[dwc:eventType] |Recommended |<<event-type,Event type>>
-|http://rs.tdwg.org/eco/terms/protocolNames[`eco:protocolNames`^] |Recommended |<<sampling-protocol,Sampling protocol>>
-|http://rs.tdwg.org/eco/terms/protocolDescriptions[`eco:protocolDescriptions`^] |Recommended |<<sampling-protocol,Sampling protocol>>
-|http://rs.tdwg.org/eco/terms/protocolReferences[`eco:protocolReferences`^] |Recommended |<<sampling-protocol,Sampling protocol>>
-|http://rs.tdwg.org/eco/terms/isAbsenceReported[`eco:isAbsenceReported`^] |Recommended |<<absences,Absences>>
-|http://rs.tdwg.org/eco/terms/isAbundanceReported[`eco:isAbundanceReported`^] |Recommended |<<abundance-information,Abundance>>
-|http://rs.tdwg.org/eco/terms/isAbundanceCapReported[`eco:isAbundanceCapReported`^] |Recommended |<<abundance-information,Abundance>>
-|http://rs.tdwg.org/eco/terms/hasMaterialSamples[`eco:hasMaterialSamples`^] |Recommended |<<material-samples,Material samples>>
-|http://rs.tdwg.org/eco/terms/hasVouchers[`eco:hasVouchers`^] |Recommended |<<vouchers,Vouchers>>
-|http://rs.tdwg.org/eco/terms/isLeastSpecificTargetCategoryQuantityInclusive[`eco:isLeastSpecificTargetCategoryQuantityInclusive`^] |Recommended |<<least-specific-target-category-quantity-inclusive,Least specific target category quantity inclusive>>
-|http://rs.tdwg.org/eco/terms/verbatimTargetScope[`eco:verbatimTargetScope`^] |Recommended |<<verbatim-scope,Verbatim scope>>
-|http://rs.tdwg.org/eco/terms/targetTaxonomicScope[`eco:targetTaxonomicScope`^] |Recommended |<<taxonomic-scope,Taxonomic scope>>
-|http://rs.tdwg.org/eco/terms/excludedTaxonomicScope[`eco:excludedTaxonomicScope`^] |Recommended |<<taxonomic-scope,Taxonomic scope>>
-|http://rs.tdwg.org/eco/terms/isSamplingEffortReported[`eco:isSamplingEffortReported`^] |Recommended |<<sampling-effort,Sampling Effort>>
-|http://rs.tdwg.org/eco/terms/samplingEffortProtocol[`eco:samplingEffortProtocol`^] |Recommended |<<sampling-effort,Sampling Effort>>
-|http://rs.tdwg.org/eco/terms/samplingEffortValue[`eco:samplingEffortValue`^] |Recommended |<<sampling-effort,Sampling Effort>>
-|http://rs.tdwg.org/eco/terms/samplingEffortUnit[`eco:samplingEffortUnit`^] |Recommended |<<sampling-effort,Sampling Effort>>
+|term:eco[eco:protocolNames] |Recommended |<<sampling-protocol,Sampling protocol>>
+|term:eco[eco:protocolDescriptions] |Recommended |<<sampling-protocol,Sampling protocol>>
+|term:eco[eco:protocolReferences] |Recommended |<<sampling-protocol,Sampling protocol>>
+|term:eco[eco:isAbsenceReported] |Recommended |<<absences,Absences>>
+|term:eco[eco:isAbundanceReported] |Recommended |<<abundance-information,Abundance>>
+|term:eco[eco:isAbundanceCapReported] |Recommended |<<abundance-information,Abundance>>
+|term:eco[eco:hasMaterialSamples] |Recommended |<<material-samples,Material samples>>
+|term:eco[eco:hasVouchers] |Recommended |<<vouchers,Vouchers>>
+|term:eco[eco:isLeastSpecificTargetCategoryQuantityInclusive] |Recommended |<<least-specific-target-category-quantity-inclusive,Least specific target category quantity inclusive>>
+|term:eco[eco:verbatimTargetScope] |Recommended |<<verbatim-scope,Verbatim scope>>
+|term:eco[eco:targetTaxonomicScope] |Recommended |<<taxonomic-scope,Taxonomic scope>>
+|term:eco[eco:excludedTaxonomicScope] |Recommended |<<taxonomic-scope,Taxonomic scope>>
+|term:eco[eco:isSamplingEffortReported] |Recommended |<<sampling-effort,Sampling Effort>>
+|term:eco[eco:samplingEffortProtocol] |Recommended |<<sampling-effort,Sampling Effort>>
+|term:eco[eco:samplingEffortValue] |Recommended |<<sampling-effort,Sampling Effort>>
+|term:eco[eco:samplingEffortUnit] |Recommended |<<sampling-effort,Sampling Effort>>
 |term:dwc[dwc:samplingEffort] |Recommended |<<sampling-effort,Sampling Effort>>
-|http://rs.tdwg.org/eco/terms/samplingPerformedBy[`eco:samplingPerformedBy`^] |Recommended |<<sampling-effort,Sampling Effort>>
-|http://rs.tdwg.org/eco/terms/inventoryTypes[`eco:inventoryTypes`^] |Recommended if applicable |<<event-type,Event type>>
-|http://rs.tdwg.org/eco/terms/compilationTypes[`eco:compilationTypes`^] |Recommended if applicable |<<event-type,Event type>>
-|http://rs.tdwg.org/eco/terms/compilationSourceTypes[`eco:compilationSourceTypes`^] |Recommended if applicable |<<event-type,Event type>>
+|term:eco[eco:samplingPerformedBy] |Recommended |<<sampling-effort,Sampling Effort>>
+|term:eco[eco:inventoryTypes] |Recommended if applicable |<<event-type,Event type>>
+|term:eco[eco:compilationTypes] |Recommended if applicable |<<event-type,Event type>>
+|term:eco[eco:compilationSourceTypes] |Recommended if applicable |<<event-type,Event type>>
 |term:dwc[dwc:fieldNumber] |Share if available |<<survey-design,Survey design>>
 |term:dwc[dwc:projectTitle] |Share if available |<<project-information,Project information>>
 |term:dwc[dwc:projectID] |Share if available |<<project-information,Project information>>
 |term:dwc[dwc:fundingAttribution] |Share if available |<<project-information,Project information>>
 |term:dwc[dwc:fundingAttributionID] |Share if available |<<project-information,Project information>>
-|http://rs.tdwg.org/eco/terms/verbatimSiteNames[`eco:verbatimSiteNames`^] |Share if available |<<survey-design,Survey design>>
+|term:eco[eco:verbatimSiteNames] |Share if available |<<survey-design,Survey design>>
 |term:dwc[dwc:habitat] |Share if available |<<site-description,Site description>>
-|http://rs.tdwg.org/eco/terms/reportedWeather[`eco:reportedWeather`^] |Share if available |<<site-description,Site description>>
-|http://rs.tdwg.org/eco/terms/reportedExtremeConditions[`eco:reportedExtremeConditions`^] |Share if available |<<site-description,Site description>>
-|http://rs.tdwg.org/eco/terms/verbatimSiteDescriptions[`eco:verbatimSiteDescriptions`^] |Share if available |<<site-description,Site description>>
+|term:eco[eco:reportedWeather] |Share if available |<<site-description,Site description>>
+|term:eco[eco:reportedExtremeConditions] |Share if available |<<site-description,Site description>>
+|term:eco[eco:verbatimSiteDescriptions] |Share if available |<<site-description,Site description>>
 |term:dwc[dwc:footprintWKT] |Share if available |<<additional-survey-site-information,Additional survey site information>>
 |term:dwc[dwc:footprintSRS] |Share if available |<<additional-survey-site-information,Additional survey site information>>
 |term:dwc[dwc:locality] |Share if available |<<additional-survey-site-information,Additional survey site information>>
-|http://rs.tdwg.org/eco/terms/absentTaxa[`eco:absentTaxa`^] |Share if available |<<absences,Absences>>
-|http://rs.tdwg.org/eco/terms/abundanceCap[`eco:abundanceCap`^] |Share if available |<<abundance-information,Abundance>>
-|http://rs.tdwg.org/eco/terms/materialSampleTypes[`eco:materialSampleTypes`^] |Share if available |<<material-samples,Material samples>>
-|http://rs.tdwg.org/eco/terms/voucherInstitutions[`eco:voucherInstitutions`^] |Share if available |<<vouchers,Vouchers>>
+|term:eco[eco:absentTaxa] |Share if available |<<absences,Absences>>
+|term:eco[eco:abundanceCap] |Share if available |<<abundance-information,Abundance>>
+|term:eco[eco:materialSampleTypes] |Share if available |<<material-samples,Material samples>>
+|term:eco[eco:voucherInstitutions] |Share if available |<<vouchers,Vouchers>>
 |term:dwc[dwc:dataGeneralizations] |Share if available |<<sensitive-data-data-generalization-information-withheld,Sensitive data: data generalization & information withheld>>
 |term:dwc[dwc:informationWithheld] |Share if available |<<sensitive-data-data-generalization-information-withheld,Sensitive data: data generalization & information withheld>>
 |term:dwc[dwc:fieldNotes] |Share if available |<<verbatim-fields,Verbatim fields>>
 |term:dwc[dwc:eventRemarks] |Share if available |<<verbatim-fields,Verbatim fields>>
-|http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] |Share if available |<<taxonomic-scope,Taxonomic scope>>
-|http://rs.tdwg.org/eco/terms/taxonCompletenessReported[`eco:taxonCompletenessReported`^] |Share if available |<<taxonomic-scope,Taxonomic scope>>
-|http://rs.tdwg.org/eco/terms/taxonCompletenessProtocols[`eco:taxonCompletenessProtocols`^] |Share if available |<<taxonomic-scope,Taxonomic scope>>
+|term:eco[eco:isTaxonomicScopeFullyReported] |Share if available |<<taxonomic-scope,Taxonomic scope>>
+|term:eco[eco:taxonCompletenessReported] |Share if available |<<taxonomic-scope,Taxonomic scope>>
+|term:eco[eco:taxonCompletenessProtocols] |Share if available |<<taxonomic-scope,Taxonomic scope>>
 |term:dwc[dwc:identifiedBy] |Share if available |<<taxonomic-scope,Taxonomic scope>>
-|http://rs.tdwg.org/eco/terms/targetLifeStageScope[`eco:targetLifeStageScope`^] |Share if available |<<organismal-scopes,Organismal scopes>>
-|http://rs.tdwg.org/eco/terms/excludedLifeStageScope[`eco:excludedLifeStageScope`^] |Share if available |<<organismal-scopes,Organismal scopes>>
-|http://rs.tdwg.org/eco/terms/isLifeStageScopeFullyReported[`eco:isLifeStageScopeFullyReported`^] |Share if available |<<organismal-scopes,Organismal scopes>>
-|http://rs.tdwg.org/eco/terms/targetDegreeOfEstablishmentScope[`eco:targetDegreeOfEstablishmentScope`^] |Share if available |<<organismal-scopes,Organismal scopes>>
-|http://rs.tdwg.org/eco/terms/excludedDegreeOfEstablishmentScope[`eco:excludedDegreeOfEstablishmentScope`^] |Share if available |<<organismal-scopes,Organismal scopes>>
-|http://rs.tdwg.org/eco/terms/isDegreeOfEstablishmentScopeFullyReported[`eco:isDegreeOfEstablishmentScopeFullyReported`^] |Share if available |<<organismal-scopes,Organismal scopes>>
-|http://rs.tdwg.org/eco/terms/targetGrowthFormScope[`eco:targetGrowthFormScope`^] |Share if available |<<organismal-scopes,Organismal scopes>>
-|http://rs.tdwg.org/eco/terms/excludedGrowthFormScope[`eco:excludedGrowthFormScope`^] |Share if available |<<organismal-scopes,Organismal scopes>>
-|http://rs.tdwg.org/eco/terms/isGrowthFormScopeFullyReported[`eco:isGrowthFormScopeFullyReported`^] |Share if available |<<organismal-scopes,Organismal scopes>>
-|http://rs.tdwg.org/eco/terms/hasNonTargetTaxa[`eco:hasNonTargetTaxa`^] |Share if available |<<bycatch-information,Bycatch>>
-|http://rs.tdwg.org/eco/terms/areNonTargetTaxaFullyReported[`eco:areNonTargetTaxaFullyReported`^] |Share if available |<<bycatch-information,Bycatch>>
-|http://rs.tdwg.org/eco/terms/nonTargetTaxa[`eco:nonTargetTaxa`^] |Share if available |<<bycatch-information,Bycatch>>
-|http://rs.tdwg.org/eco/terms/hasNonTargetOrganisms[`eco:hasNonTargetOrganisms`^] |Share if available |<<bycatch-information,Bycatch>>
-|http://rs.tdwg.org/eco/terms/targetHabitatScope[`eco:targetHabitatScope`^] |Share if available |<<habitat-scope,Habitat scope>>
-|http://rs.tdwg.org/eco/terms/excludedHabitatScope[`eco:excludedHabitatScope`^] |Share if available |<<habitat-scope,Habitat scope>>
+|term:eco[eco:targetLifeStageScope] |Share if available |<<organismal-scopes,Organismal scopes>>
+|term:eco[eco:excludedLifeStageScope] |Share if available |<<organismal-scopes,Organismal scopes>>
+|term:eco[eco:isLifeStageScopeFullyReported] |Share if available |<<organismal-scopes,Organismal scopes>>
+|term:eco[eco:targetDegreeOfEstablishmentScope] |Share if available |<<organismal-scopes,Organismal scopes>>
+|term:eco[eco:excludedDegreeOfEstablishmentScope] |Share if available |<<organismal-scopes,Organismal scopes>>
+|term:eco[eco:isDegreeOfEstablishmentScopeFullyReported] |Share if available |<<organismal-scopes,Organismal scopes>>
+|term:eco[eco:targetGrowthFormScope] |Share if available |<<organismal-scopes,Organismal scopes>>
+|term:eco[eco:excludedGrowthFormScope] |Share if available |<<organismal-scopes,Organismal scopes>>
+|term:eco[eco:isGrowthFormScopeFullyReported] |Share if available |<<organismal-scopes,Organismal scopes>>
+|term:eco[eco:hasNonTargetTaxa] |Share if available |<<bycatch-information,Bycatch>>
+|term:eco[eco:areNonTargetTaxaFullyReported] |Share if available |<<bycatch-information,Bycatch>>
+|term:eco[eco:nonTargetTaxa] |Share if available |<<bycatch-information,Bycatch>>
+|term:eco[eco:hasNonTargetOrganisms] |Share if available |<<bycatch-information,Bycatch>>
+|term:eco[eco:targetHabitatScope] |Share if available |<<habitat-scope,Habitat scope>>
+|term:eco[eco:excludedHabitatScope] |Share if available |<<habitat-scope,Habitat scope>>
 |===
 
 === `occurrence` table (Occurrence extension)
