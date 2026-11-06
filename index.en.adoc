@@ -55,7 +55,8 @@ include::900.en.adoc[]
 
 //include::appa.en.adoc[]
 
-include::appendix-terms.en.adoc[]
+//include::appendix-terms.en.adoc[]
+include::appendix.en.adoc[]
 
 include::glossary.en.adoc[]
 
