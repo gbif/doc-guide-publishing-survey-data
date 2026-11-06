@@ -188,11 +188,11 @@ The table below outlines the minimum required and recommended terms for each Occ
 
 <<absence, *Absences*>> are defined here as the lack of detection of organisms that are explicitly stated to be part of the target taxonomic scope. Information regarding the absence of detection of a type of taxon can be reported explicitly or implicitly within a DwC-A. 
 
-The reporting of absences only provides meaningful information when taxonomic scope is fully reported (http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] = `true`). 
+The reporting of absences only provides meaningful information when taxonomic scope is fully reported (term:eco[eco:isTaxonomicScopeFullyReported] = `true`). 
 
-If taxonomic scope is not fully reported (http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] = `false`), Occurrence records of zero individuals are uninterpretable because the user of these data cannot know whether there are any taxa that were not detected but were not reported with Occurrence records of zero individuals. Implicit reporting of absences is impossible if taxonomic scope is not fully reported (http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] = `false`).
+If taxonomic scope is not fully reported (term:eco[eco:isTaxonomicScopeFullyReported] = `false`), Occurrence records of zero individuals are uninterpretable because the user of these data cannot know whether there are any taxa that were not detected but were not reported with Occurrence records of zero individuals. Implicit reporting of absences is impossible if taxonomic scope is not fully reported (term:eco[eco:isTaxonomicScopeFullyReported] = `false`).
 
-*If absences are implicitly reported*, each end user of data will need to reconstruct explicit absences for themselves for each taxon of interest to them because any unreported taxon (i.e. any taxon without an Occurrence record) is known to be absent. Again, this will only be possible if a taxonomic scope is fully reported (http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] = `true`).
+*If absences are implicitly reported*, each end user of data will need to reconstruct explicit absences for themselves for each taxon of interest to them because any unreported taxon (i.e. any taxon without an Occurrence record) is known to be absent. Again, this will only be possible if a taxonomic scope is fully reported (term:eco[eco:isTaxonomicScopeFullyReported] = `true`).
 
 
 *Explicit documentation of absences*
@@ -204,17 +204,17 @@ Explicit reporting of absence or non-detection means that the dataset reports, a
 ** term:dwc[dwc:occurrenceStatus] = `absent` or `notDetected`. +
 ** Recommended best practice is to also populate term:dwc[dwc:individualCount] and term:dwc[dwc:organismQuantity] as `0` and term:dwc[dwc:organismQuantityType] as `individuals`. +
 * In the `survey` table:
-** If one or more absences are reported at any taxonomic level (term:dwc[dwc:occurrenceStatus] = `absent` or `notDetected`), then http://rs.tdwg.org/eco/terms/isAbsenceReported[`eco:isAbsenceReported`^] = `true` for each relevant Event.
-** A list of absent taxa can be provided using http://rs.tdwg.org/eco/terms/absentTaxa[`eco:absentTaxa`^] at all relevant Events. See the section 'link:#absences[Absence]' for details on reporting absence information at the Event level.
+** If one or more absences are reported at any taxonomic level (term:dwc[dwc:occurrenceStatus] = `absent` or `notDetected`), then term:eco[eco:isAbsenceReported] = `true` for each relevant Event.
+** A list of absent taxa can be provided using term:eco[eco:absentTaxa] at all relevant Events. See the section 'link:#absences[Absence]' for details on reporting absence information at the Event level.
 
 Absences should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey. Absence cannot be asserted for bycatch.
 
 *Implicit documentation of absences*
 
-Implicit reporting of absence or non-detection, on the other hand, means that the lack of detection of a dwc:Taxon is indirectly suggested through the lack of Occurrence record in the `occurrence` table. When taxonomic scopes are broader, and include hundreds or thousands of species (e.g., a taxonomic scope of a dataset that includes all species of birds in the world), then it is not feasible to add occurrence records of zero individuals for all of the species not detected. To implicitly document absences in a DwC-A, http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] must be `true` for the Event and either http://rs.tdwg.org/eco/terms/targetTaxonomicScope[`eco:targetTaxonomicScope`^] or http://rs.tdwg.org/eco/terms/excludedTaxonomicScope[`eco:excludedTaxonomicScope`^] must be specified. Then:
+Implicit reporting of absence or non-detection, on the other hand, means that the lack of detection of a dwc:Taxon is indirectly suggested through the lack of Occurrence record in the `occurrence` table. When taxonomic scopes are broader, and include hundreds or thousands of species (e.g., a taxonomic scope of a dataset that includes all species of birds in the world), then it is not feasible to add occurrence records of zero individuals for all of the species not detected. To implicitly document absences in a DwC-A, term:eco[eco:isTaxonomicScopeFullyReported] must be `true` for the Event and either term:eco[eco:targetTaxonomicScope] or term:eco[eco:excludedTaxonomicScope] must be specified. Then:
 
 * In the `occurrence` table, for each taxon to be implicitly reported absent, there will not be any Occurrence record created.
-* In the `survey` table, http://rs.tdwg.org/eco/terms/isAbsenceReported[`eco:isAbsenceReported`^] = `false` for all relevant Events because no absences are explicitly reported. See the section 'link:#absences[Absence]' for details on reporting absence information at the Event level.
+* In the `survey` table, term:eco[eco:isAbsenceReported] = `false` for all relevant Events because no absences are explicitly reported. See the section 'link:#absences[Absence]' for details on reporting absence information at the Event level.
 
 Absences should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey. Absence cannot be asserted for bycatch.
 
@@ -241,16 +241,16 @@ Absences should only be reported for taxa within the stated taxonomic and/or org
 |`individuals`
 
 |Survey
-|http://rs.tdwg.org/eco/terms/isAbsenceReported[`eco:isAbsenceReported`^]
+|term:eco[eco:isAbsenceReported]
 |`true` or `false`
 
 |Survey
 .2+|Share if available
-|http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^]
+|term:eco[eco:isTaxonomicScopeFullyReported]
 |`true` or `false`
 
 |Survey
-|http://rs.tdwg.org/eco/terms/absentTaxa[`eco:absentTaxa`^]
+|term:eco[eco:absentTaxa]
 |
 |===
 
@@ -260,7 +260,7 @@ Absences should only be reported for taxa within the stated taxonomic and/or org
 
 The example dataset uses both approaches to documenting absences.
 
-*Pathogens: explicit absences.* The target pathogens are listed in http://rs.tdwg.org/eco/terms/targetTaxonomicScope[`eco:targetTaxonomicScope`^] and every test result is reported. Each test of a tick sample for a target pathogen results in one Occurrence, with term:dwc[dwc:occurrenceStatus] = `present` when the pathogen was detected and `absent` when it was not. The table below shows some of the pathogen results for plot visit `SCBI_014.20140610`. For example, _Borrelia burgdorferi_ sensu lato was detected in one tested sample (`present`), while _Rickettsia rickettsii_ was not detected in another (`absent`).
+*Pathogens: explicit absences.* The target pathogens are listed in term:eco[eco:targetTaxonomicScope] and every test result is reported. Each test of a tick sample for a target pathogen results in one Occurrence, with term:dwc[dwc:occurrenceStatus] = `present` when the pathogen was detected and `absent` when it was not. The table below shows some of the pathogen results for plot visit `SCBI_014.20140610`. For example, _Borrelia burgdorferi_ sensu lato was detected in one tested sample (`present`), while _Rickettsia rickettsii_ was not detected in another (`absent`).
 
 [width="100%",cols="30%,19%,16%,22%,13%",options="header",]
 |===
@@ -276,7 +276,7 @@ The example dataset uses both approaches to documenting absences.
 |+084607eb-2358-49c3-9e87-95c4e2ce30ca+ |+SCBI_014.20140610+ |+MaterialSample+ |+Borrelia sp.+ |+absent+
 |===
 
-*Ticks: implicit absences.* Tick Occurrences are only created for ticks that were collected. Because http://rs.tdwg.org/eco/terms/targetTaxonomicScope[`eco:targetTaxonomicScope`^] includes `Ixodidae` and http://rs.tdwg.org/eco/terms/isTaxonomicScopeFullyReported[`eco:isTaxonomicScopeFullyReported`^] is `true`, any tick taxon without an Occurrence record for a plot visit was not detected during that visit. For example, 11 of the 58 plot visits in the example data subset have no tick Occurrences.
+*Ticks: implicit absences.* Tick Occurrences are only created for ticks that were collected. Because term:eco[eco:targetTaxonomicScope] includes `Ixodidae` and term:eco[eco:isTaxonomicScopeFullyReported] is `true`, any tick taxon without an Occurrence record for a plot visit was not detected during that visit. For example, 11 of the 58 plot visits in the example data subset have no tick Occurrences.
 ****
 
 
@@ -288,13 +288,13 @@ To capture <<abundance, abundance>> in a dataset or at a specific Event level:
 ** Populate required fields, e.g., term:dwc[dwc:eventID] (refer to the link:#mapping-occurrence-information[list of required Occurrence terms]) +
 ** use the paired terms term:dwc[dwc:organismQuantity] and term:dwc[dwc:organismQuantityType] to report the observed abundance for each reported Occurrence. For example, if 3 individuals of a species were observed, term:dwc[dwc:organismQuantity] = `3` and term:dwc[dwc:organismQuantityType] = `individuals`.
 * In the `survey` table:
-** The inclusion of abundance information in the dataset, even if this information is not reported for all taxa, should be indicated by populating http://rs.tdwg.org/eco/terms/isAbundanceReported[`eco:isAbundanceReported`^] as `true`. +
-** The existence of an abundance cap should be captured using the Boolean term http://rs.tdwg.org/eco/terms/isAbundanceCapReported[`eco:isAbundanceCapReported`^] and the value of that cap reported in http://rs.tdwg.org/eco/terms/abundanceCap[`eco:abundanceCap`^].
+** The inclusion of abundance information in the dataset, even if this information is not reported for all taxa, should be indicated by populating term:eco[eco:isAbundanceReported] as `true`. +
+** The existence of an abundance cap should be captured using the Boolean term term:eco[eco:isAbundanceCapReported] and the value of that cap reported in term:eco[eco:abundanceCap].
 
 If the dataset or relevant Event does not include abundance information, then it is recommended that the following terms be populated as follows in the `survey` table at the appropriate level(s) within the Event hierarchy:
 
-* http://rs.tdwg.org/eco/terms/isAbundanceReported[`eco:isAbundanceReported`^] = `false` +
-* http://rs.tdwg.org/eco/terms/isAbundanceCapReported[`eco:isAbundanceCapReported`^] = `false`
+* term:eco[eco:isAbundanceReported] = `false` +
+* term:eco[eco:isAbundanceCapReported] = `false`
 
 See the section 'link:#abundance-information[Abundance]' for details on reporting abundance information at the Event level.
 
@@ -317,16 +317,16 @@ See the section 'link:#abundance-information[Abundance]' for details on reportin
 |`individuals`
 
 |Survey
-|http://rs.tdwg.org/eco/terms/isAbundanceReported[`eco:isAbundanceReported`^]
+|term:eco[eco:isAbundanceReported]
 |`true` or `false`
 
 |Survey
-|http://rs.tdwg.org/eco/terms/isAbundanceCapReported[`eco:isAbundanceCapReported`^]
+|term:eco[eco:isAbundanceCapReported]
 |`true` or `false`
 
 |Survey
 |Share if available
-|http://rs.tdwg.org/eco/terms/abundanceCap[`eco:abundanceCap`^]
+|term:eco[eco:abundanceCap]
 |`5`
 |===
 
@@ -334,7 +334,7 @@ See the section 'link:#abundance-information[Abundance]' for details on reportin
 [discrete]
 ==== NEON example: Abundance in the occurrence table
 
-Tick abundance is reported for each tick Occurrence using term:dwc[dwc:individualCount] (see the NEON examples in link:#reporting-multiple-individuals-as-a-single-occurrence[Reporting multiple individuals as a single Occurrence] and link:#reporting-multiple-individuals-as-multiple-occurrences[Reporting multiple individuals as multiple occurrences]). Pathogen Occurrences record whether a pathogen was detected in a tested sample and do not include abundance. In the `survey` table, http://rs.tdwg.org/eco/terms/isAbundanceReported[`eco:isAbundanceReported`^] is `true` and http://rs.tdwg.org/eco/terms/isAbundanceCapReported[`eco:isAbundanceCapReported`^] is `false` for every Event. The rows below show tick abundances for plot visit `SCBI_014.20190819`:
+Tick abundance is reported for each tick Occurrence using term:dwc[dwc:individualCount] (see the NEON examples in link:#reporting-multiple-individuals-as-a-single-occurrence[Reporting multiple individuals as a single Occurrence] and link:#reporting-multiple-individuals-as-multiple-occurrences[Reporting multiple individuals as multiple occurrences]). Pathogen Occurrences record whether a pathogen was detected in a tested sample and do not include abundance. In the `survey` table, term:eco[eco:isAbundanceReported] is `true` and term:eco[eco:isAbundanceCapReported] is `false` for every Event. The rows below show tick abundances for plot visit `SCBI_014.20190819`:
 
 [width="99%",cols="<30%,<30%,<20%,20%",options="header",]
 |===
