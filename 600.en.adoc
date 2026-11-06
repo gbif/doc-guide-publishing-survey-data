@@ -81,7 +81,7 @@ Vegetation plot surveys are not part of the NEON tick sampling protocol, so the 
 
 [width="100%",cols="50%,50%",options="header",]
 |===
-|term:dwc[dwc:eventID] |http://rs.tdwg.org/eco/terms/isVegetationCoverReported[`eco:isVegetationCoverReported`^]
+|term:dwc[dwc:eventID] |term:eco[eco:isVegetationCoverReported]
 |+SCBI_014+ |+false+
 |+SCBI_014.20190325+ |+false+
 |===
