@@ -22,7 +22,7 @@ In the current GBIF data model, an Event core dataset does not have a separate t
 
 === Event level: declaring material samples and vouchers
 
-For each Event, indicate whether material samples were collected using http://rs.tdwg.org/eco/terms/hasMaterialSamples[`eco:hasMaterialSamples`^] and list the types collected in http://rs.tdwg.org/eco/terms/materialSampleTypes[`eco:materialSampleTypes`^]. If any material was accessioned into a collection as a <<voucher, voucher>>, also populate http://rs.tdwg.org/eco/terms/hasVouchers[`eco:hasVouchers`^] and http://rs.tdwg.org/eco/terms/voucherInstitutions[`eco:voucherInstitutions`^]. See link:#material-samples[Material samples] and link:#vouchers[Vouchers] for details.
+For each Event, indicate whether material samples were collected using term:eco[eco:hasMaterialSamples] and list the types collected in term:eco[eco:materialSampleTypes]. If any material was accessioned into a collection as a <<voucher, voucher>>, also populate term:eco[eco:hasVouchers] and term:eco[eco:voucherInstitutions]. See link:#material-samples[Material samples] and link:#vouchers[Vouchers] for details.
 
 Every voucher is a material sample, but not every material sample is a voucher. A material sample becomes a voucher when it is accessioned into a museum or other collection in support of a specific project or survey.
 
@@ -137,7 +137,7 @@ Further information about the test sample is reported in the `emof` table, linke
 |+CQ (Quantification Cycle or Threshold Number) Value+ |+29.84+
 |===
 
-At the Event level, each plot visit where ticks were collected reports http://rs.tdwg.org/eco/terms/hasMaterialSamples[`eco:hasMaterialSamples`^] = `true` and http://rs.tdwg.org/eco/terms/materialSampleTypes[`eco:materialSampleTypes`^] = `wholeOrganism` in the `survey` table.
+At the Event level, each plot visit where ticks were collected reports term:eco[eco:hasMaterialSamples] = `true` and term:eco[eco:materialSampleTypes] = `wholeOrganism` in the `survey` table.
 ****
 
 <<<
