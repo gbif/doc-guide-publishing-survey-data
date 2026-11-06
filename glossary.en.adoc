@@ -51,7 +51,7 @@ ecological [[ecomonitoring]]monitoring:: the collection of information about the
 
 [[openData]]open data:: data that can be freely used, re-used, and redistributed by anyone.
 
-[[pairedTerms]]paired terms:: mutually interdependent sets of terms that must be populated together for complete information to be present, for example with http://rs.tdwg.org/eco/terms/eventDurationValue[`eco:eventDurationValue`^] and http://rs.tdwg.org/eco/terms/eventDurationUnit[`eco:eventDurationUnit`^].
+[[pairedTerms]]paired terms:: mutually interdependent sets of terms that must be populated together for complete information to be present, for example with term:eco[eco:eventDurationValue] and term:eco[eco:eventDurationUnit].
 
 [[parentEvent]]parent Event:: any dwc:Event whose dwc:eventID is a dwc:parentEventID for at least one other dwc:Event.
 
