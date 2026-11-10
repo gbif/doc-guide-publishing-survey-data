@@ -140,7 +140,7 @@ The highest Event level representing the NEON project as a whole has an eventID,
 |===
 |term:dwc[dwc:eventID]
 |term:dwc[dwc:parentEventID]
-|term:eco[eco:site{zwsp}Nesting{zwsp}Description]
+|term:eco[eco:siteNestingDescription]
 |term:eco[eco:siteCount]
 |term:eco[eco:verbatimSiteNames]
 |+NEON+ | |+46 terrestrial sites each with at least six 40x40 m plots designated for (...)+ |+311+ |+ABBY_001 \| ABBY_002 \| (...)+
