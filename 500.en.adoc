@@ -283,11 +283,11 @@ In the NEON tick-pathogen dataset, all Events except the project level Event (ev
 |===
 |term:dwc[dwc:eventID]
 |term:dwc[dwc:locationID]
-|term:dwc[dwc:countryCode]
-|term:dwc[dwc:decimalLatitude]
-|term:dwc[dwc:decimalLongitude]
-|term:dwc[dwc:coordinateUncertaintyInMeters]
-|term:dwc[dwc:geodeticDatum]
+|https://rs.tdwg.org/dwc/terms/countryCode[dwc:&#8203;country&#8203;Code,role=term]
+|https://rs.tdwg.org/dwc/terms/decimalLatitude[dwc:&#8203;decimal&#8203;Latitude,role=term]
+|https://rs.tdwg.org/dwc/terms/decimalLongitude[dwc:&#8203;decimal&#8203;Longitude,role=term]
+|https://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters[dwc:&#8203;coordinate&#8203;Uncertainty&#8203;InMeters,role=term]
+|https://rs.tdwg.org/dwc/terms/geodeticDatum[dwc:&#8203;geodetic&#8203;Datum,role=term]
 |+NEON+ | |+US+ | | | |
 |+D02+ |+D02+ |+US+ |+35.95+ |+-79.65+ |+886557.43+ |+WGS84+
 |+SCBI+ |+SCBI+ |+US+ |+38.892925+ |+-78.139494+ | |+WGS84+
