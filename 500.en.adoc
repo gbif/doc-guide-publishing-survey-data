@@ -281,8 +281,8 @@ In the NEON tick-pathogen dataset, all Events except the project level Event (ev
 
 [width="100%",cols="18%,18%,10%,13%,13%,16%,12%",options="header",]
 |===
-|term:dwc[dwc:eventID]
-|term:dwc[dwc:locationID]
+|https://rs.tdwg.org/dwc/terms/eventID[dwc:&#8203;event&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/locationID[dwc:&#8203;location&#8203;ID,role=term]
 |https://rs.tdwg.org/dwc/terms/countryCode[dwc:&#8203;country&#8203;Code,role=term]
 |https://rs.tdwg.org/dwc/terms/decimalLatitude[dwc:&#8203;decimal&#8203;Latitude,role=term]
 |https://rs.tdwg.org/dwc/terms/decimalLongitude[dwc:&#8203;decimal&#8203;Longitude,role=term]
