@@ -138,11 +138,11 @@ The highest Event level representing the NEON project as a whole has an eventID,
 
 [width="100%",cols="21%,12%,35%,8%,24%",options="header",]
 |===
-|[.break-all]term:dwc[dwc:eventID]
-|[.break-all]term:dwc[dwc:parentEventID]
-|[.break-all]term:eco[eco:siteNestingDescription]
-|[.break-all]term:eco[eco:siteCount]
-|[.break-all]term:eco[eco:verbatimSiteNames]
+|[.break-all] term:dwc[dwc:eventID]
+|term:dwc[dwc:parentEventID]
+|term:eco[eco:siteNestingDescription]
+|term:eco[eco:siteCount]
+|term:eco[eco:verbatimSiteNames]
 |+NEON+ | |+46 terrestrial sites each with at least six 40x40 m plots designated for (...)+ |+311+ |+ABBY_001 \| ABBY_002 \| (...)+
 |+D02+ |+NEON+ |+Each domain contains 1-3 terrestrial field sites, each with at least six (...)+ |+23+ |+BLAN_002 \| BLAN_004 \| (...)+
 |+SCBI+ |+D02+ |+Each site contains at least six 40x40 m plots designated for tick sampling (...)+ |+9+ |+SCBI_002 \| SCBI_005 \| (...)+
