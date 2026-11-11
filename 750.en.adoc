@@ -100,7 +100,7 @@ The NEON tick-pathogen example dataset includes two kinds of material sample rec
 
 *Pathogen test samples.* A subset of ticks is sent to a laboratory and tested for pathogens. Each test result is reported with term:dwc[dwc:basisOfRecord] = `MaterialSample`. The NEON identifier for the group of ticks tested together (the NEON testingID) is reported in term:dwc[dwc:materialSampleID], so all of the pathogen results from the same test share one term:dwc[dwc:materialSampleID]. Where the remaining genomic extract is archived, its catalog number is reported in term:dwc[dwc:catalogNumber] (e.g., `NEON07LK6`). This is explained in term:dwc[dwc:materialEntityRemarks].
 
-[width="100%",cols="20%,23%,16%,13%,18%,10%",options="header",]
+[width="100%",options="header",]
 |===
 |https://rs.tdwg.org/dwc/terms/occurrenceID[dwc:&#8203;occurrence&#8203;ID,role=term]
 |https://rs.tdwg.org/dwc/terms/scientificName[dwc:&#8203;scientific&#8203;Name,role=term]
@@ -108,16 +108,16 @@ The NEON tick-pathogen example dataset includes two kinds of material sample rec
 |https://rs.tdwg.org/dwc/terms/catalogNumber[dwc:&#8203;catalog&#8203;Number,role=term]
 |https://rs.tdwg.org/dwc/terms/materialSampleID[dwc:&#8203;material&#8203;Sample&#8203;ID,role=term]
 |https://rs.tdwg.org/dwc/terms/preparations[dwc:&#8203;preparations,role=term]
-|+SCBI_014.20240508.IXOSCA.N+
+|pass:[SCBI_014.20240508.&#8203;IXOSCA.N.T.006]
 |+Ixodes scapularis+
-|+PreservedSpecimen+
+|pass:[Preserved&#8203;Specimen]
 |+NEON0CSJO+
 |
 |+95% ethanol+
 
 |+69ae7cfb-cbbd-4fdb-9446-72ddb8be4b4f+
 |+Borrelia burgdorferi sensu lato+
-|+MaterialSample+
+|pass:[Material&#8203;Sample]
 |
 |pass:[SCBI_014.20240508.&#8203;IXOSCA.N.T.006]
 |
