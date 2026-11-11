@@ -25,10 +25,10 @@ The example dataset uses the emof extension to share a wide range of additional 
 
 [width="100%",cols="22%,20%,20%,38%",options="header",]
 |===
-|term:dwc[dwc:eventID]
-|term:dwc[dwc:measurementType]
-|term:dwc[dwc:measurementValue]
-|term:dwc[dwc:measurementRemarks]
+|https://rs.tdwg.org/dwc/terms/eventID[dwc:&#8203;event&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/measurementType[dwc:&#8203;measurement&#8203;Type,role=term]
+|https://rs.tdwg.org/dwc/terms/measurementValue[dwc:&#8203;measurement&#8203;Value,role=term]
+|https://rs.tdwg.org/dwc/terms/measurementRemarks[dwc:&#8203;measurement&#8203;Remarks,role=term]
 |+SCBI_014+ |+Plot Type+ |+distributed+ |
 |+SCBI_014.20140610+ |+Adult Count+ |+1+ |+Excludes records where adultCount is NA+
 |+SCBI_014.20140610+ |+Nymph Count+ |+43+ |+Excludes records where nymphCount is NA+
@@ -40,9 +40,9 @@ The example dataset also uses the emof extension to share additional information
 
 [width="100%",cols="35%,35%,30%",options="header",]
 |===
-|term:dwc[dwc:occurrenceID]
-|term:dwc[dwc:measurementType]
-|term:dwc[dwc:measurementValue]
+|https://rs.tdwg.org/dwc/terms/occurrenceID[dwc:&#8203;occurrence&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/measurementType[dwc:&#8203;measurement&#8203;Type,role=term]
+|https://rs.tdwg.org/dwc/terms/measurementValue[dwc:&#8203;measurement&#8203;Value,role=term]
 |+0066d2d4-17ba-43fe-b832-1c7192e123bc+ |+Tick Pathogen Sample Condition+ |+OK+
 |+0066d2d4-17ba-43fe-b832-1c7192e123bc+ |+CQ (Quantification Cycle or Threshold Number) Value+ |+0+
 |+0066d2d4-17ba-43fe-b832-1c7192e123bc+ |+Identifier for DNA sample+ |+SCBI_014.20210621.AMBAME.N.T.005.DNA+
@@ -81,7 +81,7 @@ Vegetation plot surveys are not part of the NEON tick sampling protocol, so the 
 
 [width="100%",cols="50%,50%",options="header",]
 |===
-|term:dwc[dwc:eventID] |term:eco[eco:isVegetationCoverReported]
+|https://rs.tdwg.org/dwc/terms/eventID[dwc:&#8203;event&#8203;ID,role=term] |https://rs.tdwg.org/eco/terms/isVegetationCoverReported[eco:&#8203;is&#8203;Vegetation&#8203;Cover&#8203;Reported,role=term]
 |+SCBI_014+ |+false+
 |+SCBI_014.20190325+ |+false+
 |===
