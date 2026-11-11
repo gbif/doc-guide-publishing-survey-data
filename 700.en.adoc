@@ -27,12 +27,12 @@ For example, if four hooded crows (_Corvus cornix_) were observed, a single occu
 
 [width="99%",cols="<20%,<16%,<16%,<16%,16%,16%",options="header",]
 |===
-|term:dwc[dwc:eventID]
-|term:dwc[dwc:occurrenceID]
-|term:dwc[dwc:basisOfRecord]
-|term:dwc[dwc:scientificName]
-|term:dwc[dwc:organismQuantity]
-|term:dwc[dwc:organismQuantityType]
+|https://rs.tdwg.org/dwc/terms/eventID[dwc:&#8203;event&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/occurrenceID[dwc:&#8203;occurrence&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/basisOfRecord[dwc:&#8203;basis&#8203;Of&#8203;Record,role=term]
+|https://rs.tdwg.org/dwc/terms/scientificName[dwc:&#8203;scientific&#8203;Name,role=term]
+|https://rs.tdwg.org/dwc/terms/organismQuantity[dwc:&#8203;organism&#8203;Quantity,role=term]
+|https://rs.tdwg.org/dwc/terms/organismQuantityType[dwc:&#8203;organism&#8203;Quantity&#8203;Type,role=term]
 |`<uniqueEventID>`
 |`<uniqueObsID>`
 |`HumanObservation`
@@ -49,11 +49,11 @@ In the NEON tick-pathogen example dataset, all ticks of the same species and lif
 
 [width="99%",cols="<22%,<26%,<18%,<20%,14%",options="header",]
 |===
-|term:dwc[dwc:eventID]
-|term:dwc[dwc:occurrenceID]
-|term:dwc[dwc:basisOfRecord]
-|term:dwc[dwc:scientificName]
-|term:dwc[dwc:individualCount]
+|https://rs.tdwg.org/dwc/terms/eventID[dwc:&#8203;event&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/occurrenceID[dwc:&#8203;occurrence&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/basisOfRecord[dwc:&#8203;basis&#8203;Of&#8203;Record,role=term]
+|https://rs.tdwg.org/dwc/terms/scientificName[dwc:&#8203;scientific&#8203;Name,role=term]
+|https://rs.tdwg.org/dwc/terms/individualCount[dwc:&#8203;individual&#8203;Count,role=term]
 |+SCBI_014.20140610+
 |+SCBI_014.20140610.IXOSCA.N+
 |+PreservedSpecimen+
@@ -71,15 +71,15 @@ For example, if 1 adult male and 3 adult females Indian gharials (_Gavialis gang
 
 [width="99%",cols="<12%,<11%,<11%,<11%,11%,11%,11%,11%,11%",options="header",]
 |===
-|term:dwc[dwc:eventID]
-|term:dwc[dwc:occurrenceID]
-|term:dwc[dwc:basisOfRecord]
-|term:dwc[dwc:scientificName]
-|term:dwc[dwc:organismQuantity]
-|term:dwc[dwc:organismQuantityType]
-|term:dwc[dwc:sex]
-|term:dwc[dwc:lifeStage]
-|term:dwc[dwc:vitality]
+|https://rs.tdwg.org/dwc/terms/eventID[dwc:&#8203;event&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/occurrenceID[dwc:&#8203;occurrence&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/basisOfRecord[dwc:&#8203;basis&#8203;Of&#8203;Record,role=term]
+|https://rs.tdwg.org/dwc/terms/scientificName[dwc:&#8203;scientific&#8203;Name,role=term]
+|https://rs.tdwg.org/dwc/terms/organismQuantity[dwc:&#8203;organism&#8203;Quantity,role=term]
+|https://rs.tdwg.org/dwc/terms/organismQuantityType[dwc:&#8203;organism&#8203;Quantity&#8203;Type,role=term]
+|https://rs.tdwg.org/dwc/terms/sex[dwc:&#8203;sex,role=term]
+|https://rs.tdwg.org/dwc/terms/lifeStage[dwc:&#8203;life&#8203;Stage,role=term]
+|https://rs.tdwg.org/dwc/terms/vitality[dwc:&#8203;vitality,role=term]
 |`uniqueEventID-1` 
 |`uniqueObsID-1`
 |`HumanObservation`
@@ -110,11 +110,11 @@ Because the life stage (and, for adults, the sex) of each tick is recorded, the 
 
 [width="100%",cols="30%,28%,14%,12%,16%",options="header",]
 |===
-|term:dwc[dwc:occurrenceID]
-|term:dwc[dwc:scientificName]
-|term:dwc[dwc:individualCount]
-|term:dwc[dwc:sex]
-|term:dwc[dwc:lifeStage]
+|https://rs.tdwg.org/dwc/terms/occurrenceID[dwc:&#8203;occurrence&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/scientificName[dwc:&#8203;scientific&#8203;Name,role=term]
+|https://rs.tdwg.org/dwc/terms/individualCount[dwc:&#8203;individual&#8203;Count,role=term]
+|https://rs.tdwg.org/dwc/terms/sex[dwc:&#8203;sex,role=term]
+|https://rs.tdwg.org/dwc/terms/lifeStage[dwc:&#8203;life&#8203;Stage,role=term]
 |+SCBI_014.20190715.IXOSP.L+ |+Ixodidae sp.+ |+7+ | |+Larva+
 |+SCBI_014.20190715.IXOSCA.N+ |+Ixodes scapularis+ |+1+ | |+Nymph+
 |+SCBI_014.20190715.DERVAR.F+ |+Dermacentor variabilis+ |+1+ |+Female+ |+Adult+
@@ -264,11 +264,11 @@ The example dataset uses both approaches to documenting absences.
 
 [width="100%",cols="30%,19%,16%,22%,13%",options="header",]
 |===
-|term:dwc[dwc:occurrenceID]
-|term:dwc[dwc:eventID]
-|term:dwc[dwc:basisOfRecord]
-|term:dwc[dwc:scientificName]
-|term:dwc[dwc:occurrenceStatus]
+|https://rs.tdwg.org/dwc/terms/occurrenceID[dwc:&#8203;occurrence&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/eventID[dwc:&#8203;event&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/basisOfRecord[dwc:&#8203;basis&#8203;Of&#8203;Record,role=term]
+|https://rs.tdwg.org/dwc/terms/scientificName[dwc:&#8203;scientific&#8203;Name,role=term]
+|https://rs.tdwg.org/dwc/terms/occurrenceStatus[dwc:&#8203;occurrence&#8203;Status,role=term]
 |+00354e35-eec8-4a62-8929-1818dcefd24b+ |+SCBI_014.20140610+ |+MaterialSample+ |+Rickettsia rickettsii+ |+absent+
 |+0527763f-2eb2-4ccc-9312-08b6002bc94c+ |+SCBI_014.20140610+ |+MaterialSample+ |+Borrelia burgdorferi sensu lato+ |+present+
 |+07ea18fa-7410-4924-8683-5eb9b7dbfc92+ |+SCBI_014.20140610+ |+MaterialSample+ |+Anaplasma phagocytophilum+ |+absent+
@@ -338,10 +338,10 @@ Tick abundance is reported for each tick Occurrence using term:dwc[dwc:individua
 
 [width="99%",cols="<30%,<30%,<20%,20%",options="header",]
 |===
-|term:dwc[dwc:occurrenceID]
-|term:dwc[dwc:scientificName]
-|term:dwc[dwc:lifeStage]
-|term:dwc[dwc:individualCount]
+|https://rs.tdwg.org/dwc/terms/occurrenceID[dwc:&#8203;occurrence&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/scientificName[dwc:&#8203;scientific&#8203;Name,role=term]
+|https://rs.tdwg.org/dwc/terms/lifeStage[dwc:&#8203;life&#8203;Stage,role=term]
+|https://rs.tdwg.org/dwc/terms/individualCount[dwc:&#8203;individual&#8203;Count,role=term]
 |+SCBI_014.20190819.AMBAME.N+ |+Amblyomma americanum+ |+Nymph+ |+1+
 |+SCBI_014.20190819.IXOSP.L+ |+Ixodidae sp.+ |+Larva+ |+218+
 |===
@@ -425,9 +425,9 @@ The table below shows pathogen results linked to the Occurrence `SCBI_014.201406
 
 [width="100%",cols="40%,35%,25%",options="header",]
 |===
-|term:dwc[dwc:resourceID]
-|term:dwc[dwc:relatedResourceID]
-|term:dwc[dwc:relationshipOfResource]
+|https://rs.tdwg.org/dwc/terms/resourceID[dwc:&#8203;resource&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/relatedResourceID[dwc:&#8203;related&#8203;Resource&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/relationshipOfResource[dwc:&#8203;relationship&#8203;Of&#8203;Resource,role=term]
 |+00354e35-eec8-4a62-8929-1818dcefd24b+ |+SCBI_014.20140610.AMBAME.N+ |+pathogen of+
 |+07ea18fa-7410-4924-8683-5eb9b7dbfc92+ |+SCBI_014.20140610.AMBAME.N+ |+pathogen of+
 |+084607eb-2358-49c3-9e87-95c4e2ce30ca+ |+SCBI_014.20140610.AMBAME.N+ |+pathogen of+
