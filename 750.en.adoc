@@ -100,7 +100,7 @@ The NEON tick-pathogen example dataset includes two kinds of material sample rec
 
 *Pathogen test samples.* A subset of ticks is sent to a laboratory and tested for pathogens. Each test result is reported with term:dwc[dwc:basisOfRecord] = `MaterialSample`. The NEON identifier for the group of ticks tested together (the NEON testingID) is reported in term:dwc[dwc:materialSampleID], so all of the pathogen results from the same test share one term:dwc[dwc:materialSampleID]. Where the remaining genomic extract is archived, its catalog number is reported in term:dwc[dwc:catalogNumber] (e.g., `NEON07LK6`). This is explained in term:dwc[dwc:materialEntityRemarks].
 
-[width="100%",options="header",]
+[width="100%",cols="20%,23%,16%,13%,18%,10%",options="header",]
 |===
 |https://rs.tdwg.org/dwc/terms/occurrenceID[dwc:&#8203;occurrence&#8203;ID,role=term]
 |https://rs.tdwg.org/dwc/terms/scientificName[dwc:&#8203;scientific&#8203;Name,role=term]
