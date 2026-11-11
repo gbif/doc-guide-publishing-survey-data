@@ -119,7 +119,7 @@ The NEON tick-pathogen example dataset includes two kinds of material sample rec
 |+Borrelia burgdorferi sensu lato+
 |+MaterialSample+
 |
-|+SCBI_014.20240508.IXOSCA.N.T.006+
+|+SCBI_014.20240508.&#8203;IXOSCA.N.T.006+
 |
 |===
 
