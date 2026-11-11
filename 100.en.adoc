@@ -109,7 +109,7 @@ The examples are drawn from a subset of the published dataset: the NEON project,
 
 [width="100%",cols="22%,26%,22%,30%",options="header",]
 |===
-|Event level |term:dwc[dwc:eventID] |term:dwc[dwc:parentEventID] |term:dwc[dwc:eventType]
+|Event level |https://rs.tdwg.org/dwc/terms/eventID[dwc:&#8203;event&#8203;ID,role=term] |https://rs.tdwg.org/dwc/terms/parentEventID[dwc:&#8203;parent&#8203;Event&#8203;ID,role=term] |https://rs.tdwg.org/dwc/terms/eventType[dwc:&#8203;event&#8203;Type,role=term]
 |NEON project |+NEON+ | |+project+
 |NEON domain |+D02+ |+NEON+ |+survey+
 |NEON site |+SCBI+ |+D02+ |+survey+
