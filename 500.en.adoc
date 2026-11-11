@@ -837,7 +837,7 @@ For example, if sensitive species data are purposefully excluded from the publis
 
 The example data subset does not generalize or withhold any information, so neither term:dwc[dwc:dataGeneralizations] nor term:dwc[dwc:informationWithheld] is used. For example, plot `SCBI_014` is shared with its full coordinates:
 
-[width="100%",cols="20%,16%,17%,22%,25%",options="header",]
+[width="100%",options="header",]
 |===
 |https://rs.tdwg.org/dwc/terms/eventID[dwc:&#8203;event&#8203;ID,role=term] |https://rs.tdwg.org/dwc/terms/decimalLatitude[dwc:&#8203;decimal&#8203;Latitude,role=term] |https://rs.tdwg.org/dwc/terms/decimalLongitude[dwc:&#8203;decimal&#8203;Longitude,role=term] |https://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters[dwc:&#8203;coordinate&#8203;Uncertainty&#8203;In&#8203;Meters,role=term] 
 |+SCBI_014+ |+38.86574+ |+-78.16312+ |+20.4+ 
