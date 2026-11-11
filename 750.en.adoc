@@ -102,12 +102,12 @@ The NEON tick-pathogen example dataset includes two kinds of material sample rec
 
 [width="100%",cols="20%,23%,16%,13%,18%,10%",options="header",]
 |===
-|term:dwc[dwc:occurrenceID]
-|term:dwc[dwc:scientificName]
-|term:dwc[dwc:basisOfRecord]
-|term:dwc[dwc:catalogNumber]
-|term:dwc[dwc:materialSampleID]
-|term:dwc[dwc:preparations]
+|https://rs.tdwg.org/dwc/terms/occurrenceID[dwc:&#8203;occurrence&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/scientificName[dwc:&#8203;scientific&#8203;Name,role=term]
+|https://rs.tdwg.org/dwc/terms/basisOfRecord[dwc:&#8203;basis&#8203;Of&#8203;Record,role=term]
+|https://rs.tdwg.org/dwc/terms/catalogNumber[dwc:&#8203;catalog&#8203;Number,role=term]
+|https://rs.tdwg.org/dwc/terms/materialSampleID[dwc:&#8203;material&#8203;Sample&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/preparations[dwc:&#8203;preparations,role=term]
 |+SCBI_014.20240508.IXOSCA.N+
 |+Ixodes scapularis+
 |+PreservedSpecimen+
