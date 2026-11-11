@@ -299,12 +299,12 @@ The dataset includes additional site locality information. This is shared using 
 
 [width="100%",cols="20%,12%,10%,20%,20%,18%",options="header",]
 |===
-|https://rs.tdwg.org/dwc/terms/eventID[dwc:&#173;event&#173;ID,role=term]
-|https://rs.tdwg.org/dwc/terms/stateProvince[dwc:&#173;state&#173;Province,role=term]
-|https://rs.tdwg.org/dwc/terms/county[dwc:&#173;county,role=term]
-|https://rs.tdwg.org/dwc/terms/minimumElevationInMeters[dwc:&#173;minimum&#173;Elevation&#173;In&#173;Meters,role=term]
-|https://rs.tdwg.org/dwc/terms/maximumElevationInMeters[dwc:&#173;maximum&#173;Elevation&#173;In&#173;Meters,role=term]
-|https://rs.tdwg.org/dwc/terms/verbatimElevation[dwc:&#173;verbatim&#173;Elevation,role=term]
+|https://rs.tdwg.org/dwc/terms/eventID[dwc:&#8203;event&#8203;ID,role=term]
+|https://rs.tdwg.org/dwc/terms/stateProvince[dwc:&#8203;state&#8203;Province,role=term]
+|https://rs.tdwg.org/dwc/terms/county[dwc:&#8203;county,role=term]
+|https://rs.tdwg.org/dwc/terms/minimumElevationInMeters[dwc:&#8203;minimum&#8203;Elevation&#8203;In&#8203;Meters,role=term]
+|https://rs.tdwg.org/dwc/terms/maximumElevationInMeters[dwc:&#8203;maximum&#8203;Elevation&#8203;In&#8203;Meters,role=term]
+|https://rs.tdwg.org/dwc/terms/verbatimElevation[dwc:&#8203;verbatim&#8203;Elevation,role=term]
 |+SCBI+ |+VA+ |+Warren+ |+251+ |+571+ |+352m+
 |+SCBI_014+ | | |+361.4+ |+362.4+ |+361.9m+
 |+SCBI_014.20190325+ | | |+361.4+ |+362.4+ |+361.9m+
