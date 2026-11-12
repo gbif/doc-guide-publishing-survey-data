@@ -31,7 +31,7 @@ ecological [[ecomonitoring]]monitoring:: the collection of information about the
 
 [[event]]event:: an action that occurs at some location during some time (see  term:dwc[dwc:Event]).
 
-[[FAIRdata]]FAIR data:: data that meet the FAIR principles of *F*indability, *A*ccessibility, *I*nteroperability, and *R*eusability. Refer to https://www.go-fair.org/fair-principles/.
+[[FAIRdata]]FAIR data:: data that meets the FAIR principles of *F*indability, *A*ccessibility, *I*nteroperability, and *R*eusability. Refer to https://www.go-fair.org/fair-principles/.
 
 [[growthForm]]growth form:: the specific shape, structure, and/or pattern of construction of an organism or group of organisms. 
 
