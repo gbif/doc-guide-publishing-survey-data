@@ -333,7 +333,7 @@ In *nested datasets*, geospatial scope terms will be equal to or greater than th
 [discrete]
 ==== NEON example: Survey site area
 
-In the NEON tick-pathogen example dataset, the geospatial scope in square kilometers is reported at the project, domain, and site levels using term:eco[eco:geospatialScopeAreaValue] and term:eco[eco:geospatialScopeAreaUnit]. The value at the NEON project level (eventID = `NEON`, `9428288` km²) reflects the area covered by the entire NEON project; the value at the NEON domain level (eventID = `D02`, `351647.28` km²) reflects the total area of that particular NEON domain; and the value at the NEON site level (eventID = `SCBI`, `9.86` km²) reflects the total area of that particular NEON site.
+In the NEON tick-pathogen example dataset, the geospatial scope in square kilometres is reported at the project, domain, and site levels using term:eco[eco:geospatialScopeAreaValue] and term:eco[eco:geospatialScopeAreaUnit]. The value at the NEON project level (eventID = `NEON`, `9428288` km²) reflects the area covered by the entire NEON project; the value at the NEON domain level (eventID = `D02`, `351647.28` km²) reflects the total area of that particular NEON domain; and the value at the NEON site level (eventID = `SCBI`, `9.86` km²) reflects the total area of that particular NEON site.
 
 The amount sampled at the plot and plot visit levels is reported using term:dwc[dwc:sampleSizeValue] and term:dwc[dwc:sampleSizeUnit] because ticks are sampled along the plot perimeter and the reported unit is a distance (`m`). The plot Event reports the planned 160 m perimeter, while each plot visit reports the distance actually sampled during that visit (e.g., `167` m on `SCBI_014.20140610`).
 
