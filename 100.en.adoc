@@ -53,6 +53,18 @@ Darwin Core
 |term:eco[eco:verbatimTargetScope]
 |===
 
+[NOTE]
+====
+Some table headers and cells wrap across lines for legibility and to reduce table width. These are display breaks only: each term name is a single, unbroken string, so a header shown as, e.g., 
+
+dwc:
+coordinate
+Uncertainty
+InMeters
+
+denotes the term term:dwc[dwc:coordinateUncertaintyInMeters] — not individual words, and not a hyphenated compound.
+====
+
 *+++Term usage recommendations+++*
 
 Each term mentioned in this guide is associated with one of 3 usage recommendations.
