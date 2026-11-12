@@ -663,7 +663,7 @@ Concatenated protocol information (`Drag sampling | Flagging`) is shared at high
 
 ==== Absences
 
-*Organismal <<absence, absences>>* are defined here as the lack of detection of organisms that are members of an explicitly stated target taxonomic scope. Absence information is critical to understanding species´ biogeography, modeling species' responses to climate- and human-induced environmental change, conservation planning and resource management, monitoring and restoration efforts, eradications or reintroductions, and other aspects of biodiversity dynamics.
+*Organismal <<absence, absences>>* are defined here as the lack of detection of organisms that are members of an explicitly stated target taxonomic scope. Absence information is critical to understanding species´ biogeography, modelling species' responses to climate- and human-induced environmental change, conservation planning and resource management, monitoring and restoration efforts, eradications or reintroductions, and other aspects of biodiversity dynamics.
 
 * If the dataset includes absence information for one or more organisms (to be reported in the `occurrence` table as term:dwc[dwc:occurrenceStatus] = `notDetected` or `notDetected`), then term:eco[eco:isAbsenceReported] = `true`. +
 * A list of absent taxa can be provided using term:eco[eco:absentTaxa] for all relevant Events.  Best practice is to use scientific names to report absent taxa. 
