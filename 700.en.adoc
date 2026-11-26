@@ -55,7 +55,7 @@ In the NEON tick-pathogen example dataset, all ticks of the same species and lif
 |https://rs.tdwg.org/dwc/terms/scientificName[dwc:&#8203;scientific&#8203;Name,role=term]
 |https://rs.tdwg.org/dwc/terms/individualCount[dwc:&#8203;individual&#8203;Count,role=term]
 |+SCBI_014.20140610+
-|+SCBI_014.20140610.IXOSCA.N+
+|+SCBI_014.20140610. IXOSCA.N+
 |+PreservedSpecimen+
 |+Ixodes scapularis+
 |+27+
@@ -115,11 +115,11 @@ Because the life stage (and, for adults, the sex) of each tick is recorded, the 
 |https://rs.tdwg.org/dwc/terms/individualCount[dwc:&#8203;individual&#8203;Count,role=term]
 |https://rs.tdwg.org/dwc/terms/sex[dwc:&#8203;sex,role=term]
 |https://rs.tdwg.org/dwc/terms/lifeStage[dwc:&#8203;life&#8203;Stage,role=term]
-|+SCBI_014.20190715.IXOSP.L+ |+Ixodidae sp.+ |+7+ | |+Larva+
-|+SCBI_014.20190715.IXOSCA.N+ |+Ixodes scapularis+ |+1+ | |+Nymph+
-|+SCBI_014.20190715.DERVAR.F+ |+Dermacentor variabilis+ |+1+ |+Female+ |+Adult+
-|+SCBI_014.20190715.HAELON.N+ |+Haemaphysalis longicornis+ |+1+ | |+Nymph+
-|+SCBI_014.20190715.AMBAME.M+ |+Amblyomma americanum+ |+1+ |+Male+ |+Adult+
+|+SCBI_014.20190715. IXOSP.L+ |+Ixodidae sp.+ |+7+ | |+Larva+
+|+SCBI_014.20190715. IXOSCA.N+ |+Ixodes scapularis+ |+1+ | |+Nymph+
+|+SCBI_014.20190715. DERVAR.F+ |+Dermacentor variabilis+ |+1+ |+Female+ |+Adult+
+|+SCBI_014.20190715. HAELON.N+ |+Haemaphysalis longicornis+ |+1+ | |+Nymph+
+|+SCBI_014.20190715. AMBAME.M+ |+Amblyomma americanum+ |+1+ |+Male+ |+Adult+
 |===
 ****
 
@@ -269,11 +269,11 @@ The example dataset uses both approaches to documenting absences or non-detectio
 |https://rs.tdwg.org/dwc/terms/basisOfRecord[dwc:&#8203;basis&#8203;Of&#8203;Record,role=term]
 |https://rs.tdwg.org/dwc/terms/scientificName[dwc:&#8203;scientific&#8203;Name,role=term]
 |https://rs.tdwg.org/dwc/terms/occurrenceStatus[dwc:&#8203;occurrence&#8203;Status,role=term]
-|+00354e35-eec8-4a62-8929-1818dcefd24b+ |+SCBI_014.20140610+ |+MaterialSample+ |+Rickettsia rickettsii+ |+notDetected+
-|+0527763f-2eb2-4ccc-9312-08b6002bc94c+ |+SCBI_014.20140610+ |+MaterialSample+ |+Borrelia burgdorferi sensu lato+ |+detected+
-|+07ea18fa-7410-4924-8683-5eb9b7dbfc92+ |+SCBI_014.20140610+ |+MaterialSample+ |+Anaplasma phagocytophilum+ |+notDetected+
-|+078741de-d93e-4584-a001-018e8094c6e8+ |+SCBI_014.20140610+ |+MaterialSample+ |+Borrelia miyamotoi+ |+notDetected+
-|+084607eb-2358-49c3-9e87-95c4e2ce30ca+ |+SCBI_014.20140610+ |+MaterialSample+ |+Borrelia sp.+ |+notDetected+
+|+00354e35-eec8-4a62- 8929-1818dcefd24b+ |+SCBI_014. 20140610+ |+MaterialSample+ |+Rickettsia rickettsii+ |+notDetected+
+|+0527763f-2eb2-4ccc- 9312-08b6002bc94c+ |+SCBI_014. 20140610+ |+MaterialSample+ |+Borrelia burgdorferi sensu lato+ |+detected+
+|+07ea18fa-7410-4924- 8683-5eb9b7dbfc92+ |+SCBI_014. 20140610+ |+MaterialSample+ |+Anaplasma phagocytophilum+ |+notDetected+
+|+078741de-d93e-4584- a001-018e8094c6e8+ |+SCBI_014. 20140610+ |+MaterialSample+ |+Borrelia miyamotoi+ |+notDetected+
+|+084607eb-2358-49c3- 9e87-95c4e2ce30ca+ |+SCBI_014. 20140610+ |+MaterialSample+ |+Borrelia sp.+ |+notDetected+
 |===
 
 *Ticks: implicit absences.* Tick Occurrences are only created for ticks that were collected. Because term:eco[eco:targetTaxonomicScope] includes `Ixodidae` and term:eco[eco:isTaxonomicScopeFullyReported] is `true`, any tick taxon without an Occurrence record for a plot visit was not detected during that visit. For example, 11 of the 58 plot visits in the example data subset have no tick Occurrences.
@@ -342,8 +342,8 @@ Tick abundance is reported for each tick Occurrence using term:dwc[dwc:individua
 |https://rs.tdwg.org/dwc/terms/scientificName[dwc:&#8203;scientific&#8203;Name,role=term]
 |https://rs.tdwg.org/dwc/terms/lifeStage[dwc:&#8203;life&#8203;Stage,role=term]
 |https://rs.tdwg.org/dwc/terms/individualCount[dwc:&#8203;individual&#8203;Count,role=term]
-|+SCBI_014.20190819.AMBAME.N+ |+Amblyomma americanum+ |+Nymph+ |+1+
-|+SCBI_014.20190819.IXOSP.L+ |+Ixodidae sp.+ |+Larva+ |+218+
+|+SCBI_014.20190819. AMBAME.N+ |+Amblyomma americanum+ |+Nymph+ |+1+
+|+SCBI_014.20190819. IXOSP.L+ |+Ixodidae sp.+ |+Larva+ |+218+
 |===
 
 The total number of adults, nymphs, and larvae collected during each plot visit is also reported at the Event level using the extended measurement or fact extension (see link:#extended-measurement-or-fact-emof-extension[Extended measurement or fact (eMoF) extension]).
@@ -428,10 +428,10 @@ The table below shows pathogen results linked to the Occurrence `SCBI_014.201406
 |https://rs.tdwg.org/dwc/terms/resourceID[dwc:&#8203;resource&#8203;ID,role=term]
 |https://rs.tdwg.org/dwc/terms/relatedResourceID[dwc:&#8203;related&#8203;Resource&#8203;ID,role=term]
 |https://rs.tdwg.org/dwc/terms/relationshipOfResource[dwc:&#8203;relationship&#8203;Of&#8203;Resource,role=term]
-|+00354e35-eec8-4a62-8929-1818dcefd24b+ |+SCBI_014.20140610.AMBAME.N+ |+pathogen of+
-|+07ea18fa-7410-4924-8683-5eb9b7dbfc92+ |+SCBI_014.20140610.AMBAME.N+ |+pathogen of+
-|+084607eb-2358-49c3-9e87-95c4e2ce30ca+ |+SCBI_014.20140610.AMBAME.N+ |+pathogen of+
-|+0afb99ea-b9a7-42a6-9ca6-efe5b35018c2+ |+SCBI_014.20140610.AMBAME.N+ |+pathogen of+
+|+00354e35-eec8-4a62- 8929-1818dcefd24b+ |+SCBI_014.20140610. AMBAME.N+ |+pathogen of+
+|+07ea18fa-7410-4924- 8683-5eb9b7dbfc92+ |+SCBI_014.20140610. AMBAME.N+ |+pathogen of+
+|+084607eb-2358-49c3- 9e87-95c4e2ce30ca+ |+SCBI_014.20140610. AMBAME.N+ |+pathogen of+
+|+0afb99ea-b9a7-42a6- 9ca6-efe5b35018c2+ |+SCBI_014.20140610. AMBAME.N+ |+pathogen of+
 |===
 
 The example data do not populate term:dwc[dwc:relationshipOfResourceID] or term:dwc[dwc:resourceRelationshipID]. See link:#mapping-material-sample-information[Mapping material sample information] for how the tested sample itself is identified.
