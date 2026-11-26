@@ -43,11 +43,11 @@ The example dataset also uses the emof extension to share additional information
 |https://rs.tdwg.org/dwc/terms/occurrenceID[dwc:&#8203;occurrence&#8203;ID,role=term]
 |https://rs.tdwg.org/dwc/terms/measurementType[dwc:&#8203;measurement&#8203;Type,role=term]
 |https://rs.tdwg.org/dwc/terms/measurementValue[dwc:&#8203;measurement&#8203;Value,role=term]
-|+0066d2d4-17ba-43fe-b832-1c7192e123bc+ |+Tick Pathogen Sample Condition+ |+OK+
-|+0066d2d4-17ba-43fe-b832-1c7192e123bc+ |+CQ (Quantification Cycle or Threshold Number) Value+ |+0+
-|+0066d2d4-17ba-43fe-b832-1c7192e123bc+ |+Identifier for DNA sample+ |+SCBI_014.20210621.AMBAME.N.T.005.DNA+
-|+0066d2d4-17ba-43fe-b832-1c7192e123bc+ |+Barcode of a DNA sample+ |+QT00000004043+
-|+0066d2d4-17ba-43fe-b832-1c7192e123bc+ |+Number of Ticks Used for Testing+ |+1+
+|+0066d2d4-17ba-43fe- b832-1c7192e123bc+ |+Tick Pathogen Sample Condition+ |+OK+
+|+0066d2d4-17ba-43fe- b832-1c7192e123bc+ |+CQ (Quantification Cycle or Threshold Number) Value+ |+0+
+|+0066d2d4-17ba-43fe- b832-1c7192e123bc+ |+Identifier for DNA sample+ |+SCBI_014.20210621.AMBAME.N.T.005.DNA+
+|+0066d2d4-17ba-43fe- b832-1c7192e123bc+ |+Barcode of a DNA sample+ |+QT00000004043+
+|+0066d2d4-17ba-43fe- b832-1c7192e123bc+ |+Number of Ticks Used for Testing+ |+1+
 |===
 ****
 
