@@ -1314,9 +1314,9 @@ The identifier of the specific person conducting the survey is reported in term:
 |https://rs.tdwg.org/eco/terms/samplingEffortValue[eco:&#8203;sampling&#8203;Effort&#8203;Value,role=term]
 |https://rs.tdwg.org/eco/terms/samplingEffortUnit[eco:&#8203;sampling&#8203;Effort&#8203;Unit,role=term]
 |https://rs.tdwg.org/eco/terms/samplingPerformedBy[eco:&#8203;sampling&#8203;Performed&#8203;By,role=term]
-|+NEON+ |+6 plots per bout, 160 m perimeter sampled per plot+ |+true+ |+6 | 160+ |+plots per bout, meters per plot circuit+ |+NEON Field Staff+
-|+SCBI_014+ |+160 m perimeter sampled per bout+ |+true+ |+6 | 160+ |+plots per bout, meters per plot circuit+ |+NEON Field Staff+
-|+SCBI_014.20190325+ |+160 m perimeter sampled per bout+ |+true+ |+6 | 160+ |+plots per bout, meters per plot circuit+ |+0000-0001-5349-9843+
+|+NEON+ |+6 plots per bout, 160 m perimeter sampled per plot+ |+true+ |+6 `|` 160+ |+plots per bout, meters per plot circuit+ |+NEON Field Staff+
+|+SCBI_014+ |+160 m perimeter sampled per bout+ |+true+ |+6 `|` 160+ |+plots per bout, meters per plot circuit+ |+NEON Field Staff+
+|+SCBI_014.20190325+ |+160 m perimeter sampled per bout+ |+true+ |+6 `|` 160+ |+plots per bout, meters per plot circuit+ |+0000-0001-5349-9843+
 |===
 ****
 
