@@ -184,7 +184,7 @@ The table below outlines the minimum required and recommended terms for each Occ
 |`alive`
 |===
 
-=== Reporting absences
+=== Reporting absences or non-detections
 
 <<absence, *Absences*>> are defined here as the lack of detection of organisms that are explicitly stated to be part of the target taxonomic scope. Information regarding the absence of detection of a type of taxon can be reported explicitly or implicitly within a DwC-A. 
 
@@ -195,21 +195,21 @@ If taxonomic scope is not fully reported (term:eco[eco:isTaxonomicScopeFullyRepo
 *If absences are implicitly reported*, each end user of data will need to reconstruct explicit absences for themselves for each taxon of interest to them because any unreported taxon (i.e. any taxon without an Occurrence record) is known to be absent. Again, this will only be possible if a taxonomic scope is fully reported (term:eco[eco:isTaxonomicScopeFullyReported] = `true`).
 
 
-*Explicit documentation of absences*
+*Explicit documentation of non-detections*
 
-Explicit reporting of absence or non-detection means that the dataset reports, at the Occurrence level (in the `occurrence` table), the lack of detection for each relevant dwc:Taxon. When the taxonomic scope is highly constrained, for example being restricted to only one or a few taxa, it is feasible to include Occurrence records for each of the non-detected taxa within the data, with each absence being denoted by reporting term:dwc[dwc:occurrenceStatus] as `absent` or `notDetected`. To explicitly document taxonomic absences in a DwC-A by including zero-count Occurrence records:
+Explicit reporting of absence or non-detection means that the dataset reports, at the Occurrence level (in the `occurrence` table), the lack of detection for each relevant dwc:Taxon. When the taxonomic scope is highly constrained, for example being restricted to only one or a few taxa, it is feasible to include Occurrence records for each of the non-detected taxa within the data, with each absence being denoted by reporting term:dwc[dwc:occurrenceStatus] as `notDetected`. To explicitly document taxonomic absences in a DwC-A by including zero-count Occurrence records:
 
 * In the `occurrence` table, for each Occurrence to be reported absent:
 ** Populate required fields, e.g., term:dwc[dwc:eventID] (refer to the link:#mapping-occurrence-information[list of required Occurrence terms]) +
-** term:dwc[dwc:occurrenceStatus] = `absent` or `notDetected`. +
+** term:dwc[dwc:occurrenceStatus] = `notDetected`. +
 ** Recommended best practice is to also populate term:dwc[dwc:individualCount] and term:dwc[dwc:organismQuantity] as `0` and term:dwc[dwc:organismQuantityType] as `individuals`. +
 * In the `survey` table:
-** If one or more absences are reported at any taxonomic level (term:dwc[dwc:occurrenceStatus] = `absent` or `notDetected`), then term:eco[eco:isAbsenceReported] = `true` for each relevant Event.
+** If one or more absences are reported at any taxonomic level (term:dwc[dwc:occurrenceStatus] = `notDetected`), then term:eco[eco:isAbsenceReported] = `true` for each relevant Event.
 ** A list of absent taxa can be provided using term:eco[eco:absentTaxa] at all relevant Events. See the section 'link:#absences[Absence]' for details on reporting absence information at the Event level.
 
 Absences should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey. Absence cannot be asserted for bycatch.
 
-*Implicit documentation of absences*
+*Implicit documentation of non-detections*
 
 Implicit reporting of absence or non-detection, on the other hand, means that the lack of detection of a dwc:Taxon is indirectly suggested through the lack of Occurrence record in the `occurrence` table. When taxonomic scopes are broader, and include hundreds or thousands of species (e.g., a taxonomic scope of a dataset that includes all species of birds in the world), then it is not feasible to add occurrence records of zero individuals for all of the species not detected. To implicitly document absences in a DwC-A, term:eco[eco:isTaxonomicScopeFullyReported] must be `true` for the Event and either term:eco[eco:targetTaxonomicScope] or term:eco[eco:excludedTaxonomicScope] must be specified. Then:
 
@@ -226,7 +226,7 @@ Absences should only be reported for taxa within the stated taxonomic and/or org
 |Occurrence
 .5+|Recommended
 |term:dwc[dwc:occurrenceStatus]
-|`present` or `absent`
+|`detected` or `notDetected`
 
 |Occurrence
 |term:dwc[dwc:individualCount]
@@ -258,9 +258,9 @@ Absences should only be reported for taxa within the stated taxonomic and/or org
 [discrete]
 ==== NEON example: Absences in the occurrence table
 
-The example dataset uses both approaches to documenting absences.
+The example dataset uses both approaches to documenting absences or non-detections.
 
-*Pathogens: explicit absences.* The target pathogens are listed in term:eco[eco:targetTaxonomicScope] and every test result is reported. Each test of a tick sample for a target pathogen results in one Occurrence, with term:dwc[dwc:occurrenceStatus] = `present` when the pathogen was detected and `absent` when it was not. The table below shows some of the pathogen results for plot visit `SCBI_014.20140610`. For example, _Borrelia burgdorferi_ sensu lato was detected in one tested sample (`present`), while _Rickettsia rickettsii_ was not detected in another (`absent`).
+*Pathogens: explicit absences.* The target pathogens are listed in term:eco[eco:targetTaxonomicScope] and every test result is reported. Each test of a tick sample for a target pathogen results in one Occurrence, with term:dwc[dwc:occurrenceStatus] = `detected` when the pathogen was detected and `notDetected` when it was not. The table below shows some of the pathogen results for plot visit `SCBI_014.20140610`. For example, _Borrelia burgdorferi_ sensu lato was detected in one tested sample (`detected`), while _Rickettsia rickettsii_ was not detected in another (`notDetected`).
 
 [width="100%",cols="30%,19%,16%,22%,13%",options="header",]
 |===
@@ -269,11 +269,11 @@ The example dataset uses both approaches to documenting absences.
 |https://rs.tdwg.org/dwc/terms/basisOfRecord[dwc:&#8203;basis&#8203;Of&#8203;Record,role=term]
 |https://rs.tdwg.org/dwc/terms/scientificName[dwc:&#8203;scientific&#8203;Name,role=term]
 |https://rs.tdwg.org/dwc/terms/occurrenceStatus[dwc:&#8203;occurrence&#8203;Status,role=term]
-|+00354e35-eec8-4a62-8929-1818dcefd24b+ |+SCBI_014.20140610+ |+MaterialSample+ |+Rickettsia rickettsii+ |+absent+
-|+0527763f-2eb2-4ccc-9312-08b6002bc94c+ |+SCBI_014.20140610+ |+MaterialSample+ |+Borrelia burgdorferi sensu lato+ |+present+
-|+07ea18fa-7410-4924-8683-5eb9b7dbfc92+ |+SCBI_014.20140610+ |+MaterialSample+ |+Anaplasma phagocytophilum+ |+absent+
-|+078741de-d93e-4584-a001-018e8094c6e8+ |+SCBI_014.20140610+ |+MaterialSample+ |+Borrelia miyamotoi+ |+absent+
-|+084607eb-2358-49c3-9e87-95c4e2ce30ca+ |+SCBI_014.20140610+ |+MaterialSample+ |+Borrelia sp.+ |+absent+
+|+00354e35-eec8-4a62-8929-1818dcefd24b+ |+SCBI_014.20140610+ |+MaterialSample+ |+Rickettsia rickettsii+ |+notDetected+
+|+0527763f-2eb2-4ccc-9312-08b6002bc94c+ |+SCBI_014.20140610+ |+MaterialSample+ |+Borrelia burgdorferi sensu lato+ |+detected+
+|+07ea18fa-7410-4924-8683-5eb9b7dbfc92+ |+SCBI_014.20140610+ |+MaterialSample+ |+Anaplasma phagocytophilum+ |+notDetected+
+|+078741de-d93e-4584-a001-018e8094c6e8+ |+SCBI_014.20140610+ |+MaterialSample+ |+Borrelia miyamotoi+ |+notDetected+
+|+084607eb-2358-49c3-9e87-95c4e2ce30ca+ |+SCBI_014.20140610+ |+MaterialSample+ |+Borrelia sp.+ |+notDetected+
 |===
 
 *Ticks: implicit absences.* Tick Occurrences are only created for ticks that were collected. Because term:eco[eco:targetTaxonomicScope] includes `Ixodidae` and term:eco[eco:isTaxonomicScopeFullyReported] is `true`, any tick taxon without an Occurrence record for a plot visit was not detected during that visit. For example, 11 of the 58 plot visits in the example data subset have no tick Occurrences.
