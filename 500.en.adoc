@@ -147,7 +147,7 @@ The highest Event level representing the NEON project as a whole has an eventID,
 |+D02+ |+NEON+ |+Each domain contains 1-3 terrestrial field sites, each with at least six (...)+ |+23+ |+BLAN_002 \| BLAN_004 \| (...)+
 |+SCBI+ |+D02+ |+Each site contains at least six 40x40 m plots designated for tick sampling (...)+ |+9+ |+SCBI_002 \| SCBI_005 \| (...)+
 |+SCBI_014+ |+SCBI+ |+One 40x40 m plot designated for tick sampling+ |+1+ |+SCBI_014+
-|+SCBI_014.20190325+ |+SCBI_014+ |+One visit to a 40x40 m plot designated for tick sampling+ |+1+ |+SCBI_014+
+|+SCBI_014. 20190325+ |+SCBI_014+ |+One visit to a 40x40 m plot designated for tick sampling+ |+1+ |+SCBI_014+
 |===
 ****
 
@@ -193,7 +193,7 @@ The example dataset does not populate the project terms. Instead, the NEON proje
 |+D02+ |+NEON+ |+survey+
 |+SCBI+ |+D02+ |+survey+
 |+SCBI_014+ |+SCBI+ |+survey+
-|+SCBI_014.20190325+ |+SCBI_014+ |+site visit+
+|+SCBI_014. 20190325+ |+SCBI_014+ |+site visit+
 |===
 ****
 
@@ -257,8 +257,8 @@ Conditions that affected a survey are noted at the plot visit level using the te
 |https://rs.tdwg.org/eco/terms/reportedExtremeConditions[eco:&#8203;reported&#8203;Extreme&#8203;Conditions,role=term]
 |+SCBI+ |+Deciduous Forest \| Evergreen Forest \| Pasture/Hay+ |+Core Terrestrial+ |
 |+SCBI_014+ |+deciduousForest+ | |
-|+SCBI_014.20190325+ |+deciduousForest+ | |
-|+SCBI_014.20200330+ |+deciduousForest+ | |+logistical, sampling impractical+
+|+SCBI_014. 20190325+ |+deciduousForest+ | |
+|+SCBI_014. 20200330+ |+deciduousForest+ | |+logistical, sampling impractical+
 |===
 ****
 
@@ -307,7 +307,7 @@ The dataset includes additional site locality information. This is shared using 
 |https://rs.tdwg.org/dwc/terms/verbatimElevation[dwc:&#8203;verbatim&#8203;Elevation,role=term]
 |+SCBI+ |+VA+ |+Warren+ |+251+ |+571+ |+352m+
 |+SCBI_014+ | | |+361.4+ |+362.4+ |+361.9m+
-|+SCBI_014.20190325+ | | |+361.4+ |+362.4+ |+361.9m+
+|+SCBI_014. 20190325+ | | |+361.4+ |+362.4+ |+361.9m+
 |===
 ****
 
@@ -423,7 +423,7 @@ The example dataset uses term:dwc[dwc:locality] to give a readable name for the 
 |+D02+ |+NEON+ |+Mid-Atlantic (D02)+
 |+SCBI+ |+D02+ |+Smithsonian Conservation Biology Institute NEON (SCBI)+
 |+SCBI_014+ |+SCBI+ |+SCBI_014+
-|+SCBI_014.20190325+ |+SCBI_014+ |+SCBI_014+
+|+SCBI_014. 20190325+ |+SCBI_014+ |+SCBI_014+
 |===
 ****
 
@@ -456,8 +456,8 @@ Vegetation cover information is not reported in the NEON tick-pathogen example d
 |+D02+ |+NEON+ |+false+
 |+SCBI+ |+D02+ |+false+
 |+SCBI_014+ |+SCBI+ |+false+
-|+SCBI_014.20140610+ |+SCBI_014+ |+false+
-|+SCBI_014.20190325+ |+SCBI_014+ |+false+
+|+SCBI_014. 20140610+ |+SCBI_014+ |+false+
+|+SCBI_014. 20190325+ |+SCBI_014+ |+false+
 |===
 ****
 
@@ -509,8 +509,8 @@ Note that ISO 8601, the date format recommended for term:dwc[dwc:eventDate], sep
 |+D02+ |+NEON+ |+2014-06-09 16:30:00/2024-10-09 19:42:00+
 |+SCBI+ |+D02+ |+2014-06-09 16:30:00/2024-10-09 19:42:00+
 |+SCBI_014+ |+SCBI+ |+2014-06-10 16:02:00/2024-10-09 19:19:00+
-|+SCBI_014.20140610+ |+SCBI_014+ |+2014-06-10 16:02:00+
-|+SCBI_014.20190325+ |+SCBI_014+ |+2019-03-25 12:47:00+
+|+SCBI_014. 20140610+ |+SCBI_014+ |+2014-06-10 16:02:00+
+|+SCBI_014. 20190325+ |+SCBI_014+ |+2019-03-25 12:47:00+
 |===
 ****
 
@@ -596,8 +596,8 @@ None of the Events is an `inventory`, so term:eco[eco:inventoryTypes] is not use
 |+D02+ |+NEON+ |+survey+
 |+SCBI+ |+D02+ |+survey+
 |+SCBI_014+ |+SCBI+ |+survey+
-|+SCBI_014.20140610+ |+SCBI_014+ |+site visit+
-|+SCBI_014.20190325+ |+SCBI_014+ |+site visit+
+|+SCBI_014. 20140610+ |+SCBI_014+ |+site visit+
+|+SCBI_014. 20190325+ |+SCBI_014+ |+site visit+
 |===
 ****
 
@@ -657,8 +657,8 @@ Concatenated protocol information (`Drag sampling | Flagging`) is shared at high
 |https://rs.tdwg.org/eco/terms/protocolDescriptions[eco:&#8203;protocol&#8203;Descriptions,role=term]
 |https://rs.tdwg.org/eco/terms/protocolReferences[eco:&#8203;protocol&#8203;References,role=term]
 |+NEON+ |+Drag sampling \| Flagging+ |+Drag sampling \| Flagging+ |+Ticks are sampled at six plots per site every three to six weeks, depending on prior detections. Sampling (...)+ |+Paull, S. 2022. TOS Protocol and Procedure: TCK - Tick and Tick-Borne Pathogen Sampling. NEON.DOC.014045. (...)+
-|+SCBI_014.20140610+ |+drag and flag+ |+drag and flag+ |+Ticks are sampled at six plots per site every three to six weeks, depending on prior detections. Sampling (...)+ |+NEON.DOC.014045vD \| Paull, S. 2022. TOS Protocol and Procedure: TCK - Tick and Tick-Borne Pathogen Sampling. (...)+
-|+SCBI_014.20190325+ |+drag+ |+drag+ |+Ticks are sampled at six plots per site every three to six weeks, depending on prior detections. Sampling (...)+ |+NEON.DOC.014045vK \| Paull, S. 2022. TOS Protocol and Procedure: TCK - Tick and Tick-Borne Pathogen Sampling. (...)+
+|+SCBI_014. 20140610+ |+drag and flag+ |+drag and flag+ |+Ticks are sampled at six plots per site every three to six weeks, depending on prior detections. Sampling (...)+ |+NEON.DOC.014045vD \| Paull, S. 2022. TOS Protocol and Procedure: TCK - Tick and Tick-Borne Pathogen Sampling. (...)+
+|+SCBI_014. 20190325+ |+drag+ |+drag+ |+Ticks are sampled at six plots per site every three to six weeks, depending on prior detections. Sampling (...)+ |+NEON.DOC.014045vK \| Paull, S. 2022. TOS Protocol and Procedure: TCK - Tick and Tick-Borne Pathogen Sampling. (...)+
 |===
 ****
 
@@ -691,9 +691,9 @@ The rows below are pathogen results with term:dwc[dwc:occurrenceStatus] = `notDe
 |https://rs.tdwg.org/dwc/terms/basisOfRecord[dwc:&#8203;basis&#8203;Of&#8203;Record,role=term]
 |https://rs.tdwg.org/dwc/terms/scientificName[dwc:&#8203;scientific&#8203;Name,role=term]
 |https://rs.tdwg.org/dwc/terms/occurrenceStatus[dwc:&#8203;occurrence&#8203;Status,role=term]
-|+SCBI_014.20140610+ |+10c59c74-f080-4745-bca1-caa4c3b12c28+ |+MaterialSample+ |+Borrelia lonestari+ |+notDetected+
-|+SCBI_014.20140610+ |+4f7d9c87-35bc-4591-8268-f92ddb38cfd5+ |+MaterialSample+ |+Ehrlichia chaffeensis+ |+notDetected+
-|+SCBI_014.20140610+ |+9011a3d4-c6b8-4807-815e-6e660ff3f14e+ |+MaterialSample+ |+Ehrlichia muris-like+ |+notDetected+
+|+SCBI_014. 20140610+ |+10c59c74-f080-4745-bca1-caa4c3b12c28+ |+MaterialSample+ |+Borrelia lonestari+ |+notDetected+
+|+SCBI_014. 20140610+ |+4f7d9c87-35bc-4591-8268-f92ddb38cfd5+ |+MaterialSample+ |+Ehrlichia chaffeensis+ |+notDetected+
+|+SCBI_014. 20140610+ |+9011a3d4-c6b8-4807-815e-6e660ff3f14e+ |+MaterialSample+ |+Ehrlichia muris-like+ |+notDetected+
 |===
 ****
 
@@ -745,8 +745,8 @@ The NEON tick-pathogen example dataset reports abundance information for ticks b
 |+D02+ |+NEON+ |+true+ |+false+
 |+SCBI+ |+D02+ |+true+ |+false+
 |+SCBI_014+ |+SCBI+ |+true+ |+false+
-|+SCBI_014.20140610+ |+SCBI_014+ |+true+ |+false+
-|+SCBI_014.20190325+ |+SCBI_014+ |+true+ |+false+
+|+SCBI_014. 20140610+ |+SCBI_014+ |+true+ |+false+
+|+SCBI_014. 20190325+ |+SCBI_014+ |+true+ |+false+
 |===
 ****
 
@@ -780,8 +780,8 @@ Note that in the example data subset, term:eco[eco:materialSampleTypes] is `whol
 |https://rs.tdwg.org/eco/terms/materialSampleTypes[eco:&#8203;material&#8203;Sample&#8203;Types,role=term]
 |+NEON+ | |+true+ |+wholeOrganism+
 |+SCBI_014+ |+SCBI+ |+true+ |+wholeOrganism+
-|+SCBI_014.20190325+ |+SCBI_014+ |+true+ |+wholeOrganism+
-|+SCBI_014.20200330+ |+SCBI_014+ |+false+ |+wholeOrganism+
+|+SCBI_014. 20190325+ |+SCBI_014+ |+true+ |+wholeOrganism+
+|+SCBI_014. 20200330+ |+SCBI_014+ |+false+ |+wholeOrganism+
 |===
 ****
 
@@ -809,8 +809,8 @@ The existence of vouchered specimens and the location of those vouchers in the e
 |https://rs.tdwg.org/eco/terms/hasVouchers[eco:&#8203;has&#8203;Vouchers,role=term]
 |https://rs.tdwg.org/eco/terms/voucherInstitutions[eco:&#8203;voucher&#8203;Institutions,role=term]
 |+NEON+ |+true+ |+US National Tick Collection, Georgia Southern University \| NEON Biorepository, Arizona State University+
-|+SCBI_014.20190325+ |+true+ |+US National Tick Collection, Georgia Southern University+
-|+SCBI_014.20200330+ |+false+ |
+|+SCBI_014. 20190325+ |+true+ |+US National Tick Collection, Georgia Southern University+
+|+SCBI_014. 20200330+ |+false+ |
 |===
 ****
 
@@ -871,8 +871,8 @@ The NEON tick-pathogen example dataset uses term:eco[eco:isLeastSpecificTargetCa
 |+D02+ |+NEON+ |+false+
 |+SCBI+ |+D02+ |+false+
 |+SCBI_014+ |+SCBI+ |+false+
-|+SCBI_014.20140610+ |+SCBI_014+ |+false+
-|+SCBI_014.20190325+ |+SCBI_014+ |+false+
+|+SCBI_014. 20140610+ |+SCBI_014+ |+false+
+|+SCBI_014. 20190325+ |+SCBI_014+ |+false+
 |===
 ****
 
@@ -985,8 +985,8 @@ The NEON tick-pathogen example dataset has an explicitly stated target scope: ti
 |+D02+ |+NEON+ |+ticks \| selected tick pathogens+
 |+SCBI+ |+D02+ |+ticks \| selected tick pathogens+
 |+SCBI_014+ |+SCBI+ |+ticks \| selected tick pathogens+
-|+SCBI_014.20140610+ |+SCBI_014+ |+ticks \| selected tick pathogens+
-|+SCBI_014.20190325+ |+SCBI_014+ |+ticks \| selected tick pathogens+
+|+SCBI_014. 20140610+ |+SCBI_014+ |+ticks \| selected tick pathogens+
+|+SCBI_014. 20190325+ |+SCBI_014+ |+ticks \| selected tick pathogens+
 |===
 ****
 
@@ -1062,7 +1062,7 @@ Conversely, there is very explicit differentiation in acknowledging the entities
 |https://rs.tdwg.org/eco/terms/taxonCompletenessReported[eco:&#8203;taxon&#8203;Completeness&#8203;Reported,role=term]
 |https://rs.tdwg.org/eco/terms/taxonCompletenessProtocols[eco:&#8203;taxon&#8203;Completeness&#8203;Protocols,role=term]
 |+NEON+ |+true+ |+notReported+ |+Tick drag/flag methods are standardized to maximize detection of all life stages of Ixodidae during the active season.+
-|+SCBI_014.20190325+ |+true+ |+notReported+ |+Tick drag/flag methods are standardized to maximize detection of all life stages of Ixodidae during the active season.+
+|+SCBI_014. 20190325+ |+true+ |+notReported+ |+Tick drag/flag methods are standardized to maximize detection of all life stages of Ixodidae during the active season.+
 |===
 ****
 
@@ -1148,8 +1148,8 @@ The survey protocols for sampling ticks in the example dataset clearly indicate 
 |+D02+ |+adult \| nymph \| larvae+ |+egg+ |+true+
 |+SCBI+ |+adult \| nymph \| larvae+ |+egg+ |+true+
 |+SCBI_014+ |+adult \| nymph \| larvae+ |+egg+ |+true+
-|+SCBI_014.20140610+ |+adult \| nymph \| larvae+ |+egg+ |+true+
-|+SCBI_014.20190325+ |+adult \| nymph \| larvae+ |+egg+ |+true+
+|+SCBI_014. 20140610+ |+adult \| nymph \| larvae+ |+egg+ |+true+
+|+SCBI_014. 20190325+ |+adult \| nymph \| larvae+ |+egg+ |+true+
 |===
 ****
 
@@ -1209,8 +1209,8 @@ The example dataset does not include any taxa outside of the stated taxonomic an
 |+D02+ |+NEON+ |+false+
 |+SCBI+ |+D02+ |+false+
 |+SCBI_014+ |+SCBI+ |+false+
-|+SCBI_014.20140610+ |+SCBI_014+ |+false+
-|+SCBI_014.20190325+ |+SCBI_014+ |+false+
+|+SCBI_014. 20140610+ |+SCBI_014+ |+false+
+|+SCBI_014. 20190325+ |+SCBI_014+ |+false+
 |===
 ****
 
@@ -1316,7 +1316,7 @@ The identifier of the specific person conducting the survey is reported in term:
 |https://rs.tdwg.org/eco/terms/samplingPerformedBy[eco:&#8203;sampling&#8203;Performed&#8203;By,role=term]
 |+NEON+ |+6 plots per bout, 160 m perimeter sampled per plot+ |+true+ |+6 \| 160+ |+plots per bout \| meters per plot circuit+ |+NEON Field Staff+
 |+SCBI_014+ |+160 m perimeter sampled per bout+ |+true+ |+6 \| 160+ |+plots per bout \| meters per plot circuit+ |+NEON Field Staff+
-|+SCBI_014. + \ 20190325+ |+160 m perimeter sampled per bout+ |+true+ |+6 \| 160+ |+plots per bout \| meters per plot circuit+ |+0000-0001- + \5349-9843+
+|+SCBI_014. 20190325+ |+160 m perimeter sampled per bout+ |+true+ |+6 \| 160+ |+plots per bout \| meters per plot circuit+ |+0000-0001- 349-9843+
 |===
 ****
 
