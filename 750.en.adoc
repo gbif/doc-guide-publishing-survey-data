@@ -35,7 +35,7 @@ Each specimen or sample is a row in the `occurrence` table, linked to the Event 
 * *Collection identifiers:* If the sample is housed in a collection, report its catalogue number in term:dwc[dwc:catalogNumber] and identify the holding institution and collection using term:dwc[dwc:institutionCode] (or term:dwc[dwc:institutionID]) and term:dwc[dwc:collectionCode]. Any other numbers assigned to the sample can be listed in term:dwc[dwc:otherCatalogNumbers]. +
 * *Preparation and storage:* Describe how the material was prepared or preserved in term:dwc[dwc:preparations] (e.g., `95% ethanol`) and its current status in term:dwc[dwc:disposition] (e.g., `in collection`, `missing`). +
 * *Remarks:* Any further information about the material sample that does not fit another term can be shared in term:dwc[dwc:materialEntityRemarks]. +
-* *Genetic sequences:* If sequences were generated from the sample and deposited in a public repository (e.g., GenBank), list their identifiers in term:dwc[dwc:associatedSequences]. The DNA-derived data extension cannot currently be published with an Event core dataset; see link:#dna-and-metabarcoding-data[DNA and metabarcoding data] for guidance on publishing DNA-derived data.
+* *Genetic sequences:* If sequences were generated from the sample and deposited in a public repository (e.g., GenBank), list their identifiers in term:dwc[dwc:associatedSequences]. 
 
 [caption=""]
 .Material sample terms in the `occurrence` table, their recommended usage (status), and example data entries.
