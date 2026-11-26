@@ -202,7 +202,7 @@ The example dataset does not populate the project terms. Instead, the NEON proje
 
 An Event <<site, *site*>> is the location at which observations are made or samples and/or measurements are taken. Sharing thorough information about a sampling Event site, including description, locality, and vegetative cover provides critical context to potential data users about conditions in which a survey was conducted. Information about the location of each survey site, such as best-practice georeferences, site description (locality name, habitat type, microhabitat), and environmental data (e.g., physical parameters, vegetation, water quality), should be populated for each Event for which the information is available. 
 
-NOTE: The Darwin Core site terms listed in this section are not comprehensive. Explore all http://purl.org/dc/terms/Location[Darwin Core Location class terms^] and the https://eco.tdwg.org/terms/#site[Humboldt Extension site terms^].
+NOTE: The Darwin Core site terms listed in this section are not comprehensive. Explore all https://dwc.tdwg.org/terms/#location[Darwin Core Location class terms^] and the https://eco.tdwg.org/terms/#site[Humboldt Extension site terms^].
 
 ==== Site description
 
@@ -532,10 +532,10 @@ Biological survey Event data can result from a wide variety of effort types (e.g
 [discrete]
 ==== Identifying Event type
 
-term:dwc[dwc:eventType] should provide a high level overview or broadly categorize the type of survey without being so specific as to overlap with sampling protocol. There is no single, standardized vocabulary for term:dwc[dwc:eventType]. If your organization or community has a controlled vocabulary, it is recommended to apply terms from that. Otherwise, you can refer to the common Event types below for guidance. More than one term may apply to an Event; choose the term that fits most closely.
+term:dwc[dwc:eventType] should provide a high level overview or broadly categorize the type of survey without being so specific as to overlap with sampling protocol. There is no single, standardized vocabulary for term:dwc[dwc:eventType]. If your organization or community has a controlled vocabulary, it is recommended to apply terms from that. Alternatively, you can refer to the common Event types below for guidance. More than one term may apply to an Event; choose the term that fits most closely.
 
 * *Project*: Projects are structured initiatives with an explicitly stated objective or suite of objectives and with clear targets, timelines, and deliverables. Projects typically are linked to non-biological information identifying participating organizations and people (agents), funding agencies, and other high-level administrative information. Biological sampling may be only one facet of a project’s scope. `Project` as an term:dwc[dwc:eventType] is typically most appropriate only at the highest Event level in a nested dataset. +
-* *Expedition*: An expedition is an organized information gathering venture that inherently includes multiple sampling Events and event types. Expeditions may include multiple taxonomic and/organismal scopes, any number of documented sampling protocols, and varying degrees of complexity in survey design. `Expedition` as an term:dwc[dwc:eventType] is typically most appropriate at higher Event levels in nested hierarchies. +
+* *Expedition* or *Research cruise*: An expedition is an organized information gathering venture that inherently includes multiple sampling Events and event types; a research cruise is the marine equivalent of an expedition. Expeditions may include multiple taxonomic and/organismal scopes, any number of documented sampling protocols, and varying degrees of complexity in survey design. `Expedition` as an term:dwc[dwc:eventType] is typically most appropriate at higher Event levels in nested hierarchies. +
 * *Survey*: A survey is a broad but systematic effort to collect information about the biological organisms in a specific area at a given time. Surveys typically included at least one documented protocol and may or may not have an explicitly defined taxonomic and/or organismal scope. `Survey` is the most general Event type term and can be applied as an term:dwc[dwc:eventType] at any Event level. +
 * *Inventory*: An inventory is a comprehensive, focused survey of the taxa present in a specific area over an explicit period of time. Inventories typically have an explicit taxonomic and/or organismal scope and a well-defined protocol. `Inventory` is typically most appropriate as an term:dwc[dwc:eventType] at lower Event levels in nested hierarchies. +
 * *Bioblitz*: A bioblitz is a survey Event aimed at finding and identifying as many species as possible in a specific area over a (typically) short, contiguous period of time. Bioblitzes often include participants (agents) with a wide range of backgrounds and levels of expertise in biodiversity sciences including
@@ -543,6 +543,8 @@ formal biologists as well as the broader, general public. `Bioblitz` as an term:
 * *Site visit*: A site visit is a single survey, inventory, or sampling at a pre-established geographic location at a discrete time. `Site visit` as an term:dwc[dwc:eventType] is typically most appropriate at the lowest event level in a nested hierarchy. +
 * *Sample*: A survey event denoted by the specific act of collecting physical samples resulting in material specimen. A sampling term:dwc[dwc:eventType] is a specific implementation of a survey Event. 'Sample' as an term:dwc[dwc:eventType] is typically most appropriate at lower (child) Event levels in a nested hierarchy. +
 * *Sensor*: The detection of an Occurrence (or a group of related occurrences such as a time series or group of organisms) by means of a sensor. A sensor may be static (e.g., camera traps) or mobile (e.g., drones) external to an organism, or it may be attached to an organism (e.g. radio collar). 'Sensor' as an term:dwc[dwc:eventType] is typically most appropriate at lower (child) Event levels in a nested hierarchy.
+
+When a dataset is published to GBIF, the value entered will be interpretted to fit into GBIF's https://registry.gbif.org/vocabulary/eventType/concepts^[eventType vocabulary].
 ****
 
 *`Inventory` Event types*
@@ -643,7 +645,7 @@ Four protocol terms exist; however, only 1 term is currently required to publish
 
 All NEON sampling protocols are documented. The tick-pathogen dataset includes 2 documented protocols: drag sampling and flagging.
 
-The name of the protocol(s) implemented during each unique survey Event is reported using both term:dwc[dwc:samplingProtocol] and term:eco[eco:protocolNames] (e.g., `drag` or `drag and flag` for individual plot visits). The official description of the protocol is reported in term:eco[eco:protocolDescriptions]. Bibliographic information for the protocol is reported in term:eco[eco:protocolReferences], with the specific protocol document version listed first at the plot visit level (e.g., `NEON.DOC.014045vK`).
+The name of the protocol(s) implemented during each unique survey Event is reported using both term:dwc[dwc:samplingProtocol] and term:eco[eco:protocolNames] (e.g., `drag`, `flag`, or `drag and flag` for individual plot visits). The official description of the protocol is reported in term:eco[eco:protocolDescriptions]. Bibliographic information for the protocol is reported in term:eco[eco:protocolReferences], with the specific protocol document version listed first at the plot visit level (e.g., `NEON.DOC.014045vK`).
 
 Concatenated protocol information (`Drag sampling | Flagging`) is shared at higher Event levels.
 
@@ -663,12 +665,12 @@ Concatenated protocol information (`Drag sampling | Flagging`) is shared at high
 
 ==== Absences
 
-*Organismal <<absence, absences>>* are defined here as the lack of detection of organisms that are members of an explicitly stated target taxonomic scope. Absence information is critical to understanding species´ biogeography, modelling species' responses to climate- and human-induced environmental change, conservation planning and resource management, monitoring and restoration efforts, eradications or reintroductions, and other aspects of biodiversity dynamics.
+*Organismal <<absence, absences>>* or non-detections are defined here as the lack of detection of organisms that are members of an explicitly stated target taxonomic scope. Absence information is critical to understanding species´ biogeography, modelling species' responses to climate- and human-induced environmental change, conservation planning and resource management, monitoring and restoration efforts, eradications or reintroductions, and other aspects of biodiversity dynamics.
 
-* If the dataset includes absence information for one or more organisms (to be reported in the `occurrence` table as term:dwc[dwc:occurrenceStatus] = `notDetected` or `notDetected`), then term:eco[eco:isAbsenceReported] = `true`. +
+* If the dataset includes non-detections for one or more organisms (to be reported in the `occurrence` table as term:dwc[dwc:occurrenceStatus] = `notDetected`), then term:eco[eco:isAbsenceReported] = `true`. +
 * A list of absent taxa can be provided using term:eco[eco:absentTaxa] for all relevant Events.  Best practice is to use scientific names to report absent taxa. 
-** Absences should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey and should use scientific nomenclature. 
-** Absence cannot be asserted for bycatch.
+** Absences or non-detections should only be reported for taxa within the stated taxonomic and/or organismal scope of a survey and should use scientific nomenclature. 
+** Absence or non-detection cannot be asserted for bycatch.
 
 See the section 'link:#reporting-absences[Reporting absences]' for details on reporting absence information at the Occurrence level.
 
@@ -676,11 +678,11 @@ See the section 'link:#reporting-absences[Reporting absences]' for details on re
 [discrete]
 ==== NEON example: Absences
 
-The example dataset reports absences explicitly for tick pathogens. Each pathogen test result is an Occurrence with term:dwc[dwc:occurrenceStatus] = `notDetected` or `notDetected` when the pathogen was not detected (see link:#reporting-absences[Reporting absences]). Absences are not reported for ticks.
+The example dataset reports absences explicitly for tick pathogens. Each pathogen test result is an Occurrence with term:dwc[dwc:occurrenceStatus] = `notDetected` when the pathogen was not detected (see link:#reporting-absences[Reporting absences]). Non-detections are not reported for ticks.
 
-The `survey` table of the example data subset does not include term:eco[eco:isAbsenceReported] or term:eco[eco:absentTaxa]. Following this guide, term:eco[eco:isAbsenceReported] would be `true` for each plot visit Event with at least one pathogen record of `notDetected` or `notDetected`, and term:eco[eco:absentTaxa] could list the pathogens not detected during that visit.
+The `survey` table of the example data subset does not include the terms term:eco[eco:isAbsenceReported] or term:eco[eco:absentTaxa]. Following this guide, term:eco[eco:isAbsenceReported] would be `true` for each plot visit Event with at least one pathogen record of `notDetected`, and term:eco[eco:absentTaxa] could list the pathogens not detected during that visit.
 
-The rows below are pathogen results with term:dwc[dwc:occurrenceStatus] = `notDetected` or `notDetected` from plot visit `SCBI_014.20140610`, as they appear in the `occurrence` table.
+The rows below are pathogen results with term:dwc[dwc:occurrenceStatus] = `notDetected` from plot visit `SCBI_014.20140610`, as they appear in the `occurrence` table.
 
 [width="99%",cols="<20%,<32%,<16%,<20%,12%",options="header",]
 |===
@@ -689,9 +691,9 @@ The rows below are pathogen results with term:dwc[dwc:occurrenceStatus] = `notDe
 |https://rs.tdwg.org/dwc/terms/basisOfRecord[dwc:&#8203;basis&#8203;Of&#8203;Record,role=term]
 |https://rs.tdwg.org/dwc/terms/scientificName[dwc:&#8203;scientific&#8203;Name,role=term]
 |https://rs.tdwg.org/dwc/terms/occurrenceStatus[dwc:&#8203;occurrence&#8203;Status,role=term]
-|+SCBI_014.20140610+ |+10c59c74-f080-4745-bca1-caa4c3b12c28+ |+MaterialSample+ |+Borrelia lonestari+ |+absent+
-|+SCBI_014.20140610+ |+4f7d9c87-35bc-4591-8268-f92ddb38cfd5+ |+MaterialSample+ |+Ehrlichia chaffeensis+ |+absent+
-|+SCBI_014.20140610+ |+9011a3d4-c6b8-4807-815e-6e660ff3f14e+ |+MaterialSample+ |+Ehrlichia muris-like+ |+absent+
+|+SCBI_014.20140610+ |+10c59c74-f080-4745-bca1-caa4c3b12c28+ |+MaterialSample+ |+Borrelia lonestari+ |+notDetected+
+|+SCBI_014.20140610+ |+4f7d9c87-35bc-4591-8268-f92ddb38cfd5+ |+MaterialSample+ |+Ehrlichia chaffeensis+ |+notDetected+
+|+SCBI_014.20140610+ |+9011a3d4-c6b8-4807-815e-6e660ff3f14e+ |+MaterialSample+ |+Ehrlichia muris-like+ |+notDetected+
 |===
 ****
 
@@ -993,7 +995,7 @@ The NEON tick-pathogen example dataset has an explicitly stated target scope: ti
 
 Reporting taxonomic scope enables reliable, quantitative, and statistical interpretation of survey and monitoring data. Knowledge of taxonomic scope is essential to interpret local non-detection of taxa as local absences. The *taxonomic scope*, stated either as targeted or intentionally excluded taxa, should be reported using term:eco[eco:targetTaxonomicScope] and term:eco[eco:excludedTaxonomicScope].
 
-If every organism in the stated term:eco[eco:targetTaxonomicScope] that was observed during an Event was reported, then term:eco[eco:isTaxonomicScopeFullyReported] = `true`; if not, term:eco[eco:isTaxonomicScopeFullyReported] = `false`.
+term:eco[eco:targetTaxonomicScope] explicity captures reporting effort by a surveyor during an Event. If a surveyor reports every organism of the stated term:eco[eco:targetTaxonomicScope] that was observed or encountered during an Event, then term:eco[eco:isTaxonomicScopeFullyReported] = `true`; if the surveyor does NOT report target taxa encountered during the survey, term:eco[eco:isTaxonomicScopeFullyReported] = `false`. 
 
 *Knowledge about taxonomic completeness* allows data users to determine how comprehensively an area was sampled. 
 
